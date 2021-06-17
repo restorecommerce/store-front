@@ -1,0 +1,64 @@
+.favorite {
+  color: salmon;
+  background-color: white;
+  border: lightgray solid 0.5px;
+}
+
+p {
+  margin-top: 1.3em;
+}
+
+.color-button {
+  margin-left: 1em;
+  height: 2rem; 
+  width: 2rem;
+  border: none;
+}
+
+.black-button {
+  background-color: black;
+}
+
+.brown-button {
+  background-color: brown;
+}
+
+.white-button {
+  background-color: lightgray;
+}
+
+.button-selected {
+  border: solid gray !important;
+}
+
+.badge {
+  padding: 0.5rem;
+}
+
+.add-to-cart-section {
+  text-align: center; 
+  padding-top: 1rem;
+}
+
+.delivery-time {
+  color: green;
+}
+
+.tooltip-arrow {
+  position: relative;
+  border-style: none;
+}
+
+.tooltip-text {
+  text-align: center;
+  background-color:#80BA27;
+  border-style: none;
+}
+
+.tooltip-pointer {
+  background-color: #80BA27;
+  top: 0; 
+  left: 50%; 
+  z-index: 301;
+  border-style: none;
+}

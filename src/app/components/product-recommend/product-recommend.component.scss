@@ -1,0 +1,56 @@
+.product-recommend-container {
+  background-color: lightgray;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border: none;
+  text-align: center;
+}
+
+.card {
+  margin: 1rem;
+  background-color: white;
+}
+
+.product-recommend-header {
+  margin-left: 4rem;
+  padding: 1rem;
+}
+
+.product-recommend-section {
+  text-align: center;
+}
+
+.more-button {
+  padding-right: 1rem;
+}
+
+.last-button {
+  padding-left: 1rem;
+}
+
+.product-recommend-list {
+  padding: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .product-recommend-container {
+    background-color: white;
+    margin: 2rem;
+  }
+  .product-recommend-header {
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .product-recommend-container {
+    background-color: white;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .product-recommend-header {
+    margin-left: 0;
+  }
+}

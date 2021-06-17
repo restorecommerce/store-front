@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="flex-11">
+    <h2>
+      {{ "ProductNavigation.Product" | translate }}
+    </h2>
+    <p>
+      {{ "ProductInformation.Description" | translate }}
+    </p>
+    <p>
+      <vcl-badge vclRounded type="primary" class="badge">{{ "ProductInformation.Bestseller" | translate }}</vcl-badge>
+    </p>
+  </div>
+  <div class="flex-1">
+    <button vcl-square-button class="circular favorite">
+      <vcl-icon icon="fas:heart"></vcl-icon>
+    </button>
+  </div>
+</div>
+<app-product-interest></app-product-interest>
+<hr>
+<div class="row">
+  <div class="flex align-left">
+    <p>
+      {{ "Price" | translate }}
+    </p>
+  </div>
+  <div class="flex align-right">
+    <p>
+      <b>250,00 €</b>
+    </p>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="flex align-left">
+    <p>
+      <b>{{ "ProductInformation.Color" | translate }}</b> {{this.dataService.getColorName()}}
+    </p>
+  </div>
+  <div class="flex align-right">
+    <p>
+      <button vcl-square-button  class="circular color-button black-button" (click)="this.dataService.selectColor('black')" [ngClass]="{'button-selected':this.dataService.getColor() === 'black'}"> </button>
+      <button vcl-square-button  class="circular color-button brown-button" (click)="this.dataService.selectColor('brown')" [ngClass]="{'button-selected':this.dataService.getColor() === 'brown'}"></button>
+      <button vcl-square-button  class="circular color-button white-button" (click)="this.dataService.selectColor('white')" [ngClass]="{'button-selected':this.dataService.getColor() === 'white'}"></button>
+    </p>
+  </div>
+</div>
+<hr>
+<p>
+  <b>{{ "ProductInformation.Material" | translate }}:</b> {{ "ProductInformation.MaterialInfo" | translate }}
+</p>
+<hr>
+<app-product-size-picker></app-product-size-picker>
+<div class="add-to-cart-section">
+  <span class="delivery-time">{{ "ProductInformation.ProductDelivery" | translate }}</span>
+  <div>
+    <button vcl-button (click)="this.addItemToCart()">
+      <vcl-icogram>
+        <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
+        {{ "ProductInformation.Cart" | translate }}
+      </vcl-icogram>
+    </button>
+  </div>
+</div>
+<div class="add-to-cart-section">
+  <div class="tooltip arrow-pointer-top tooltip-arrow" role="tooltip">
+    <div class="tooltip-content tooltip-text">
+      <p><b>{{ "ProductInformation.ShopOnline" | translate }}</b></p>
+      <p>{{ "ProductInformation.IfStyleDoesntSuit" | translate }}</p>
+    </div>
+    <div class="arrow-pointer tooltip-pointer"></div>
+  </div>
+</div>

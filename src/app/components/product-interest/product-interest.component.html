@@ -1,0 +1,8 @@
+<p class="product-interest">
+  <ng-container *ngIf="switch">
+    <vcl-icon icon="mdi mdi-eye"> {{ 'ProductInterest.Views' | translate }}</vcl-icon> 
+  </ng-container>
+  <ng-container *ngIf="!switch">
+    <vcl-icon icon="mdi mdi-cart"> {{ 'ProductInterest.Clicks' | translate }}</vcl-icon> 
+  </ng-container>
+</p>

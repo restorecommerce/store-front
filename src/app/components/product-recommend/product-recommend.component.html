@@ -1,0 +1,74 @@
+<h1 class="product-recommend-header">{{ "ProductRecommend.Title" | translate }}</h1>
+<div class="product-recommend-container">
+  <div class="product-recommend-section">
+    <a class="more-button">{{ "ProductRecommend.YouMightAlso" | translate }}</a>
+    <a class="last-button">{{ "ProductRecommend.LastSeen" | translate }}</a>
+  </div>
+  <div class="row">
+    <div class="gallery" touch-action="pan-y">
+      <div class="gallery-content">
+        <button class="button gallery-prev-button">
+          <vcl-icogram>
+            <vcl-icon icon="vcl:arrow-left"></vcl-icon>
+          </vcl-icogram>
+        </button>
+        <div class="row product-recommend-list">
+          <div class="w-25p">
+            <div class="demoItem">
+              <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+            </div>
+          </div>
+          <div class="w-25p">
+            <div class="demoItem">
+              <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+            </div>
+          </div>
+          <div class="w-25p">
+            <div class="demoItem">
+              <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+            </div>
+          </div>
+          <div class="w-25p">
+            <div class="demoItem">
+              <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+            </div>
+          </div>
+        </div>
+        <button class="button gallery-next-button">
+          <vcl-icogram>
+            <vcl-icon icon="vcl:arrow-right"></vcl-icon>
+          </vcl-icogram>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row">
+    <div class="flex"></div>
+    <div class="flex-2 card">
+      <div class="demoItem">
+        <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+        <p>Lowtop Sneakers mit Logo-Details</p>
+      </div>
+    </div>
+    <div class="flex-2 card">
+      <div class="demoItem">
+        <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+        <p>Lowtop Sneakers mit Logo-Details</p>
+        <p></p>
+      </div>
+    </div>
+    <div class="flex-2 card">
+      <div class="demoItem">
+        <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+        <p>Lowtop Sneakers mit Logo-Details</p>
+      </div>
+    </div>
+    <div class="flex-2 card">
+      <div class="demoItem">
+        <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+        <p>Lowtop Sneakers mit Logo-Details</p>
+      </div>
+    </div>
+    <div class="flex"></div>
+  </div> -->
+</div>

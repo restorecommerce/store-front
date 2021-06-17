@@ -1,0 +1,7 @@
+<section class="content-area" role="main">
+  <app-service-teaser *ngIf="this.screenWidth() >= this.tabletWidth()"></app-service-teaser>
+  <app-product-navigation *ngIf="this.screenWidth() >= this.desktopWidth()"></app-product-navigation>
+  <app-product-main></app-product-main>
+  <app-product-description></app-product-description>
+  <app-product-recommend></app-product-recommend>
+</section>

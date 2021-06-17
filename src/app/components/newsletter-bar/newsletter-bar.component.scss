@@ -1,0 +1,41 @@
+.newsletter-bar-container {
+  background-color: black;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+h4 {
+  color: white;
+  text-align: center;
+}
+
+.icon {
+  color: white;
+  background-color: black;
+}
+
+input {
+  background-color: black;
+  color: white;
+  border-bottom-color: white;
+  border-bottom-width: 1px;;
+}
+
+.arrow-button {
+  text-align: left;
+  padding-left: 1rem;
+  font-size: 18px;
+}
+
+.arrow-button:hover {
+  background-color: black;
+}
+
+.arrow-button:focus {
+  background-color: black;
+}

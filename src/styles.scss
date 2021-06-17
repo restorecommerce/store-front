@@ -1,0 +1,24 @@
+@use "~normalize.css" as normalize;
+
+@use "~@vcl/vcl/bw-theme" with (
+  $app-viewport-bg-color: #ffffff
+);
+
+@use "~@vcl/vcl";
+
+@use "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@use "~@fortawesome/fontawesome-free/scss/brands.scss" with (
+  $fa-font-path: "~@fortawesome/fontawesome-free/webfonts"
+);
+@use "~@fortawesome/fontawesome-free/scss/solid.scss" with (
+  $fa-font-path: "~@fortawesome/fontawesome-free/webfonts"
+);
+
+@use "~@mdi/font/scss/materialdesignicons.scss" with (
+  $mdi-font-path: "~@mdi/font/fonts"
+);
+
+@import "~@angular/cdk/overlay-prebuilt.css";
+@import "~@angular/cdk/a11y-prebuilt.css";
+
+@import "global.scss";

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="flex-5">
+    <vcl-form-control-group>
+      <vcl-label>{{ "ProductSizePicker.Size" | translate }}</vcl-label>
+      <vcl-select>
+        <vcl-select-list [(value)]="size">
+          <ng-container *ngFor="let el of sizeArray">
+            <vcl-select-list-item [value]="el">
+              {{this.el}}
+            </vcl-select-list-item>
+          </ng-container>
+        </vcl-select-list>
+      </vcl-select>
+    </vcl-form-control-group>
+  </div>
+  <div class="flex-7 align-right">
+    <div class="column">
+      <div class="product-size-picker-column">
+        <b>{{ "ProductSizePicker.WhatIsMySize" | translate }}</b>
+        <vcl-icogram class="">
+          <vcl-icon vclPrepend icon="fas:ruler-combined"></vcl-icon>
+        </vcl-icogram>
+      </div>
+      <div class="product-size-picker-column">
+        <b>{{ "ProductSizePicker.SizeChart" | translate }}</b>
+        <vcl-icogram class="">
+          <vcl-icon vclPrepend icon="fas:ruler-horizontal"></vcl-icon>
+        </vcl-icogram>
+      </div>
+    </div>
+  </div>
+</div>
+

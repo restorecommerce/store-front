@@ -1,0 +1,14 @@
+<h1 class="product-description-header">{{ "ProductDescription.Title" | translate }}</h1>
+<div class="product-description-container">
+  <div class="row">
+    <div class="flex-6 product-description-column">
+      <h3>{{ "ProductDescription.SubTitle" | translate }}</h3>
+      <p>
+        {{ "ProductDescription.Description" | translate }}
+      </p>
+    </div>
+    <div class="flex-6 product-description-column">
+      <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src">
+    </div>
+  </div>
+</div>

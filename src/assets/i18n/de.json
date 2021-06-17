@@ -1,0 +1,182 @@
+{
+  "ClickAndCollect": "Click And Collect",
+  "FreeDelivery": "Kostenloser Standardversand",
+  "FreeExtendedReturns": "Kostenloses verlängertes Rückgaberecht",
+  "FreeReturns": "Kostenlose Rücksendung",
+  "Men": "HERREN",
+  "Price": "Preis",
+  "Search": "Suchen",
+  "Women": "DAMEN",
+  "New": "NEU",
+  "NewHits": "NEUHEITEN",
+  "Dress": "KLEIDUNG",
+  "Shoes": "SCHUHE",
+  "Accessories": "ACCESSOIRES",
+  "Suit": "DER ANZUG",
+  "Specials": "SPECIALS",
+
+  "Navigation": {
+    "NewIn": "NEUHEITEN",
+    "Clothing": "KLEIDUNG",
+    "Shoes": "SCHUHE",
+    "Accessories": "ACCESSOIRES",
+    "Suit": "DER ANZUG",
+    "Specials": "SPECIALS",
+    "Children": "KINDER",
+    "Gifts": "GESCHENKE",
+    "Inspiration": "INSPIRATIONEN"
+  },
+  "NewsLetter": {
+    "Title": "STORE Newsletter",
+    "Description": "Seien Sie mit dem STORE Newsletter immer up-to-date - neue Produkte, exklusive Specials, Lifestyle und Fashion Trends.",
+    "Email": "Email"
+  },
+  "ProductDescription": {
+    "Title": "PRODUKTBESCHREIBUNG",
+    "SubTitle": "BESCREIBUNG",
+    "Description": "Sportive STORE Sneakers mit Logo-Prägung an der Lasche. Die Herren-Schnürer werden in Italien aus edlem Leder gefertigt und sind mit perforierten Einsätzen versehen. An der Seite befindet sich das STORE Monogramm der neuen Saison. Ein Innenfutter aus cognacfarbenem Leder und die Laufsohle aus Gummi sorgen für dauerhaften Komfort."
+  },
+  "ProductInterest": {
+    "Views": "100+ Personen haben dies angesehen",
+    "Clicks": "6 Personen haben dies vor Kurzem in den Warenkorb gelegt"
+  },
+  "ProductNavigation": {
+    "Back": "Zurück",
+    "Home": "Startseite",
+    "Men": "Herren",
+    "Shoes": "Schuhe",
+    "Sneakers": "Sneakers",
+    "Product": "In Italien gefertigte Sneakers aus Leder mit Monogramm-Details",
+    "Cart": " IN DEN WARENKORB",
+    "ShopOnline": "Online shoppen, zu Hause entscheiden",
+    "IfStyleDoesntSuit": "Wenn Ihnen ein Style nicht passt, können Sie ihn ganz einfach und kostenlos wieder zurückschicken",
+    "Share": "Share"
+
+  },
+  "ProductInformation": {
+    "Description": "Style Mirage_Tenn_lthbpf - 50433323",
+    "Currency": "€",
+    "Color": "Farbe",
+    "Material": "Materialangabe",
+    "MaterialInfo": "Obermaterial: 100% Rindsleder, 100% Ziegenleder, 100% Kalbsleder, 100% Rindsleder, Sohle: 100% Gummi",
+    "ProductDelivery": "Lieferung in 2-3 Werktagen",
+    "Cart": "IN DEN WARENKORB",
+    "ShopOnline": "Online shoppen, zu Hause entscheiden",
+    "IfStyleDoesntSuit": "Wenn Ihnen ein Style nicht passt, können Sie ihn ganz einfach und kostenlos wieder zurückschicken",
+    "Bestseller": "BESTSELLER"
+
+  },
+  "ProductRecommend": {
+    "Title": "STORE EMPFIEHLT",
+    "YouMightAlso": "KÖNNTE IHNEN AUCH GEFALLEN",
+    "LastSeen": "ZULETZT ANGESEHEN"
+  },
+  "ProductSizePicker": {
+    "Size": "Size",
+    "WhatIsMySize": "What is my size",
+    "SizeChart": "Size Chart"
+  },
+  "TopBar" : {
+    "PanelTitle": "CHOOSE YOUR DELIVERY LOCATION",
+    "SecondaryHeading": "ORT",
+    "DeliveryLocationDe": "Germany / Deutschland",
+    "DeliveryLocationUk": "United Kingdom",
+    "Language": "Language",
+    "LanguageDe": "Deutsch",
+    "LanguageEn": "English",
+    "Currency": "WÄHRUNG",
+    "CurrencyEur": "€ – Euro",
+    "CurrencyPound": " £ – Pound",
+    "Apply": "ANWEDEN",
+    "OrderOverview": "BESTELLÜBERSICHT",
+    "ToCheckout": "ZUR KASSE",
+    "UnitPrice": "Einzelpreis",
+    "YourShoppingCartCurrently": "Ihr Warenkorb enthält aktuell keine Artikel.",
+    "YourOrders": "IHRE BESTELLUNG",
+    "TotalAmountOf": "Gesamtsumme der Ware",
+    "DHLPackageShipping": "DHL Paket Versand",
+    "DeliveryInApprox":"Lieferung in ca. 2-3 Werktagen. Weitere Informationen auf unserer Serviceseite",
+    "incl": "inkl. MwSt.",
+    "TotalPrice": "Gesamtpreis"
+
+
+  },
+
+  "ClickAndCollect": {
+    "OurService": "UNSER SHOPPING SERVICE",
+    "ClickAndCollect": "CLICK AND COLLECT",
+    "ShopOnline": "Shoppen Sie Ihre Artikel online und holen Sie sie in einem der teilnehmenden Stores ab. Vor Ort berät unser Team Sie gerne.",
+    "YouDontHaveToBeAtHome": "Sie müssen nicht zu einer bestimmten Lieferzeit zu Hause sein, sondern können Ihren Einkauf in einem STORE Store in Ihrer Nähe abholen. Außerdem können Sie einen Termin mit unserem Team vereinbaren, um sich persönlich beraten zu lassen – ob es um Pflegetipps für Ihren Artikel, eine Stilberatung oder andere Anliegen geht.",
+    "HowItWorks": "Und so funktioniert es:",
+    "OnlineShopping": "Online shoppen",
+    "DiscoverLatest": "Entdecken Sie unter STORE website die neuesten Kollektionen und legen Sie Ihre Wunschartikel in den Warenkorb.",
+    "SelectStoreStore": "STORE Store auswählen",
+    "SelectTab": "Wählen Sie unter der Kategorie Lieferadressen den Reiter \"Click & Collect\" aus und wählen Sie den Store aus, in dem Sie Ihr Paket abholen möchten.",
+    "WhenYouPickUp": "Bei der Abholung Ihrer Produkte im Store haben Sie außerdem die Möglichkeit, einen Anprobetermin zu vereinbaren.",
+    "CollectOrder": "Abholung Ihrer Bestellung",
+    "AsSoonAsOrderArrives": "Sobald Ihre Bestellung in Ihrer Wunschfiliale eingetroffen ist, haben Sie 14 Tage Zeit, um diese abzuholen. Zur Abholung benötigen Sie lediglich einen gültigen Personalausweis oder Ihre Versandbestätigung. Natürlich können Sie auch eine andere Person mit der Abholung beauftragen, hierfür muss die von Ihnen beauftragte Person eine Vollmacht mitbringen.",
+    "OrdersAreDelivered": "Bestellungen werden innerhalb von zwei bis drei Werktagen an den Store Ihrer Wahl geliefert. Hinweis: Bitte bringen Sie bei der Abholung Ihren Ausweis oder die E-Mail mit der Versandbestätigung mit, damit die Mitarbeiter des Stores Sie identifizieren können."
+  },
+  "Delivery": {
+  "DeliveryOptions" : "Lieferoptionen und –zeiten",
+  "DHLIsOurShipping" : "DHL is our shipping partner for deliveries within Germany.",
+  "AllOrdersAreSent": "Alle Bestellungen werden aus unserem Paketzentrum in Baden-Württemberg versendet. Bestellaufträge werden von Montag bis Freitag bearbeitet, Wochenenden und Feiertage ausgenommen.",
+  "TheTableBelow": "Die untenstehende Tabelle bietet Ihnen einen groben Richtwert über den Liefertermin Ihrer Sendung. Wurde beim Bezahlvorgang eine andere Zeitspanne genannt, dann richten Sie sich bitte nach dieser.",
+  "IfDeliveryDosesNotMeet": "Sollte Sie der Zusteller nicht persönlich antreffen, wird das Paket entweder bei einem Nachbarn oder in einer Postfiliale in Ihrer Nähe für Sie hinterlegt. Sie können das Paket dann innerhalb der nächsten 7 Werktage abholen, bevor es an uns zurückgesendet wird.",
+  "YouCanAlsoEnter": "Sie können als Lieferadresse auch eine DHL Packstation Ihrer Wahl angeben. Bitte nutzen Sie dazu die Lieferoption „Paketshop“ während des Checkouts. Bei einer manuellen Eingabe über das reguläre Adressfeld beachten Sie bitte die Anleitung zur Adresseingabe.",
+  "Note": "Hinweis: Düfte, Smartwatches und personalisierte Produkte können nicht per Expresslieferung versendet werden. Das gilt auch für Special Offers wie Aktionen mit kostenlosem Expressversand.",
+  "IfSpecialConditions": "Falls für die Versandkosten Ihrer Bestellung Sonderkonditionen gelten, werden diese während des Bestellvorgangs bei der Auswahl der Versandart angezeigt."
+},
+  "MyProfile": {
+    "Title": "My STORE",
+    "Register": "Anmelden",
+    "PleaseEnterYour": "Bitte geben Sie Ihre E-Mail Adresse und Ihr Passwort ein.",
+    "Email": "E-mail",
+    "Password": "Passwort",
+    "SaveEmailAdress": "E-Mail Adresse speichern",
+    "CreateAnAccount": "Account erstellen",
+    "CreateAccounntAndEnjoy": "Erstellen Sie einen Account und genießen Sie folgende Vorteile:",
+    "FasterPayment": "Schnellerer Ablauf beim Bezahlvorgang",
+    "ViewOrderStatus": "Bestellstatus ansehen",
+    "GetOrderHistory": "Bestellverlauf abrufen",
+    "SaveSeveralDelivery": "Mehrere Lieferadressen abspeichern",
+    "AllTheAdvantages": "Alle Vorteile von STORE EXPERIENCE",
+    "Continue": "WEITER"
+  },
+  "Footer": {
+    "StoreStories": "STORE Stories",
+    "StoreStoriesDescription": "Fashion Shows, Experten-Guides und vieles mehr: Lassen Sie sich von STORE inspirieren.",
+    "StoreStories": "STORE Stories",
+    "StoreStoriesDescription": "Aktuelle News un Style-Inspirationen aus der Welt von STORE entdecken.",
+    "Contacts": "Kontakt",
+    "ChatAndConsultation": "Live Chat & Stilberatung",
+    "CustomerService": "Kundenservice",
+    "BusinessHours": "Mo - Sa 8:00 - 19:30 Uhr",
+    "MESZ": "MESZ",
+    "Telephone": "+49 (0) 7123 1783 981",
+    "WhatsApp": "WhatsApp",
+    "WhatsAppContactHours": "Mo - Fr 8:00 - 19:30 Uhr",
+    "WhatsAppContactTelephone": "+49 151 4026 1809",
+    "EmailUs": "Schreiben Sie uns eine E-Mail",
+    "StoreLocator": "Store Locator",
+    "Services": "Services",
+    "CoronaInfo": "Corona Information",
+    "FAQChristmas": "FAQ Weihnachten",
+    "FreeReturns": "Kostenlose Rücksendung",
+    "FreeStandardShipping": "Kostenloser Standardversand",
+    "SecurePayment": "Secure payment with SSL-Krypt",
+    "PrintReturnLabel": "Retourenlabel drucken",
+    "DHLExpressShipping": "DHL Express Versand 9,95 €",
+    "ShipmentTracking": "Sendungsverfolgung",
+    "StoreExperience": "STORE EXPERIENCE",
+    "TailorMadeShopping": "Tailor-Made Shopping",
+    "Enterprise": "Das Unternehmen",
+    "Career": "Karriere",
+    "InvestorRelations": "Investor Relations",
+    "'Sustainability'": "Nachhaltigkeit",
+    "Press": "Presse",
+    "DiscoverMore": "Mehr entdecken",
+    "HelpAndContacts": "Hilfe & Kontakt",
+    "CompanyWebsite": "Unternehmenswebseite"
+  }
+}

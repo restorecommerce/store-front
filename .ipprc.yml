@@ -1,0 +1,41 @@
+# These will be the folders that will get processed,
+# relative to the current working directory
+input: src/assets/products
+output: src/assets/products_responsive
+
+# Remove this part to disable manifest generation
+manifest:
+  source:
+    p: path
+    x: "hash:8"
+  format:
+    w: width
+    h: height
+    f: format
+    p: path
+    x: "hash:8"
+
+# Here is where you customise the pipeline
+# This is what the default pipeline looks like
+pipeline:
+  - pipe: resize
+    options:
+      breakpoints:
+        - name: sm
+          resizeOptions:
+            width: 190
+        - name: md
+          resizeOptions:
+            width: 260
+        - name: lg
+          resizeOptions:
+            width: 330
+        - name: xl
+          resizeOptions:
+            width: 400
+    save: "[name]-[breakpoint][ext]"
+    then:
+      - pipe: convert
+        options:
+          format: webp
+        save: "[name]-[breakpoint][ext]"
