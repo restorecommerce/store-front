@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import * as blackSneakers from 'src/app/data/blackSneakers.json';
 import * as brownSneakers from 'src/app/data/brownSneakers.json';
 import * as whiteSneakers from 'src/app/data/whiteSneakers.json';
@@ -8,6 +8,7 @@ import { MockSerializer } from '@restorecommerce/cart/lib/model/impl/MockSeriali
 import { Courier } from '@restorecommerce/cart/lib/model/impl/Courier';
 import { data, Decimal, Money } from '@restorecommerce/cart/lib/model/primitives';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
+import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class CartService {
   private loading: boolean = false;
   public cart: Cart;
 
-  constructor() {
+  constructor(@Inject(DOCUMENT) private document: Document) {
     this.initializeCart();
     this.cart.setDestinationCountry('DE');
   }
@@ -117,7 +118,7 @@ export class CartService {
   }
 
   public getScreenSize(): number {
-    return document.body.clientWidth;
+    return this.document.body.clientWidth;
   }
 
   public selectColor(color: string): void {

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-product-interest',
@@ -6,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-interest.component.scss']
 })
 export class ProductInterestComponent implements OnInit {
-  public switch: boolean = false;
+  public switch = false;
 
-  constructor() { }
+  constructor(@Inject(PLATFORM_ID) private readonly platformId: any) {
+  }
 
   ngOnInit(): void {
-    setInterval(()=> { this.changing() }, 5000); 
+    if (isPlatformBrowser(this.platformId)) {
+      setInterval(() => this.changing(), 5000);
+    }
   }
 
   private changing(): void {

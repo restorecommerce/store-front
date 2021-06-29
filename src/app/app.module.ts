@@ -40,8 +40,8 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ShoesComponent } from './pages/shoes/shoes.component';
 import { LAZYLOAD_IMAGE_HOOKS, LazyLoadImageModule, ScrollHooks } from 'ng-lazyload-image';
 
-export  function  HttpLoaderFactory(http:  HttpClient) {
-  return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
+export  function  HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -74,16 +74,17 @@ export  function  HttpLoaderFactory(http:  HttpClient) {
     ShoesComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     LazyLoadImageModule,
     TranslateModule.forRoot({
+      defaultLanguage: 'en',
       loader: {
         provide:  TranslateLoader,
         useFactory:  HttpLoaderFactory,
-        deps: [HttpClient]
+        deps: [HttpClient],
       }
     }),
     FormsModule,
