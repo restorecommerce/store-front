@@ -1,14 +1,8 @@
-<h1 class="product-description-header">{{ "ProductDescription.Title" | translate }}</h1>
-<div class="product-description-container">
-  <div class="row">
-    <div class="flex-6 product-description-column">
-      <h3>{{ "ProductDescription.SubTitle" | translate }}</h3>
-      <p>
-        {{ "ProductDescription.Description" | translate }}
-      </p>
-    </div>
-    <div class="flex-6 product-description-column">
-      <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src">
-    </div>
-  </div>
+<button class="row justify-content-between details-button" (click)="show = !show">
+  <p>Details</p>
+  <vcl-icon class="icon mdi mdi-chevron-down"></vcl-icon></button>
+<div class="product-description-container" *ngIf="show">
+  <p>
+    {{ "ProductDescription.Description" | translate }}
+  </p>
 </div>

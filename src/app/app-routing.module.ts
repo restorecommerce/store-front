@@ -6,6 +6,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ReturnsComponent } from './pages/returns/returns.component';
 import { ShoesComponent } from './pages/shoes/shoes.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'shoes',
     component: ShoesComponent
+  },
+  {
+    path: 'checkout',
+    component: CheckoutComponent
   },
 ];
 

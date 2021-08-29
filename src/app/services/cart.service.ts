@@ -120,6 +120,10 @@ export class CartService {
     return document.body.clientWidth;
   }
 
+  public getScreenWidth(): number {
+    return window.screen.width;;
+  }
+
   public selectColor(color: string): void {
     switch (color) {
       case 'black': {

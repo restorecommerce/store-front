@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { VCLBadgeModule, VCLBusyIndicatorModule, VCLButtonModule, VCLCheckboxModule, VCLDrawerModule, VCLFontAwesomeModule, VCLGalleryModule,
   VCLIcogramModule, VCLIconModule, VCLInputModule, VCLLayerModule, VCLMaterialDesignModule, VCLNavigationModule, VCLNotifierModule,
-  VCLPanelModule, VCLPasswordInputModule, VCLSelectModule, VCLSelectListModule, VCLZoomBoxModule } from "@vcl/ng-vcl";
+  VCLPanelModule, VCLPasswordInputModule, VCLSelectModule, VCLSelectListModule, VCLZoomBoxModule, VCLFormControlGroupModule } from "@vcl/ng-vcl";
 import { TranslateModule, TranslateLoader, TranslateService } from  '@ngx-translate/core';
 import { TranslateHttpLoader } from  '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from  '@angular/common/http';
@@ -39,6 +39,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ShoesComponent } from './pages/shoes/shoes.component';
 import { LAZYLOAD_IMAGE_HOOKS, LazyLoadImageModule, ScrollHooks } from 'ng-lazyload-image';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { OrderOverviewComponent } from './pages/checkout/order-overview/order-overview.component';
+import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout-forms.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 export  function  HttpLoaderFactory(http:  HttpClient) {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -71,7 +75,10 @@ export  function  HttpLoaderFactory(http:  HttpClient) {
     FooterTopComponent,
     HeaderComponent,
     ProductsComponent,
-    ShoesComponent
+    ShoesComponent,
+    CheckoutComponent,
+    OrderOverviewComponent,
+    CheckoutFormsComponent
   ],
   imports: [
     BrowserModule,
@@ -107,7 +114,9 @@ export  function  HttpLoaderFactory(http:  HttpClient) {
     VCLPasswordInputModule,
     VCLSelectModule,
     VCLSelectListModule,
-    VCLZoomBoxModule
+    VCLZoomBoxModule,
+    VCLFormControlGroupModule,
+    IvyCarouselModule
   ],
   exports: [TranslateModule],
   providers: [

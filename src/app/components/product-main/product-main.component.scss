@@ -25,3 +25,9 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .app-product-gallery-container {
+    display: flex;
+    justify-content: center;
+  }
+}

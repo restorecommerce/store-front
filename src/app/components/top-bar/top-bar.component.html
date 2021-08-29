@@ -1,67 +1,59 @@
 <div class="top-bar-container">
-  <div class="row">
-    <div *ngIf="this.screenWidth() >= this.desktopWidth()" class="flex-1 vertical-center">
+  <div class="row justify-content-between align-items-center top-bar-nav">
+    <div class="vertical-center home-icon-container">
       <button type="button" class="button transparent" (click)="this.navigate('')">
         <div class="icogram">
-          <div class="icon mdi mdi-home-outline large-icon" aria-hidden="true" role="img"></div>
+          <div class="icon mdi mdi-home-outline large-icon nav-icon" aria-hidden="true" role="img"></div>
         </div>
       </button>
     </div>
-    <div *ngIf="this.screenWidth() < this.desktopWidth()" class="flex-1 vertical-center">
+    <div class="vertical-center hamburger-icon-container">
       <button type="button" class="button transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-menu large-icon" aria-hidden="true" role="img" (click)="menuLayer.open()"></div>
+          <div class="icon mdi mdi-menu large-icon hamburger-icon" aria-hidden="true" role="img" (click)="menuLayer.open()"></div>
         </div>
       </button>
     </div>
-    <div class="flex-2-xl flex-2-lg flex-2-md flex-4-sm flex-2 vertical-center">
+    <div class="vertical-center">
       <svg viewBox="0 0 88 32" id="store_logo" class="logo" >
         <title>store_logo</title>
         <path d="M2.09 31.78v-2.11h2.09v2.11h1.1v-4.87h-1.1v1.98H2.09v-1.98H.99v4.87h1.1zm12.78-4.87v2.65c0 .78 0 1.56-1.1 1.56s-1.1-.78-1.1-1.56v-2.65h-1.1V30c0 1.33.99 1.88 2.2 1.88s2.2-.66 2.2-1.88v-3.1h-1.1v.01zM25.65 30v1c-.22.11-.55.11-.99.11-.99 0-1.43-.67-1.43-1.78 0-1.1.44-1.76 1.32-1.76.66 0 .99.44.99.88h1.1c0-.99-.88-1.54-2.2-1.54-.99 0-2.42.55-2.42 2.54 0 2 1.32 2.55 2.53 2.55.99 0 1.65-.22 2.09-.33v-2.33h-2.09v.78h1.1V30zm50.32-1.66c0-.99-.99-1.54-1.88-1.54-.88 0-1.97.55-1.97 1.54 0 .66.55 1.1 1.21 1.32.22.11.55.22.77.22.67.23.89.34.89.78 0 .56-.55.67-.89.67-.77 0-1.1-.44-1.1-1h-1.1c0 1.11.77 1.66 2.19 1.66 1.11 0 1.99-.55 1.99-1.55 0-.78-.55-1.22-1.32-1.44-.22-.11-.56-.11-.78-.22-.55-.22-.88-.33-.88-.66s.22-.66.88-.66c.56 0 .89.33.89.88h1.1zm10.69 0c0-.99-1-1.54-1.99-1.54-.88 0-1.97.55-1.97 1.54 0 .66.55 1.1 1.21 1.32.22.11.55.22.77.22.66.23.88.34.88.78 0 .56-.55.67-.88.67-.77 0-1.1-.44-1.1-1h-1.1c0 1.11.77 1.66 2.19 1.66 1.1 0 1.99-.55 1.99-1.55 0-.78-.56-1.22-1.33-1.44-.22-.11-.55-.11-.77-.22-.55-.22-.88-.33-.88-.66s.22-.66.88-.66c.55 0 .88.33.88.88h1.22zM35.35 32c1.65 0 2.42-1.1 2.42-2.66 0-1.43-.78-2.65-2.42-2.65-1.66 0-2.43 1.11-2.43 2.65-.11 1.55.65 2.66 2.43 2.66zm0-4.43c1.1 0 1.32.99 1.32 1.87 0 .89-.22 1.89-1.32 1.89s-1.32-1-1.32-1.89c-.01-.88.21-1.87 1.32-1.87zm17.06 4.32c.99 0 1.99-.44 1.99-1.33 0-.78-.56-1.22-1.22-1.22.44 0 .99-.44.99-1.1 0-.88-.66-1.32-1.75-1.32H50.2v4.98l2.21-.01zm-1.1-.77v-1.45h.99c.44 0 .88.11.88.67s-.44.78-.88.78h-.99zm0-2.23v-1.32h.99c.44 0 .66.33.66.66s-.33.66-.77.66h-.88zM63.2 32c1.76 0 2.52-1.1 2.52-2.66 0-1.54-.77-2.65-2.52-2.65-1.77 0-2.54 1.11-2.54 2.65 0 1.55.77 2.66 2.54 2.66zm0-4.43c1.1 0 1.32.99 1.32 1.87 0 .89-.22 1.89-1.32 1.89-1.11 0-1.33-1-1.33-1.89 0-.99.22-1.87 1.33-1.87zm4.52-12.07c.22 2.54-.88 7.19-8.15 7.53-3.2.11-7.27-.89-8.81-1.56v-6.08h.77c.22.77 1.65 6.3 6.94 6.64 3.07.11 5.39-1.11 5.5-3.66.11-2.87-3.2-3.88-6.17-5.1-3.29-1.32-6.6-2.65-7.04-6.2-.56-4.21 3.4-6.98 7.82-6.75 2.41.12 4.95.68 6.82 1.45v5.09h-.77c-.44-2.77-2.19-5.43-5.94-5.65-2.21-.11-4.29.67-4.29 3.1 0 2.44 4.07 3.43 7.03 4.54 2.98 1.11 5.96 2.67 6.29 6.65zm20.25 0c.22 2.54-.88 7.19-8.15 7.53-3.2.11-7.27-.89-8.81-1.56v-6.08h.77c.22.77 1.64 6.3 6.94 6.64 3.07.11 5.39-1.11 5.5-3.66.11-2.87-3.2-3.88-6.17-5.1-3.29-1.32-6.6-2.65-7.04-6.2-.55-4.21 3.41-6.98 7.82-6.75 2.41.11 4.95.66 6.82 1.44v5.09H85c-.44-2.77-2.19-5.43-5.94-5.65-2.21-.11-4.29.67-4.29 3.1 0 2.44 4.07 3.43 7.03 4.54 2.87 1.12 5.84 2.68 6.17 6.66zm-52.4 6.75c4.62-.11 6.28-5.87 6.28-10.63S39.87.88 35.57.88c-4.4 0-6.28 5.87-6.28 10.74-.01 4.76 1.65 10.74 6.28 10.63zm-11.9-10.62C23.67 5.2 28.95 0 35.46 0c6.49 0 11.78 5.2 11.78 11.63 0 6.42-5.29 11.63-11.78 11.63-6.51-.01-11.79-5.21-11.79-11.63zM1.98 20.81c0 .66-.77.99-1.43.99H0v.78h12c4.18 0 8.81-1.99 8.81-6.2.11-4.87-5.06-5.76-6.6-5.87 2.53-.44 5.51-2.43 5.29-5.42-.11-3.1-3.52-4.65-6.72-4.65H.11v.89h.66c.44 0 1.21.11 1.21.78v18.7zm5.07.88V11.08h2.97c3.3 0 5.07 2.32 5.29 4.98.22 3.21-2.21 5.64-5.29 5.64H7.05v-.01zm0-11.39V1.44h2.52c2.43 0 4.41 1.55 4.52 4.32.11 2.65-1.87 4.65-4.4 4.65H7.05v-.11z"></path>
       </svg>
     </div>
-    <div class="flex-5-xl flex-5-lg flex-4-md flex-1-sm flex-1 vertical-center">
-      <ng-container *ngIf="this.screenWidth() >= this.desktopWidth()">
+    <div class="vertical-center men-women-container">
+      <ng-container>
         <h4>{{ 'Men' | translate }}</h4>
         <h4>{{ 'Women' | translate }}</h4>
       </ng-container>
     </div>
-    <div class="flex-2-xl flex-2-lg flex-3-md flex-4-sm flex-6 align-right">
-      <vcl-form-control-group>
-      <vcl-label>{{ 'Search' |  translate }}</vcl-label>
-      <vcl-input-field>
-        <vcl-icon icon="mdi:magnify"></vcl-icon>
-        <input vclInput />
-        <button vcl-button square>
-          <vcl-icon icon="mdi:close"></vcl-icon>
-        </button>
-      </vcl-input-field>
-      </vcl-form-control-group>
+    <div class="align-right top-bar-search-container">
+      <vcl-icon icon="mdi:magnify" class="search-icon"></vcl-icon>
+      <input class="top-bar-search" placeholder="Search">
     </div>
-    <div class="flex-2 vertical-center">
-      <button  *ngIf="this.screenWidth() >= this.desktopWidth()" type="button" class="button transparent">
+    <div class="vertical-center">
+      <button type="button" class="button nav-icon-container transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-earth large-icon" aria-hidden="true" role="img" (click)="languageLayer.open()"></div>
+          <div class="icon mdi mdi-earth large-icon nav-icon" aria-hidden="true" role="img" (click)="languageLayer.open()"></div>
         </div>
       </button>
-      <button *ngIf="this.screenWidth() >= this.desktopWidth()" type="button" class="button transparent">
+      <button type="button" class="button nav-icon-container transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-message-outline large-icon" aria-hidden="true" role="img"></div>
+          <div class="icon mdi mdi-message-outline large-icon nav-icon" aria-hidden="true" role="img"></div>
         </div>
       </button>
-      <button *ngIf="this.screenWidth() >= this.desktopWidth()" type="button" class="button transparent">
+      <button type="button" class="button nav-icon-container transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-map-marker-outline large-icon" aria-hidden="true" role="img"></div>
+          <div class="icon mdi mdi-map-marker-outline large-icon nav-icon" aria-hidden="true" role="img"></div>
         </div>
       </button>
-      <button *ngIf="this.screenWidth() >= this.desktopWidth()" type="button" class="button transparent" (click)="this.navigate('/profile')">
+      <button type="button" class="button nav-icon-container transparent" (click)="this.navigate('/profile')">
         <div class="icogram">
-          <div class="icon mdi mdi-account-outline large-icon" aria-hidden="true" role="img"></div>
+          <div class="icon mdi mdi-account-outline large-icon nav-icon" aria-hidden="true" role="img"></div>
         </div>
       </button>
-      <button type="button" class="button transparent">
+      <button type="button" class="button nav-icon-container transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-cart-outline large-icon" aria-hidden="true" role="img" (click)="cartLayer.open()"></div>
+          <div class="icon mdi mdi-cart-outline large-icon nav-icon cart-icon" aria-hidden="true" role="img" (click)="cartLayer.open()"></div>
         </div>
       </button>
     </div>
@@ -109,7 +101,7 @@
         </vcl-select>
       </vcl-form-control-group>
       <div class="row">
-        <button vcl-button class="flex" (click)="this.setLanguage()">
+        <button vcl-button class="flex" (click)="this.setLanguage(); languageLayer.close()">
           <vcl-icogram>
             {{ "TopBar.Apply" | translate }}
           </vcl-icogram>
@@ -122,7 +114,7 @@
       <vcl-panel-title>{{ "TopBar.OrderOverview" | translate }}</vcl-panel-title>
       <ng-container *ngIf="this.getCartItemCount() > 0">
         <div class="row">
-          <button vcl-button class="flex">
+          <button vcl-button class="flex" (click)="cartLayer.close(); this.navigate('/checkout')">
             <vcl-icogram>
               {{ "TopBar.ToCheckout" | translate }}
             </vcl-icogram>
@@ -199,7 +191,7 @@
           </div>
         </div>
         <div class="row">
-          <button vcl-button class="flex">
+          <button vcl-button class="flex" (click)="cartLayer.close(); this.navigate('/checkout')">
             <vcl-icogram>
               {{ "TopBar.ToCheckout" | translate }}
             </vcl-icogram>
@@ -219,6 +211,11 @@
         <button type="button" class="button transparent">
           <div class="icogram">
             <div class="icon mdi mdi-account-outline large-icon" aria-hidden="true" role="img"></div>
+          </div>
+        </button>
+        <button type="button" class="button transparent">
+          <div class="icogram">
+            <div class="icon mdi mdi-earth large-icon" aria-hidden="true" role="img" (click)="menuLayer.close(); languageLayer.open()"></div>
           </div>
         </button>
       </vcl-panel-title>

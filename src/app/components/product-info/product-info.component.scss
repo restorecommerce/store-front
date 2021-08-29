@@ -1,11 +1,17 @@
 .favorite {
   color: salmon;
   background-color: white;
-  border: lightgray solid 0.5px;
+  border: lightgray solid 1px;
+  width: 30px;
+  height: 30px;
 }
 
-p {
-  margin-top: 1.3em;
+.favorite:hover {
+  color: red;
+}
+
+h2 {
+  font-size: 20px;
 }
 
 .color-button {
@@ -28,7 +34,17 @@ p {
 }
 
 .button-selected {
-  border: solid gray !important;
+  height: 2.2rem !important;
+  width: 2.2rem !important;
+  border: 3px solid grey;
+}
+
+.colored-buttons-container {
+  margin-bottom: 0;
+}
+
+.chosen-color-name {
+  margin-bottom: 0;
 }
 
 .badge {
@@ -36,8 +52,16 @@ p {
 }
 
 .add-to-cart-section {
-  text-align: center; 
-  padding-top: 1rem;
+  text-align: center;
+  margin-top: 7px;
+}
+
+.add-to-cart-button-container {
+  margin-bottom: 7px;
+}
+
+.add-to-cart-button {
+  width: 100%;
 }
 
 .delivery-time {
@@ -61,4 +85,8 @@ p {
   left: 50%; 
   z-index: 301;
   border-style: none;
+}
+
+.price-container-text {
+  margin-bottom: 0;
 }

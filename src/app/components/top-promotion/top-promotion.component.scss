@@ -1,9 +1,32 @@
 .top-promotion-container {
+  display: flex;
+  justify-content: center;
   background-color: black;
   text-align: center;
+  height: 35px;
 }
 
 h4 {
   color: white;
   text-decoration: underline;
+  font-size: 12px;
+}
+
+.seperator {
+  margin: 0 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .top-promotion-container{
+    flex-direction: column;
+    height: 50px;
+  }
+
+  .top-promotion-text h4{
+    margin: 0;
+  }
+
+  .seperator {
+    display: none;
+  }
 }

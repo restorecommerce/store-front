@@ -6,39 +6,39 @@
     <p>
       {{ "ProductInformation.Description" | translate }}
     </p>
-    <p>
-      <vcl-badge vclRounded type="primary" class="badge">{{ "ProductInformation.Bestseller" | translate }}</vcl-badge>
-    </p>
-  </div>
-  <div class="flex-1">
-    <button vcl-square-button class="circular favorite">
-      <vcl-icon icon="fas:heart"></vcl-icon>
-    </button>
+    <div class="row justify-content-between">
+      <p>
+        <vcl-badge vclRounded type="primary" class="badge">{{ "ProductInformation.Bestseller" | translate }}</vcl-badge>
+      </p>
+      <button vcl-square-button class="circular favorite">
+        <vcl-icon icon="fas:heart"></vcl-icon>
+      </button>
+    </div>
   </div>
 </div>
 <app-product-interest></app-product-interest>
 <hr>
 <div class="row">
   <div class="flex align-left">
-    <p>
+    <p class="price-container-text">
       {{ "Price" | translate }}
     </p>
   </div>
   <div class="flex align-right">
-    <p>
+    <p class="price-container-text">
       <b>250,00 €</b>
     </p>
   </div>
 </div>
 <hr>
-<div class="row">
-  <div class="flex align-left">
-    <p>
+<div class="row justify-content-between align-items-center">
+  <div>
+    <p class="chosen-color-name">
       <b>{{ "ProductInformation.Color" | translate }}</b> {{this.dataService.getColorName()}}
     </p>
   </div>
-  <div class="flex align-right">
-    <p>
+  <div>
+    <p class="colored-buttons-container row align-items-center">
       <button vcl-square-button  class="circular color-button black-button" (click)="this.dataService.selectColor('black')" [ngClass]="{'button-selected':this.dataService.getColor() === 'black'}"> </button>
       <button vcl-square-button  class="circular color-button brown-button" (click)="this.dataService.selectColor('brown')" [ngClass]="{'button-selected':this.dataService.getColor() === 'brown'}"></button>
       <button vcl-square-button  class="circular color-button white-button" (click)="this.dataService.selectColor('white')" [ngClass]="{'button-selected':this.dataService.getColor() === 'white'}"></button>
@@ -51,19 +51,22 @@
 </p>
 <hr>
 <app-product-size-picker></app-product-size-picker>
+<hr style="margin-bottom:0">
+<app-product-description></app-product-description>
+<hr style="margin-top:0">
 <div class="add-to-cart-section">
-  <span class="delivery-time">{{ "ProductInformation.ProductDelivery" | translate }}</span>
-  <div>
-    <button vcl-button (click)="this.addItemToCart()">
+  <div class="add-to-cart-button-container">
+    <button vcl-button class="add-to-cart-button" (click)="this.addItemToCart()">
       <vcl-icogram>
         <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
         {{ "ProductInformation.Cart" | translate }}
       </vcl-icogram>
     </button>
   </div>
+  <span class="delivery-time">{{ "ProductInformation.ProductDelivery" | translate }}</span>
 </div>
 <div class="add-to-cart-section">
-  <div class="tooltip arrow-pointer-top tooltip-arrow" role="tooltip">
+  <div class="tooltip" role="tooltip">
     <div class="tooltip-content tooltip-text">
       <p><b>{{ "ProductInformation.ShopOnline" | translate }}</b></p>
       <p>{{ "ProductInformation.IfStyleDoesntSuit" | translate }}</p>

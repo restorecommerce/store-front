@@ -1,0 +1,58 @@
+<!-- <div *ngFor="let item of this.getCartItems()">
+  <div class="flex-5 align-left">
+    <p>{{item.desc}}</p>
+    <p>{{item.price}} €</p>
+  </div>
+  <div class="flex-6">
+    <img class="responsive-image" [src]="item.imgSrc">
+  </div>
+</div> -->
+
+<div class="order-overview">
+  <div class="order-overview-header">
+    <h3>{{ 'TopBar.OrderOverview' | translate }}</h3>
+    <div class="order-overview-header-flex-container row justify-content-between">
+      <p class="price">150€</p>
+      <p>{{ 'Checkout.ChangeOrder' | translate }}</p>
+    </div>
+  </div>
+  <hr>
+  <div *ngFor="let item of this.getCartItems()" class="item-info-container row justify-content-between">
+    <div class="item-description-container flex-5">
+      <p class="item-description">{{item.desc}}</p>
+      <br>
+      <p class="item-color">Color</p>
+      <p class="item-size">Size</p>
+      <p class="availability">Auf Lager</p>
+      <br>
+      <p class="single-price-header">{{ 'Checkout.SinglePrice' | translate }}</p>
+      <p class="single-price">{{item.price}}</p>
+      <p class="amount">{{ 'Checkout.Amount' | translate }}: {{item.quantity}}</p>
+      <p class="overall-price-header">{{ 'Checkout.OverallPrice' | translate }}</p>
+      <p class="overall-price">{{item.price * item.quantity}}</p>
+    </div>
+    <div class="item-image-container flex-5">
+      <img class="responsive-image image" src="https://images.hugoboss.com/is/image/boss/hbeu50407672_001_220?$large$=&fit=crop,1&align=1,1&wid=1024&qlt=80&fmt=webp">
+    </div>
+  </div>
+  <div class="price-info">
+    <h3 class="price-info-header">{{ 'Checkout.YourOrder' | translate }}</h3>
+    <div class="row justify-content-between">
+      <p>{{ 'Checkout.Total' | translate }}</p>
+      <p class="total">{{this.getCartTotal()}} €</p>
+    </div>
+    <div class="row justify-content-between">
+      <p>{{ 'Checkout.Shipment' | translate }}</p>
+      <p class="shipment-info">{{this.getCartShipping()}} €</p>
+    </div>
+    <div class="row justify-content-between">
+      <p>{{ "TopBar.incl" | translate }}</p>
+      <p class="tax-info">{{this.getTaxes()}} €</p>
+    </div>
+    <hr>
+    <div class="row justify-content-between total-price">
+      <p>{{ 'Checkout.YourOrder' | translate }}</p>
+      <p class="total">{{this.getCartTotalGross()}} €</p>
+    </div>
+  </div>
+</div>

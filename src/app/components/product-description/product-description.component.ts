@@ -13,6 +13,7 @@ export class ProductDescriptionComponent implements OnInit {
   public zoomImage = false;
   public imageIndex = 0;
   public dataService: CartService;
+  public show: boolean = false;
 
   constructor(private service: CartService) {
     this.dataService = this.service;

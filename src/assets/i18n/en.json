@@ -7,7 +7,7 @@
   "Price": "Price",
   "Search": "Search",
   "Women": "WOMEN",
-  "New": "New",
+  "New": "NEW:",
   "NewHits": "NEW HITS",
   "Specials": "SPECIALS",
   "Navigation": {
@@ -45,13 +45,13 @@
     "Share": "Share"
   },
   "ProductInformation": {
-    "Description": "Style Mirage_Tenn_lthbpf - 50433323",
+    "Description": "with special inner lining",
     "Currency": "€",
-    "Color": "Color",
+    "Color": "Color:",
     "Material": "Material",
-    "MaterialInfo": "Upper material: 100% cow leather, 100% goatskin, 100% calf leather, 100% cow leather, sole: 100% rubber",
+    "MaterialInfo": "Upper material: 100% cow leather, sole: 100% rubber",
     "ProductDelivery": "Delivery in 2-3 working days",
-    "Cart": "Prouct in the cart",
+    "Cart": "Product in the cart",
     "ShopOnline": "Shop online, decide at home",
     "IfStyleDoesntSuit": "If a style does not suit you, you can easily send it back free of charge",
     "Bestseller": "BESTSELLER"
@@ -63,7 +63,7 @@
   },
   "ProductSizePicker": {
     "Size": "Size",
-    "WhatIsMySize": "What is my size",
+    "WhatIsMySize": "What is my size?",
     "SizeChart": "Size Chart"
   },
   "TopBar" : {
@@ -166,5 +166,38 @@
     "DiscoverMore": "Discover More",
     "HelpAndContacts": "Help and Contacts",
     "CompanyWebsite": "Company website"
+  },
+  "Checkout": {
+    "ChangeOrder": "Change Order",
+    "YourOrder": "Your Order",
+    "Total": "Total",
+    "Shipment": "Shipment",
+    "ForFree": "For free",
+    "SinglePrice": "Single Price",
+    "OverallPrice": "Overall Price",
+    "Amount": "Amount",
+    "PersonalData": "Personal Data",
+    "ShipmentOptions": "Shipment Options",
+    "HomeDelivery": "Home Delivery",
+    "ParcelShop": "ParcelShop",
+    "ClickCollect": "Click & Collect",
+    "Male": "male",
+    "Female": "female",
+    "Gender": "Gender",
+    "CreateAccount": "Create Account",
+    "DeliveryAdressIsSame": "Delivery address is same as billing address",
+    "ProceedToPayment": "Proceed to payment",
+    "FirstName": "First Name",
+    "LastName": "Last Name",
+    "StreetName": "Street Name",
+    "HouseNumber": "Nr.",
+    "AdditionalAdress": "Additional Adress",
+    "Postcode": "Postcode",
+    "City": "City",
+    "Country": "Country",
+    "PackingStation": "Packing station or ParcelShop",
+    "PostNumber": "Postnumber",
+    "ChooseAStore": "Choose a store",
+    "BillingAdress": "Billing adress"
   }
 }

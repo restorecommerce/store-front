@@ -1,6 +1,12 @@
 .top-bar-container {
   background-color: white;
   border-bottom: 1px black solid;
+  height: 45px;
+  padding: 0 1rem;
+}
+
+.top-bar-nav {
+  height: 100%;
 }
 
 .vertical-center {
@@ -18,8 +24,7 @@
 }
 
 .logo {
-  height: auto; 
-  width: 80px; 
+  height: 26px; 
   cursor: pointer;
 }
 
@@ -47,4 +52,72 @@ h4:hover {
   top: 0 !important;
   height: 100% !important;
   margin: 0 !important;
+}
+
+.top-bar-search-container {
+  position: relative;
+}
+
+.top-bar-search {
+  box-sizing: content-box;
+  border: none;
+  color: black;
+  background-color: rgb(245, 245, 245);
+  height: 30px;
+  border-radius: 15px;
+  text-indent: 10px;
+  font-size: 13px;
+  padding-right: 40px;
+}
+
+.top-bar-search::placeholder {
+  color:gray;
+}
+
+.top-bar-search:focus {
+  outline-width: 0;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  bottom: -2px;
+  font-size: 24px;
+}
+
+.hamburger-icon {
+  font-size: 25px;
+  display: none;
+}
+
+.cart-icon {
+  font-size: 25px;
+}
+
+.nav-icon {
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-icon-container {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: inline-block;
+  }
+
+  .nav-icon-container {
+    display: none;
+  }
+
+  .men-women-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
 }
