@@ -1,11 +1,4 @@
-<div class="carousel hide-this-element">
-  <carousel width=300 cellsToShow=1>
-    <div class="carousel-cell" *ngFor="let image of this.dataService.getCurrentImageArray()">
-      <img src="{{ image.src }}">
-    </div>
-  </carousel>
-</div>
-<div class="all-gallery-container">
+<div>
   <ng-container *ngIf="!this.dataService.getLoading()">
     <vcl-gallery [selectedImage]="imageIndex">
       <ng-container *ngFor="let image of this.dataService.getCurrentImageArray()">
