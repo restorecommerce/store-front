@@ -8,6 +8,13 @@
   padding: 1rem;
 }
 
+.product-gallery-logo {
+  display: block;
+  width: 80px; 
+  height: 80px;
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1400px) {
   .product-main-container {
     background-color: white;
@@ -25,9 +32,3 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .app-product-gallery-container {
-    display: flex;
-    justify-content: center;
-  }
-}

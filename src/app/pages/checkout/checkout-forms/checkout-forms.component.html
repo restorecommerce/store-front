@@ -1,128 +1,127 @@
 <h2 class="checkout-forms-header"><span class="header-num">01</span>{{ "Checkout.PersonalData" | translate }}</h2>
 <h3 class="checkout-forms-sub-header">{{ "Checkout.ShipmentOptions" | translate }}</h3>
 
-<div class="tab-buttons row justify-content-between">
-  <button class="tap-button" (click)="showTabOne=true; showTabTwo=false; showTabThree=false;">
-    {{ "Checkout.HomeDelivery" | translate }}
-  </button>
-  <button class="tap-button" (click)="showTabOne=false; showTabTwo=true; showTabThree=false;">
-    {{ "Checkout.ParcelShop" | translate }}
-  </button>
-  <button class="tap-button" (click)="showTabOne=false; showTabTwo=false; showTabThree=true;">
-    {{ "Checkout.ClickCollect" | translate }}
-  </button>
-</div>
-<div class="content-container">
-  <div [ngClass]="showTabOne ? 'show' : 'hide'" style="width: 100%;">
-    <form action="" class="form-tag col">
-      <select name="gender" id="gender" class="info-input gender">
-        <option value="">{{ "Checkout.Gender" | translate }}</option>
-        <option value="male">{{ "Checkout.Male" | translate }}</option>
-        <option value="female">{{ "Checkout.Female" | translate }}</option>
-      </select>
-      <div class="full-name">
-        <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
-        <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
-      </div>
-      <div class="street-info">
-        <input type="text" class="info-input street-name" placeholder='{{ "Checkout.StreetName" | translate }}'>
-        <input type="text" class="info-input house-number" placeholder='{{ "Checkout.HouseNumber" | translate }}'>
-      </div>
-      <input type="text" class="info-input extra-info" placeholder='{{ "Checkout.AdditionalAdress" | translate }}'>
-      <div class="city-postcode">
-        <input type="text" class="info-input postcode" placeholder='{{ "Checkout.Postcode" | translate }}'>
-        <input type="text" class="info-input city" placeholder='{{ "Checkout.City" | translate }}'>
-      </div>
-      <input type="text" class="info-input country" placeholder='{{ "Checkout.Country" | translate }}'>
-      <input type="text" class="info-input email" placeholder="Mail">
-      <div>
-        <input type="checkbox" id="CreateAccount" name="horns">
-        <label class="checkbox-label" for="CreateAccount">{{ "Checkout.CreateAccount" | translate }}</label>
-      </div>
-      <div>
-        <input type="checkbox" id="DeliveryAdressIsSame" name="horns">
-        <label class="checkbox-label" for="DeliveryAdressIsSame">{{ "Checkout.DeliveryAdressIsSame" | translate }}</label>
-      </div>
-    </form>
-    <button class="go-to-payment">{{ "Checkout.ProceedToPayment" | translate }}</button>
-  </div>
-  <div [ngClass]="showTabTwo ? 'show' : 'hide'" style="width: 100%;">
-    <h2>{{ "Checkout.BillingAdress" | translate }}</h2>
-    <form action="" class="form-tag col">
-      <select name="gender" id="gender" class="info-input gender">
-        <option value="">{{ "Checkout.Gender" | translate }}</option>
-        <option value="male">{{ "Checkout.Male" | translate }}</option>
-        <option value="female">{{ "Checkout.Female" | translate }}</option>
-      </select>
-      <div class="full-name">
-        <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
-        <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
-      </div>
-      <div class="street-info">
-        <input type="text" class="info-input street-name" placeholder='{{ "Checkout.StreetName" | translate }}'>
-        <input type="text" class="info-input house-number" placeholder='{{ "Checkout.HouseNumber" | translate }}'>
-      </div>
-      <input type="text" class="info-input extra-info" placeholder='{{ "Checkout.AdditionalAdress" | translate }}'>
-      <div class="city-postcode">
-        <input type="text" class="info-input postcode" placeholder='{{ "Checkout.Postcode" | translate }}'>
-        <input type="text" class="info-input city" placeholder='{{ "Checkout.City" | translate }}'>
-      </div>
-      <input type="text" class="info-input country" placeholder='{{ "Checkout.Country" | translate }}'>
-      <input type="text" class="info-input email" placeholder="Mail">
-      <div>
-        <input type="checkbox" id="CreateAccount" name="horns">
-        <label class="checkbox-label" for="CreateAccount">{{ "Checkout.CreateAccount" | translate }}</label>
-      </div>
-    </form>
-    <h2>{{ "Checkout.PackingStation" | translate }}</h2>
-    <form action="" class="form-tag col">
-      <select name="gender" id="gender" class="info-input gender">
-        <option value="">{{ "Checkout.Gender" | translate }}</option>
-        <option value="male">{{ "Checkout.Male" | translate }}</option>
-        <option value="female">{{ "Checkout.Female" | translate }}</option>
-      </select>
-      <div class="full-name">
-        <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
-        <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
-      </div>
-      <input type="text" class="info-input postnumber" placeholder='{{ "Checkout.PostNumber" | translate }}'>
-    </form>
-    <button class="go-to-payment">{{ "Checkout.ProceedToPayment" | translate }}</button>
-  </div>
-  <div [ngClass]="showTabThree ? 'show' : 'hide'" style="width: 100%;">
-    <h2 style="margin-bottom: 14px;">{{ "Checkout.ClickCollect" | translate }}</h2>
-      <button class="find-store align-center">{{ "Checkout.ChooseAStore" | translate }}</button>
-    <h2>{{ "Checkout.BillingAdress" | translate }}</h2>
-    <form action="" class="form-tag col">
-      <select name="gender" id="gender" class="info-input gender">
-        <option value="">{{ "Checkout.Gender" | translate }}</option>
-        <option value="male">{{ "Checkout.Male" | translate }}</option>
-        <option value="female">{{ "Checkout.Female" | translate }}</option>
-      </select>
-      <div class="full-name">
-        <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
-        <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
-      </div>
-      <div class="street-info">
-        <input type="text" class="info-input street-name" placeholder='{{ "Checkout.StreetName" | translate }}'>
-        <input type="text" class="info-input house-number" placeholder='{{ "Checkout.HouseNumber" | translate }}'>
-      </div>
-      <input type="text" class="info-input extra-info" placeholder='{{ "Checkout.AdditionalAdress" | translate }}'>
-      <div class="city-postcode">
-        <input type="text" class="info-input postcode" placeholder='{{ "Checkout.Postcode" | translate }}'>
-        <input type="text" class="info-input city" placeholder='{{ "Checkout.City" | translate }}'>
-      </div>
-      <input type="text" class="info-input country" placeholder='{{ "Checkout.Country" | translate }}'>
-      <input type="text" class="info-input email" placeholder="Mail">
-      <div>
-        <input type="checkbox" id="CreateAccount" name="horns">
-        <label class="checkbox-label" for="CreateAccount">{{ "Checkout.CreateAccount" | translate }}</label>
-      </div>
-      <div>
-        <input type="checkbox" id="DeliveryAdressIsSame" name="horns">
-        <label class="checkbox-label" for="DeliveryAdressIsSame">{{ "Checkout.DeliveryAdressIsSame" | translate }}</label>
-      </div>
-    </form>
-    <button class="go-to-payment">{{ "Checkout.ProceedToPayment" | translate }}</button>
-  </div>
-</div>
+<vcl-tab-nav>
+  <vcl-tab>
+    <vcl-label>{{ "Checkout.HomeDelivery" | translate }}</vcl-label>
+    <div class="content-container">
+      <form action="" class="form-tag col">
+        <select name="gender" id="gender" class="info-input gender">
+          <option value="">{{ "Checkout.Gender" | translate }}</option>
+          <option value="male">{{ "Checkout.Male" | translate }}</option>
+          <option value="female">{{ "Checkout.Female" | translate }}</option>
+        </select>
+        <div class="full-name">
+          <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
+          <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
+        </div>
+        <div class="street-info">
+          <input type="text" class="info-input street-name" placeholder='{{ "Checkout.StreetName" | translate }}'>
+          <input type="text" class="info-input house-number" placeholder='{{ "Checkout.HouseNumber" | translate }}'>
+        </div>
+        <input type="text" class="info-input extra-info" placeholder='{{ "Checkout.AdditionalAdress" | translate }}'>
+        <div class="city-postcode">
+          <input type="text" class="info-input postcode" placeholder='{{ "Checkout.Postcode" | translate }}'>
+          <input type="text" class="info-input city" placeholder='{{ "Checkout.City" | translate }}'>
+        </div>
+        <input type="text" class="info-input country" placeholder='{{ "Checkout.Country" | translate }}'>
+        <input type="text" class="info-input email" placeholder="Mail">
+        <div>
+          <input type="checkbox" id="CreateAccount" name="horns">
+          <label class="checkbox-label" for="CreateAccount">{{ "Checkout.CreateAccount" | translate }}</label>
+        </div>
+        <div>
+          <input type="checkbox" id="DeliveryAdressIsSame" name="horns">
+          <label class="checkbox-label" for="DeliveryAdressIsSame">{{ "Checkout.DeliveryAdressIsSame" | translate }}</label>
+        </div>
+      </form>
+      <button class="go-to-payment">{{ "Checkout.ProceedToPayment" | translate }}</button>
+    </div>
+  </vcl-tab>
+  <vcl-tab>
+    <vcl-label>{{ "Checkout.ParcelShop" | translate }}</vcl-label>
+    <div class="content-container">
+      <h2>{{ "Checkout.BillingAdress" | translate }}</h2>
+      <form action="" class="form-tag col">
+        <select name="gender" id="gender" class="info-input gender">
+          <option value="">{{ "Checkout.Gender" | translate }}</option>
+          <option value="male">{{ "Checkout.Male" | translate }}</option>
+          <option value="female">{{ "Checkout.Female" | translate }}</option>
+        </select>
+        <div class="full-name">
+          <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
+          <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
+        </div>
+        <div class="street-info">
+          <input type="text" class="info-input street-name" placeholder='{{ "Checkout.StreetName" | translate }}'>
+          <input type="text" class="info-input house-number" placeholder='{{ "Checkout.HouseNumber" | translate }}'>
+        </div>
+        <input type="text" class="info-input extra-info" placeholder='{{ "Checkout.AdditionalAdress" | translate }}'>
+        <div class="city-postcode">
+          <input type="text" class="info-input postcode" placeholder='{{ "Checkout.Postcode" | translate }}'>
+          <input type="text" class="info-input city" placeholder='{{ "Checkout.City" | translate }}'>
+        </div>
+        <input type="text" class="info-input country" placeholder='{{ "Checkout.Country" | translate }}'>
+        <input type="text" class="info-input email" placeholder="Mail">
+        <div>
+          <input type="checkbox" id="CreateAccount" name="horns">
+          <label class="checkbox-label" for="CreateAccount">{{ "Checkout.CreateAccount" | translate }}</label>
+        </div>
+      </form>
+      <h2>{{ "Checkout.PackingStation" | translate }}</h2>
+      <form action="" class="form-tag col">
+        <select name="gender" id="gender" class="info-input gender">
+          <option value="">{{ "Checkout.Gender" | translate }}</option>
+          <option value="male">{{ "Checkout.Male" | translate }}</option>
+          <option value="female">{{ "Checkout.Female" | translate }}</option>
+        </select>
+        <div class="full-name">
+          <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
+          <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
+        </div>
+        <input type="text" class="info-input postnumber" placeholder='{{ "Checkout.PostNumber" | translate }}'>
+      </form>
+      <button class="go-to-payment">{{ "Checkout.ProceedToPayment" | translate }}</button>
+    </div>
+  </vcl-tab>
+  <vcl-tab>
+    <vcl-label>{{ "Checkout.ClickCollect" | translate }}</vcl-label>
+    <div class="content-container">
+      <h2 style="margin-bottom: 14px;">{{ "Checkout.ClickCollect" | translate }}</h2>
+        <button class="find-store align-center">{{ "Checkout.ChooseAStore" | translate }}</button>
+      <h2>{{ "Checkout.BillingAdress" | translate }}</h2>
+      <form action="" class="form-tag col">
+        <select name="gender" id="gender" class="info-input gender">
+          <option value="">{{ "Checkout.Gender" | translate }}</option>
+          <option value="male">{{ "Checkout.Male" | translate }}</option>
+          <option value="female">{{ "Checkout.Female" | translate }}</option>
+        </select>
+        <div class="full-name">
+          <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
+          <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
+        </div>
+        <div class="street-info">
+          <input type="text" class="info-input street-name" placeholder='{{ "Checkout.StreetName" | translate }}'>
+          <input type="text" class="info-input house-number" placeholder='{{ "Checkout.HouseNumber" | translate }}'>
+        </div>
+        <input type="text" class="info-input extra-info" placeholder='{{ "Checkout.AdditionalAdress" | translate }}'>
+        <div class="city-postcode">
+          <input type="text" class="info-input postcode" placeholder='{{ "Checkout.Postcode" | translate }}'>
+          <input type="text" class="info-input city" placeholder='{{ "Checkout.City" | translate }}'>
+        </div>
+        <input type="text" class="info-input country" placeholder='{{ "Checkout.Country" | translate }}'>
+        <input type="text" class="info-input email" placeholder="Mail">
+        <div>
+          <input type="checkbox" id="CreateAccount" name="horns">
+          <label class="checkbox-label" for="CreateAccount">{{ "Checkout.CreateAccount" | translate }}</label>
+        </div>
+        <div>
+          <input type="checkbox" id="DeliveryAdressIsSame" name="horns">
+          <label class="checkbox-label" for="DeliveryAdressIsSame">{{ "Checkout.DeliveryAdressIsSame" | translate }}</label>
+        </div>
+      </form>
+      <button class="go-to-payment">{{ "Checkout.ProceedToPayment" | translate }}</button>
+    </div>
+  </vcl-tab>
+</vcl-tab-nav>
+

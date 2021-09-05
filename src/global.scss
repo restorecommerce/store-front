@@ -3,3 +3,11 @@
   position: static;
   padding: 0 3rem;
 }
+
+[override] app-checkout-forms .tab-content {
+  padding: 0;
+}
+
+[override] app-checkout-forms .tab:hover {
+  background-color: white;
+}

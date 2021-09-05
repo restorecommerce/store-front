@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { VCLBadgeModule, VCLBusyIndicatorModule, VCLButtonModule, VCLCheckboxModule, VCLDrawerModule, VCLFontAwesomeModule, VCLGalleryModule,
   VCLIcogramModule, VCLIconModule, VCLInputModule, VCLLayerModule, VCLMaterialDesignModule, VCLNavigationModule, VCLNotifierModule,
-  VCLPanelModule, VCLPasswordInputModule, VCLSelectModule, VCLSelectListModule, VCLZoomBoxModule, VCLFormControlGroupModule } from "@vcl/ng-vcl";
+  VCLPanelModule, VCLPasswordInputModule, VCLSelectModule, VCLSelectListModule, VCLZoomBoxModule, VCLFormControlGroupModule, VCLTabNavModule } from "@vcl/ng-vcl";
 import { TranslateModule, TranslateLoader, TranslateService } from  '@ngx-translate/core';
 import { TranslateHttpLoader } from  '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from  '@angular/common/http';
@@ -114,6 +114,7 @@ export  function  HttpLoaderFactory(http:  HttpClient) {
     VCLPasswordInputModule,
     VCLSelectModule,
     VCLSelectListModule,
+    VCLTabNavModule,
     VCLZoomBoxModule,
     VCLFormControlGroupModule,
     IvyCarouselModule

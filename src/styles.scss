@@ -1,8 +1,6 @@
 @use "~normalize.css" as normalize;
 
-// @use "~@vcl/vcl/bw-theme" with (
-//   $app-viewport-bg-color: #ffffff !default
-// );
+@use "~@vcl/vcl/bw-theme";
 
 @use "~@vcl/vcl";
 

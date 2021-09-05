@@ -11,10 +11,6 @@ export class CheckoutFormsComponent implements OnInit {
 
   private translateService: TranslateService;
 
-  showTabOne:boolean = true;
-  showTabTwo:boolean = false;
-  showTabThree:boolean = false;
-
   constructor(private secondService: TranslateService) {
     this.translateService = this.secondService;
   }
