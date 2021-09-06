@@ -23,13 +23,31 @@ export class CheckoutFormsComponent implements OnInit {
   }
 
   formGroup = new FormGroup({
+    gender: new FormControl(null, Validators.required),
     firstName: new FormControl('', [
       Validators.required,
     ]),
     lastName: new FormControl('', [
       Validators.required,
     ]),
-    gender: new FormControl(null, Validators.required)
+    streetName: new FormControl('', [
+      Validators.required,
+    ]),
+    houseNumber: new FormControl('', [
+      Validators.required,
+    ]),
+    postcode: new FormControl('', [
+      Validators.required,
+    ]),
+    city: new FormControl('', [
+      Validators.required,
+    ]),
+    country: new FormControl('', [
+      Validators.required,
+    ]),
+    mail: new FormControl('', [
+      Validators.required,
+    ])
   });
 
 }

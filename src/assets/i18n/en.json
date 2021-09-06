@@ -200,6 +200,15 @@
     "PostNumber": "Postnumber",
     "ChooseAStore": "Choose a store",
     "BillingAdress": "Billing adress",
-    "Genderless": "genderless"
+    "Genderless": "genderless",
+    "SelectGender": "Gender is required",
+    "SelectName": "Name is required",
+    "SelectStreet": "Street is required",
+    "SelectNumber": "Number is required",
+    "SelectPostcode": "Postcode is required",
+    "SelectCity": "City is required",
+    "SelectCountry": "Country is required",
+    "SelectMail": "Mail is required"
+    
   }
 }

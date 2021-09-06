@@ -212,7 +212,15 @@
     "PostNumber": "Postnummer",
     "ChooseAStore": "Einen Store aussuchen",
     "BillingAdress": "Rechnungsadresse",
-    "Genderless": "geschlechtslos"
+    "Genderless": "geschlechtslos",
+    "SelectGender": "Geschlecht wird benötigt",
+    "SelectName": "Name wird benötigt",
+    "SelectStreet": "Straße wird benötigt",
+    "SelectNumber": "Nummer wird benötigt",
+    "SelectPostcode": "Postcode wird benötigt",
+    "SelectCity": "Stadt wird benötigt",
+    "SelectCountry": "Land wird benötigt",
+    "SelectMail": "Mail wird benötigt"
 
   }
 }
