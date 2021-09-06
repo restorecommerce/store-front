@@ -210,6 +210,8 @@
     "PackingStation": "Packstation oder Packetshop",
     "PostNumber": "Postnummer",
     "ChooseAStore": "Einen Store aussuchen",
-    "BillingAdress": "Rechnungsadresse"
+    "BillingAdress": "Rechnungsadresse",
+    "Genderless": "geschlechtslos"
+
   }
 }

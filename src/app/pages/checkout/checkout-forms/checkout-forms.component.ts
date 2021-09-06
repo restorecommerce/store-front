@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,7 +16,20 @@ export class CheckoutFormsComponent implements OnInit {
     this.translateService = this.secondService;
   }
 
+  @ViewChild('form')
+  form: NgForm;
+
   ngOnInit(): void {
   }
+
+  formGroup = new FormGroup({
+    firstName: new FormControl('', [
+      Validators.required,
+    ]),
+    lastName: new FormControl('', [
+      Validators.required,
+    ]),
+    gender: new FormControl(null, Validators.required)
+  });
 
 }

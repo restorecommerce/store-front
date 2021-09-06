@@ -5,37 +5,103 @@
   <vcl-tab>
     <vcl-label>{{ "Checkout.HomeDelivery" | translate }}</vcl-label>
     <div class="content-container">
-      <form action="" class="form-tag col">
-        <select name="gender" id="gender" class="info-input gender">
-          <option value="">{{ "Checkout.Gender" | translate }}</option>
-          <option value="male">{{ "Checkout.Male" | translate }}</option>
-          <option value="female">{{ "Checkout.Female" | translate }}</option>
-        </select>
-        <div class="full-name">
-          <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
-          <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
-        </div>
-        <div class="street-info">
-          <input type="text" class="info-input street-name" placeholder='{{ "Checkout.StreetName" | translate }}'>
-          <input type="text" class="info-input house-number" placeholder='{{ "Checkout.HouseNumber" | translate }}'>
-        </div>
-        <input type="text" class="info-input extra-info" placeholder='{{ "Checkout.AdditionalAdress" | translate }}'>
-        <div class="city-postcode">
-          <input type="text" class="info-input postcode" placeholder='{{ "Checkout.Postcode" | translate }}'>
-          <input type="text" class="info-input city" placeholder='{{ "Checkout.City" | translate }}'>
-        </div>
-        <input type="text" class="info-input country" placeholder='{{ "Checkout.Country" | translate }}'>
-        <input type="text" class="info-input email" placeholder="Mail">
-        <div>
-          <input type="checkbox" id="CreateAccount" name="horns">
-          <label class="checkbox-label" for="CreateAccount">{{ "Checkout.CreateAccount" | translate }}</label>
-        </div>
-        <div>
-          <input type="checkbox" id="DeliveryAdressIsSame" name="horns">
-          <label class="checkbox-label" for="DeliveryAdressIsSame">{{ "Checkout.DeliveryAdressIsSame" | translate }}</label>
-        </div>
+      <form>
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Gender" | translate }}</vcl-label>
+          <vcl-radio-group>
+            <vcl-radio-button value="m">
+              <vcl-icogram>{{ "Checkout.Male" | translate }}<vcl-icon vclAppend icon="fas:mars"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-radio-button value="f">
+              <vcl-icogram>{{ "Checkout.Female" | translate }}<vcl-icon vclAppend icon="fas:venus"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-radio-button value="g">
+              <vcl-icogram>{{ "Checkout.Genderless" | translate }}<vcl-icon vclAppend icon="fas:genderless"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-hint-error error="required">You must select a gender</vcl-hint-error>
+          </vcl-radio-group>      
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.FirstName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Name is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.LastName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Name is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.StreetName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Street is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.HouseNumber" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Number is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.AdditionalAdress" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Postcode" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+        
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.City" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Country" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>Mail</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-checkbox>
+            {{ "Checkout.CreateAccount" | translate }}
+          </vcl-checkbox>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-checkbox>
+            {{ "Checkout.DeliveryAdressIsSame" | translate }}
+          </vcl-checkbox>
+        </vcl-form-control-group>
+        <input type="submit" class="go-to-payment" value='{{ "Checkout.ProceedToPayment" | translate }}'>
       </form>
-      <button class="go-to-payment">{{ "Checkout.ProceedToPayment" | translate }}</button>
     </div>
   </vcl-tab>
   <vcl-tab>
@@ -43,45 +109,138 @@
     <div class="content-container">
       <h2>{{ "Checkout.BillingAdress" | translate }}</h2>
       <form action="" class="form-tag col">
-        <select name="gender" id="gender" class="info-input gender">
-          <option value="">{{ "Checkout.Gender" | translate }}</option>
-          <option value="male">{{ "Checkout.Male" | translate }}</option>
-          <option value="female">{{ "Checkout.Female" | translate }}</option>
-        </select>
-        <div class="full-name">
-          <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
-          <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
-        </div>
-        <div class="street-info">
-          <input type="text" class="info-input street-name" placeholder='{{ "Checkout.StreetName" | translate }}'>
-          <input type="text" class="info-input house-number" placeholder='{{ "Checkout.HouseNumber" | translate }}'>
-        </div>
-        <input type="text" class="info-input extra-info" placeholder='{{ "Checkout.AdditionalAdress" | translate }}'>
-        <div class="city-postcode">
-          <input type="text" class="info-input postcode" placeholder='{{ "Checkout.Postcode" | translate }}'>
-          <input type="text" class="info-input city" placeholder='{{ "Checkout.City" | translate }}'>
-        </div>
-        <input type="text" class="info-input country" placeholder='{{ "Checkout.Country" | translate }}'>
-        <input type="text" class="info-input email" placeholder="Mail">
-        <div>
-          <input type="checkbox" id="CreateAccount" name="horns">
-          <label class="checkbox-label" for="CreateAccount">{{ "Checkout.CreateAccount" | translate }}</label>
-        </div>
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Gender" | translate }}</vcl-label>
+          <vcl-radio-group>
+            <vcl-radio-button value="m">
+              <vcl-icogram>{{ "Checkout.Male" | translate }}<vcl-icon vclAppend icon="fas:mars"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-radio-button value="f">
+              <vcl-icogram>{{ "Checkout.Female" | translate }}<vcl-icon vclAppend icon="fas:venus"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-radio-button value="g">
+              <vcl-icogram>{{ "Checkout.Genderless" | translate }}<vcl-icon vclAppend icon="fas:genderless"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-hint-error error="required">You must select a gender</vcl-hint-error>
+          </vcl-radio-group>      
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.FirstName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Name is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.LastName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Name is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.StreetName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Street is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.HouseNumber" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Number is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.AdditionalAdress" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Postcode" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+        
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.City" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Country" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>Mail</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-checkbox>
+            {{ "Checkout.CreateAccount" | translate }}
+          </vcl-checkbox>
+        </vcl-form-control-group>
       </form>
       <h2>{{ "Checkout.PackingStation" | translate }}</h2>
       <form action="" class="form-tag col">
-        <select name="gender" id="gender" class="info-input gender">
-          <option value="">{{ "Checkout.Gender" | translate }}</option>
-          <option value="male">{{ "Checkout.Male" | translate }}</option>
-          <option value="female">{{ "Checkout.Female" | translate }}</option>
-        </select>
-        <div class="full-name">
-          <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
-          <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
-        </div>
-        <input type="text" class="info-input postnumber" placeholder='{{ "Checkout.PostNumber" | translate }}'>
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Gender" | translate }}</vcl-label>
+          <vcl-radio-group>
+            <vcl-radio-button value="m">
+              <vcl-icogram>{{ "Checkout.Male" | translate }}<vcl-icon vclAppend icon="fas:mars"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-radio-button value="f">
+              <vcl-icogram>{{ "Checkout.Female" | translate }}<vcl-icon vclAppend icon="fas:venus"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-radio-button value="g">
+              <vcl-icogram>{{ "Checkout.Genderless" | translate }}<vcl-icon vclAppend icon="fas:genderless"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-hint-error error="required">You must select a gender</vcl-hint-error>
+          </vcl-radio-group>      
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.FirstName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Name is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.LastName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Name is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.PostNumber" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Name is required</vcl-hint-error>
+        </vcl-form-control-group>
       </form>
-      <button class="go-to-payment">{{ "Checkout.ProceedToPayment" | translate }}</button>
+      <input type="submit" class="go-to-payment" value='{{ "Checkout.ProceedToPayment" | translate }}'>
     </div>
   </vcl-tab>
   <vcl-tab>
@@ -90,37 +249,103 @@
       <h2 style="margin-bottom: 14px;">{{ "Checkout.ClickCollect" | translate }}</h2>
         <button class="find-store align-center">{{ "Checkout.ChooseAStore" | translate }}</button>
       <h2>{{ "Checkout.BillingAdress" | translate }}</h2>
-      <form action="" class="form-tag col">
-        <select name="gender" id="gender" class="info-input gender">
-          <option value="">{{ "Checkout.Gender" | translate }}</option>
-          <option value="male">{{ "Checkout.Male" | translate }}</option>
-          <option value="female">{{ "Checkout.Female" | translate }}</option>
-        </select>
-        <div class="full-name">
-          <input type="text" class="info-input first-name" placeholder='{{ "Checkout.FirstName" | translate }}'>
-          <input type="text" class="info-input last-name" placeholder='{{ "Checkout.LastName" | translate }}'>
-        </div>
-        <div class="street-info">
-          <input type="text" class="info-input street-name" placeholder='{{ "Checkout.StreetName" | translate }}'>
-          <input type="text" class="info-input house-number" placeholder='{{ "Checkout.HouseNumber" | translate }}'>
-        </div>
-        <input type="text" class="info-input extra-info" placeholder='{{ "Checkout.AdditionalAdress" | translate }}'>
-        <div class="city-postcode">
-          <input type="text" class="info-input postcode" placeholder='{{ "Checkout.Postcode" | translate }}'>
-          <input type="text" class="info-input city" placeholder='{{ "Checkout.City" | translate }}'>
-        </div>
-        <input type="text" class="info-input country" placeholder='{{ "Checkout.Country" | translate }}'>
-        <input type="text" class="info-input email" placeholder="Mail">
-        <div>
-          <input type="checkbox" id="CreateAccount" name="horns">
-          <label class="checkbox-label" for="CreateAccount">{{ "Checkout.CreateAccount" | translate }}</label>
-        </div>
-        <div>
-          <input type="checkbox" id="DeliveryAdressIsSame" name="horns">
-          <label class="checkbox-label" for="DeliveryAdressIsSame">{{ "Checkout.DeliveryAdressIsSame" | translate }}</label>
-        </div>
+      <form>
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Gender" | translate }}</vcl-label>
+          <vcl-radio-group>
+            <vcl-radio-button value="m">
+              <vcl-icogram>{{ "Checkout.Male" | translate }}<vcl-icon vclAppend icon="fas:mars"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-radio-button value="f">
+              <vcl-icogram>{{ "Checkout.Female" | translate }}<vcl-icon vclAppend icon="fas:venus"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-radio-button value="g">
+              <vcl-icogram>{{ "Checkout.Genderless" | translate }}<vcl-icon vclAppend icon="fas:genderless"></vcl-icon></vcl-icogram>
+            </vcl-radio-button>
+            <vcl-hint-error error="required">You must select a gender</vcl-hint-error>
+          </vcl-radio-group>      
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.FirstName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Name is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.LastName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Name is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.StreetName" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Street is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.HouseNumber" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+          <vcl-hint-error error="required">Number is required</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.AdditionalAdress" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Postcode" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+        
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.City" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.Country" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>Mail</vcl-label>
+          <vcl-input-field>
+            <input vclInput>
+          </vcl-input-field>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-checkbox>
+            {{ "Checkout.CreateAccount" | translate }}
+          </vcl-checkbox>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-checkbox>
+            {{ "Checkout.DeliveryAdressIsSame" | translate }}
+          </vcl-checkbox>
+        </vcl-form-control-group>
+        <input type="submit" class="go-to-payment" value='{{ "Checkout.ProceedToPayment" | translate }}'>
       </form>
-      <button class="go-to-payment">{{ "Checkout.ProceedToPayment" | translate }}</button>
     </div>
   </vcl-tab>
 </vcl-tab-nav>
