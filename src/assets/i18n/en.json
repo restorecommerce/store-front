@@ -209,6 +209,5 @@
     "SelectCity": "City is required",
     "SelectCountry": "Country is required",
     "SelectMail": "Mail is required"
-    
   }
 }

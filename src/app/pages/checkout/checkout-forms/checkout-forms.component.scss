@@ -1,24 +1,3 @@
-.show {
-  display: inline-block;
-}
-
-.hide {
-  display: none;
-}
-
-.tap-button {
-  width: 33.2%;
-  height: 85px;
-  cursor: pointer;
-  background-color: lightgray;
-  border: none;
-}
-
-.tap-button:active, 
-.tap-button:focus {
-  background-color: #b3b3b3;
-}
-
 .checkout-forms-header {
   box-sizing: border-box;
   height: 65px;
@@ -46,73 +25,6 @@
   padding: 40px 60px;
 }
 
-.form-tag {
-  width: 100%;
-}
-
-.info-input {
-  height: 60px;
-  font-size: 17px;
-  background-color: #eee;
-  border: none;
-  border-bottom: 1px solid black;
-  margin-bottom: 30px;
-  padding: 0 20px;
-}
-
-.info-input:active,
-.info-input:focus {
-  border: 1px dotted grey;
-  outline: none;
-}
-
-.full-name {
-  display: flex;
-  justify-content: space-between;
-}
-
-.street-info {
-  display: flex;
-  justify-content: space-between;
-}
-
-.city-postcode {
-  display: flex;
-  justify-content: space-between;
-}
-
-.gender,
-.first-name,
-.last-name,
-.postnumber {
-  width: 43%;
-  box-sizing: border-box;
-}
-
-.street-name {
-  width: 66%;
-  box-sizing: border-box;
-}
-
-.house-number {
-  width: 20%;
-  box-sizing: border-box;
-}
-
-.postcode {
-  width: 20%;
-  box-sizing: border-box;
-}
-
-.city {
-  width: 66%;
-  box-sizing: border-box;
-}
-
-.checkbox-label {
-  margin-left: 12px;
-}
-
 .find-store {
   color: black;
   background-color: white;
@@ -133,25 +45,6 @@
 @media only screen and (max-width: 1024px) {
   .content-container {
     padding: 40px 30px;
-  }
-
-  .full-name {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .street-info {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .city-postcode {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .info-input {
-    width: 100%;
   }
 }
 

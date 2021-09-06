@@ -22,7 +22,7 @@ export class CheckoutFormsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  formGroup = new FormGroup({
+  DeliveryForm = new FormGroup({
     gender: new FormControl(null, Validators.required),
     firstName: new FormControl('', [
       Validators.required,
@@ -48,6 +48,19 @@ export class CheckoutFormsComponent implements OnInit {
     mail: new FormControl('', [
       Validators.required,
     ])
+  });
+
+  PackingForm = new FormGroup({
+    gender: new FormControl(null, Validators.required),
+    firstName: new FormControl('', [
+      Validators.required,
+    ]),
+    lastName: new FormControl('', [
+      Validators.required,
+    ]),
+    postNumber: new FormControl('', [
+      Validators.required,
+    ]),
   });
 
 }
