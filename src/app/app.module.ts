@@ -43,6 +43,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { OrderOverviewComponent } from './pages/checkout/order-overview/order-overview.component';
 import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout-forms.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
 
 export  function  HttpLoaderFactory(http:  HttpClient) {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -78,7 +79,8 @@ export  function  HttpLoaderFactory(http:  HttpClient) {
     ShoesComponent,
     CheckoutComponent,
     OrderOverviewComponent,
-    CheckoutFormsComponent
+    CheckoutFormsComponent,
+    CheckoutPaymentComponent
   ],
   imports: [
     BrowserModule,

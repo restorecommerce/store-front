@@ -220,6 +220,7 @@
     "SelectPostcode": "Postcode wird benötigt",
     "SelectCity": "Stadt wird benötigt",
     "SelectCountry": "Land wird benötigt",
-    "SelectMail": "Mail wird benötigt"
+    "SelectMail": "Mail wird benötigt",
+    "FillOutForm": "Bitte füllen Sie das Formular ganz aus."
   }
 }

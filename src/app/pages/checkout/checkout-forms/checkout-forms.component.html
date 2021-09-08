@@ -5,7 +5,7 @@
   <vcl-tab>
     <vcl-label>{{ "Checkout.HomeDelivery" | translate }}</vcl-label>
     <div class="content-container">
-      <form [formGroup]="DeliveryForm">
+      <form [formGroup]="homeDeliveryForm" (ngSubmit)="homeDeliverySubmit()">
         <vcl-form-control-group>
           <vcl-label>{{ "Checkout.Gender" | translate }}</vcl-label>
           <vcl-radio-group formControlName="gender">
@@ -112,7 +112,7 @@
     <vcl-label>{{ "Checkout.ParcelShop" | translate }}</vcl-label>
     <div class="content-container">
       <h2>{{ "Checkout.BillingAdress" | translate }}</h2>
-      <form [formGroup]="DeliveryForm">
+      <form [formGroup]="parcelShopForm" (ngSubmit)="parcelShopSubmit()">
         <vcl-form-control-group>
           <vcl-label>{{ "Checkout.Gender" | translate }}</vcl-label>
           <vcl-radio-group formControlName="gender">
@@ -211,13 +211,10 @@
             {{ "Checkout.DeliveryAdressIsSame" | translate }}
           </vcl-checkbox>
         </vcl-form-control-group>
-        <input type="submit" class="go-to-payment" value='{{ "Checkout.ProceedToPayment" | translate }}'>
-      </form>
-      <h2>{{ "Checkout.PackingStation" | translate }}</h2>
-      <form [formGroup]="PackingForm">
+        <h2>{{ "Checkout.PackingStation" | translate }}</h2>
         <vcl-form-control-group>
           <vcl-label>{{ "Checkout.Gender" | translate }}</vcl-label>
-          <vcl-radio-group formControlName="gender">
+          <vcl-radio-group formControlName="psGender">
             <vcl-radio-button value="m">
               <vcl-icogram>{{ "Checkout.Male" | translate }}<vcl-icon vclAppend icon="fas:mars"></vcl-icon></vcl-icogram>
             </vcl-radio-button>
@@ -234,7 +231,7 @@
         <vcl-form-control-group>
           <vcl-label>{{ "Checkout.FirstName" | translate }}</vcl-label>
           <vcl-input-field>
-            <input vclInput formControlName="firstName">
+            <input vclInput formControlName="psFirstName">
           </vcl-input-field>
           <vcl-hint-error error="required">{{ "Checkout.SelectName" | translate }}</vcl-hint-error>
         </vcl-form-control-group>
@@ -242,7 +239,7 @@
         <vcl-form-control-group>
           <vcl-label>{{ "Checkout.LastName" | translate }}</vcl-label>
           <vcl-input-field>
-            <input vclInput formControlName="lastName">
+            <input vclInput formControlName="psLastName">
           </vcl-input-field>
           <vcl-hint-error error="required">{{ "Checkout.SelectName" | translate }}</vcl-hint-error>
         </vcl-form-control-group>
@@ -250,7 +247,7 @@
         <vcl-form-control-group>
           <vcl-label>{{ "Checkout.PostNumber" | translate }}</vcl-label>
           <vcl-input-field>
-            <input vclInput formControlName="postNumber">
+            <input vclInput formControlName="psPostNumber">
           </vcl-input-field>
           <vcl-hint-error error="required">{{ "Checkout.SelectNumber" | translate }}</vcl-hint-error>
         </vcl-form-control-group>
@@ -264,7 +261,7 @@
       <h2 style="margin-bottom: 14px;">{{ "Checkout.ClickCollect" | translate }}</h2>
         <button class="find-store align-center">{{ "Checkout.ChooseAStore" | translate }}</button>
       <h2>{{ "Checkout.BillingAdress" | translate }}</h2>
-      <form [formGroup]="DeliveryForm">
+      <form [formGroup]="clickAndCollectForm" (ngSubmit)="clickAndCollectSubmit()">
         <vcl-form-control-group>
           <vcl-label>{{ "Checkout.Gender" | translate }}</vcl-label>
           <vcl-radio-group formControlName="gender">

@@ -208,6 +208,7 @@
     "SelectPostcode": "Postcode is required",
     "SelectCity": "City is required",
     "SelectCountry": "Country is required",
-    "SelectMail": "Mail is required"
+    "SelectMail": "Mail is required",
+    "FillOutForm": "Please fill out the whole form."
   }
 }
