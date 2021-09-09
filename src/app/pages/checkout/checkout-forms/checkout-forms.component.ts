@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
 
@@ -13,7 +14,10 @@ export class CheckoutFormsComponent implements OnInit {
 
   private translateService: TranslateService;
 
-  constructor(private notifier: NotifierService, private secondService: TranslateService) {
+  constructor(
+    private notifier: NotifierService,
+    private secondService: TranslateService,
+    private router: Router) {
     this.translateService = this.secondService;
   }
 
@@ -51,6 +55,7 @@ export class CheckoutFormsComponent implements OnInit {
   homeDeliverySubmit() {
     if (this.homeDeliveryForm.valid) {
       console.log(this.homeDeliveryForm.value);
+      this.router.navigate(["/checkout/payment"]);
     } else {
       this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
     }
@@ -97,6 +102,7 @@ export class CheckoutFormsComponent implements OnInit {
   parcelShopSubmit() {
     if (this.parcelShopForm.valid) {
       console.log(this.homeDeliveryForm.value);
+      this.router.navigate(["/checkout/payment"]);
     } else {
       this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
     }
@@ -133,6 +139,7 @@ export class CheckoutFormsComponent implements OnInit {
   clickAndCollectSubmit() {
     if (this.clickAndCollectForm.valid) {
       console.log(this.homeDeliveryForm.value);
+      this.router.navigate(["/checkout/payment"]);
     } else {
       this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
     }

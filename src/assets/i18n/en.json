@@ -209,6 +209,9 @@
     "SelectCity": "City is required",
     "SelectCountry": "Country is required",
     "SelectMail": "Mail is required",
-    "FillOutForm": "Please fill out the whole form."
+    "FillOutForm": "Please fill out the whole form.",
+    "DeliveryOption": "Delivery Option",
+    "DeliveryAdress": "Delivery Adress",
+    "Payment": "Payment"
   }
 }

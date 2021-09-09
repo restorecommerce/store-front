@@ -221,6 +221,9 @@
     "SelectCity": "Stadt wird benötigt",
     "SelectCountry": "Land wird benötigt",
     "SelectMail": "Mail wird benötigt",
-    "FillOutForm": "Bitte füllen Sie das Formular ganz aus."
+    "FillOutForm": "Bitte füllen Sie das Formular ganz aus.",
+    "DeliveryOption": "Lieferoption",
+    "DeliveryAdress": "Lieferadresse",
+    "Payment": "Bezahlung"
   }
 }

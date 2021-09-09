@@ -7,6 +7,8 @@ import { ProductComponent } from './pages/product/product.component';
 import { ReturnsComponent } from './pages/returns/returns.component';
 import { ShoesComponent } from './pages/shoes/shoes.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout-forms.component';
+import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
 
 
 const routes: Routes = [
@@ -36,7 +38,17 @@ const routes: Routes = [
   },
   {
     path: 'checkout',
-    component: CheckoutComponent
+      component: CheckoutComponent,
+      children: [
+        {
+          path: '',
+          component: CheckoutFormsComponent,
+        },
+        {
+          path: 'payment',
+          component: CheckoutPaymentComponent,
+        }
+       ]
   },
 ];
 
