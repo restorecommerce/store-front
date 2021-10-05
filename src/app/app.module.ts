@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { VCLBadgeModule, VCLBusyIndicatorModule, VCLButtonModule, VCLCheckboxModule, VCLDrawerModule, VCLFontAwesomeModule, VCLGalleryModule,
   VCLIcogramModule, VCLIconModule, VCLInputModule, VCLLayerModule, VCLMaterialDesignModule, VCLNavigationModule, VCLNotifierModule,
@@ -42,7 +42,6 @@ import { LAZYLOAD_IMAGE_HOOKS, LazyLoadImageModule, ScrollHooks } from 'ng-lazyl
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { OrderOverviewComponent } from './pages/checkout/order-overview/order-overview.component';
 import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout-forms.component';
-import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
 
 export  function  HttpLoaderFactory(http:  HttpClient) {
@@ -120,8 +119,7 @@ export  function  HttpLoaderFactory(http:  HttpClient) {
     VCLTabNavModule,
     VCLRadioButtonModule,
     VCLZoomBoxModule,
-    VCLFormControlGroupModule,
-    IvyCarouselModule
+    VCLFormControlGroupModule
   ],
   exports: [TranslateModule],
   providers: [

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, AfterViewChecked, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { ProductImage } from 'src/app/models/productImage';
 
 @Component({
@@ -6,18 +6,35 @@ import { ProductImage } from 'src/app/models/productImage';
   templateUrl: './product-zoom.component.html',
   styleUrls: ['./product-zoom.component.scss']
 })
-export class ProductZoomComponent implements OnInit {
+export class ProductZoomComponent implements OnInit, AfterViewChecked {
 
   @Input() zoom: boolean;
   @Input() imageIndex: number;
   @Input() imageArray: ProductImage[];
   @Output() zoomChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @ViewChild('thumbnails') el:ElementRef;
 
   public zoomIn: boolean = false;
+  public index: number;
 
-  constructor() { }
+  constructor(private rd: Renderer2) {}
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewChecked() {
+    let allThumbnails = this.el.nativeElement.children[0].children[0].children;
+    //allThumbnails.forEach(function(thumb, i){
+    //  if (thumb.classList[1] === 'selected') {
+    //    return i;
+    //  }
+    //});
+
+    for (let thumb of allThumbnails) {
+      if (thumb.classList[1] != undefined) {
+        this.index = Array.prototype.indexOf.call(allThumbnails, thumb);
+      }
+    };
   }
 
   public unZoom(): void {
