@@ -1,12 +1,16 @@
 .navigation-container {
-  background-color: lightgray;
+  color: black;
+  background-color: #f6f6f6;
   padding-left: 3rem;
   padding-right: 3rem;
-  border-bottom: 1px black solid;
 }
 
 .navigation {
   margin-bottom: 0;
+}
+
+.navigation-item {
+  color:black;
 }
 
 @media only screen and (max-width: 1024px) {

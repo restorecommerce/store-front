@@ -4,7 +4,9 @@
       <ng-container *ngFor="let image of this.dataService.getCurrentImageArray()">
         <vcl-gallery-image [image]="image.src" [thumbnail]="image.srcThumb" [alt]="image.alt"></vcl-gallery-image>
       </ng-container>
-      <vcl-gallery-body></vcl-gallery-body>
+      <div #pictures>
+        <vcl-gallery-body></vcl-gallery-body>
+      </div>
       <vcl-gallery-thumbnails class="gallery-thumbs column"></vcl-gallery-thumbnails>
     </vcl-gallery>
   </ng-container>
@@ -18,7 +20,7 @@
   <ng-template vclLayer #inlineLayer="vclLayer">
     <vcl-panel-dialog [showCloseButton]="true" (close)="inlineLayer.close()">
       <vcl-panel-title></vcl-panel-title>
-      <app-product-zoom class="layout-width row center" [imageArray]="this.dataService.getCurrentImageArray()" [(zoom)]="zoomImage" [imageIndex]="imageIndex"></app-product-zoom>
+      <app-product-zoom class="row center" [imageArray]="this.dataService.getCurrentImageArray()" [(zoom)]="zoomImage" [imageIndex]="imageIndex" [zoomOutWidth]="productZoomContainerWidth"></app-product-zoom>
     </vcl-panel-dialog>
   </ng-template>
 </div>

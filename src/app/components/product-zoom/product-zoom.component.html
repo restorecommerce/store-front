@@ -1,34 +1,14 @@
-<div class="product-zoom-container">
+<div class="product-zoom-container" [ngStyle]="productZoomContainerStyle">
   <vcl-gallery [selectedImage]="imageIndex">
     <ng-container *ngFor="let image of imageArray" >
-      <vcl-gallery-image [image]="image.src" [thumbnail]="image.srcThumb" [alt]="image.alt"></vcl-gallery-image>
+      <vcl-gallery-image [image]="image.src" [thumbnail]="image.srcThumb" [alt]="image.alt" class="gallery-image"></vcl-gallery-image>
     </ng-container>
-    <vcl-gallery-body *ngIf="!zoomIn"></vcl-gallery-body>
-    <ng-container *ngIf="zoomIn">
-      <div class="row justify-center">
-        <div class="flex-6">
-          <vcl-zoom-box-container #first [x]="30" [y]="60" [width]="190" [height]="120" [hidden]="true" [hiding]="true">
-            <img [src]="imageArray[index].src">
-            <vcl-zoom-box-magnifier></vcl-zoom-box-magnifier>
-          </vcl-zoom-box-container>
-        </div>
-        <div class="flex-6">
-          <vcl-zoom-box [target]="first" [scale]="2"></vcl-zoom-box>
-        </div>
-      </div>
-    </ng-container>
-    <div class="row justify-center">
-      <button vcl-button  (click)="zoomIn = true">   
-        <vcl-icogram>
-          <vcl-icon icon="fas:search-plus"></vcl-icon>
-        </vcl-icogram>
-      </button>
-      <button vcl-button  (click)="zoomIn = false">   
-        <vcl-icogram>
-          <vcl-icon icon="fas:search-minus"></vcl-icon>
-        </vcl-icogram>
-      </button>
+    <div #pictures>
+      <vcl-gallery-body *ngIf="!zoomIn"  (click)="zoomOutImageClicked($event)" class="galleryBody"></vcl-gallery-body>
     </div>
+    <ng-container *ngIf="zoomIn">
+      <img [src]="imageArray[imageArrayIndex].src" class="zoomImage" (click)="zoomInImageClicked($event)" (mousemove)="mouseScroll($event)" #image>
+    </ng-container>
     <div #thumbnails>
       <vcl-gallery-thumbnails></vcl-gallery-thumbnails>
     </div>

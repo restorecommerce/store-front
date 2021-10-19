@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as blackSneakers from 'src/app/data/blackSneakers.json';
 import * as brownSneakers from 'src/app/data/brownSneakers.json';
 import * as whiteSneakers from 'src/app/data/whiteSneakers.json';
+import * as whiteShirt from 'src/app/data/whiteShirt.json';
 import { ProductImage } from '../models/productImage';
 import { Cart } from '@restorecommerce/cart/lib/model/impl/Cart';
 import { MockSerializer } from '@restorecommerce/cart/lib/model/impl/MockSerializer';
@@ -15,7 +16,7 @@ import { IItem } from '@restorecommerce/cart/lib/model/IItem';
 export class CartService {
 
   private color: string = "black";
-  private currentImageArray: ProductImage[] = (blackSneakers as any).default;
+  private currentImageArray: ProductImage[] = (whiteShirt as any).default;
   private loading: boolean = false;
   public cart: Cart;
 

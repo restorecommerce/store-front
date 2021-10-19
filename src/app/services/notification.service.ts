@@ -11,8 +11,7 @@ export class NotificationService {
   public success() {
     this.notifier.success({
       content: 'Artikel in den Warenkorb gelegt',
-      title: 'Erfolg',
-      position: NotifierPosition.TopRight
+      position: NotifierPosition.TopLeft
     });
   }
 

@@ -7,7 +7,7 @@
   "Price": "Preis",
   "Search": "Suchen",
   "Women": "DAMEN",
-  "New": "NEU",
+  "New": "NEU IM ANGEBOT",
   "NewHits": "NEUHEITEN",
   "Dress": "KLEIDUNG",
   "Shoes": "SCHUHE",
@@ -48,7 +48,7 @@
     "Shoes": "Schuhe",
     "Sneakers": "Sneakers",
     "Product": "In Italien gefertigte Sneakers aus Leder mit Monogramm-Details",
-    "Cart": " IN DEN WARENKORB",
+    "Cart": "Dem Warenkorb hinzufügen",
     "ShopOnline": "Online shoppen, zu Hause entscheiden",
     "IfStyleDoesntSuit": "Wenn Ihnen ein Style nicht passt, können Sie ihn ganz einfach und kostenlos wieder zurückschicken",
     "Share": "Share"
@@ -61,7 +61,7 @@
     "Material": "Materialangabe",
     "MaterialInfo": "Obermaterial: 100% Rindsleder, 100% Ziegenleder, 100% Kalbsleder, 100% Rindsleder, Sohle: 100% Gummi",
     "ProductDelivery": "Lieferung in 2-3 Werktagen",
-    "Cart": "IN DEN WARENKORB",
+    "Cart": "Dem Warenkorb hinzufügen",
     "ShopOnline": "Online shoppen, zu Hause entscheiden",
     "IfStyleDoesntSuit": "Wenn Ihnen ein Style nicht passt, können Sie ihn ganz einfach und kostenlos wieder zurückschicken",
     "Bestseller": "BESTSELLER"
@@ -224,6 +224,7 @@
     "FillOutForm": "Bitte füllen Sie das Formular ganz aus.",
     "DeliveryOption": "Lieferoption",
     "DeliveryAdress": "Lieferadresse",
-    "Payment": "Bezahlung"
+    "Payment": "Bezahlung",
+    "CreditCard": "Kreditkarte"
   }
 }
