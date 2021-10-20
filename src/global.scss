@@ -11,3 +11,7 @@
 [override] app-checkout-forms .tab:hover {
   background-color: white;
 }
+
+[override] app-product-zoom .gallery {
+  display: flex;
+}

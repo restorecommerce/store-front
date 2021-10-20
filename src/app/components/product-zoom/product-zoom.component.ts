@@ -40,6 +40,7 @@ export class ProductZoomComponent implements OnInit, AfterViewChecked{
         this.imageArrayIndex = Array.prototype.indexOf.call(allThumbnails, thumb);
       }
     };
+    console.log(this.zoomWidth);
   }
 
   @HostListener('window:keydown.arrowup') scrollUp() {
@@ -95,9 +96,15 @@ export class ProductZoomComponent implements OnInit, AfterViewChecked{
   }
 
   get productZoomContainerStyle(): object {
-    return {
-      width: this.zoomWidth + 'px'
-    };
+    if (!this.zoomIn) {
+      return {
+        width: this.zoomWidth + 260 + 'px'
+      };
+    } else {
+      return {
+        width: 'auto'
+      };
+    }
   }
 
 

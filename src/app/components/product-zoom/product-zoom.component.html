@@ -3,14 +3,14 @@
     <ng-container *ngFor="let image of imageArray" >
       <vcl-gallery-image [image]="image.src" [thumbnail]="image.srcThumb" [alt]="image.alt" class="gallery-image"></vcl-gallery-image>
     </ng-container>
-    <div #pictures>
+    <div #pictures class="left">
       <vcl-gallery-body *ngIf="!zoomIn"  (click)="zoomOutImageClicked($event)" class="galleryBody"></vcl-gallery-body>
     </div>
     <ng-container *ngIf="zoomIn">
       <img [src]="imageArray[imageArrayIndex].src" class="zoomImage" (click)="zoomInImageClicked($event)" (mousemove)="mouseScroll($event)" #image>
     </ng-container>
-    <div #thumbnails>
-      <vcl-gallery-thumbnails></vcl-gallery-thumbnails>
+    <div #thumbnails class="right" [ngClass]="zoomIn ? 'noMaxHeight' : 'maxHeight'" *ngIf="!zoomIn">
+      <vcl-gallery-thumbnails [vertical]="true"></vcl-gallery-thumbnails>
     </div>
   </vcl-gallery>
 </div>
