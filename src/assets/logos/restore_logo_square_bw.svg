@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="37.278"
+   height="37.278"
+   version="1.1"
+   id="svg1211"
+   sodipodi:docname="restore_logo_square_bw.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
+  <defs
+     id="defs1215" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1007"
+     id="namedview1213"
+     showgrid="false"
+     inkscape:zoom="3.2270623"
+     inkscape:cx="-94.092833"
+     inkscape:cy="-16.61863"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1211"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata1107">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-543.41364,-81.882983)"
+     id="g1109" />
+  <g
+     transform="translate(-67.903,-329.521)"
+     stroke="#000000"
+     id="g1191">
+    <circle
+       cx="86.542"
+       cy="348.16"
+       r="17.489"
+       fill="#ffffff"
+       stroke-linecap="round"
+       stroke-linejoin="bevel"
+       stroke-width="2.3"
+       id="circle1181" />
+    <g
+       stroke-width="2"
+       id="g1189">
+      <circle
+         cx="86.542"
+         cy="348.16"
+         r="6.5553002"
+         fill="#ffffff"
+         stroke-linecap="round"
+         stroke-linejoin="bevel"
+         id="circle1183" />
+      <path
+         d="m 79.988,348.2 v 16.654"
+         fill="none"
+         id="path1185" />
+      <path
+         d="m 82.629,353.42 c 12.992,10.388 13.018,10.409 13.018,10.409"
+         fill="none"
+         id="path1187" />
+    </g>
+  </g>
+</svg>
