@@ -40,7 +40,6 @@ export class ProductZoomComponent implements OnInit, AfterViewChecked{
         this.imageArrayIndex = Array.prototype.indexOf.call(allThumbnails, thumb);
       }
     };
-    console.log(this.zoomWidth);
   }
 
   @HostListener('window:keydown.arrowup') scrollUp() {

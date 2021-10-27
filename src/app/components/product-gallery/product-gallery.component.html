@@ -4,10 +4,10 @@
       <ng-container *ngFor="let image of this.dataService.getCurrentImageArray()">
         <vcl-gallery-image [image]="image.src" [thumbnail]="image.srcThumb" [alt]="image.alt"></vcl-gallery-image>
       </ng-container>
-      <div #pictures>
+      <vcl-gallery-thumbnails class="gallery-thumbs column" [vertical]="true"></vcl-gallery-thumbnails>
+      <div #pictures class="right">
         <vcl-gallery-body></vcl-gallery-body>
       </div>
-      <vcl-gallery-thumbnails class="gallery-thumbs column"></vcl-gallery-thumbnails>
     </vcl-gallery>
   </ng-container>
 

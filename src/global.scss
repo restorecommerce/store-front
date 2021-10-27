@@ -15,3 +15,11 @@
 [override] app-product-zoom .gallery {
   display: flex;
 }
+
+[override] app-product-gallery .gallery {
+  display: flex;
+}
+
+[override] app-product-gallery .gallery-thumbs {
+  width: auto;
+}
