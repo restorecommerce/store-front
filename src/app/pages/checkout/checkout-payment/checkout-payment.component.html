@@ -12,24 +12,56 @@
 </div>
 <h2 class="checkout-forms-header"><span class="header-num">02</span>{{ "Checkout.Payment" | translate }}</h2>
 <div class="content-container">
-  <vcl-form-control-group>
-    <vcl-checkbox>
-      PayPal
-    </vcl-checkbox>
-    <vcl-checkbox>
-      {{ "Checkout.CreateAccount" | translate }}
-    </vcl-checkbox>
-    <vcl-checkbox>
-      {{ "Checkout.CreditCard" | translate }}
-    </vcl-checkbox>
-    <vcl-checkbox>
-      {{ "Checkout.CreateAccount" | translate }}
-    </vcl-checkbox>
-    <vcl-checkbox>
-      {{ "Checkout.CreateAccount" | translate }}
-    </vcl-checkbox>
-    <vcl-checkbox>
-      {{ "Checkout.CreateAccount" | translate }}
-    </vcl-checkbox>
-  </vcl-form-control-group>
+  <h3>{{ "Checkout.PaymentOption" | translate }}</h3>
+  <vcl-radio-group layout="vertical" [(ngModel)]="payMethod">
+    <vcl-radio-button value="paypal">PayPal</vcl-radio-button>
+    <div class="paypalOption" *ngIf="payMethod === 'paypal'">
+      <p class="paymentOptionDescriptionHeader">{{ "Checkout.PaypalDescriptionHeader" | translate }}</p>
+      <p class="paymentOptionDescription">{{ "Checkout.PaypalDescription" | translate }}</p>
+    </div>
+    <vcl-radio-button value="creditcard">{{ "Checkout.CreditCard" | translate }}</vcl-radio-button>
+    <div class="creditCardOption" *ngIf="payMethod === 'creditcard'">
+      <form [formGroup]="paymentOptionForm" (ngSubmit)="paymentOptionSubmit()">
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.CardNumber" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput formControlName="cardNumber">
+          </vcl-input-field>
+          <vcl-hint-error error="required">{{ "Checkout.SelectCardNumber" | translate }}</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.ExpiryDate" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput formControlName="expiryDate">
+          </vcl-input-field>
+          <vcl-hint-error error="required">{{ "Checkout.SelectExpiryDate" | translate }}</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.SecurityCode" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput formControlName="securityCode">
+          </vcl-input-field>
+          <vcl-hint-error error="required">{{ "Checkout.SelectSecurityCode" | translate }}</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <vcl-form-control-group>
+          <vcl-label>{{ "Checkout.CardHolder" | translate }}</vcl-label>
+          <vcl-input-field>
+            <input vclInput formControlName="cardHolder">
+          </vcl-input-field>
+          <vcl-hint-error error="required">{{ "Checkout.CardHolder" | translate }}</vcl-hint-error>
+        </vcl-form-control-group>
+
+        <input type="submit" class="go-to-payment" value='{{ "Checkout.ProceedToPayment" | translate }}'>
+      </form>
+    </div>
+    <vcl-radio-button value="onAccount">{{ "Checkout.OnAccount" | translate }}</vcl-radio-button>
+    <div class="paypalOption" *ngIf="payMethod === 'onAccount'">
+      <p class="paymentOptionDescription">{{ "Checkout.OnAccountDescription" | translate }}</p>
+    </div>
+  </vcl-radio-group>
+  <button class="go-to-payment" (click)="goToDelivery()" *ngIf="payMethod != 'creditcard'">{{ "Checkout.ProceedToDelivery" | translate }}</button>
 </div>

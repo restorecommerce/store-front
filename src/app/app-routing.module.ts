@@ -9,6 +9,7 @@ import { ShoesComponent } from './pages/shoes/shoes.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout-forms.component';
 import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
+import { CheckoutDeliveryComponent } from './pages/checkout/checkout-delivery/checkout-delivery.component';
 
 
 const routes: Routes = [
@@ -47,6 +48,10 @@ const routes: Routes = [
         {
           path: 'payment',
           component: CheckoutPaymentComponent,
+        },
+        {
+          path: 'delivery',
+          component: CheckoutDeliveryComponent,
         }
        ]
   },

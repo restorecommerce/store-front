@@ -43,6 +43,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { OrderOverviewComponent } from './pages/checkout/order-overview/order-overview.component';
 import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout-forms.component';
 import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
+import { CheckoutDeliveryComponent } from './pages/checkout/checkout-delivery/checkout-delivery.component';
 
 export  function  HttpLoaderFactory(http:  HttpClient) {
   return  new  TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -79,7 +80,8 @@ export  function  HttpLoaderFactory(http:  HttpClient) {
     CheckoutComponent,
     OrderOverviewComponent,
     CheckoutFormsComponent,
-    CheckoutPaymentComponent
+    CheckoutPaymentComponent,
+    CheckoutDeliveryComponent
   ],
   imports: [
     BrowserModule,

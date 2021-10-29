@@ -14,7 +14,7 @@
 
 h3 {
   margin: 0;
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-size: 20px;
 }
 
@@ -37,7 +37,21 @@ p {
   cursor: pointer;
 }
 
-.paymentOptionDescriptionHeader {
+.apply {
+  width: 200px;
+}
+
+.price-info-header {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.shipment-info {
+  color: green;
+}
+
+.price-info p {
+  font-size: 17px;
   font-weight: bold;
-  margin-bottom: 7px;
 }
