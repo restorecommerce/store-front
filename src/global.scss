@@ -12,14 +12,11 @@
   background-color: white;
 }
 
-[override] app-product-zoom .gallery {
-  display: flex;
+[override] app-product-gallery .gallery-image {
+  max-height: 100%;
 }
 
-[override] app-product-gallery .gallery {
-  display: flex;
-}
-
-[override] app-product-gallery .gallery-thumbs {
-  width: auto;
+[override] app-product-zoom .gallery-image {
+  max-height: 100%;
+  cursor: zoom-in;
 }

@@ -13,6 +13,7 @@ export class ProductZoomComponent implements OnInit, AfterViewChecked{
   @Input() zoomOutWidth: number;
   @Input() imageArray: ProductImage[];
   @Output() zoomChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @ViewChild('productZoomContainer') productZoomContainer:ElementRef;
   @ViewChild('thumbnails') thumbnails:ElementRef;
   @ViewChild('pictures') pictures:ElementRef;
   @ViewChild('image') image:ElementRef;
@@ -34,12 +35,9 @@ export class ProductZoomComponent implements OnInit, AfterViewChecked{
   }
 
   @HostListener('click') getIndex() {
-    let allThumbnails = this.thumbnails.nativeElement.children[0].children[0].children[0].children;
-    for (let thumb of allThumbnails) {
-      if (thumb.classList[1] != undefined) {
-        this.imageArrayIndex = Array.prototype.indexOf.call(allThumbnails, thumb);
-      }
-    };
+    let selectedThumbnail = this.productZoomContainer.nativeElement.querySelector("div.gallery-thumb-wrapper.selected");
+    let allThumbnails = selectedThumbnail.parentNode;
+    this.imageArrayIndex = Array.prototype.indexOf.call(allThumbnails.children, selectedThumbnail);
   }
 
   @HostListener('window:keydown.arrowup') scrollUp() {
@@ -93,20 +91,6 @@ export class ProductZoomComponent implements OnInit, AfterViewChecked{
     this.lastPoint.x = event.clientX
     this.lastPoint.y = event.clientY
   }
-
-  get productZoomContainerStyle(): object {
-    if (!this.zoomIn) {
-      return {
-        width: this.zoomWidth + 260 + 'px'
-      };
-    } else {
-      return {
-        width: 'auto'
-      };
-    }
-  }
-
-
 
   public unZoom(): void {
     this.zoomChange.emit(this.zoom=false);

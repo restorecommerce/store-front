@@ -7,28 +7,18 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './product-gallery.component.html',
   styleUrls: ['./product-gallery.component.scss']
 })
-export class ProductGalleryComponent implements OnInit, AfterViewChecked {
+export class ProductGalleryComponent implements OnInit {
   public loading = false;
   public zoomImage = false;
   public imageIndex = 0;
   public dataService: CartService;
   public productZoomContainerWidth: number;
 
-
-  @ViewChild('pictures') pictures:ElementRef;
-
   constructor(private service: CartService) {
     this.dataService = this.service;
   }
 
   ngOnInit(): void {
-  }
-
-  ngAfterViewChecked() {
-    let windowHeight = window.innerHeight;
-    let imageContainerWidth = this.pictures.nativeElement.children[0].children[0].offsetWidth;
-    let imageContainerHeight = this.pictures.nativeElement.children[0].children[0].offsetHeight;
-    this.productZoomContainerWidth = (imageContainerWidth/imageContainerHeight)*windowHeight - 115 ;
   }
 
   ngOnChanges() {

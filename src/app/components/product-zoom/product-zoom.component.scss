@@ -1,27 +1,16 @@
+.product-zoom-container {
+  min-width: 70vw;
+  height: 90vh;
+}
+
+.seperator {
+  margin-left: 1rem;
+}
+
 .zoomImage {
   cursor: zoom-out;
 }
 
 .galleryBody {
   cursor: zoom-in;
-}
-
-.left {
-  width: 100%;
-}
-
-.right {
-  display: flex;
-  justify-content: flex-end;
-  width: 300px;
-  max-width: 300px;
-  margin-left: 20px;
-}
-
-.maxHeight {
-  max-height: 86vh;
-}
-
-.noMaxHeight {
-  max-height: auto;
 }
