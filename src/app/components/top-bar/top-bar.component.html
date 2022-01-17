@@ -1,62 +1,105 @@
 <div class="top-bar-container">
   <div class="row justify-content-between align-items-center top-bar-nav">
     <div class="vertical-center home-icon-container">
-      <button type="button" class="button transparent" (click)="this.navigate('')">
+      <button
+        type="button"
+        class="button transparent"
+        (click)="this.navigate('')"
+      >
         <div class="icogram">
-          <div class="icon mdi mdi-home-outline large-icon nav-icon" aria-hidden="true" role="img"></div>
+          <div
+            class="icon mdi mdi-home-outline large-icon nav-icon"
+            aria-hidden="true"
+            role="img"
+          ></div>
         </div>
       </button>
     </div>
     <div class="vertical-center hamburger-icon-container">
       <button type="button" class="button transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-menu large-icon hamburger-icon" aria-hidden="true" role="img" (click)="menuLayer.open()"></div>
+          <div
+            class="icon mdi mdi-menu large-icon hamburger-icon"
+            aria-hidden="true"
+            role="img"
+            (click)="menuLayer.open()"
+          ></div>
         </div>
       </button>
     </div>
     <div class="vertical-center">
-      <img src="../../../assets/logos/restore_logo_bw.svg" alt="restorelogo">
+      <img src="../../../assets/logos/restore_logo_bw.svg" alt="restorelogo" />
     </div>
     <div class="vertical-center men-women-container">
       <ng-container>
-        <h4>{{ 'Men' | translate }}</h4>
-        <h4>{{ 'Women' | translate }}</h4>
+        <h4>{{ "Men" | translate }}</h4>
+        <h4>{{ "Women" | translate }}</h4>
       </ng-container>
     </div>
     <div class="align-right top-bar-search-container">
       <vcl-icon icon="mdi:magnify" class="search-icon"></vcl-icon>
-      <input class="top-bar-search" placeholder="Search">
+      <input class="top-bar-search" placeholder="Search" />
     </div>
     <div class="vertical-center">
       <button type="button" class="button nav-icon-container transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-earth large-icon nav-icon" aria-hidden="true" role="img" (click)="languageLayer.open()"></div>
+          <div
+            class="icon mdi mdi-earth large-icon nav-icon"
+            aria-hidden="true"
+            role="img"
+            (click)="languageLayer.open()"
+          ></div>
         </div>
       </button>
       <button type="button" class="button nav-icon-container transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-message-outline large-icon nav-icon" aria-hidden="true" role="img"></div>
+          <div
+            class="icon mdi mdi-message-outline large-icon nav-icon"
+            aria-hidden="true"
+            role="img"
+          ></div>
         </div>
       </button>
       <button type="button" class="button nav-icon-container transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-map-marker-outline large-icon nav-icon" aria-hidden="true" role="img"></div>
+          <div
+            class="icon mdi mdi-map-marker-outline large-icon nav-icon"
+            aria-hidden="true"
+            role="img"
+          ></div>
         </div>
       </button>
-      <button type="button" class="button nav-icon-container transparent" (click)="this.navigate('/profile')">
+      <button
+        type="button"
+        class="button nav-icon-container transparent"
+        (click)="this.navigate('/profile')"
+      >
         <div class="icogram">
-          <div class="icon mdi mdi-account-outline large-icon nav-icon" aria-hidden="true" role="img"></div>
+          <div
+            class="icon mdi mdi-account-outline large-icon nav-icon"
+            aria-hidden="true"
+            role="img"
+          ></div>
         </div>
       </button>
       <button type="button" class="button nav-icon-container transparent">
         <div class="icogram">
-          <div class="icon mdi mdi-cart-outline large-icon nav-icon cart-icon" aria-hidden="true" role="img" (click)="cartLayer.open()"></div>
+          <div
+            class="icon mdi mdi-cart-outline large-icon nav-icon cart-icon"
+            aria-hidden="true"
+            role="img"
+            (click)="cartLayer.open()"
+          ></div>
         </div>
       </button>
     </div>
   </div>
   <ng-template vclLayer #languageLayer="vclLayer">
-    <vcl-panel-dialog [showCloseButton]="true" (close)="languageLayer.close()" class="pos-cart-absolute">
+    <vcl-panel-dialog
+      [showCloseButton]="true"
+      (close)="languageLayer.close()"
+      class="pos-cart-absolute"
+    >
       <vcl-panel-title>{{ "TopBar.PanelTitle" | translate }}</vcl-panel-title>
       <h3>{{ "TopBar.SecondaryHeading" | translate }}</h3>
       <vcl-form-control-group>
@@ -84,7 +127,7 @@
           </vcl-select-list>
         </vcl-select>
       </vcl-form-control-group>
-      <h3> {{ "TopBar.Currency" | translate }}</h3>
+      <h3>{{ "TopBar.Currency" | translate }}</h3>
       <vcl-form-control-group>
         <vcl-select>
           <vcl-select-list [value]="this.language" [disabled]="true">
@@ -98,7 +141,11 @@
         </vcl-select>
       </vcl-form-control-group>
       <div class="row">
-        <button vcl-button class="flex" (click)="this.setLanguage(); languageLayer.close()">
+        <button
+          vcl-button
+          class="flex"
+          (click)="this.setLanguage(); languageLayer.close()"
+        >
           <vcl-icogram>
             {{ "TopBar.Apply" | translate }}
           </vcl-icogram>
@@ -107,11 +154,21 @@
     </vcl-panel-dialog>
   </ng-template>
   <ng-template vclLayer #cartLayer="vclLayer">
-    <vcl-panel-dialog [showCloseButton]="true" (close)="cartLayer.close()" class="pos-cart-absolute">
-      <vcl-panel-title>{{ "TopBar.OrderOverview" | translate }}</vcl-panel-title>
+    <vcl-panel-dialog
+      [showCloseButton]="true"
+      (close)="cartLayer.close()"
+      class="pos-cart-absolute"
+    >
+      <vcl-panel-title>{{
+        "TopBar.OrderOverview" | translate
+      }}</vcl-panel-title>
       <ng-container *ngIf="this.getCartItemCount() > 0">
         <div class="row">
-          <button vcl-button class="flex" (click)="cartLayer.close(); this.navigate('/checkout')">
+          <button
+            vcl-button
+            class="flex"
+            (click)="cartLayer.close(); this.navigate('/checkout')"
+          >
             <vcl-icogram>
               {{ "TopBar.ToCheckout" | translate }}
             </vcl-icogram>
@@ -122,16 +179,24 @@
         <hr />
         <div class="row">
           <div class="flex-5 align-left">
-            <p>{{item.desc}}</p>
-            <p>{{ "TopBar.UnitPrice" | translate }}: {{item.price}} €</p>
+            <p>{{ item.desc }}</p>
+            <p>{{ "TopBar.UnitPrice" | translate }}: {{ item.price }} €</p>
           </div>
           <div class="flex-6">
-            <img class="responsive-image" [src]="item.imgSrc">
+            <img class="responsive-image" [src]="item.imgSrc" />
           </div>
           <div class="flex-1 align-right">
-            <button type="button" class="button transparent" (click)="this.removeCartItem(item.sku)">
+            <button
+              type="button"
+              class="button transparent"
+              (click)="this.removeCartItem(item.sku)"
+            >
               <div class="icogram">
-                <div class="icon mdi mdi-cart-remove" aria-hidden="true" role="img"></div>
+                <div
+                  class="icon mdi mdi-cart-remove"
+                  aria-hidden="true"
+                  role="img"
+                ></div>
               </div>
             </button>
           </div>
@@ -153,17 +218,13 @@
           <div class="flex align-left">
             {{ "TopBar.TotalAmountOf" | translate }}
           </div>
-          <div class="flex align-right">
-            {{this.getCartTotal()}} €
-          </div>
+          <div class="flex align-right">{{ this.getCartTotal() }} €</div>
         </div>
         <div class="row">
           <div class="flex align-left">
             {{ "TopBar.DHLPackageShipping" | translate }}
           </div>
-          <div class="flex align-right">
-            {{this.getCartShipping()}} €
-          </div>
+          <div class="flex align-right">{{ this.getCartShipping() }} €</div>
         </div>
         <div class="row">
           <div class="flex align-left">
@@ -174,21 +235,21 @@
           <div class="flex align-left">
             {{ "TopBar.incl" | translate }}
           </div>
-          <div class="flex align-right">
-            {{this.getTaxes()}} €
-          </div>
+          <div class="flex align-right">{{ this.getTaxes() }} €</div>
         </div>
-        <hr/>
+        <hr />
         <div class="row">
           <div class="flex align-left">
             {{ "TopBar.TotalPrice" | translate }}
           </div>
-          <div class="flex align-right">
-            {{this.getCartTotalGross()}} €
-          </div>
+          <div class="flex align-right">{{ this.getCartTotalGross() }} €</div>
         </div>
         <div class="row">
-          <button vcl-button class="flex" (click)="cartLayer.close(); this.navigate('/checkout')">
+          <button
+            vcl-button
+            class="flex"
+            (click)="cartLayer.close(); this.navigate('/checkout')"
+          >
             <vcl-icogram>
               {{ "TopBar.ToCheckout" | translate }}
             </vcl-icogram>
@@ -198,28 +259,50 @@
     </vcl-panel-dialog>
   </ng-template>
   <ng-template vclLayer #menuLayer="vclLayer">
-    <vcl-panel-dialog [showCloseButton]="true" (close)="menuLayer.close()" class="pos-menu-absolute">
+    <vcl-panel-dialog
+      [showCloseButton]="true"
+      (close)="menuLayer.close()"
+      class="pos-menu-absolute"
+    >
       <vcl-panel-title>
         <button type="button" class="button transparent">
           <div class="icogram">
-            <div class="icon mdi mdi-home-outline large-icon" aria-hidden="true" role="img"></div>
+            <div
+              class="icon mdi mdi-home-outline large-icon"
+              aria-hidden="true"
+              role="img"
+            ></div>
           </div>
         </button>
         <button type="button" class="button transparent">
           <div class="icogram">
-            <div class="icon mdi mdi-account-outline large-icon" aria-hidden="true" role="img"></div>
+            <div
+              class="icon mdi mdi-account-outline large-icon"
+              aria-hidden="true"
+              role="img"
+            ></div>
           </div>
         </button>
         <button type="button" class="button transparent">
           <div class="icogram">
-            <div class="icon mdi mdi-earth large-icon" aria-hidden="true" role="img" (click)="menuLayer.close(); languageLayer.open()"></div>
+            <div
+              class="icon mdi mdi-earth large-icon"
+              aria-hidden="true"
+              role="img"
+              (click)="menuLayer.close(); languageLayer.open()"
+            ></div>
           </div>
         </button>
         <button type="button" class="button transparent">
           <div class="icogram">
-            <div class="icon mdi mdi-cart-outline large-icon" aria-hidden="true" role="img" (click)="cartLayer.open()"></div>
+            <div
+              class="icon mdi mdi-cart-outline large-icon"
+              aria-hidden="true"
+              role="img"
+              (click)="cartLayer.open()"
+            ></div>
           </div>
-        </button>        
+        </button>
       </vcl-panel-title>
       <vcl-navigation layout="horizontal">
         <vcl-navigation-item>
