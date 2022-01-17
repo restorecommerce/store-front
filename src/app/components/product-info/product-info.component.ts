@@ -26,7 +26,7 @@ export class ProductInfoComponent implements OnInit {
     this.cartService.addItemToCart([
       {
         sku: '50433323',
-        desc: 'In Italien gefertigte Sneakers aus Leder mit Monogramm-Details',
+        desc: 'Italian-made leather sneakers with monogram details',
         imgSrc:
           'https://images.hugoboss.com/is/image/boss/hbeu50410989_001_250?$re_fullPageZoom$&qlt=85&wid=300&hei=200',
         price: new Decimal('250.00'), // Price

@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProductImage } from 'src/app/models/productImage';
+import { ProductImage } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-product-description',
   templateUrl: './product-description.component.html',
-  styleUrls: ['./product-description.component.scss']
+  styleUrls: ['./product-description.component.scss'],
 })
 export class ProductDescriptionComponent implements OnInit {
   @Input() imageArray: ProductImage[];
