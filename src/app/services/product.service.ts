@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { Product } from '../models/product';
 import { Product as ProductCard } from '../pages/products/products.component';
 
-import { SHOES } from '../data/products-shoes';
+import { SHOE } from '../data/products-shoes';
 import { products } from '../data/product-samples';
 
 @Injectable({
@@ -12,12 +12,13 @@ import { products } from '../data/product-samples';
 export class ProductService {
   constructor() {}
 
-  getShoes(): Observable<Product[]> {
-    const shoes = of(SHOES);
-    return shoes;
+  getShoe(): Observable<Product> {
+    /* This is a placeholder to access the a `shoe` product detail  */
+    return of(SHOE);
   }
 
-  getProducts(): Observable<ProductCard[]> {
+  getShoes(): Observable<ProductCard[]> {
+    /* This is a placeholder to access the a `shoe` product detail  */
     return of(products);
   }
 }

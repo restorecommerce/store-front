@@ -53,8 +53,6 @@ export class ProductInfoComponent implements OnInit {
   onChangeProductColor(color: string) {}
 
   getProduct(): void {
-    this.productService
-      .getShoes()
-      .subscribe((shoes) => (this.product = shoes[0]));
+    this.productService.getShoe().subscribe((shoe) => (this.product = shoe));
   }
 }

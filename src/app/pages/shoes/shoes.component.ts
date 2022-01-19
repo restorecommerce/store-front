@@ -17,7 +17,7 @@ export class ShoesComponent implements OnInit {
   }
 
   getShoes() {
-    this.productService.getProducts().subscribe((shoes) => {
+    this.productService.getShoes().subscribe((shoes) => {
       console.log('*************');
       console.log(shoes);
       console.log('============');
