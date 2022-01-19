@@ -80,14 +80,10 @@
               media.min +
               'px)'
             "
-            [srcset]="'./assets/products/product' + (i + 1) + '.' + 'jpeg'"
+            [srcset]="product.imgUrl"
             [type]="'image/' + media.format"
           />
-          <img
-            class="image"
-            alt="product image"
-            [src]="'./assets/products/product' + (i + 1) + '.jpeg'"
-          />
+          <img class="image" alt="product image" [src]="product.imgUrl" />
         </picture>
         <div
           class="row center justify-center spinner-wrapper"
