@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 import { Product, timeout } from '../products/products.component';
 
@@ -10,7 +11,7 @@ import { Product, timeout } from '../products/products.component';
 export class ShoesComponent implements OnInit {
   products: Product[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit() {
     this.getShoes();
@@ -18,10 +19,11 @@ export class ShoesComponent implements OnInit {
 
   getShoes() {
     this.productService.getShoes().subscribe((shoes) => {
-      console.log('*************');
-      console.log(shoes);
-      console.log('============');
       this.products = shoes;
     });
+  }
+
+  onProductClicked(payload: number | string) {
+    this.router.navigate(['products', payload]);
   }
 }

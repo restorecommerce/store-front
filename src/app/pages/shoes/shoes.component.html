@@ -1,1 +1,6 @@
-<products pageTitle="Men's shoes" currency="€" [products]="products"></products>
+<products
+  pageTitle="Men's shoes"
+  currency="€"
+  [products]="products"
+  (productClicked)="onProductClicked($event)"
+></products>

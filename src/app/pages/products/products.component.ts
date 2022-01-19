@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'products',
@@ -50,12 +50,18 @@ export class ProductsComponent {
   @Input() currency: string;
   @Input() products: Product[] = [];
   @Input() pageTitle: string;
+
+  @Output() productClicked = new EventEmitter<string | number>();
   constructor() {}
 
   sortOptionClicked(option: string, event) {
     this.sortBy = option;
     this.sortDropdownExpanded = false;
     event.stopPropagation();
+  }
+
+  onProductClicked(productId: number | string) {
+    this.productClicked.emit(productId);
   }
 }
 
@@ -64,6 +70,7 @@ export function timeout(ms) {
 }
 
 export class Product {
+  id: string | number;
   title: string;
   price: number;
   imgUrl: string;

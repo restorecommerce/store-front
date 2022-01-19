@@ -4,6 +4,7 @@ const products: Product[] = [];
 
 for (let i = 0; i < 11; ++i) {
   products.push({
+    id: `product-${i}`,
     title: [
       'Retro-inspired sock trainers in mixed materials',
       'Italian-crafted trainers in burnished leather',

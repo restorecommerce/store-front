@@ -57,6 +57,7 @@
       <div
         class="column align-centered product"
         *ngFor="let product of products; let i = index"
+        (click)="onProductClicked(product.id)"
       >
         <div class="row justify-between product-header">
           <div class="row additional-label" *ngIf="product.additionalLabel">

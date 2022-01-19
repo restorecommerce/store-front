@@ -15,6 +15,10 @@ import { CheckoutPageGuard } from './services/checkout-page-guard.service';
 const routes: Routes = [
   {
     path: '',
+    component: ShoesComponent,
+  },
+  {
+    path: 'products/:productId',
     component: ProductComponent,
   },
   {
