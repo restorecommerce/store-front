@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from 'src/app/models/product';
 //import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-info.component.scss'],
 })
 export class ProductInfoComponent implements OnInit {
-  product: Product;
+  @Input() product: Product;
 
   constructor(
     public cartService: CartService,
@@ -19,9 +19,7 @@ export class ProductInfoComponent implements OnInit {
     private productService: ProductService
   ) {}
 
-  ngOnInit(): void {
-    this.getProduct();
-  }
+  ngOnInit(): void {}
 
   public getStyle(color: string, selected: boolean): string {
     if (selected) {
@@ -51,9 +49,4 @@ export class ProductInfoComponent implements OnInit {
   }
 
   onChangeProductColor(color: string) {}
-
-  // Placeholder: data will be fetch! e.g `getShoe(id)`
-  getProduct(): void {
-    this.productService.getShoe().subscribe((shoe) => (this.product = shoe));
-  }
 }
