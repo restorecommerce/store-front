@@ -8,7 +8,7 @@ export interface MultiColorsProductImage {
   [key: string]: ProductImage[];
 }
 
-export interface ProductDetail {
+export interface Product {
   title: string;
   description: string;
   price: number;
@@ -20,4 +20,13 @@ export interface ProductDetail {
   materialInfo: string;
   expectedDeliveryDuration: string;
   additionalLabel: string;
+  meta: {
+    // SKU Item : Will form part of the IItem
+    sku: string;
+    taxType: string;
+    weight: number;
+    height: number;
+    width: number;
+    depth: number;
+  };
 }

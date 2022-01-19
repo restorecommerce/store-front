@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
+import { Product } from 'src/app/models/product';
+//import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
 import { NotificationService } from 'src/app/services/notification.service';
 
@@ -9,6 +10,8 @@ import { NotificationService } from 'src/app/services/notification.service';
   styleUrls: ['./product-info.component.scss'],
 })
 export class ProductInfoComponent implements OnInit {
+  product: Product;
+
   constructor(
     public cartService: CartService,
     private notificationService: NotificationService
@@ -23,6 +26,7 @@ export class ProductInfoComponent implements OnInit {
   }
 
   public addItemToCart() {
+    /*
     this.cartService.addItemToCart([
       {
         sku: '50433323',
@@ -38,6 +42,9 @@ export class ProductInfoComponent implements OnInit {
         quantity: 1,
       },
     ]);
+    */
     this.notificationService.success();
   }
+
+  onChangeProductColor(color: string) {}
 }

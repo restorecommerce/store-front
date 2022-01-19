@@ -1,13 +1,13 @@
 <div class="row">
   <div class="flex-11">
     <h2>
-      {{ "ProductNavigation.Product" | translate }}
+      {{ product.title }}
     </h2>
     <p>
-      {{ "ProductInformation.Description" | translate }}
+      {{ product.description }}
     </p>
     <div class="row justify-content-between">
-      <p>
+      <p *ngIf="product.isBestSeller">
         <vcl-badge vclRounded type="primary" class="badge">{{
           "ProductInformation.Bestseller" | translate
         }}</vcl-badge>
@@ -28,7 +28,7 @@
   </div>
   <div class="flex align-right">
     <p class="price-container-text">
-      <b>250,00 €</b>
+      <b>{{ product.price | currency }}</b>
     </p>
   </div>
 </div>
@@ -37,7 +37,7 @@
   <div>
     <p class="chosen-color-name">
       <b>{{ "ProductInformation.Color" | translate }}</b>
-      {{ this.cartService.getColorName() }}
+      {{ product.selectedColor }}
     </p>
   </div>
   <div>
@@ -45,25 +45,25 @@
       <button
         vcl-square-button
         class="circular color-button black-button"
-        (click)="this.cartService.selectColor('black')"
+        (click)="onChangeProductColor('black')"
         [ngClass]="{
-          'button-selected': this.cartService.getColor() === 'black'
+          'button-selected': product.selectedColor === 'black'
         }"
       ></button>
       <button
         vcl-square-button
         class="circular color-button brown-button"
-        (click)="this.cartService.selectColor('brown')"
+        (click)="onChangeProductColor('brown')"
         [ngClass]="{
-          'button-selected': this.cartService.getColor() === 'brown'
+          'button-selected': product.selectedColor === 'brown'
         }"
       ></button>
       <button
         vcl-square-button
         class="circular color-button white-button"
-        (click)="this.cartService.selectColor('white')"
+        (click)="onChangeProductColor('white')"
         [ngClass]="{
-          'button-selected': this.cartService.getColor() === 'white'
+          'button-selected': product.selectedColor === 'white'
         }"
       ></button>
     </p>
@@ -72,7 +72,7 @@
 <hr />
 <p>
   <b>{{ "ProductInformation.Material" | translate }}:</b>
-  {{ "ProductInformation.MaterialInfo" | translate }}
+  {{ product.materialInfo }}
 </p>
 <hr />
 <app-product-size-picker></app-product-size-picker>
@@ -81,11 +81,7 @@
 <hr style="margin-top: 0" />
 <div class="add-to-cart-section">
   <div class="add-to-cart-button-container">
-    <button
-      vcl-button
-      class="add-to-cart-button"
-      (click)="this.addItemToCart()"
-    >
+    <button vcl-button class="add-to-cart-button" (click)="addItemToCart()">
       <vcl-icogram>
         <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
         {{ "ProductInformation.Cart" | translate }}
