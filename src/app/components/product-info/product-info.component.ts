@@ -52,6 +52,7 @@ export class ProductInfoComponent implements OnInit {
 
   onChangeProductColor(color: string) {}
 
+  // Placeholder: data will be fetch! e.g `getShoe(id)`
   getProduct(): void {
     this.productService.getShoe().subscribe((shoe) => (this.product = shoe));
   }
