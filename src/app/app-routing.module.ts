@@ -10,55 +10,56 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout-forms.component';
 import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
 import { CheckoutDeliveryComponent } from './pages/checkout/checkout-delivery/checkout-delivery.component';
-
+import { CheckoutPageGuard } from './services/checkout-page-guard.service';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProductComponent
+    component: ProductComponent,
   },
   {
     path: 'returns',
-    component: ReturnsComponent
+    component: ReturnsComponent,
   },
   {
     path: 'click-and-collect',
-    component: ClickAndCollectComponent
+    component: ClickAndCollectComponent,
   },
   {
     path: 'delivery',
-    component: DeliveryComponent
+    component: DeliveryComponent,
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
   },
   {
     path: 'shoes',
-    component: ShoesComponent
+    component: ShoesComponent,
   },
   {
     path: 'checkout',
-      component: CheckoutComponent,
-      children: [
-        {
-          path: '',
-          component: CheckoutFormsComponent,
-        },
-        {
-          path: 'payment',
-          component: CheckoutPaymentComponent,
-        },
-        {
-          path: 'delivery',
-          component: CheckoutDeliveryComponent,
-        }
-       ]
+    component: CheckoutComponent,
+    canActivate: [CheckoutPageGuard],
+    children: [
+      {
+        path: '',
+        component: CheckoutFormsComponent,
+      },
+      {
+        path: 'payment',
+        component: CheckoutPaymentComponent,
+      },
+      {
+        path: 'delivery',
+        component: CheckoutDeliveryComponent,
+      },
+    ],
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
