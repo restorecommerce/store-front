@@ -14,19 +14,19 @@ export interface Product {
   price: number;
   isBestSeller: true;
   liked: boolean;
-  productGalleryImages: MultiColorsProductImage;
+  productImageSources: MultiColorsProductImage;
   selectedColor: string;
   colors: string[];
   materialInfo: string;
-  expectedDeliveryDuration: string;
   additionalLabel: string;
-  meta: {
-    // SKU Item : Will form part of the IItem
-    sku: string;
-    taxType: string;
-    weight: number;
-    height: number;
-    width: number;
-    depth: number;
-  };
+  // meta: {
+  //   // SKU Item : Will form part of the IItem
+  //   sku: string;
+  //   taxType: string;
+  //   weight: number;
+  //   height: number;
+  //   width: number;
+  //   depth: number;
+  //   currency: string;
+  // };
 }
