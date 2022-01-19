@@ -4,16 +4,14 @@ import { Product, timeout } from '../products/products.component';
 @Component({
   selector: 'app-shoes',
   templateUrl: './shoes.component.html',
-  styleUrls: ['./shoes.component.scss']
+  styleUrls: ['./shoes.component.scss'],
 })
 export class ShoesComponent implements OnInit {
-
   products: Product[] = [];
 
-  constructor() { }
+  constructor() {}
 
   async ngOnInit() {
-
     for (let i = 0; i < 11; ++i) {
       this.products.push({
         title: [
@@ -27,7 +25,7 @@ export class ShoesComponent implements OnInit {
           'Italian-made trainers with organic-cotton-blend uppers',
           'Italian-made driver moccasins in suede with cord trim',
           'Sock trainers with knitted uppers',
-          'Derby shoes in smooth leather with rubber-injected sole'
+          'Derby shoes in smooth leather with rubber-injected sole',
         ][i],
         price: Math.round((Math.random() * 200 + 50) * 100) / 100,
         imgUrl: [
@@ -41,23 +39,33 @@ export class ShoesComponent implements OnInit {
           'assets/products/product08.jpeg',
           'assets/products/product09.jpeg',
           'assets/products/product10.jpeg',
-          'assets/products/product11.jpeg'
+          'assets/products/product11.jpeg',
         ][i],
         like: false,
-        additionalLabel: ['Made in Europe', 'Made in China', 'Recycled', null][Math.trunc(Math.random() * 4)],
+        additionalLabel: ['Made in Europe', 'Made in China', 'Recycled', null][
+          Math.trunc(Math.random() * 4)
+        ],
         colors: [
-          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)})`,
-          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)})`,
-          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)})`,
-          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)})`,
-          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)}, ${Math.trunc(Math.random() * 256)})`
+          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(
+            Math.random() * 256
+          )}, ${Math.trunc(Math.random() * 256)})`,
+          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(
+            Math.random() * 256
+          )}, ${Math.trunc(Math.random() * 256)})`,
+          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(
+            Math.random() * 256
+          )}, ${Math.trunc(Math.random() * 256)})`,
+          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(
+            Math.random() * 256
+          )}, ${Math.trunc(Math.random() * 256)})`,
+          `rgb(${Math.trunc(Math.random() * 256)}, ${Math.trunc(
+            Math.random() * 256
+          )}, ${Math.trunc(Math.random() * 256)})`,
         ].slice(0, Math.trunc(Math.random() * 5) + 1),
-        selectedColor: null
+        selectedColor: null,
       });
-      this.products[this.products.length - 1].selectedColor = this.products[this.products.length - 1].colors[0];
+      this.products[this.products.length - 1].selectedColor =
+        this.products[this.products.length - 1].colors[0];
     }
-
   }
-
 }
-

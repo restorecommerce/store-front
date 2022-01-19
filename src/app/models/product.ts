@@ -12,7 +12,7 @@ export interface Product {
   title: string;
   description: string;
   price: number;
-  isBestSeller: true;
+  isBestSeller: boolean;
   liked: boolean;
   productImageSources: MultiColorsProductImage;
   selectedColor: string;
