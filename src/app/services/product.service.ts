@@ -11,7 +11,7 @@ export class ProductService {
   constructor(private http: HttpClient) {}
 
   getShoe(shoeId: number | string) {
-    const url = `/assets/shoes/shoes/${shoeId}.json`;
+    const url = `/assets/shoes/${shoeId}.json`;
     return this.http.get<Product>(url);
   }
 

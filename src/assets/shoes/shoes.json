@@ -1,134 +1,52 @@
 [
   {
     "id": "shoe1",
-    "title": "Retro-inspired sock trainers in mixed materials",
-    "price": 158.13,
-    "imgUrl": "assets/products/product1.jpeg",
-    "like": false,
-    "additionalLabel": "Made in Europe",
-    "colors": [
-      "rgb(88, 48, 61)",
-      "rgb(98, 104, 48)",
-      "rgb(35, 88, 83)",
-      "rgb(198, 129, 52)",
-      "rgb(238, 144, 232)"
-    ],
-    "selectedColor": "rgb(88, 48, 61)"
+    "title": "DOUBLE-STRAP SANDALS WITH STRUCTURED RUBBERIZED UPPERS",
+    "price": 138.0,
+    "imgUrl": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+    "like": true,
+    "additionalLabel": "",
+    "colors": ["yellow"],
+    "selectedColor": "yellow"
   },
   {
     "id": "shoe2",
-    "title": "Italian-crafted trainers in burnished leather",
-    "price": 193.57,
-    "imgUrl": "assets/products/product2.jpeg",
-    "like": false,
-    "additionalLabel": "Recycled",
-    "colors": ["rgb(141, 184, 238)", "rgb(30, 59, 9)", "rgb(185, 193, 240)"],
-    "selectedColor": "rgb(141, 184, 238)"
+    "title": "ITALIAN-MADE SLIDES WITH LOGO STRAP AND CONTOURED SOLE",
+    "price": 118.0,
+    "imgUrl": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+    "like": true,
+    "additionalLabel": "",
+    "colors": ["black", "blue", "gray"],
+    "selectedColor": "blue"
   },
   {
     "id": "shoe3",
-    "title": "Sock trainers with knitted uppers",
-    "price": 74.38,
-    "imgUrl": "assets/products/product3.jpeg",
+    "title": "SLIPPERS IN REPREVE® WITH COLLAPSIBLE HEEL COUNTER",
+    "price": 228.0,
+    "imgUrl": "https://images.hugoboss.com/is/image/boss/hbeu50464913_131_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
     "like": false,
-    "additionalLabel": null,
-    "colors": ["rgb(170, 187, 248)"],
-    "selectedColor": "rgb(170, 187, 248)"
+    "additionalLabel": "",
+    "colors": ["black", "white"],
+    "selectedColor": "white"
   },
   {
     "id": "shoe4",
-    "title": "Italian-made cap-toe shoes in calf leather",
-    "price": 95.94,
-    "imgUrl": "assets/products/product4.jpeg",
-    "like": false,
-    "additionalLabel": "Made in Europe",
-    "colors": [
-      "rgb(219, 131, 108)",
-      "rgb(46, 133, 35)",
-      "rgb(206, 253, 81)",
-      "rgb(238, 124, 185)",
-      "rgb(109, 68, 69)"
-    ],
-    "selectedColor": "rgb(219, 131, 108)"
+    "title": "SOCK-CONSTRUCTION TRAINERS WITH MESH AND SUEDE",
+    "price": 298.0,
+    "imgUrl": "https://images.hugoboss.com/is/image/boss/hbeu50465589_750_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+    "like": true,
+    "additionalLabel": "",
+    "colors": ["black", "white", "purple", "lightyellow"],
+    "selectedColor": "lightyellow"
   },
   {
     "id": "shoe5",
-    "title": "Low-profile trainers with memory-foam insole",
-    "price": 247.41,
-    "imgUrl": "assets/products/product5.jpeg",
+    "title": "HALF-BOOTS IN SUEDE WITH LOGO DETAILS",
+    "price": 298.0,
+    "imgUrl": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_220?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
     "like": false,
-    "additionalLabel": "Made in China",
-    "colors": ["rgb(72, 237, 213)", "rgb(47, 68, 212)"],
-    "selectedColor": "rgb(72, 237, 213)"
-  },
-  {
-    "id": "shoe6",
-    "title": "Shoes in patent leather with grosgrain piping",
-    "price": 115.88,
-    "imgUrl": "assets/products/product6.jpeg",
-    "like": false,
-    "additionalLabel": null,
-    "colors": ["rgb(250, 17, 161)", "rgb(73, 2, 130)"],
-    "selectedColor": "rgb(250, 17, 161)"
-  },
-  {
-    "id": "shoe7",
-    "title": "Running-inspired trainers in mixed materials with exclusive logo",
-    "price": 73.69,
-    "imgUrl": "assets/products/product7.jpeg",
-    "like": false,
-    "additionalLabel": "Made in Europe",
-    "colors": ["rgb(26, 103, 245)"],
-    "selectedColor": "rgb(26, 103, 245)"
-  },
-  {
-    "id": "shoe8",
-    "title": "Italian-made trainers with organic-cotton-blend uppers",
-    "price": 221.85,
-    "imgUrl": "assets/products/product8.jpeg",
-    "like": false,
-    "additionalLabel": null,
-    "colors": ["rgb(125, 25, 170)", "rgb(25, 147, 102)"],
-    "selectedColor": "rgb(125, 25, 170)"
-  },
-  {
-    "id": "shoe9",
-    "title": "Italian-made driver moccasins in suede with cord trim",
-    "price": 117.61,
-    "imgUrl": "assets/products/product9.jpeg",
-    "like": false,
-    "additionalLabel": "Made in China",
-    "colors": [
-      "rgb(143, 201, 160)",
-      "rgb(237, 216, 236)",
-      "rgb(216, 43, 42)",
-      "rgb(130, 56, 184)"
-    ],
-    "selectedColor": "rgb(143, 201, 160)"
-  },
-  {
-    "id": "shoe10",
-    "title": "Sock trainers with knitted uppers",
-    "price": 232.26,
-    "imgUrl": "assets/products/product10.jpeg",
-    "like": false,
-    "additionalLabel": "Recycled",
-    "colors": [
-      "rgb(213, 61, 82)",
-      "rgb(81, 48, 87)",
-      "rgb(178, 13, 15)",
-      "rgb(182, 218, 205)"
-    ],
-    "selectedColor": "rgb(213, 61, 82)"
-  },
-  {
-    "id": "shoe11",
-    "title": "Derby shoes in smooth leather with rubber-injected sole",
-    "price": 56.72,
-    "imgUrl": "assets/products/product11.jpeg",
-    "like": false,
-    "additionalLabel": null,
-    "colors": ["rgb(207, 5, 50)"],
-    "selectedColor": "rgb(207, 5, 50)"
+    "additionalLabel": "MADE IN EUROPE",
+    "colors": ["black", "white"],
+    "selectedColor": "white"
   }
 ]

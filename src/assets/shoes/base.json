@@ -1,0 +1,60 @@
+{
+  "id": "",
+  "title": "",
+  "description": "",
+  "price": 298.0,
+  "isBestSeller": true,
+  "liked": true,
+  "productImageSources": {
+    "white": [
+      {
+        "src": "",
+        "srcThumb": "",
+        "alt": ""
+      },
+
+      {
+        "src": "",
+        "srcThumb": "",
+        "alt": ""
+      },
+      {
+        "src": "",
+        "srcThumb": "",
+        "alt": "Black Sneakers"
+      },
+      {
+        "src": "",
+        "srcThumb": "",
+        "alt": ""
+      }
+    ],
+    "black": [
+      {
+        "src": "",
+        "srcThumb": "",
+        "alt": ""
+      },
+
+      {
+        "src": "",
+        "srcThumb": "",
+        "alt": ""
+      },
+      {
+        "src": "",
+        "srcThumb": "",
+        "alt": "Black Sneakers"
+      },
+      {
+        "src": "",
+        "srcThumb": "",
+        "alt": ""
+      }
+    ]
+  },
+  "selectedColor": "white",
+  "colors": ["black", "white"],
+  "materialInfo": "Upper material: 100% Cow leather, 100% Cow leather, Sole: 100% Ethylene vinyl acetate, Innersole: 90% Polyamid, 10% Polyurethane",
+  "additionalLabel": ""
+}
