@@ -1,15 +1,5 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  AfterViewInit,
-  ViewChild,
-  ElementRef,
-  AfterViewChecked,
-} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product, ProductImage } from 'src/app/models/product';
-
-import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-product-gallery',
@@ -20,15 +10,12 @@ export class ProductGalleryComponent implements OnInit {
   public loading = false;
   public zoomImage = false;
   public imageIndex = 0;
-  public dataService: CartService;
   public productZoomContainerWidth: number;
 
   @Input() product: Product;
   galleryImages: ProductImage[];
 
-  constructor(private service: CartService) {
-    this.dataService = this.service;
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 
@@ -47,6 +34,6 @@ export class ProductGalleryComponent implements OnInit {
   setCurrentImageArray() {
     const { productImageSources, selectedColor } = this.product;
     this.galleryImages = productImageSources[selectedColor];
-    console.log(productImageSources[selectedColor]);
+    //console.log(productImageSources[selectedColor]);
   }
 }
