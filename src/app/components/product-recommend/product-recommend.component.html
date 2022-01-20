@@ -1,4 +1,6 @@
-<h2 class="product-recommend-header">{{ "ProductRecommend.Title" | translate }}</h2>
+<h2 class="product-recommend-header">
+  {{ "ProductRecommend.Title" | translate }}
+</h2>
 <div class="product-recommend-container">
   <div class="product-recommend-section">
     <a class="more-button">{{ "ProductRecommend.YouMightAlso" | translate }}</a>
@@ -15,22 +17,38 @@
         <div class="row product-recommend-list">
           <div class="w-25p">
             <div class="demoItem">
-              <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+              <img
+                class="responsive-image"
+                [src]="this.service.getCurrentImageArray()[1].src"
+                alt="Image 1"
+              />
             </div>
           </div>
           <div class="w-25p">
             <div class="demoItem">
-              <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+              <img
+                class="responsive-image"
+                [src]="this.service.getCurrentImageArray()[1].src"
+                alt="Image 1"
+              />
             </div>
           </div>
           <div class="w-25p">
             <div class="demoItem">
-              <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+              <img
+                class="responsive-image"
+                [src]="this.service.getCurrentImageArray()[1].src"
+                alt="Image 1"
+              />
             </div>
           </div>
           <div class="w-25p">
             <div class="demoItem">
-              <img class="responsive-image" [src]="this.dataService.getCurrentImageArray()[1].src" alt="Image 1">
+              <img
+                class="responsive-image"
+                [src]="this.service.getCurrentImageArray()[1].src"
+                alt="Image 1"
+              />
             </div>
           </div>
         </div>

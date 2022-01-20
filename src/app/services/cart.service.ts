@@ -1,9 +1,4 @@
 import { Injectable } from '@angular/core';
-import * as blackSneakers from 'src/app/data/blackSneakers.json';
-import * as brownSneakers from 'src/app/data/brownSneakers.json';
-import * as whiteSneakers from 'src/app/data/whiteSneakers.json';
-import * as whiteShirt from 'src/app/data/whiteShirt.json';
-import { ProductImage } from '../models/product';
 import { Cart } from '@restorecommerce/cart/lib/model/impl/Cart';
 import { MockSerializer } from '@restorecommerce/cart/lib/model/impl/MockSerializer';
 import { Courier } from '@restorecommerce/cart/lib/model/impl/Courier';
@@ -18,9 +13,6 @@ import { IItem } from '@restorecommerce/cart/lib/model/IItem';
   providedIn: 'root',
 })
 export class CartService {
-  private color: string = 'brown';
-  private currentImageArray: ProductImage[] = (brownSneakers as any).default;
-  private loading: boolean = false;
   public cart: Cart;
 
   constructor() {
@@ -96,60 +88,11 @@ export class CartService {
     return 768;
   }
 
-  public getLoading() {
-    return this.loading;
-  }
-
-  public getColor(): string {
-    return this.color;
-  }
-
-  public getColorName(): string {
-    switch (this.color) {
-      case 'black':
-        return 'Schwarz';
-      case 'brown':
-        return 'Braun';
-      case 'white':
-        return 'Weiß';
-    }
-  }
-
-  public getCurrentImageArray(): ProductImage[] {
-    return this.currentImageArray;
-  }
-
   public getScreenSize(): number {
     return document.body.clientWidth;
   }
 
   public getScreenWidth(): number {
     return window.screen.width;
-  }
-
-  public selectColor(color: string): void {
-    switch (color) {
-      case 'black': {
-        this.currentImageArray = (blackSneakers as any).default;
-        this.color = color;
-        this.loading = true;
-        setTimeout(() => (this.loading = false), 100);
-        break;
-      }
-      case 'brown': {
-        this.currentImageArray = (brownSneakers as any).default;
-        this.color = color;
-        this.loading = true;
-        setTimeout(() => (this.loading = false), 100);
-        break;
-      }
-      case 'white': {
-        this.currentImageArray = (whiteSneakers as any).default;
-        this.color = color;
-        this.loading = true;
-        setTimeout(() => (this.loading = false), 100);
-        break;
-      }
-    }
   }
 }
