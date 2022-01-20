@@ -24,6 +24,7 @@ export class ProductGalleryComponent implements OnInit {
   public productZoomContainerWidth: number;
 
   @Input() product: Product;
+  galleryImages: ProductImage[];
 
   constructor(private service: CartService) {
     this.dataService = this.service;
@@ -33,16 +34,19 @@ export class ProductGalleryComponent implements OnInit {
 
   ngOnChanges() {
     this.loading = true;
-    setTimeout(() => (this.loading = false), 100);
-    this.setCurrentImageArray();
+    setTimeout(() => {
+      this.setCurrentImageArray();
+      this.loading = false;
+    }, 100);
   }
 
   public zoom(): void {
     this.zoomImage = true;
   }
 
-  setCurrentImageArray(): ProductImage[] {
+  setCurrentImageArray() {
     const { productImageSources, selectedColor } = this.product;
-    return productImageSources[selectedColor];
+    this.galleryImages = productImageSources[selectedColor];
+    console.log(productImageSources[selectedColor]);
   }
 }

@@ -1,9 +1,13 @@
 <div>
-  <ng-container *ngIf="!this.dataService.getLoading()">
+  <ng-container *ngIf="!this.loading">
     <div class="product-gallery-container">
       <vcl-gallery [selectedImage]="imageIndex" row="true">
-        <ng-container *ngFor="let image of this.dataService.getCurrentImageArray()">
-          <vcl-gallery-image [image]="image.src" [thumbnail]="image.srcThumb" [alt]="image.alt"></vcl-gallery-image>
+        <ng-container *ngFor="let image of this.galleryImages">
+          <vcl-gallery-image
+            [image]="image.src"
+            [thumbnail]="image.srcThumb"
+            [alt]="image.alt"
+          ></vcl-gallery-image>
         </ng-container>
         <vcl-gallery-thumbnails></vcl-gallery-thumbnails>
         <div class="seperator"></div>
@@ -12,16 +16,32 @@
     </div>
   </ng-container>
 
-  <button vcl-button class="zoom-button" (click)="inlineLayer.open({data: { title: '' }, closeOnBackdropClick: true})">
+  <button
+    vcl-button
+    class="zoom-button"
+    (click)="
+      inlineLayer.open({ data: { title: '' }, closeOnBackdropClick: true })
+    "
+  >
     <vcl-icogram>
       <vcl-icon icon="fas:search-plus"></vcl-icon>
     </vcl-icogram>
   </button>
-  
+
   <ng-template vclLayer #inlineLayer="vclLayer">
-    <vcl-panel-dialog [showCloseButton]="true" (close)="inlineLayer.close()" class="m-0">
+    <vcl-panel-dialog
+      [showCloseButton]="true"
+      (close)="inlineLayer.close()"
+      class="m-0"
+    >
       <vcl-panel-title></vcl-panel-title>
-      <app-product-zoom class="row center" [imageArray]="this.dataService.getCurrentImageArray()" [(zoom)]="zoomImage" [imageIndex]="imageIndex" [zoomOutWidth]="productZoomContainerWidth"></app-product-zoom>
+      <app-product-zoom
+        class="row center"
+        [imageArray]="this.galleryImages"
+        [(zoom)]="zoomImage"
+        [imageIndex]="imageIndex"
+        [zoomOutWidth]="productZoomContainerWidth"
+      ></app-product-zoom>
     </vcl-panel-dialog>
   </ng-template>
 </div>
