@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from 'src/app/models/product';
-//import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
+import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
 import { NotificationService } from 'src/app/services/notification.service';
 import { ProductService } from 'src/app/services/product.service';
@@ -28,14 +28,14 @@ export class ProductInfoComponent implements OnInit {
   }
 
   public addItemToCart() {
-    /*
+    const { price, id: sku, title } = this.product;
     this.cartService.addItemToCart([
       {
-        sku: '50433323',
-        desc: 'Italian-made leather sneakers with monogram details',
+        sku,
+        desc: title,
         imgSrc:
           'https://images.hugoboss.com/is/image/boss/hbeu50410989_001_250?$re_fullPageZoom$&qlt=85&wid=300&hei=200',
-        price: new Decimal('250.00'), // Price
+        price: new Decimal(price), // Price
         taxType: 'vat_standard',
         weight: 610, // grams
         height: 4.2, // cm
@@ -44,7 +44,7 @@ export class ProductInfoComponent implements OnInit {
         quantity: 1,
       },
     ]);
-    */
+
     this.notificationService.success();
   }
 
