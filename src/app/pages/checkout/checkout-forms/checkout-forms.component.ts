@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
 
+import { CartService } from 'src/app/services/cart.service';
+
 @Component({
   selector: 'app-checkout-forms',
   templateUrl: './checkout-forms.component.html',
@@ -14,6 +16,7 @@ export class CheckoutFormsComponent implements OnInit {
 
   constructor(
     private notifier: NotifierService,
+    private cartService: CartService,
     private secondService: TranslateService,
     private router: Router
   ) {
@@ -83,6 +86,8 @@ export class CheckoutFormsComponent implements OnInit {
   clickAndCollectSubmit() {
     if (this.clickAndCollectForm.valid) {
       console.log(this.homeDeliveryForm.value);
+      console.log('And this are your products!');
+      console.log(this.cartService.getCartItems());
       this.router.navigate(['/checkout/payment']);
     } else {
       this.notifier.error('Bitte füllen Sie das Formular ganz aus.');

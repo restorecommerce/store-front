@@ -112,8 +112,8 @@
       }
     ]
   },
-  "selectedColor": "purple",
-  "colors": ["black", "white", "purple", "lightyellow"],
+  "selectedColor": "yellow",
+  "colors": ["black", "white", "purple", "yellow"],
   "materialInfo": "Upper material: 100% Cow leather, 100% Cow leather, Sole: 100% Ethylene vinyl acetate, Innersole: 90% Polyamid, 10% Polyurethane",
   "additionalLabel": ""
 }

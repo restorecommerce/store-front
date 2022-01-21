@@ -33,8 +33,7 @@ export class ProductInfoComponent implements OnInit {
       {
         sku,
         desc: title,
-        imgSrc:
-          'https://images.hugoboss.com/is/image/boss/hbeu50410989_001_250?$re_fullPageZoom$&qlt=85&wid=300&hei=200',
+        imgSrc: null,
         price: new Decimal(price), // Price
         taxType: 'vat_standard',
         weight: 610, // grams

@@ -16,7 +16,6 @@ export class ProductService {
   }
 
   getShoes() {
-    //return of(products);
     return this.http.get<ProductCard[]>('/assets/shoes/shoes.json');
   }
 }
