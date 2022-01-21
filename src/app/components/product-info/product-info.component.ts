@@ -3,7 +3,7 @@ import { Product } from 'src/app/models/product';
 import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
 import { NotificationService } from 'src/app/services/notification.service';
-import { ProductService } from 'src/app/services/product.service';
+// import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-info',
@@ -15,8 +15,7 @@ export class ProductInfoComponent implements OnInit {
 
   constructor(
     public cartService: CartService,
-    private notificationService: NotificationService,
-    private productService: ProductService
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit(): void {}
@@ -47,5 +46,7 @@ export class ProductInfoComponent implements OnInit {
     this.notificationService.success();
   }
 
-  onChangeProductColor(color: string) {}
+  onChangeProductColor(color: string): void {
+    this.product.selectedColor = color;
+  }
 }

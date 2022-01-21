@@ -44,27 +44,13 @@
     <p class="colored-buttons-container row align-items-center">
       <button
         vcl-square-button
-        class="circular color-button black-button"
-        (click)="onChangeProductColor('black')"
+        class="circular color-button"
+        *ngFor="let color of product.colors"
+        (click)="onChangeProductColor(color)"
         [ngClass]="{
-          'button-selected': product.selectedColor === 'black'
+          'button-selected': product.selectedColor === color
         }"
-      ></button>
-      <button
-        vcl-square-button
-        class="circular color-button brown-button"
-        (click)="onChangeProductColor('brown')"
-        [ngClass]="{
-          'button-selected': product.selectedColor === 'brown'
-        }"
-      ></button>
-      <button
-        vcl-square-button
-        class="circular color-button white-button"
-        (click)="onChangeProductColor('white')"
-        [ngClass]="{
-          'button-selected': product.selectedColor === 'white'
-        }"
+        [ngStyle]="{ backgroundColor: color }"
       ></button>
     </p>
   </div>
