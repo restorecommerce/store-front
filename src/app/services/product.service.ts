@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Product } from '../models/product';
@@ -8,6 +8,8 @@ import { Product as ProductCard } from '../pages/products/products.component';
   providedIn: 'root',
 })
 export class ProductService {
+  productColorChanged = new EventEmitter<string>();
+
   constructor(private http: HttpClient) {}
 
   getShoe(shoeId: number | string) {
@@ -18,4 +20,6 @@ export class ProductService {
   getShoes() {
     return this.http.get<ProductCard[]>('/assets/shoes/shoes.json');
   }
+
+  onProductColorChanged(color: string) {}
 }

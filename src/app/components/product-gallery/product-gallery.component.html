@@ -1,7 +1,7 @@
 <div>
   <ng-container *ngIf="!this.loading">
     <div class="product-gallery-container">
-      <vcl-gallery [selectedImage]="imageIndex" row="true">
+      <vcl-gallery row="true">
         <ng-container *ngFor="let image of this.galleryImages">
           <vcl-gallery-image
             [image]="image.src"
