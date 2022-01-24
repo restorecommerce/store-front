@@ -74,6 +74,7 @@ import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout
 import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
 import { CheckoutDeliveryComponent } from './pages/checkout/checkout-delivery/checkout-delivery.component';
 import { ClickStopPropagation } from './shared/click-stop-propagation.directive';
+import { ProductCardComponent } from './pages/product-card/product-card.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -113,6 +114,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CheckoutPaymentComponent,
     CheckoutDeliveryComponent,
     ClickStopPropagation,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
