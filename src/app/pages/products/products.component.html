@@ -81,18 +81,18 @@
               media.min +
               'px)'
             "
-            [srcset]="product.imgUrl"
+            [srcset]="product.images[product.selectedColor]"
             [type]="'image/' + media.format"
           />
           <img
             class="image"
             alt="product image"
-            [src]="product.images['product.selectedColor']"
+            [src]="product.images[product.selectedColor]"
           />
         </picture>
         <div
           class="row center justify-center spinner-wrapper"
-          *ngIf="!product.imgUrl"
+          *ngIf="!product.images[product.selectedColor]"
         >
           <i class="fas fa-spinner spinner"></i>
         </div>
@@ -101,10 +101,10 @@
             class="row color-wrapper"
             *ngFor="let color of product.colors"
             [class.color-selected]="color === product.selectedColor"
-            (click)="changeProductColor(product, color)"
+            (click)="onChangeProductColor(product, color)"
             click-stop-propagation
           >
-            <div class="color" [style.background-color]="color">F</div>
+            <div class="color" [style.background-color]="color"></div>
           </div>
         </div>
         <div class="title">{{ product.title }}</div>

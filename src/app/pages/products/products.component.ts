@@ -52,6 +52,11 @@ export class ProductsComponent {
   @Input() pageTitle: string;
 
   @Output() productClicked = new EventEmitter<string | number>();
+  @Output() productColorChanged = new EventEmitter<{
+    id: string | number;
+    color: string;
+  }>();
+
   constructor() {}
 
   sortOptionClicked(option: string, event) {
@@ -64,8 +69,10 @@ export class ProductsComponent {
     this.productClicked.emit(productId);
   }
 
-  changeProductColor(product: Product, color: string) {
-    alert('Change product color!');
+  onChangeProductColor(product: Product, color: string) {
+    console.log('Product whose color was changed!');
+    console.log(product.id);
+    this.productColorChanged.emit({ id: product.id, color });
   }
 }
 
