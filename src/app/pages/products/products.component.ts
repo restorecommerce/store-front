@@ -51,16 +51,6 @@ export class ProductsComponent {
     this.sortDropdownExpanded = false;
     event.stopPropagation();
   }
-
-  onProductClicked(productId: number | string) {
-    this.productClicked.emit(productId);
-  }
-
-  onChangeProductColor(product: Product, color: string) {
-    console.log('Product whose color was changed!');
-    console.log(product.id);
-    this.productColorChanged.emit({ id: product.id, color });
-  }
 }
 
 export function timeout(ms) {
