@@ -28,7 +28,21 @@ export class ProductCardComponent implements OnInit {
 
   onChangeProductColor(color: string) {}
 
-  onProductClicked() {}
+  onProductClicked() {
+    // this.router.navigate(['products', payload]);
+  }
+
+  // onProductColorChanged(payload: { id: string | number; color: string }) {
+  //   this.products = this.products.map((shoe) => {
+  //     if (shoe.id === payload.id) {
+  //       console.log('We want to change the color of the product!');
+  //       shoe.selectedColor = payload.color;
+  //     }
+  //     return shoe;
+  //   });
+
+  //   // This is not optimal!
+  // }
 
   ngOnInit(): void {}
 }

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'products',
@@ -37,12 +37,6 @@ export class ProductsComponent {
   @Input() currency: string;
   @Input() products: Product[] = [];
   @Input() pageTitle: string;
-
-  @Output() productClicked = new EventEmitter<string | number>();
-  @Output() productColorChanged = new EventEmitter<{
-    id: string | number;
-    color: string;
-  }>();
 
   constructor() {}
 

@@ -1,59 +1,6 @@
 <section class="content-area page-products" role="main">
-  <header class="row center justify-between page-header">
-    <div class="row groups-buttons">
-      <div
-        class="row group-button"
-        *ngFor="let group of groups"
-        [class.selected]="selectedGroup === group.title"
-        (click)="selectedGroup = group.title"
-      >
-        <div class="title">{{ group.title }}</div>
-        {{ group.productCount }}
-      </div>
-    </div>
-    <div class="page-title">
-      {{ pageTitle }}
-    </div>
-    <div class="row panel-grid-size-and-sort">
-      <div class="row panel-grid-size">
-        <i
-          class="grid-size-button fas fa-th-large"
-          [class.selected]="selectedGridSize === '2x2'"
-          (click)="selectedGridSize = '2x2'"
-        ></i>
-        <i
-          class="grid-size-button fas fa-th"
-          [class.selected]="selectedGridSize === '3x3'"
-          (click)="selectedGridSize = '3x3'"
-        ></i>
-      </div>
-      <div
-        class="row justify-between panel-sort"
-        (click)="sortDropdownExpanded = !sortDropdownExpanded"
-      >
-        <div>Sort: {{ sortBy }}</div>
-        <i class="fas fa-sort"></i>
-        <div class="col sort-options" *ngIf="sortDropdownExpanded">
-          <div
-            class="sort-option"
-            *ngFor="let option of sortOptions"
-            [class.selected]="sortBy === option"
-            (click)="sortOptionClicked(option, $event)"
-          >
-            {{ option }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="row flex-no-wrap start justify-center body">
-    <div class="panel-filter">
-      <div class="row option" *ngFor="let filterOption of filterOptions">
-        <i class="fas fa-sort-down arrow"></i>
-        {{ filterOption }}
-      </div>
-    </div>
-    <div class="row flex-wrap panel-products">
+  <div class="">
+    <div class="panel-products">
       <app-product-card
         *ngFor="let product of products"
         [product]="product"

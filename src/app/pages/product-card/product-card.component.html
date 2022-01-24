@@ -1,8 +1,8 @@
-<div class="column align-centered product" (click)="onProductClicked()">
-  <div class="row justify-between product-header">
-    <div class="row additional-label" *ngIf="product.additionalLabel">
-      <div class="text">{{ product.additionalLabel }}</div>
-      <div class="rounded-right"></div>
+<div class="product" (click)="onProductClicked()">
+  <div class="">
+    <div class="" *ngIf="product.additionalLabel">
+      <div class="">{{ product.additionalLabel }}</div>
+      <div class=""></div>
     </div>
     <i
       class="fas fa-heart like"
@@ -10,9 +10,9 @@
       (click)="product.like = !product.like"
     ></i>
   </div>
-  <picture class="image-wrapper">
+  <picture class="">
     <source
-      class="image"
+      class=""
       *ngFor="let media of responsiveImagesConfiguration"
       [media]="
         '(max-width: ' + media.max + 'px) and (min-width: ' + media.min + 'px)'
@@ -21,30 +21,27 @@
       [type]="'image/' + media.format"
     />
     <img
-      class="image"
+      class=""
       alt="product image"
       [src]="product.images[product.selectedColor]"
     />
   </picture>
-  <div
-    class="row center justify-center spinner-wrapper"
-    *ngIf="!product.images[product.selectedColor]"
-  >
+  <div class="" *ngIf="!product.images[product.selectedColor]">
     <i class="fas fa-spinner spinner"></i>
   </div>
-  <div class="row justify-center colors">
+  <div class="">
     <div
-      class="row color-wrapper"
+      class=""
       *ngFor="let color of product.colors"
       [class.color-selected]="color === product.selectedColor"
       (click)="onChangeProductColor(color)"
       click-stop-propagation
     >
-      <div class="color" [style.background-color]="color"></div>
+      <div class="" [style.background-color]="color"></div>
     </div>
   </div>
-  <div class="title">{{ product.title }}</div>
-  <div class="row justify-center price">
+  <div class="">{{ product.title }}</div>
+  <div class="">
     {{ product.price | currency: currency }}
   </div>
 </div>
