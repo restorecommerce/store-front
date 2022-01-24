@@ -63,6 +63,10 @@ export class ProductsComponent {
   onProductClicked(productId: number | string) {
     this.productClicked.emit(productId);
   }
+
+  changeProductColor(product: Product, color: string) {
+    alert('Change product color!');
+  }
 }
 
 export function timeout(ms) {

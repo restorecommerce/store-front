@@ -84,7 +84,11 @@
             [srcset]="product.imgUrl"
             [type]="'image/' + media.format"
           />
-          <img class="image" alt="product image" [src]="product.imgUrl" />
+          <img
+            class="image"
+            alt="product image"
+            [src]="product.images['product.selectedColor']"
+          />
         </picture>
         <div
           class="row center justify-center spinner-wrapper"
@@ -97,9 +101,10 @@
             class="row color-wrapper"
             *ngFor="let color of product.colors"
             [class.color-selected]="color === product.selectedColor"
-            (click)="product.selectedColor = color"
+            (click)="changeProductColor(product, color)"
+            click-stop-propagation
           >
-            <div class="color" [style.background-color]="color"></div>
+            <div class="color" [style.background-color]="color">F</div>
           </div>
         </div>
         <div class="title">{{ product.title }}</div>

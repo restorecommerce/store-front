@@ -11,11 +11,10 @@ export class ProductGalleryComponent implements OnInit {
   loading = false;
   zoomImage = false;
   productZoomContainerWidth: number;
-
+  public galleryImages: ProductImage[];
   imageIndex = 0;
 
   @Input() product: Product;
-  galleryImages: ProductImage[];
 
   constructor(private productService: ProductService) {}
 
