@@ -19,9 +19,6 @@ export class ShoesComponent implements OnInit {
 
   getShoes() {
     this.productService.getShoes().subscribe((shoes) => {
-      console.log('This was ran, and it returned!');
-      console.log(shoes);
-      console.log('*****************');
       this.products = shoes;
     });
   }
