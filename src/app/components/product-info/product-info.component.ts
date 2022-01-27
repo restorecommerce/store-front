@@ -56,7 +56,5 @@ export class ProductInfoComponent implements OnInit {
 
   onSizeSelected(payload: number) {
     this.selectedSize = payload;
-    console.log('A size has been choosen!');
-    console.log(this.selectedSize);
   }
 }
