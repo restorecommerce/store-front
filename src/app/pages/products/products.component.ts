@@ -60,4 +60,5 @@ export class Product {
   colors: string[];
   selectedColor: string;
   images: {};
+  urls: {};
 }

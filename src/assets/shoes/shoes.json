@@ -9,6 +9,9 @@
     "selectedColor": "yellow",
     "images": {
       "yellow": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_220"
+    },
+    "urls": {
+      "self": "products/shoe1"
     }
   },
   {
@@ -23,6 +26,9 @@
       "blue": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_220",
       "black": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_220",
       "gray": "https://images.hugoboss.com/is/image/boss/hbeu50425152_059_220"
+    },
+    "urls": {
+      "self": "products/shoe2"
     }
   },
   {
@@ -36,6 +42,9 @@
     "images": {
       "white": "https://images.hugoboss.com/is/image/boss/hbeu50464913_131_220",
       "black": "https://images.hugoboss.com/is/image/boss/hbeu50464913_001_220"
+    },
+    "urls": {
+      "self": "products/shoe3"
     }
   },
   {
@@ -51,6 +60,9 @@
       "purple": "https://images.hugoboss.com/is/image/boss/hbeu50465589_512_220",
       "white": "https://images.hugoboss.com/is/image/boss/hbeu50465589_120_220",
       "yellow": "https://images.hugoboss.com/is/image/boss/hbeu50465589_750_220"
+    },
+    "urls": {
+      "self": "products/shoe4"
     }
   },
   {
@@ -64,6 +76,9 @@
     "images": {
       "white": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_220",
       "black": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_220"
+    },
+    "urls": {
+      "self": "products/shoe5"
     }
   }
 ]

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from '../products/products.component';
 
 @Component({
@@ -25,17 +26,17 @@ export class ProductCardComponent implements OnInit {
     { width: 400, min: 1382, max: 99999, suffix: '-xl', format: 'jpeg' },
   ];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   onChangeProductColor(color: string) {
     if (this.product.selectedColor === color) return;
     this.product.selectedColor = color;
     this.selectedColor = color;
-    //alert(`color changed to  ${this.product.selectedColor}`);
   }
 
   onProductClicked() {
-    // this.router.navigate(['products', payload]);
+    console.log(this.product.urls['self']);
+    this.router.navigateByUrl(this.product.urls['self']);
   }
 
   ngOnInit(): void {
