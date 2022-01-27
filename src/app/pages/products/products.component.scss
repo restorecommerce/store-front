@@ -1,2 +1,122 @@
 .page-products {
+  max-width: 1333px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .page-header {
+    margin-bottom: 25px;
+
+    .groups-buttons {
+      .group-button {
+        margin-right: 20px;
+        cursor: pointer;
+        font: 400 13.3333px Arial;
+
+        .title {
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-right: 5px;
+        }
+
+        &.selected {
+          border-bottom: 2px solid black;
+        }
+      }
+    }
+
+    .page-title {
+      font: Univers, sans-serif;
+      font-size: 28px;
+      font-weight: lighter;
+    }
+
+    .panel-grid-size-and-sort {
+      .panel-grid-size {
+        margin-right: 10px;
+
+        .grid-size-button {
+          margin-right: 5px;
+          font-size: 20px;
+          color: #aaaaaa;
+          cursor: pointer;
+
+          &.selected {
+            color: black;
+          }
+        }
+      }
+
+      .panel-sort {
+        border-bottom: 1px solid black;
+        width: 170px;
+        font-weight: bold;
+        padding-bottom: 5px;
+        position: relative;
+        cursor: pointer;
+
+        .sort-options {
+          position: absolute;
+          top: 24px;
+          border: 1px solid black;
+
+          .sort-option {
+            height: 42px;
+            max-height: 42px;
+            width: 170px;
+            text-transform: uppercase;
+            padding-top: 14px;
+            padding-left: 10px;
+            background-color: white;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+
+            &.selected {
+              background-color: black;
+              color: white;
+            }
+
+            &:hover {
+              background-color: black;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .body {
+    @media (max-width: 1100px) {
+      flex-wrap: wrap;
+    }
+
+    .panel-filter {
+      background-color: white;
+      padding: 0 30px 60px 30px;
+      margin-bottom: 20px;
+
+      .option {
+        width: 250px;
+        height: 40px;
+        border-bottom: 1px solid #bbbbbb;
+        background-color: #ffffff;
+        margin-top: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        .arrow {
+          margin-right: 25px;
+        }
+      }
+    }
+
+    .panel-products {
+      width: 100%;
+      min-width: 720px;
+      @media (max-width: 700px) {
+        min-width: auto;
+      }
+    }
+  }
 }
