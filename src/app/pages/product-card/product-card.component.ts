@@ -10,6 +10,7 @@ export class ProductCardComponent implements OnInit {
   @Input() product: Product;
 
   currency: string;
+  selectedColor: string;
 
   responsiveImagesConfiguration = [
     { width: 400, min: 0, max: 1100.99, suffix: '-xl', format: 'webp' },
@@ -26,23 +27,18 @@ export class ProductCardComponent implements OnInit {
 
   constructor() {}
 
-  onChangeProductColor(color: string) {}
+  onChangeProductColor(color: string) {
+    if (this.product.selectedColor === color) return;
+    this.product.selectedColor = color;
+    this.selectedColor = color;
+    //alert(`color changed to  ${this.product.selectedColor}`);
+  }
 
   onProductClicked() {
     // this.router.navigate(['products', payload]);
   }
 
-  // onProductColorChanged(payload: { id: string | number; color: string }) {
-  //   this.products = this.products.map((shoe) => {
-  //     if (shoe.id === payload.id) {
-  //       console.log('We want to change the color of the product!');
-  //       shoe.selectedColor = payload.color;
-  //     }
-  //     return shoe;
-  //   });
-
-  //   // This is not optimal!
-  // }
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.selectedColor = this.product.selectedColor;
+  }
 }

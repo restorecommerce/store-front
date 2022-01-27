@@ -36,7 +36,7 @@
     <div
       class="row color-wrapper"
       *ngFor="let color of product.colors"
-      [class.color-selected]="color === product.selectedColor"
+      [class.color-selected]="color === selectedColor"
       (click)="onChangeProductColor(color)"
       click-stop-propagation
     >
