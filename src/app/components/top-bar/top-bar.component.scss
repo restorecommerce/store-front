@@ -1,5 +1,5 @@
 .top-bar-container {
-  background-color: white;
+  background-color: black;
   height: 45px;
   padding: 0 1rem;
 }
@@ -15,7 +15,7 @@
 }
 
 .icon {
- line-height: 1.5;
+  line-height: 1.5;
 }
 
 .large-icon {
@@ -23,7 +23,7 @@
 }
 
 .logo {
-  height: 26px; 
+  height: 26px;
   cursor: pointer;
 }
 
@@ -70,7 +70,7 @@ h4:hover {
 }
 
 .top-bar-search::placeholder {
-  color:gray;
+  color: gray;
 }
 
 .top-bar-search:focus {
@@ -95,6 +95,7 @@ h4:hover {
 
 .nav-icon {
   font-size: 25px;
+  color: #fff;
 }
 
 @media only screen and (max-width: 1024px) {

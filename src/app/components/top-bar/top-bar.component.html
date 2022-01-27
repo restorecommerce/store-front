@@ -1,4 +1,5 @@
 <div class="top-bar-container">
+  <!-- the main nav bar! -->
   <div class="row justify-content-between align-items-center top-bar-nav">
     <div class="vertical-center home-icon-container">
       <button
@@ -28,7 +29,11 @@
       </button>
     </div>
     <div class="vertical-center">
-      <img src="../../../assets/logos/restore_logo_bw.svg" alt="restorelogo" />
+      <img
+        class="logo"
+        src="../../../assets/logos/restore_logo_wb.svg"
+        alt="restorelogo"
+      />
     </div>
     <div class="vertical-center men-women-container">
       <ng-container>
@@ -94,6 +99,9 @@
       </button>
     </div>
   </div>
+  <!-- Application layers! -->
+
+  <!-- the language layer -->
   <ng-template vclLayer #languageLayer="vclLayer">
     <vcl-panel-dialog
       [showCloseButton]="true"
@@ -153,6 +161,8 @@
       </div>
     </vcl-panel-dialog>
   </ng-template>
+
+  <!-- the cart layer -->
   <ng-template vclLayer #cartLayer="vclLayer">
     <vcl-panel-dialog
       [showCloseButton]="true"
@@ -258,6 +268,8 @@
       </ng-container>
     </vcl-panel-dialog>
   </ng-template>
+
+  <!-- the menu layer -->
   <ng-template vclLayer #menuLayer="vclLayer">
     <vcl-panel-dialog
       [showCloseButton]="true"
