@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-product-size-picker',
   templateUrl: './product-size-picker.component.html',
-  styleUrls: ['./product-size-picker.component.scss']
+  styleUrls: ['./product-size-picker.component.scss'],
 })
 export class ProductSizePickerComponent implements OnInit {
-  size = '';
+  size: number;
 
-  sizeArray = ['39', '40', '41', '42', '43', '44', '45', '46']
+  @Input() sizeArray: number[];
+  @Output() sizeSelected = new EventEmitter<number>();
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {}
-  
+
+  // listen for change on the product size picker, and then proceed
+  // to emit it so that the parent stores IItem
 }

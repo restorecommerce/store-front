@@ -61,7 +61,10 @@
   {{ product.materialInfo }}
 </p>
 <hr />
-<app-product-size-picker></app-product-size-picker>
+<app-product-size-picker
+  [sizeArray]="product.availableSizes"
+  (sizeSelected)="onSizeSelected($event)"
+></app-product-size-picker>
 <hr style="margin-bottom: 0" />
 <app-product-description></app-product-description>
 <hr style="margin-top: 0" />

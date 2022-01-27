@@ -13,6 +13,8 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductInfoComponent implements OnInit {
   @Input() product: Product;
 
+  selectedSize: number;
+
   constructor(
     public cartService: CartService,
     private notificationService: NotificationService,
@@ -50,5 +52,11 @@ export class ProductInfoComponent implements OnInit {
   onChangeProductColor(color: string): void {
     this.product.selectedColor = color;
     this.productService.productColorChanged.emit(color);
+  }
+
+  onSizeSelected(payload: number) {
+    this.selectedSize = payload;
+    console.log('A size has been choosen!');
+    console.log(this.selectedSize);
   }
 }

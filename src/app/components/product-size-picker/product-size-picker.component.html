@@ -3,10 +3,13 @@
     <vcl-form-control-group>
       <vcl-label>{{ "ProductSizePicker.Size" | translate }}</vcl-label>
       <vcl-select>
-        <vcl-select-list [(value)]="size">
+        <vcl-select-list
+          [(value)]="size"
+          (valueChange)="this.sizeSelected.emit(size)"
+        >
           <ng-container *ngFor="let el of sizeArray">
             <vcl-select-list-item [value]="el">
-              {{this.el}}
+              {{ this.el }}
             </vcl-select-list-item>
           </ng-container>
         </vcl-select-list>
@@ -17,11 +20,14 @@
     <div class="column">
       <div class="product-size-picker-column">
         <vcl-icogram class="">
-          <vcl-icon vclPrepend icon="fas:ruler-horizontal" class="ruler-icon"></vcl-icon>
+          <vcl-icon
+            vclPrepend
+            icon="fas:ruler-horizontal"
+            class="ruler-icon"
+          ></vcl-icon>
         </vcl-icogram>
         <b>{{ "ProductSizePicker.WhatIsMySize" | translate }}</b>
       </div>
     </div>
   </div>
 </div>
-
