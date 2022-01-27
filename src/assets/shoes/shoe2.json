@@ -77,5 +77,6 @@
   "selectedColor": "gray",
   "colors": ["black", "blue", "gray"],
   "materialInfo": "Upper material: 100% Cow leather, 100% Cow leather, Sole: 100% Ethylene vinyl acetate, Innersole: 90% Polyamid, 10% Polyurethane",
-  "additionalLabel": ""
+  "additionalLabel": "",
+  "availableSizes": [44, 45, 46, 47, 48, 49]
 }

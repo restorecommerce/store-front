@@ -20,6 +20,7 @@ export interface Product {
   colors: string[];
   materialInfo: string;
   additionalLabel: string;
+  availableSizes: number[];
   // meta: {
   //   // SKU Item : Will form part of the IItem
   //   sku: string;

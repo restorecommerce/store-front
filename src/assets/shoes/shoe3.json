@@ -56,5 +56,6 @@
   "selectedColor": "white",
   "colors": ["black", "white"],
   "materialInfo": "Upper material: 80% Polyester (recycled) , 20% Polyester, 100% Polyester, Sole: 100% Ethylene vinyl acetate, Innersole: 100% Polyester",
-  "additionalLabel": ""
+  "additionalLabel": "",
+  "availableSizes": [39, 40, 41]
 }
