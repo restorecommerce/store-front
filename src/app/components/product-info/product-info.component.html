@@ -1,14 +1,16 @@
 <div class="row">
   <div class="flex-11">
     <h2>
-      {{ "ProductNavigation.Product" | translate }}
+      {{ product.title }}
     </h2>
     <p>
-      {{ "ProductInformation.Description" | translate }}
+      {{ product.description }}
     </p>
     <div class="row justify-content-between">
-      <p>
-        <vcl-badge vclRounded type="primary" class="badge">{{ "ProductInformation.Bestseller" | translate }}</vcl-badge>
+      <p *ngIf="product.isBestSeller">
+        <vcl-badge vclRounded type="primary" class="badge">{{
+          "ProductInformation.Bestseller" | translate
+        }}</vcl-badge>
       </p>
       <button vcl-square-button class="circular favorite">
         <vcl-icon icon="fas:heart"></vcl-icon>
@@ -17,7 +19,7 @@
   </div>
 </div>
 <app-product-interest></app-product-interest>
-<hr>
+<hr />
 <div class="row">
   <div class="flex align-left">
     <p class="price-container-text">
@@ -26,49 +28,62 @@
   </div>
   <div class="flex align-right">
     <p class="price-container-text">
-      <b>250,00 €</b>
+      <b>{{ product.price | currency: "EUR":true }}</b>
     </p>
   </div>
 </div>
-<hr>
+<hr />
 <div class="row justify-content-between align-items-center">
   <div>
     <p class="chosen-color-name">
-      <b>{{ "ProductInformation.Color" | translate }}</b> {{this.dataService.getColorName()}}
+      <b>{{ "ProductInformation.Color" | translate }}</b>
+      {{ product.selectedColor }}
     </p>
   </div>
   <div>
     <p class="colored-buttons-container row align-items-center">
-      <button vcl-square-button  class="circular color-button black-button" (click)="this.dataService.selectColor('black')" [ngClass]="{'button-selected':this.dataService.getColor() === 'black'}"> </button>
-      <button vcl-square-button  class="circular color-button brown-button" (click)="this.dataService.selectColor('brown')" [ngClass]="{'button-selected':this.dataService.getColor() === 'brown'}"></button>
-      <button vcl-square-button  class="circular color-button white-button" (click)="this.dataService.selectColor('white')" [ngClass]="{'button-selected':this.dataService.getColor() === 'white'}"></button>
+      <button
+        vcl-square-button
+        class="circular color-button"
+        *ngFor="let color of product.colors"
+        (click)="onChangeProductColor(color)"
+        [ngClass]="{
+          'button-selected': product.selectedColor === color
+        }"
+        [ngStyle]="{ backgroundColor: color }"
+      ></button>
     </p>
   </div>
 </div>
-<hr>
+<hr />
 <p>
-  <b>{{ "ProductInformation.Material" | translate }}:</b> {{ "ProductInformation.MaterialInfo" | translate }}
+  <b>{{ "ProductInformation.Material" | translate }}:</b>
+  {{ product.materialInfo }}
 </p>
-<hr>
+<hr />
 <app-product-size-picker></app-product-size-picker>
-<hr style="margin-bottom:0">
+<hr style="margin-bottom: 0" />
 <app-product-description></app-product-description>
-<hr style="margin-top:0">
+<hr style="margin-top: 0" />
 <div class="add-to-cart-section">
   <div class="add-to-cart-button-container">
-    <button vcl-button class="add-to-cart-button" (click)="this.addItemToCart()">
+    <button vcl-button class="add-to-cart-button" (click)="addItemToCart()">
       <vcl-icogram>
         <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
         {{ "ProductInformation.Cart" | translate }}
       </vcl-icogram>
     </button>
   </div>
-  <span class="delivery-time">{{ "ProductInformation.ProductDelivery" | translate }}</span>
+  <span class="delivery-time">{{
+    "ProductInformation.ProductDelivery" | translate
+  }}</span>
 </div>
 <div class="add-to-cart-section">
   <div class="tooltip" role="tooltip">
     <div class="tooltip-content tooltip-text">
-      <p><b>{{ "ProductInformation.ShopOnline" | translate }}</b></p>
+      <p>
+        <b>{{ "ProductInformation.ShopOnline" | translate }}</b>
+      </p>
       <p>{{ "ProductInformation.IfStyleDoesntSuit" | translate }}</p>
     </div>
     <div class="arrow-pointer tooltip-pointer"></div>

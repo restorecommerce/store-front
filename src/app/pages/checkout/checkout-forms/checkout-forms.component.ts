@@ -4,105 +4,68 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
 
+import { CartService } from 'src/app/services/cart.service';
+
 @Component({
   selector: 'app-checkout-forms',
   templateUrl: './checkout-forms.component.html',
-  styleUrls: ['./checkout-forms.component.scss']
+  styleUrls: ['./checkout-forms.component.scss'],
 })
-
 export class CheckoutFormsComponent implements OnInit {
-
   private translateService: TranslateService;
 
   constructor(
     private notifier: NotifierService,
+    private cartService: CartService,
     private secondService: TranslateService,
-    private router: Router) {
+    private router: Router
+  ) {
     this.translateService = this.secondService;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   homeDeliveryForm = new FormGroup({
     gender: new FormControl(null, Validators.required),
-    firstName: new FormControl('', [
-      Validators.required,
-    ]),
-    lastName: new FormControl('', [
-      Validators.required,
-    ]),
-    streetName: new FormControl('', [
-      Validators.required,
-    ]),
-    houseNumber: new FormControl('', [
-      Validators.required,
-    ]),
-    postcode: new FormControl('', [
-      Validators.required,
-    ]),
-    city: new FormControl('', [
-      Validators.required,
-    ]),
-    country: new FormControl('', [
-      Validators.required,
-    ]),
-    mail: new FormControl('', [
-      Validators.required,
-    ])
+    firstName: new FormControl('', [Validators.required]),
+    lastName: new FormControl('', [Validators.required]),
+    streetName: new FormControl('', [Validators.required]),
+    houseNumber: new FormControl('', [Validators.required]),
+    postcode: new FormControl('', [Validators.required]),
+    city: new FormControl('', [Validators.required]),
+    country: new FormControl('', [Validators.required]),
+    mail: new FormControl('', [Validators.required]),
   });
 
   homeDeliverySubmit() {
     if (this.homeDeliveryForm.valid) {
       console.log(this.homeDeliveryForm.value);
-      this.router.navigate(["/checkout/payment"]);
+      this.router.navigate(['/checkout/payment']);
     } else {
-      this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
+      this.notifier.error('Please fill out the form completely.');
     }
   }
 
   parcelShopForm = new FormGroup({
     gender: new FormControl(null, Validators.required),
-    firstName: new FormControl('', [
-      Validators.required,
-    ]),
-    lastName: new FormControl('', [
-      Validators.required,
-    ]),
-    streetName: new FormControl('', [
-      Validators.required,
-    ]),
-    houseNumber: new FormControl('', [
-      Validators.required,
-    ]),
-    postcode: new FormControl('', [
-      Validators.required,
-    ]),
-    city: new FormControl('', [
-      Validators.required,
-    ]),
-    country: new FormControl('', [
-      Validators.required,
-    ]),
-    mail: new FormControl('', [
-      Validators.required,
-    ]),
+    firstName: new FormControl('', [Validators.required]),
+    lastName: new FormControl('', [Validators.required]),
+    streetName: new FormControl('', [Validators.required]),
+    houseNumber: new FormControl('', [Validators.required]),
+    postcode: new FormControl('', [Validators.required]),
+    city: new FormControl('', [Validators.required]),
+    country: new FormControl('', [Validators.required]),
+    mail: new FormControl('', [Validators.required]),
     psGender: new FormControl(null, Validators.required),
-    psFirstName: new FormControl('', [
-      Validators.required,
-    ]),
-    psLastName: new FormControl('', [
-      Validators.required,
-    ]),
-    psPostNumber: new FormControl('', [
-      Validators.required,
-    ]),
+    psFirstName: new FormControl('', [Validators.required]),
+    psLastName: new FormControl('', [Validators.required]),
+    psPostNumber: new FormControl('', [Validators.required]),
   });
 
   parcelShopSubmit() {
     if (this.parcelShopForm.valid) {
       console.log(this.homeDeliveryForm.value);
-      this.router.navigate(["/checkout/payment"]);
+      this.router.navigate(['/checkout/payment']);
     } else {
       this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
     }
@@ -110,36 +73,22 @@ export class CheckoutFormsComponent implements OnInit {
 
   clickAndCollectForm = new FormGroup({
     gender: new FormControl(null, Validators.required),
-    firstName: new FormControl('', [
-      Validators.required,
-    ]),
-    lastName: new FormControl('', [
-      Validators.required,
-    ]),
-    streetName: new FormControl('', [
-      Validators.required,
-    ]),
-    houseNumber: new FormControl('', [
-      Validators.required,
-    ]),
-    postcode: new FormControl('', [
-      Validators.required,
-    ]),
-    city: new FormControl('', [
-      Validators.required,
-    ]),
-    country: new FormControl('', [
-      Validators.required,
-    ]),
-    mail: new FormControl('', [
-      Validators.required,
-    ])
+    firstName: new FormControl('', [Validators.required]),
+    lastName: new FormControl('', [Validators.required]),
+    streetName: new FormControl('', [Validators.required]),
+    houseNumber: new FormControl('', [Validators.required]),
+    postcode: new FormControl('', [Validators.required]),
+    city: new FormControl('', [Validators.required]),
+    country: new FormControl('', [Validators.required]),
+    mail: new FormControl('', [Validators.required]),
   });
 
   clickAndCollectSubmit() {
     if (this.clickAndCollectForm.valid) {
       console.log(this.homeDeliveryForm.value);
-      this.router.navigate(["/checkout/payment"]);
+      console.log('And this are your products!');
+      console.log(this.cartService.getCartItems());
+      this.router.navigate(['/checkout/payment']);
     } else {
       this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
     }

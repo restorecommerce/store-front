@@ -1,0 +1,37 @@
+{
+  "id": "shoe1",
+  "title": "DOUBLE-STRAP SANDALS WITH STRUCTURED RUBBERIZED UPPERS",
+  "description": "",
+  "price": 138.0,
+  "isBestSeller": true,
+  "liked": true,
+  "productImageSources": {
+    "yellow": [
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      },
+
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_200?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_200?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_250?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_250?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_210?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_210?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      }
+    ]
+  },
+  "selectedColor": "yellow",
+  "colors": ["yellow"],
+  "materialInfo": "Upper material: 100% Cow leather, 100% Cow leather, Sole: 100% Ethylene vinyl acetate, Innersole: 90% Polyamid, 10% Polyurethane",
+  "additionalLabel": ""
+}

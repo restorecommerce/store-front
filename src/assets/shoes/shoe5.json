@@ -1,0 +1,70 @@
+{
+  "id": "shoe5",
+  "title": "HALF-BOOTS IN SUEDE WITH LOGO DETAILS",
+  "description": "Casual half-boots by HUGO. Crafted in Portugal from soft suede, this lace-up pair is designed with a HUGO logo at the side and branded tape at the back tab. A lightweight outsole and stitched details on the uppers add the finishing touches. By purchasing this product, you are supporting responsible leather manufacturing through the Leather Working Group.",
+  "price": 298.0,
+  "isBestSeller": false,
+  "liked": false,
+  "productImageSources": {
+    "black": [
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_220?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_220?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_200?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_200?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_300?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_300?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_250?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_250?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_210?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_210?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      }
+    ],
+    "white": [
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_220?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_220?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_200?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_200?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_300?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_300?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_250?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_250?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_210?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_210?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      }
+    ]
+  },
+  "selectedColor": "black",
+  "colors": ["black", "white"],
+  "materialInfo": "Upper material: 100% Cow leather, 100% Cow leather, Sole: 100% Ethylene vinyl acetate, Innersole: 90% Polyamid, 10% Polyurethane",
+  "additionalLabel": "Made in Europe"
+}

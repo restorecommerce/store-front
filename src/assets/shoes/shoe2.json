@@ -1,0 +1,81 @@
+{
+  "id": "shoe2",
+  "title": "ITALIAN-MADE SLIDES WITH LOGO STRAP AND CONTOURED SOLE",
+  "description": "",
+  "price": 118.0,
+  "isBestSeller": true,
+  "liked": true,
+  "productImageSources": {
+    "blue": [
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_200?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_200?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_300?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_300?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": "Black Sneakers"
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_250?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_250?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      }
+    ],
+    "gray": [
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_059_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_059_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_059_200?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_059_200?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_059_250?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_059_250?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      }
+    ],
+    "black": [
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_220?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      },
+
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_200?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_200?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50472814_742_250?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_300?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_250?$large$=&fit=crop,1&align=1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_250?$large$=&fit=crop,1&align=1,1&wid=192&hei=292",
+        "alt": ""
+      },
+      {
+        "src": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_210?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=1500&hei=2275",
+        "srcThumb": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_210?$large$=&fit=crop,1&align=1,1&cropN=0,0.3,1,1&wid=192&hei=292",
+        "alt": ""
+      }
+    ]
+  },
+  "selectedColor": "gray",
+  "colors": ["black", "blue", "gray"],
+  "materialInfo": "Upper material: 100% Cow leather, 100% Cow leather, Sole: 100% Ethylene vinyl acetate, Innersole: 90% Polyamid, 10% Polyurethane",
+  "additionalLabel": ""
+}

@@ -8,65 +8,65 @@ import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.scss']
+  styleUrls: ['./top-bar.component.scss'],
 })
 export class TopBarComponent implements OnInit {
+  public language: string = 'en';
 
-  private dataService: CartService;
-  private translateService: TranslateService;
+  constructor(
+    public cartService: CartService,
+    private translateService: TranslateService,
+    private router: Router
+  ) {}
 
-  public language: string = "en";
-
-  constructor(private service: CartService, private secondService: TranslateService, private router: Router) {
-    this.dataService = this.service;
-    this.translateService = this.secondService;
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public navigate(value: string): void {
     this.router.navigateByUrl(value);
   }
 
+  // should be refactored to a screenDisplayConfigurationService
   public screenWidth(): number {
-    return this.dataService.getScreenSize();
+    return this.cartService.getScreenSize();
   }
 
   public desktopWidth(): number {
-    return this.dataService.desktopSize();
+    return this.cartService.desktopSize();
   }
+  // ===========================================================
 
   public getCartItems(): IItem[] {
-    return this.dataService.getCartItems();
+    return this.cartService.getCartItems();
   }
 
   public getCartItemCount(): number {
-    return this.dataService.getCartItemCount();
+    return this.cartService.getCartItemCount();
   }
 
   public getCartTotal(): number {
-    return this.dataService.getCartItemTotal();
+    return this.cartService.getCartItemTotal();
   }
 
   public getTaxes(): string {
-    return this.dataService.round(Number(this.getCartTotalGross()) - Number(this.getCartTotalNet()));
+    return this.cartService.round(
+      Number(this.getCartTotalGross()) - Number(this.getCartTotalNet())
+    );
   }
 
   public getCartTotalNet(): string {
-    return this.dataService.round(this.dataService.getCartTotalNet());
+    return this.cartService.round(this.cartService.getCartTotalNet());
   }
 
   public getCartTotalGross(): string {
-    return this.dataService.round(this.dataService.getCartTotalGross());
+    return this.cartService.round(this.cartService.getCartTotalGross());
   }
 
   public getCartShipping(): Money {
-    return this.dataService.getCartShipping();
+    return this.cartService.getCartShipping();
   }
 
   public removeCartItem(sku: string): void {
-    this.dataService.removeCartItem(sku);
+    this.cartService.removeCartItem(sku);
   }
 
   public setLanguage(): void {

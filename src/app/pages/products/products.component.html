@@ -7,13 +7,11 @@
         [class.selected]="selectedGroup === group.title"
         (click)="selectedGroup = group.title"
       >
-        <div class="title">{{group.title}}</div>
-        {{group.productCount}}
+        <div class="title">{{ group.title }}</div>
+        {{ group.productCount }}
       </div>
     </div>
-    <div class="page-title">
-      {{pageTitle}}
-    </div>
+    <div class="page-title">{{ pageTitle }}</div>
     <div class="row panel-grid-size-and-sort">
       <div class="row panel-grid-size">
         <i
@@ -27,11 +25,21 @@
           (click)="selectedGridSize = '3x3'"
         ></i>
       </div>
-      <div class="row justify-between panel-sort" (click)="sortDropdownExpanded = !sortDropdownExpanded">
-        <div>Sort: {{sortBy}}</div>
+      <div
+        class="row justify-between panel-sort"
+        (click)="sortDropdownExpanded = !sortDropdownExpanded"
+      >
+        <div>Sort: {{ sortBy }}</div>
         <i class="fas fa-sort"></i>
         <div class="col sort-options" *ngIf="sortDropdownExpanded">
-          <div class="sort-option" *ngFor="let option of sortOptions" [class.selected]="sortBy === option" (click)="sortOptionClicked(option, $event)">{{option}}</div>
+          <div
+            class="sort-option"
+            *ngFor="let option of sortOptions"
+            [class.selected]="sortBy === option"
+            (click)="sortOptionClicked(option, $event)"
+          >
+            {{ option }}
+          </div>
         </div>
       </div>
     </div>
@@ -40,41 +48,14 @@
     <div class="panel-filter">
       <div class="row option" *ngFor="let filterOption of filterOptions">
         <i class="fas fa-sort-down arrow"></i>
-        {{filterOption}}
+        {{ filterOption }}
       </div>
     </div>
     <div class="row flex-wrap panel-products">
-      <div class="column align-centered product" *ngFor="let product of products; let i = index">
-        <div class="row justify-between product-header">
-          <div class="row additional-label" *ngIf="product.additionalLabel">
-            <div class="text">{{product.additionalLabel}}</div>
-            <div class="rounded-right"></div>
-          </div>
-          <i class="fas fa-heart like" [class.liked]="product.like" (click)="product.like = !product.like"></i>
-        </div>
-        <picture class="image-wrapper">
-          <source
-            class="image"
-            *ngFor="let media of responsiveImagesConfiguration"
-            [media]="'(max-width: ' + media.max + 'px) and (min-width: ' + media.min + 'px)'"
-            [srcset]="'./assets/products_responsive/product' + (i + 1) + media.suffix + '.' + media.format"
-            [type]="'image/' + media.format"
-          />
-          <img
-            class="image"
-            alt="product image"
-            [src]="'./assets/products/product' + (i + 1) + '.jpeg'"
-          />
-        </picture>
-        <div class="row center justify-center spinner-wrapper" *ngIf="!product.imgUrl"><i class="fas fa-spinner spinner"></i></div>
-        <div class="row justify-center colors">
-          <div class="row color-wrapper" *ngFor="let color of product.colors" [class.color-selected]="color === product.selectedColor" (click)="product.selectedColor = color">
-            <div class="color" [style.background-color]="color"></div>
-          </div>
-        </div>
-        <div class="title">{{product.title}}</div>
-        <div class="row justify-center price">{{product.price | currency : currency}}</div>
-      </div>
+      <app-product-card
+        *ngFor="let product of products"
+        [product]="product"
+      ></app-product-card>
     </div>
   </div>
 </section>
