@@ -1,1 +1,103 @@
-<p>cart-layer works!</p>
+<ng-template vclLayer #cartLayer="vclLayer">
+  <vcl-panel-dialog
+    [showCloseButton]="true"
+    (close)="cartLayer.close()"
+    class="pos-cart-absolute"
+  >
+    <vcl-panel-title>{{ "TopBar.OrderOverview" | translate }}</vcl-panel-title>
+    <ng-container *ngIf="this.getCartItemCount() > 0">
+      <div class="row">
+        <button
+          vcl-button
+          class="flex"
+          (click)="cartLayer.close(); this.navigate('/checkout')"
+        >
+          <vcl-icogram>
+            {{ "TopBar.ToCheckout" | translate }}
+          </vcl-icogram>
+        </button>
+      </div>
+    </ng-container>
+    <ng-container *ngFor="let item of this.getCartItems()">
+      <hr />
+      <div class="row">
+        <div class="flex-5 align-left">
+          <p>{{ item.desc }}</p>
+          <p>{{ "TopBar.UnitPrice" | translate }}: {{ item.price }} €</p>
+        </div>
+        <div class="flex-6">
+          <img class="responsive-image" [src]="item.imgSrc" />
+        </div>
+        <div class="flex-1 align-right">
+          <button
+            type="button"
+            class="button transparent"
+            (click)="this.removeCartItem(item.sku)"
+          >
+            <div class="icogram">
+              <div
+                class="icon mdi mdi-cart-remove"
+                aria-hidden="true"
+                role="img"
+              ></div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <hr />
+    </ng-container>
+    <ng-container *ngIf="this.getCartItemCount() == 0">
+      <hr />
+      <p>{{ "TopBar.YourShoppingCartCurrently" | translate }}</p>
+      <hr />
+    </ng-container>
+    <ng-container *ngIf="this.getCartItemCount() > 0">
+      <div class="row">
+        <div class="flex align-left">
+          {{ "TopBar.YourOrders" | translate }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="flex align-left">
+          {{ "TopBar.TotalAmountOf" | translate }}
+        </div>
+        <div class="flex align-right">{{ this.getCartTotal() }} €</div>
+      </div>
+      <div class="row">
+        <div class="flex align-left">
+          {{ "TopBar.DHLPackageShipping" | translate }}
+        </div>
+        <div class="flex align-right">{{ this.getCartShipping() }} €</div>
+      </div>
+      <div class="row">
+        <div class="flex align-left">
+          {{ "TopBar.DeliveryInApprox" | translate }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="flex align-left">
+          {{ "TopBar.incl" | translate }}
+        </div>
+        <div class="flex align-right">{{ this.getTaxes() }} €</div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="flex align-left">
+          {{ "TopBar.TotalPrice" | translate }}
+        </div>
+        <div class="flex align-right">{{ this.getCartTotalGross() }} €</div>
+      </div>
+      <div class="row">
+        <button
+          vcl-button
+          class="flex"
+          (click)="cartLayer.close(); this.navigate('/checkout')"
+        >
+          <vcl-icogram>
+            {{ "TopBar.ToCheckout" | translate }}
+          </vcl-icogram>
+        </button>
+      </div>
+    </ng-container>
+  </vcl-panel-dialog>
+</ng-template>

@@ -13,6 +13,8 @@ import { CartService } from 'src/app/services/cart.service';
 export class TopBarComponent implements OnInit {
   public language: string = 'en';
 
+  cartClosed: boolean;
+
   constructor(
     public cartService: CartService,
     private translateService: TranslateService,
@@ -20,6 +22,10 @@ export class TopBarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {}
+
+  onCartToggle() {
+    this.cartClosed = !this.cartClosed;
+  }
 
   public navigate(value: string): void {
     this.router.navigateByUrl(value);
@@ -34,40 +40,6 @@ export class TopBarComponent implements OnInit {
     return this.cartService.desktopSize();
   }
   // ===========================================================
-
-  public getCartItems(): IItem[] {
-    return this.cartService.getCartItems();
-  }
-
-  public getCartItemCount(): number {
-    return this.cartService.getCartItemCount();
-  }
-
-  public getCartTotal(): number {
-    return this.cartService.getCartItemTotal();
-  }
-
-  public getTaxes(): string {
-    return this.cartService.round(
-      Number(this.getCartTotalGross()) - Number(this.getCartTotalNet())
-    );
-  }
-
-  public getCartTotalNet(): string {
-    return this.cartService.round(this.cartService.getCartTotalNet());
-  }
-
-  public getCartTotalGross(): string {
-    return this.cartService.round(this.cartService.getCartTotalGross());
-  }
-
-  public getCartShipping(): Money {
-    return this.cartService.getCartShipping();
-  }
-
-  public removeCartItem(sku: string): void {
-    this.cartService.removeCartItem(sku);
-  }
 
   public setLanguage(): void {
     this.translateService.use(this.language);
