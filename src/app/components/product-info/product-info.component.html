@@ -1,17 +1,19 @@
 <div class="row">
-  <div class="flex-11">
+  <div class="flex-12">
     <h2>
       {{ product.title }}
     </h2>
     <p>
       {{ product.description }}
     </p>
-    <div class="row justify-content-between">
-      <p *ngIf="product.isBestSeller">
-        <vcl-badge vclRounded type="primary" class="badge">{{
-          "ProductInformation.Bestseller" | translate
-        }}</vcl-badge>
-      </p>
+    <div class="row justify-content-between bestseller-like-container">
+      <div>
+        <span *ngIf="product.isBestSeller">
+          <vcl-badge vclRounded type="primary" class="badge">{{
+            "ProductInformation.Bestseller" | translate
+          }}</vcl-badge>
+        </span>
+      </div>
       <button vcl-square-button class="circular favorite">
         <vcl-icon icon="fas:heart"></vcl-icon>
       </button>

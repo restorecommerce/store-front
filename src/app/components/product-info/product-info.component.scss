@@ -17,7 +17,7 @@ h2 {
 
 .color-button {
   margin-left: 1em;
-  height: 2rem; 
+  height: 2rem;
   width: 2rem;
   border: none;
 }
@@ -76,18 +76,27 @@ h2 {
 
 .tooltip-text {
   text-align: center;
-  background-color:#80BA27;
+  background-color: #80ba27;
   border-style: none;
 }
 
 .tooltip-pointer {
-  background-color: #80BA27;
-  top: 0; 
-  left: 50%; 
+  background-color: #80ba27;
+  top: 0;
+  left: 50%;
   z-index: 301;
   border-style: none;
 }
 
 .price-container-text {
   margin-bottom: 0;
+}
+
+.bestseller-like-container {
+  margin: 0.5rem 0;
+}
+
+/* === utility === */
+.mb {
+  margin-bottom: 0.5rem;
 }
