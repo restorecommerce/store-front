@@ -23,10 +23,6 @@ export class TopBarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onCartToggle() {
-    this.cartClosed = !this.cartClosed;
-  }
-
   public navigate(value: string): void {
     this.router.navigateByUrl(value);
   }
