@@ -43,18 +43,19 @@
     </p>
   </div>
   <div>
-    <p class="colored-buttons-container row align-items-center">
+    <div class="colored-buttons-container row align-items-center">
       <button
         vcl-square-button
         class="circular color-button"
         *ngFor="let color of product.colors"
         (click)="onChangeProductColor(color)"
         [ngClass]="{
-          'button-selected': product.selectedColor === color
+          'button-selected': product.selectedColor === color,
+          'button-border': product.selectedColor !== color
         }"
         [ngStyle]="{ backgroundColor: color }"
       ></button>
-    </p>
+    </div>
   </div>
 </div>
 <hr />
@@ -63,10 +64,12 @@
   {{ product.materialInfo }}
 </p>
 <hr />
+
 <app-product-size-picker
   [sizeArray]="product.availableSizes"
   (sizeSelected)="onSizeSelected($event)"
 ></app-product-size-picker>
+
 <hr style="margin-bottom: 0" />
 <app-product-description></app-product-description>
 <hr style="margin-top: 0" />
