@@ -8,6 +8,7 @@ import {
   Money,
 } from '@restorecommerce/cart/lib/model/primitives';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
+import { element } from 'protractor';
 
 @Injectable({
   providedIn: 'root',
@@ -41,45 +42,50 @@ export class CartService {
     });
   }
 
-  public addItemToCart(items: IItem[]): void {
+  isItemInCart(skuId: string) {
+    return this.cart.getItems().find((item) => item.sku === skuId);
+  }
+
+  addItemToCart(items: IItem[]): void {
     this.cart.addItems(items);
   }
 
-  public getCartItems(): IItem[] {
+  getCartItems(): IItem[] {
     return this.cart.getItems();
   }
 
-  public getCartItemCount(): number {
+  getCartItemCount(): number {
     return this.cart.getItemCount();
   }
 
-  public getCartItemTotal(): number {
+  getCartItemTotal(): number {
     let sum: number = 0;
     var x = this.cart.getItems();
     x.forEach((item) => (sum += Number(item.price)));
     return sum;
   }
 
-  public getCartTotalNet(): Decimal {
+  getCartTotalNet(): Decimal {
     return this.cart.getTotalNet();
   }
 
-  public getCartTotalGross(): Decimal {
+  getCartTotalGross(): Decimal {
     return this.cart.getTotalGross();
   }
 
-  public getCartShipping(): Money {
+  getCartShipping(): Money {
     return this.cart.getShipping().price;
   }
 
-  public removeCartItem(sku: string): void {
+  removeCartItem(sku: string): void {
     this.cart.remItem(sku);
   }
 
-  public round(value: Money): string {
+  round(value: Money): string {
     return this.cart.round(value);
   }
 
+  // non related functions
   public desktopSize(): number {
     return 1400;
   }

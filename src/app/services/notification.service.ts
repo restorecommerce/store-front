@@ -7,9 +7,16 @@ import { NotifierPosition, NotifierService } from '@vcl/ng-vcl';
 export class NotificationService {
   constructor(private notifier: NotifierService) {}
 
-  public success() {
+  success(message: string) {
     this.notifier.success({
-      content: 'Item added to cart',
+      content: message,
+      position: NotifierPosition.TopLeft,
+    });
+  }
+
+  error(message: string) {
+    this.notifier.error({
+      content: message,
       position: NotifierPosition.TopLeft,
     });
   }
