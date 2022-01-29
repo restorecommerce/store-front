@@ -172,87 +172,9 @@
       <vcl-panel-title>{{
         "TopBar.OrderOverview" | translate
       }}</vcl-panel-title>
-      <ng-container *ngIf="cartService.getCartItemCount() > 0">
-        <div class="row">
-          <button
-            vcl-button
-            class="flex"
-            (click)="cartLayer.close(); this.navigate('/checkout')"
-          >
-            <vcl-icogram>
-              {{ "TopBar.ToCheckout" | translate }}
-            </vcl-icogram>
-          </button>
-        </div>
-      </ng-container>
-
-      <app-cart-layer-item
-        *ngFor="let item of cartService.getCartItems()"
-        [cartItem]="item"
-      ></app-cart-layer-item>
-
-      <ng-container *ngIf="this.cartService.getCartItemCount() == 0">
-        <hr />
-        <p>{{ "TopBar.YourShoppingCartCurrently" | translate }}</p>
-        <hr />
-      </ng-container>
-      <ng-container *ngIf="this.cartService.getCartItemCount() > 0">
-        <div class="row">
-          <div class="flex align-left">
-            {{ "TopBar.YourOrders" | translate }}
-          </div>
-        </div>
-        <div class="row">
-          <div class="flex align-left">
-            {{ "TopBar.TotalAmountOf" | translate }}
-          </div>
-          <div class="flex align-right">
-            {{ cartService.getCartItemTotal() }} €
-          </div>
-        </div>
-        <div class="row">
-          <div class="flex align-left">
-            {{ "TopBar.DHLPackageShipping" | translate }}
-          </div>
-          <div class="flex align-right">
-            {{ cartService.getCartShipping() }} €
-          </div>
-        </div>
-        <div class="row">
-          <div class="flex align-left">
-            {{ "TopBar.DeliveryInApprox" | translate }}
-          </div>
-        </div>
-        <div class="row">
-          <div class="flex align-left">
-            {{ "TopBar.incl" | translate }}
-          </div>
-          <div class="flex align-right">
-            {{ "Task value placeholder" }}
-            €
-          </div>
-        </div>
-        <hr />
-        <div class="row">
-          <div class="flex align-left">
-            {{ "TopBar.TotalPrice" | translate }}
-          </div>
-          <div class="flex align-right">
-            {{ this.cartService.getCartTotalGross() }} €
-          </div>
-        </div>
-        <div class="row">
-          <button
-            vcl-button
-            class="flex"
-            (click)="cartLayer.close(); this.navigate('/checkout')"
-          >
-            <vcl-icogram>
-              {{ "TopBar.ToCheckout" | translate }}
-            </vcl-icogram>
-          </button>
-        </div>
-      </ng-container>
+      <app-cart-layer-contents
+        [cartLayer]="cartLayer"
+      ></app-cart-layer-contents>
     </vcl-panel-dialog>
   </ng-template>
 
