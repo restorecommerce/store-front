@@ -44,12 +44,20 @@ export class ProductInfoComponent implements OnInit {
       return;
     }
 
-    const { price, id: sku, title } = this.product;
+    const {
+      price,
+      id: sku,
+      title,
+      productImageSources,
+      selectedColor,
+    } = this.product;
+    const thumbImage = productImageSources[selectedColor][0].srcThumb;
+
     this.cartService.addItemToCart([
       {
         sku,
         desc: title,
-        imgSrc: null, // first image from the selected color thumb!
+        imgSrc: thumbImage,
         price: new Decimal(price),
         taxType: 'vat_standard',
         weight: 610,
