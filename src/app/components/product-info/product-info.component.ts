@@ -39,6 +39,7 @@ export class ProductInfoComponent implements OnInit {
 
   removeItemFromCart(skuId: string) {
     this.cartService.removeCartItem(skuId);
+    this.isItemInCart = false;
     this.notificationService.error('Item removed from cart');
   }
 
