@@ -12,6 +12,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductInfoComponent implements OnInit {
   @Input() product: Product;
+  isItemInCart: boolean;
 
   selectedSize: number;
   /* 
@@ -24,7 +25,11 @@ export class ProductInfoComponent implements OnInit {
     private productService: ProductService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isItemInCart = Boolean(
+      this.cartService.isItemInCart(String(this.product.id))
+    );
+  }
 
   public getStyle(color: string, selected: boolean): string {
     if (selected) {
@@ -32,15 +37,14 @@ export class ProductInfoComponent implements OnInit {
     }
   }
 
-  public addItemToCart() {
+  removeItemFromCart(skuId: string) {
+    this.cartService.removeCartItem(skuId);
+    this.notificationService.error('Item removed from cart');
+  }
+
+  addItemToCart() {
     if (!this.selectedSize) {
       this.notificationService.error('Please select a size for the product!');
-      return;
-    }
-
-    const isItemInCart = this.cartService.isItemInCart(String(this.product.id));
-    if (isItemInCart) {
-      this.notificationService.error('Item already added to cart');
       return;
     }
 
@@ -68,8 +72,8 @@ export class ProductInfoComponent implements OnInit {
       },
     ]);
 
+    this.isItemInCart = true;
     this.notificationService.success('Item added to cart!');
-    // then set itemAddedToCart to show the RemoveFromCart button!
   }
 
   onChangeProductColor(color: string): void {

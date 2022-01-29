@@ -75,12 +75,30 @@
 <hr style="margin-top: 0" />
 <div class="add-to-cart-section">
   <div class="add-to-cart-button-container">
-    <button vcl-button class="add-to-cart-button" (click)="addItemToCart()">
+    <button
+      *ngIf="!isItemInCart; else removeItemInCartButton"
+      vcl-button
+      class="add-to-cart-button"
+      (click)="addItemToCart()"
+    >
       <vcl-icogram>
         <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
         {{ "ProductInformation.Cart" | translate }}
       </vcl-icogram>
     </button>
+    <ng-template #removeItemInCartButton>
+      <button
+        *ngIf="isItemInCart; else removeItemInCartButton"
+        vcl-button
+        class="add-to-cart-button"
+        (click)="removeItemFromCart(product.id)"
+      >
+        <vcl-icogram>
+          <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
+          {{ "ProductInformation.RemoveFromCart" | translate }}
+        </vcl-icogram>
+      </button>
+    </ng-template>
   </div>
   <span class="delivery-time">{{
     "ProductInformation.ProductDelivery" | translate
