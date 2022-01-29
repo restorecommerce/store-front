@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="flex-6 align-left">
+    <p>{{ cartItem.desc }}</p>
+
+    <!-- Edit the product size if you so wish -->
+    <div class="row">
+      <vcl-form-control-group class="flex-5">
+        <vcl-label>{{ "ProductSizePicker.Size" | translate }}</vcl-label>
+        <vcl-select>
+          <vcl-select-list>
+            <ng-container *ngFor="let el of cartItem.sizeArray">
+              <vcl-select-list-item [value]="el">
+                {{ this.el }}
+              </vcl-select-list-item>
+            </ng-container>
+          </vcl-select-list>
+        </vcl-select>
+      </vcl-form-control-group>
+    </div>
+
+    <p>{{ "TopBar.UnitPriceOfItem" | translate }}: {{ cartItem.price }} €</p>
+    <!-- Edit the quantity to the allowable quantity -->
+    <div class="row">
+      <vcl-form-control-group class="flex-5">
+        <vcl-label>Quantity</vcl-label>
+        <vcl-select>
+          <vcl-select-list>
+            <ng-container *ngFor="let el of cartItem.sizeArray">
+              <vcl-select-list-item [value]="el">
+                {{ this.el }}
+              </vcl-select-list-item>
+            </ng-container>
+          </vcl-select-list>
+        </vcl-select>
+      </vcl-form-control-group>
+    </div>
+    <!-- item * quantity -->
+    <p>{{ "TopBar.TotalPrice" | translate }}: 2000 €</p>
+  </div>
+  <div class="flex-5">
+    <img class="responsive-image" [src]="cartItem.imgSrc" />
+  </div>
+  <div class="flex-1 align-right">
+    <button
+      type="button"
+      class="button transparent"
+      (click)="cartService.removeCartItem(cartItem.sku)"
+    >
+      <div class="icogram">
+        <div
+          class="icon mdi mdi-cart-remove"
+          aria-hidden="true"
+          role="img"
+        ></div>
+      </div>
+    </button>
+  </div>
+</div>

@@ -67,7 +67,7 @@
     "WhatIsMySize": "What is my size?",
     "SizeChart": "Size Chart"
   },
-  "TopBar" : {
+  "TopBar": {
     "PanelTitle": "CHOOSE YOUR DELIVERY LOCATION",
     "SecondaryHeading": "ORT",
     "DeliveryLocationDe": "Germany / Deutschland",
@@ -81,17 +81,14 @@
     "Apply": "Apply",
     "OrderOverview": "ORDER OVERVIEW",
     "ToCheckout": "Checkout",
-    "UnitPrice": "Unit Price",
     "YourShoppingCartCurrently": "Your shopping cart currently contains no items.",
     "YourOrders": "Your Orders",
     "TotalAmountOf": "Total amount of the goods",
     "DHLPackageShipping": "DHL package shipping",
     "DeliveryInApprox": "Delivery in approx. 2-3 working days. More information on our service page",
     "incl": "inkl. MwSt.",
-    "TotalPrice": "Total Price"
-
-
-
+    "TotalPrice": "Total Price",
+    "UnitPriceOfItem": "Unit Price"
   },
   "ClickAndCollect": {
     "OurService": "OUR SHOPPING SERVICE",
@@ -109,15 +106,15 @@
     "OrdersAreDelivered": "Orders are delivered to the store of your choice within two to three working days. Note: Please bring your ID or the e-mail with the shipping confirmation when you pick up, so that the store staff can identify you."
   },
   "Delivery": {
-  "DeliveryOptions" : "Delivery options and times",
-  "DHLIsOurShipping" : "DHL is our shipping partner for deliveries within Germany.",
-  "AllOrdersAreSent": "All orders are sent from our parcel center in Baden-Württemberg. Orders are processed from Monday to Friday, excluding weekends and public holidays.",
-  "TheTableBelow": "The table below gives you a rough guide to the delivery date of your shipment. If a different time period was specified during the payment process, please use this as a guide.",
-  "IfDeliveryDosesNotMeet": "If the delivery does not meet you personally, the parcel will either be deposited with a neighbor or in a post office near you. You can then collect the package within the next 7 working days before it is returned to us.",
-  "YouCanAlsoEnter": "You can also enter a DHL Packstation of your choice as the delivery address. Please use the delivery option “parcel shop” during the checkout. When entering the address manually using the regular address field, please follow the instructions for entering the address.",
-  "Note": "Note: Fragrances, smartwatches and personalized products cannot be sent via express delivery. This also applies to special offers such as promotions with free express delivery.",
-  "IfSpecialConditions": "If special conditions apply to the shipping costs of your order, these will be displayed during the ordering process when selecting the shipping method."
-},
+    "DeliveryOptions": "Delivery options and times",
+    "DHLIsOurShipping": "DHL is our shipping partner for deliveries within Germany.",
+    "AllOrdersAreSent": "All orders are sent from our parcel center in Baden-Württemberg. Orders are processed from Monday to Friday, excluding weekends and public holidays.",
+    "TheTableBelow": "The table below gives you a rough guide to the delivery date of your shipment. If a different time period was specified during the payment process, please use this as a guide.",
+    "IfDeliveryDosesNotMeet": "If the delivery does not meet you personally, the parcel will either be deposited with a neighbor or in a post office near you. You can then collect the package within the next 7 working days before it is returned to us.",
+    "YouCanAlsoEnter": "You can also enter a DHL Packstation of your choice as the delivery address. Please use the delivery option “parcel shop” during the checkout. When entering the address manually using the regular address field, please follow the instructions for entering the address.",
+    "Note": "Note: Fragrances, smartwatches and personalized products cannot be sent via express delivery. This also applies to special offers such as promotions with free express delivery.",
+    "IfSpecialConditions": "If special conditions apply to the shipping costs of your order, these will be displayed during the ordering process when selecting the shipping method."
+  },
   "Profile": {
     "Title": "Profile",
     "Register": "Register",

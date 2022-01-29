@@ -52,7 +52,6 @@
     "ShopOnline": "Online shoppen, zu Hause entscheiden",
     "IfStyleDoesntSuit": "Wenn Ihnen ein Style nicht passt, können Sie ihn ganz einfach und kostenlos wieder zurückschicken",
     "Share": "Share"
-
   },
   "ProductInformation": {
     "Description": "Style Mirage_Tenn_lthbpf - 50433323",
@@ -65,7 +64,6 @@
     "ShopOnline": "Online shoppen, zu Hause entscheiden",
     "IfStyleDoesntSuit": "Wenn Ihnen ein Style nicht passt, können Sie ihn ganz einfach und kostenlos wieder zurückschicken",
     "Bestseller": "BESTSELLER"
-
   },
   "ProductRecommend": {
     "Title": "STORE EMPFIEHLT",
@@ -77,7 +75,7 @@
     "WhatIsMySize": "What is my size",
     "SizeChart": "Size Chart"
   },
-  "TopBar" : {
+  "TopBar": {
     "PanelTitle": "CHOOSE YOUR DELIVERY LOCATION",
     "SecondaryHeading": "ORT",
     "DeliveryLocationDe": "Germany / Deutschland",
@@ -96,11 +94,9 @@
     "YourOrders": "IHRE BESTELLUNG",
     "TotalAmountOf": "Gesamtsumme der Ware",
     "DHLPackageShipping": "DHL Paket Versand",
-    "DeliveryInApprox":"Lieferung in ca. 2-3 Werktagen. Weitere Informationen auf unserer Serviceseite",
+    "DeliveryInApprox": "Lieferung in ca. 2-3 Werktagen. Weitere Informationen auf unserer Serviceseite",
     "incl": "inkl. MwSt.",
     "TotalPrice": "Gesamtpreis"
-
-
   },
 
   "ClickAndCollect": {
@@ -119,15 +115,15 @@
     "OrdersAreDelivered": "Bestellungen werden innerhalb von zwei bis drei Werktagen an den Store Ihrer Wahl geliefert. Hinweis: Bitte bringen Sie bei der Abholung Ihren Ausweis oder die E-Mail mit der Versandbestätigung mit, damit die Mitarbeiter des Stores Sie identifizieren können."
   },
   "Delivery": {
-  "DeliveryOptions" : "Lieferoptionen und –zeiten",
-  "DHLIsOurShipping" : "DHL is our shipping partner for deliveries within Germany.",
-  "AllOrdersAreSent": "Alle Bestellungen werden aus unserem Paketzentrum in Baden-Württemberg versendet. Bestellaufträge werden von Montag bis Freitag bearbeitet, Wochenenden und Feiertage ausgenommen.",
-  "TheTableBelow": "Die untenstehende Tabelle bietet Ihnen einen groben Richtwert über den Liefertermin Ihrer Sendung. Wurde beim Bezahlvorgang eine andere Zeitspanne genannt, dann richten Sie sich bitte nach dieser.",
-  "IfDeliveryDosesNotMeet": "Sollte Sie der Zusteller nicht persönlich antreffen, wird das Paket entweder bei einem Nachbarn oder in einer Postfiliale in Ihrer Nähe für Sie hinterlegt. Sie können das Paket dann innerhalb der nächsten 7 Werktage abholen, bevor es an uns zurückgesendet wird.",
-  "YouCanAlsoEnter": "Sie können als Lieferadresse auch eine DHL Packstation Ihrer Wahl angeben. Bitte nutzen Sie dazu die Lieferoption „Paketshop“ während des Checkouts. Bei einer manuellen Eingabe über das reguläre Adressfeld beachten Sie bitte die Anleitung zur Adresseingabe.",
-  "Note": "Hinweis: Düfte, Smartwatches und personalisierte Produkte können nicht per Expresslieferung versendet werden. Das gilt auch für Special Offers wie Aktionen mit kostenlosem Expressversand.",
-  "IfSpecialConditions": "Falls für die Versandkosten Ihrer Bestellung Sonderkonditionen gelten, werden diese während des Bestellvorgangs bei der Auswahl der Versandart angezeigt."
-},
+    "DeliveryOptions": "Lieferoptionen und –zeiten",
+    "DHLIsOurShipping": "DHL is our shipping partner for deliveries within Germany.",
+    "AllOrdersAreSent": "Alle Bestellungen werden aus unserem Paketzentrum in Baden-Württemberg versendet. Bestellaufträge werden von Montag bis Freitag bearbeitet, Wochenenden und Feiertage ausgenommen.",
+    "TheTableBelow": "Die untenstehende Tabelle bietet Ihnen einen groben Richtwert über den Liefertermin Ihrer Sendung. Wurde beim Bezahlvorgang eine andere Zeitspanne genannt, dann richten Sie sich bitte nach dieser.",
+    "IfDeliveryDosesNotMeet": "Sollte Sie der Zusteller nicht persönlich antreffen, wird das Paket entweder bei einem Nachbarn oder in einer Postfiliale in Ihrer Nähe für Sie hinterlegt. Sie können das Paket dann innerhalb der nächsten 7 Werktage abholen, bevor es an uns zurückgesendet wird.",
+    "YouCanAlsoEnter": "Sie können als Lieferadresse auch eine DHL Packstation Ihrer Wahl angeben. Bitte nutzen Sie dazu die Lieferoption „Paketshop“ während des Checkouts. Bei einer manuellen Eingabe über das reguläre Adressfeld beachten Sie bitte die Anleitung zur Adresseingabe.",
+    "Note": "Hinweis: Düfte, Smartwatches und personalisierte Produkte können nicht per Expresslieferung versendet werden. Das gilt auch für Special Offers wie Aktionen mit kostenlosem Expressversand.",
+    "IfSpecialConditions": "Falls für die Versandkosten Ihrer Bestellung Sonderkonditionen gelten, werden diese während des Bestellvorgangs bei der Auswahl der Versandart angezeigt."
+  },
   "MyProfile": {
     "Title": "My STORE",
     "Register": "Anmelden",
@@ -248,5 +244,9 @@
     "VoucherCode": "Gutscheincode",
     "Apply": "Anwenden",
     "PlaceOrderAndPay": "ZAHLUNGSPFLICHTIG BESTELLEN"
+  },
+  "Cart": {
+    "UnitPriceOfItem": "Unit Price",
+    "TotalPriceOfItem": "Total Price"
   }
 }
