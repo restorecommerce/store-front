@@ -76,6 +76,7 @@ import { CheckoutDeliveryComponent } from './pages/checkout/checkout-delivery/ch
 import { ClickStopPropagation } from './shared/click-stop-propagation.directive';
 import { ProductCardComponent } from './pages/product-card/product-card.component';
 import { CartLayerItemComponent } from './components/cart-layer-item/cart-layer-item.component';
+import { CartLayerContentsComponent } from './components/cart-layer-contents/cart-layer-contents.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -117,6 +118,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ClickStopPropagation,
     ProductCardComponent,
     CartLayerItemComponent,
+    CartLayerContentsComponent,
   ],
   imports: [
     BrowserModule,
