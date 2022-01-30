@@ -1,33 +1,36 @@
 :host {
-  background-color: white;
-  width: calc(33.333333% - 30px);
+  background-color: transparent;
+  width: 33.333%;
   display: flex;
   flex-direction: column;
 
-  margin-left: 10px;
-  margin-bottom: 10px;
-  padding: 0.2rem;
-
-  &:hover {
-    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
-  }
+  // margin-left: 10px;
+  // margin-bottom: 10px;
+  padding: 16px;
 
   @media (max-width: 1100px) {
-    width: calc(50% - 30px);
+    width: 50%;
   }
   @media (max-width: 700px) {
-    width: calc(100% - 30px);
+    padding: 8px;
+    width: 100%;
   }
 }
 
 .product {
   width: 100%;
   height: 100%;
+  background-color: white;
+  padding: 0.5rem;
   flex: 1;
+
+  &:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  }
 
   .product-header {
     .additional-label {
-      margin-left: -10px;
+      margin-left: -5px;
       max-height: 0px;
       margin-top: 4px;
 
@@ -72,7 +75,8 @@
   }
 
   .image-wrapper {
-    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
     display: block;
 
     .image {
@@ -92,7 +96,7 @@
       .color {
         width: 21px;
         height: 21px;
-        background-color: white;
+        background-color: transparent;
         border: 1px solid rgb(153, 153, 153);
         border-radius: 50%;
       }
