@@ -1,38 +1,9 @@
-.newsletter-bar-container {
-  background-color: black;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+.newsletter-teaser-banner {
+  background-image: url("https://image.shutterstock.com/image-vector/white-geometrical-shape-podium-floor-600w-1970895380.jpg");
+  background-color: dimgray;
+  height: 280px;
+  position: relative;
 }
 
-h2 {
-  color: white;
-  text-align: center;
-}
-
-h4 {
-  color: white;
-  text-align: center;
-}
-
-.icon {
-  color: white;
-  background-color: black;
-}
-
-input {
-  color: black;
-}
-
-.arrow-button {
-  text-align: left;
-  padding-left: 1rem;
-  font-size: 18px;
-}
-
-.arrow-button:hover {
-  background-color: black;
-}
-
-.arrow-button:focus {
-  background-color: black;
+@media only screen and (max-width: 1024px) {
 }
