@@ -1,19 +1,21 @@
-<div style="border: 1px solid blue">
+<div class="newsletter-container">
   <div class="newsletter-teaser-banner"></div>
   <div class="newsletter-contents">
     <h2 class="flex">{{ "NewsLetter.Title" | translate }}</h2>
 
     <p>{{ "NewsLetter.Description" | translate }}</p>
 
-    <vcl-form-control-group>
-      <vcl-label>{{ "NewsLetter.Email" | translate }}</vcl-label>
-      <vcl-input-field>
-        <input vclInput />
-      </vcl-input-field>
-    </vcl-form-control-group>
+    <div class="newsletter-contents-subsciption">
+      <vcl-form-control-group class="form-input" style="margin: 0; flex: 1">
+        <vcl-label>{{ "NewsLetter.Email" | translate }}</vcl-label>
+        <vcl-input-field>
+          <input vclInput />
+        </vcl-input-field>
+      </vcl-form-control-group>
 
-    <button vcl-button square>
-      <vcl-icon icon="mdi:arrow-right-bold"></vcl-icon>
-    </button>
+      <button vcl-button square class="subscribe-button">
+        <vcl-icon icon="mdi:arrow-right-bold"></vcl-icon>
+      </button>
+    </div>
   </div>
 </div>

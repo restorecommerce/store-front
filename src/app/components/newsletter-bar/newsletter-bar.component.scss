@@ -1,9 +1,63 @@
-.newsletter-teaser-banner {
-  background-image: url("https://image.shutterstock.com/image-vector/white-geometrical-shape-podium-floor-600w-1970895380.jpg");
-  background-color: dimgray;
-  height: 280px;
+h2 {
+  font-weight: 600;
+}
+
+.newsletter-container {
   position: relative;
 }
 
+.newsletter-teaser-banner {
+  background-image: url("https://image.shutterstock.com/image-vector/white-geometrical-shape-podium-floor-600w-1970895380.jpg");
+  background-color: #696969;
+  height: 280px;
+}
+
+.newsletter-contents {
+  width: 40%;
+  padding: 16px 24px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10%, 20%);
+}
+
+.newsletter-contents-subsciption {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  .arrow-button {
+    text-align: left;
+    padding-left: 1rem;
+    font-size: 18px;
+  }
+
+  .arrow-button:hover {
+    background-color: black;
+  }
+
+  .arrow-button:focus {
+    background-color: black;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
+  h2,
+  p {
+    text-align: center;
+  }
+
+  .newsletter-container {
+    position: static;
+  }
+
+  .newsletter-contents {
+    box-sizing: border-box;
+    position: static;
+    padding: 1.5rem 3rem;
+    background-color: #fff;
+    width: 100%;
+    transform: translate(0, 0);
+  }
 }
