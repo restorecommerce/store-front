@@ -14,6 +14,7 @@ export class TopBarComponent implements OnInit {
   public language: string = 'en';
 
   cartClosed: boolean;
+  cartItemCount: number;
 
   constructor(
     public cartService: CartService,
@@ -21,7 +22,9 @@ export class TopBarComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cartItemCount = this.cartService.getCartItemCount();
+  }
 
   public navigate(value: string): void {
     this.router.navigateByUrl(value);

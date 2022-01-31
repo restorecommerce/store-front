@@ -127,6 +127,19 @@ h4:hover {
   }
 }
 
+/* ==== cartItem Logo Container styles ==== */
+.cart-icon-container {
+  position: relative;
+
+  .cart-count-badge {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    background-color: #e8e8e8;
+    color: black;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .logo {
     display: none;

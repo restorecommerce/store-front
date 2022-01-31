@@ -87,16 +87,24 @@
           ></div>
         </div>
       </button>
-      <button type="button" class="button nav-icon-container transparent">
-        <div class="icogram">
-          <div
-            class="icon mdi mdi-cart-outline large-icon nav-icon cart-icon"
-            aria-hidden="true"
-            role="img"
-            (click)="cartLayer.open()"
-          ></div>
-        </div>
-      </button>
+      <div class="cart-icon-container">
+        <vcl-badge
+          class="cart-count-badge"
+          vclRounded
+          *ngIf="cartItemCount > 0"
+          >{{ cartItemCount }}</vcl-badge
+        >
+        <button type="button" class="button nav-icon-container transparent">
+          <div class="icogram">
+            <div
+              class="icon mdi mdi-cart-outline large-icon nav-icon cart-icon"
+              aria-hidden="true"
+              role="img"
+              (click)="cartLayer.open()"
+            ></div>
+          </div>
+        </button>
+      </div>
     </div>
   </div>
   <!-- Application layers! -->
