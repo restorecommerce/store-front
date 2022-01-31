@@ -38,7 +38,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductGalleryComponent } from './components/product-gallery/product-gallery.component';
+import { ProductGalleryComponent } from './components/product-main/product-gallery/product-gallery.component';
 import { ProductSizePickerComponent } from './components/product-size-picker/product-size-picker.component';
 import { ProductZoomComponent } from './components/product-zoom/product-zoom.component';
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
@@ -48,7 +48,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ReturnsComponent } from './pages/returns/returns.component';
-import { ProductInfoComponent } from './components/product-info/product-info.component';
+import { ProductInfoComponent } from './components/product-main/product-info/product-info.component';
 import { ProductInterestComponent } from './components/product-interest/product-interest.component';
 import { ProductMainComponent } from './components/product-main/product-main.component';
 import { ProductRecommendComponent } from './components/product-recommend/product-recommend.component';
