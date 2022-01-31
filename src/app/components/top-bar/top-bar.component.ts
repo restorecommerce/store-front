@@ -23,7 +23,9 @@ export class TopBarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.cartItemCount = this.cartService.getCartItemCount();
+    this.cartService.cartItemCountUpdated.subscribe((cartCount) => {
+      this.cartItemCount = cartCount;
+    });
   }
 
   public navigate(value: string): void {

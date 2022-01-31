@@ -10,11 +10,15 @@ import {
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
 import { element } from 'protractor';
 
+import { Subject } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
   public cart: Cart;
+
+  cartItemCountUpdated = new Subject<number>();
 
   constructor() {
     this.initializeCart();
@@ -48,6 +52,7 @@ export class CartService {
 
   addItemToCart(items: IItem[]): void {
     this.cart.addItems(items);
+    this.cartItemCountUpdated.next(this.getCartItemCount());
   }
 
   getCartItems(): IItem[] {
