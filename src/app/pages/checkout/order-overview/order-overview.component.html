@@ -5,7 +5,9 @@
       class="order-overview-header-flex-container row justify-content-between"
     >
       <p class="price">{{ this.getCartTotalGross() }} €</p>
-      <p>{{ "Checkout.ChangeOrder" | translate }}</p>
+      <p>
+        <a>{{ "Checkout.ChangeOrder" | translate }}</a>
+      </p>
     </div>
   </div>
   <hr />
@@ -33,10 +35,7 @@
       <p class="overall-price">{{ item.price * item.quantity }}</p>
     </div>
     <div class="item-image-container flex-5">
-      <img
-        class="responsive-image image"
-        src="https://images.hugoboss.com/is/image/boss/hbeu50407672_001_220?$large$=&fit=crop,1&align=1,1&wid=1024&qlt=80&fmt=webp"
-      />
+      <img class="responsive-image image" [src]="item.imgSrc" />
     </div>
   </div>
 
