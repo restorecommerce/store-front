@@ -183,7 +183,7 @@
     "Male": "male",
     "Female": "female",
     "Gender": "Gender",
-    "CreateAccount": "Create Account",
+    "CreateAccount": "Create an account",
     "DeliveryAdressIsSame": "Delivery address is same as billing address",
     "ProceedToPayment": "Proceed to payment",
     "FirstName": "First Name",
@@ -233,6 +233,9 @@
     "ExpressDelivery": "UPS Express Delivery",
     "VoucherCode": "Voucher Code",
     "Apply": "Apply",
-    "PlaceOrderAndPay": "PLACE ORDER AND PAY"
+    "PlaceOrderAndPay": "PLACE ORDER AND PAY",
+    "InStock": "In stock",
+    "color": "Color",
+    "size": "Size"
   }
 }

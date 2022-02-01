@@ -243,10 +243,9 @@
     "ExpressDelivery": "DHL Express Versand",
     "VoucherCode": "Gutscheincode",
     "Apply": "Anwenden",
-    "PlaceOrderAndPay": "ZAHLUNGSPFLICHTIG BESTELLEN"
-  },
-  "Cart": {
-    "UnitPriceOfItem": "Unit Price",
-    "TotalPriceOfItem": "Total Price"
+    "PlaceOrderAndPay": "ZAHLUNGSPFLICHTIG BESTELLEN",
+    "InStock": "Auf Lager",
+    "color": "Farbe",
+    "size": "Größe"
   }
 }
