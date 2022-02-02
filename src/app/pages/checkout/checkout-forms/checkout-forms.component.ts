@@ -69,10 +69,6 @@ export class CheckoutFormsComponent implements OnInit {
 
   parcelShopSubmit() {
     if (this.parcelShopForm.valid) {
-      // this.checkoutService.deliveryData = {
-      //   deliveryOption: 'Checkout.HomeDelivery',
-      //   deliveryAddress: this.homeDeliveryForm.value,
-      // };
       this.router.navigate(['/checkout/payment']);
     } else {
       this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
@@ -93,9 +89,9 @@ export class CheckoutFormsComponent implements OnInit {
 
   clickAndCollectSubmit() {
     if (this.clickAndCollectForm.valid) {
-      console.log(this.homeDeliveryForm.value);
-      console.log('And this are your products!');
-      console.log(this.cartService.getCartItems());
+      // console.log(this.homeDeliveryForm.value);
+      // console.log('And this are your products!');
+      // console.log(this.cartService.getCartItems());
       this.router.navigate(['/checkout/payment']);
     } else {
       this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
