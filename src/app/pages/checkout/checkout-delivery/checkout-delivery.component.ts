@@ -2,39 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Money } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
+import { CheckoutService } from '../checkout.service';
 
 @Component({
   selector: 'app-checkout-delivery',
   templateUrl: './checkout-delivery.component.html',
-  styleUrls: ['./checkout-delivery.component.scss']
+  styleUrls: ['./checkout-delivery.component.scss'],
 })
 export class CheckoutDeliveryComponent implements OnInit {
-
-  private dataService: CartService;
-
-
-  constructor(private service: CartService) { 
-    this.dataService = this.service;
-  }
+  constructor(
+    private cartService: CartService,
+    public checkoutService: CheckoutService
+  ) {}
 
   deliveryMethod = 'standard';
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   voucherForm = new FormGroup({
-    cardNumber: new FormControl('', [
-      Validators.required,
-    ]),
-    expiryDate: new FormControl('', [
-      Validators.required,
-    ]),
-    securityCode: new FormControl('', [
-      Validators.required,
-    ]),
-    cardHolder: new FormControl('', [
-      Validators.required,
-    ]),
+    cardNumber: new FormControl('', [Validators.required]),
+    expiryDate: new FormControl('', [Validators.required]),
+    securityCode: new FormControl('', [Validators.required]),
+    cardHolder: new FormControl('', [Validators.required]),
   });
 
   voucherSubmit() {
@@ -44,18 +33,20 @@ export class CheckoutDeliveryComponent implements OnInit {
   }
 
   public getCartTotalGross(): string {
-    return this.dataService.round(this.dataService.getCartTotalGross());
+    return this.cartService.round(this.cartService.getCartTotalGross());
   }
 
   public getCartShipping(): Money {
-    return this.dataService.getCartShipping();
+    return this.cartService.getCartShipping();
   }
 
   public getTaxes(): string {
-    return this.dataService.round(Number(this.getCartTotalGross()) - Number(this.getCartTotalNet()));
+    return this.cartService.round(
+      Number(this.getCartTotalGross()) - Number(this.getCartTotalNet())
+    );
   }
 
   public getCartTotalNet(): string {
-    return this.dataService.round(this.dataService.getCartTotalNet());
+    return this.cartService.round(this.cartService.getCartTotalNet());
   }
 }

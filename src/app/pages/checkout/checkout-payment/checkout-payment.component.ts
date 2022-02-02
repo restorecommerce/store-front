@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NotifierService } from '@vcl/ng-vcl';
+import { CheckoutService } from '../checkout.service';
 
 @Component({
   selector: 'app-checkout-payment',
@@ -14,7 +15,8 @@ export class CheckoutPaymentComponent implements OnInit {
   constructor(
     private notifier: NotifierService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public checkoutService: CheckoutService
   ) {}
 
   ngOnInit(): void {}

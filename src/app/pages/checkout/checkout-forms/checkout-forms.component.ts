@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
 
-import { CartService } from 'src/app/services/cart.service';
 import { CheckoutService } from '../checkout.service';
 
 @Component({
@@ -13,11 +12,8 @@ import { CheckoutService } from '../checkout.service';
   styleUrls: ['./checkout-forms.component.scss'],
 })
 export class CheckoutFormsComponent implements OnInit {
-  private translateService: TranslateService;
-
   constructor(
     private notifier: NotifierService,
-    private cartService: CartService,
     private translate: TranslateService,
     private router: Router,
     private checkoutService: CheckoutService

@@ -1,54 +1,83 @@
-<h2 class="checkout-forms-header"><span class="header-num">01</span>{{ "Checkout.PersonalData" | translate }}</h2>
+<!-- Information summary for checkout -->
+<h2 class="checkout-forms-header">
+  <span class="header-num">01</span>{{ "Checkout.PersonalData" | translate }}
+</h2>
 <div class="content-container">
   <h3>{{ "Checkout.DeliveryOption" | translate }}</h3>
-  <p>Lieferung nach Hause</p>
+  <p>{{ checkoutService.deliveryData.deliveryOption | translate }}</p>
   <h3>{{ "Checkout.DeliveryAdress" | translate }}</h3>
-  <p>Mr</p>
-  <p>Max Mustermann</p>
-  <p>Boardwalk 1</p>
-  <p>10001 New York</p>
-  <p>USA</p>
-  <p>maxmustermann@gmail.com</p>
+  <p>
+    {{ checkoutService.deliveryData.deliveryAddress.firstName }}
+    {{ checkoutService.deliveryData.deliveryAddress.lastName }}
+  </p>
+  <p>
+    {{ checkoutService.deliveryData.deliveryAddress.streetName }}
+  </p>
+  <p>
+    {{ checkoutService.deliveryData.deliveryAddress.postCode }}
+    {{ checkoutService.deliveryData.deliveryAddress.city }}
+  </p>
+  <p>{{ checkoutService.deliveryData.deliveryAddress.country }}</p>
+  <p>{{ checkoutService.deliveryData.deliveryAddress.mail }}</p>
 </div>
-<h2 class="checkout-forms-header"><span class="header-num">02</span>{{ "Checkout.Payment" | translate }}</h2>
+
+<!-- payment method options -->
+<h2 class="checkout-forms-header">
+  <span class="header-num">02</span>{{ "Checkout.Payment" | translate }}
+</h2>
 <div class="content-container">
   <h3>{{ "Checkout.PaymentOptionHeader" | translate }}</h3>
   <p>Chosen Payment Option</p>
 </div>
-<h2 class="checkout-forms-header"><span class="header-num">03</span>{{ "Checkout.Delivery" | translate }}</h2>
+<h2 class="checkout-forms-header">
+  <span class="header-num">03</span>{{ "Checkout.Delivery" | translate }}
+</h2>
 <div class="content-container">
   <h3>{{ "Checkout.DeliveryOptionHeader" | translate }}</h3>
   <vcl-radio-group layout="vertical" [(ngModel)]="deliveryMethod">
-    <vcl-radio-button value="standard">{{ "Checkout.StandardDelivery" | translate }}</vcl-radio-button>
-    <vcl-radio-button value="express">{{ "Checkout.ExpressDelivery" | translate }}</vcl-radio-button>
+    <vcl-radio-button value="standard">{{
+      "Checkout.StandardDelivery" | translate
+    }}</vcl-radio-button>
+    <vcl-radio-button value="express">{{
+      "Checkout.ExpressDelivery" | translate
+    }}</vcl-radio-button>
   </vcl-radio-group>
   <form [formGroup]="voucherForm" (ngSubmit)="voucherSubmit()">
-
     <vcl-form-control-group>
       <vcl-label>{{ "Checkout.VoucherCode" | translate }}</vcl-label>
       <vcl-input-field>
-        <input vclInput formControlName="voucher">
+        <input vclInput formControlName="voucher" />
       </vcl-input-field>
     </vcl-form-control-group>
 
-    <input type="submit" class="go-to-payment apply" value='{{ "Checkout.Apply" | translate }}'>
+    <input
+      type="submit"
+      class="go-to-payment apply"
+      value="{{ 'Checkout.Apply' | translate }}"
+    />
   </form>
   <div class="price-info">
-    <h3 class="price-info-header">{{ 'Checkout.YourOrder' | translate }}</h3>
+    <h3 class="price-info-header">{{ "Checkout.YourOrder" | translate }}</h3>
     <div class="row justify-content-between">
-      <p *ngIf="deliveryMethod === 'standard'">{{ 'Checkout.StandardDelivery' | translate }}</p>
-      <p *ngIf="deliveryMethod === 'express'">{{ 'Checkout.ExpressDelivery' | translate }}</p>
-      <p class="shipment-info">{{this.getCartShipping()}} €</p>
+      <p *ngIf="deliveryMethod === 'standard'">
+        {{ "Checkout.StandardDelivery" | translate }}
+      </p>
+      <p *ngIf="deliveryMethod === 'express'">
+        {{ "Checkout.ExpressDelivery" | translate }}
+      </p>
+      <p class="shipment-info">{{ this.getCartShipping() }} €</p>
     </div>
     <div class="row justify-content-between">
       <p>{{ "TopBar.incl" | translate }}</p>
-      <p class="tax-info">{{this.getTaxes()}} €</p>
+      <p class="tax-info">{{ this.getTaxes() }} €</p>
     </div>
-    <hr>
+    <hr />
     <div class="row justify-content-between total-price">
-      <p>{{ 'Checkout.YourOrder' | translate }}</p>
-      <p class="total">{{this.getCartTotalGross()}} €</p>
+      <p>{{ "Checkout.YourOrder" | translate }}</p>
+      <p class="total">{{ this.getCartTotalGross() }} €</p>
     </div>
   </div>
-  <button class="go-to-payment">{{ 'Checkout.PlaceOrderAndPay' | translate }}</button>
+  <button class="go-to-payment">
+    {{ "Checkout.PlaceOrderAndPay" | translate }}
+  </button>
 </div>
