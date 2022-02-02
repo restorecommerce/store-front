@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
 import { CheckoutService } from '../checkout.service';
 
@@ -15,7 +16,7 @@ export class CheckoutPaymentComponent implements OnInit {
   constructor(
     private notifier: NotifierService,
     private router: Router,
-    private route: ActivatedRoute,
+    private translate: TranslateService,
     public checkoutService: CheckoutService
   ) {}
 
@@ -33,7 +34,9 @@ export class CheckoutPaymentComponent implements OnInit {
       console.log(this.paymentOptionForm.value);
       this.router.navigate(['/checkout/delivery']);
     } else {
-      this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
+      this.notifier.error(
+        this.translate.instant('Checkout.invalidFormNotificationMessage')
+      );
     }
   }
 
