@@ -26,7 +26,8 @@
     ></div>
   </div>
 </button>
-<button type="button" class="button transparent">
+
+<button type="button" class="button transparent cart-icon-container">
   <div class="icogram">
     <div
       class="icon mdi mdi-cart-outline large-icon"
@@ -35,4 +36,10 @@
       (click)="menuLayer.close(); cartLayer.open()"
     ></div>
   </div>
+  <vcl-badge
+    class="cart-count-badge"
+    vclRounded
+    *ngIf="this.cartService.getCartItemCount() > 0"
+    >{{ this.cartService.getCartItemCount() }}</vcl-badge
+  >
 </button>

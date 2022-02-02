@@ -1,0 +1,16 @@
+.large-icon {
+  font-size: 35px;
+}
+
+.cart-icon-container {
+  position: relative;
+  //   border: 1px solid red;
+
+  .cart-count-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #444;
+    color: #e8e8e8;
+  }
+}

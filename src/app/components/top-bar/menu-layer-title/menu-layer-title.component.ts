@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TemplateLayerRef } from '@vcl/ng-vcl';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-menu-layer-title',
@@ -11,7 +12,7 @@ export class MenuLayerTitleComponent implements OnInit {
   @Input() cartLayer: TemplateLayerRef;
   @Input() languageLayer: TemplateLayerRef;
 
-  constructor() {}
+  constructor(public cartService: CartService) {}
 
   ngOnInit(): void {}
 }
