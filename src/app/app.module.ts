@@ -77,6 +77,8 @@ import { ClickStopPropagation } from './shared/click-stop-propagation.directive'
 import { ProductCardComponent } from './pages/product-card/product-card.component';
 import { CartLayerItemComponent } from './components/cart-layer-item/cart-layer-item.component';
 import { CartLayerContentsComponent } from './components/cart-layer-contents/cart-layer-contents.component';
+import { MenuLayerContentComponent } from './components/top-bar/menu-layer-content/menu-layer-content.component';
+import { MenuLayerTitleComponent } from './components/top-bar/menu-layer-title/menu-layer-title.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -119,6 +121,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProductCardComponent,
     CartLayerItemComponent,
     CartLayerContentsComponent,
+    MenuLayerContentComponent,
+    MenuLayerTitleComponent,
   ],
   imports: [
     BrowserModule,

@@ -194,44 +194,11 @@
       class="pos-menu-absolute"
     >
       <vcl-panel-title>
-        <button type="button" class="button transparent">
-          <div class="icogram">
-            <div
-              class="icon mdi mdi-home-outline large-icon"
-              aria-hidden="true"
-              role="img"
-            ></div>
-          </div>
-        </button>
-        <button type="button" class="button transparent">
-          <div class="icogram">
-            <div
-              class="icon mdi mdi-account-outline large-icon"
-              aria-hidden="true"
-              role="img"
-            ></div>
-          </div>
-        </button>
-        <button type="button" class="button transparent">
-          <div class="icogram">
-            <div
-              class="icon mdi mdi-earth large-icon"
-              aria-hidden="true"
-              role="img"
-              (click)="menuLayer.close(); languageLayer.open()"
-            ></div>
-          </div>
-        </button>
-        <button type="button" class="button transparent">
-          <div class="icogram">
-            <div
-              class="icon mdi mdi-cart-outline large-icon"
-              aria-hidden="true"
-              role="img"
-              (click)="menuLayer.close(); cartLayer.open()"
-            ></div>
-          </div>
-        </button>
+        <app-menu-layer-title
+          [menuLayer]="menuLayer"
+          [languageLayer]="languageLayer"
+          [cartLayer]="cartLayer"
+        ></app-menu-layer-title>
       </vcl-panel-title>
       <vcl-navigation layout="horizontal">
         <vcl-navigation-item>
