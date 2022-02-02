@@ -236,6 +236,7 @@
     "PlaceOrderAndPay": "PLACE ORDER AND PAY",
     "InStock": "In stock",
     "color": "Color",
-    "size": "Size"
+    "size": "Size",
+    "invalidFormNotificationMessage": "Please fill out the form completely."
   }
 }

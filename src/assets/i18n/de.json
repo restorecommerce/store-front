@@ -246,6 +246,7 @@
     "PlaceOrderAndPay": "ZAHLUNGSPFLICHTIG BESTELLEN",
     "InStock": "Auf Lager",
     "color": "Farbe",
-    "size": "Größe"
+    "size": "Größe",
+    "invalidFormNotificationMessage": "Bitte füllen Sie das Formular vollständig aus."
   }
 }

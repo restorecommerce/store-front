@@ -5,6 +5,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
 
 import { CartService } from 'src/app/services/cart.service';
+import { CheckoutService } from '../checkout.service';
 
 @Component({
   selector: 'app-checkout-forms',
@@ -17,11 +18,10 @@ export class CheckoutFormsComponent implements OnInit {
   constructor(
     private notifier: NotifierService,
     private cartService: CartService,
-    private secondService: TranslateService,
-    private router: Router
-  ) {
-    this.translateService = this.secondService;
-  }
+    private translate: TranslateService,
+    private router: Router,
+    private checkoutService: CheckoutService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -39,10 +39,15 @@ export class CheckoutFormsComponent implements OnInit {
 
   homeDeliverySubmit() {
     if (this.homeDeliveryForm.valid) {
-      console.log(this.homeDeliveryForm.value);
+      this.checkoutService.deliveryData = {
+        deliveryOption: 'Checkout.HomeDelivery',
+        deliveryAddress: this.homeDeliveryForm.value,
+      };
       this.router.navigate(['/checkout/payment']);
     } else {
-      this.notifier.error('Please fill out the form completely.');
+      this.notifier.error(
+        this.translate.instant('Checkout.invalidFormNotificationMessage')
+      );
     }
   }
 
@@ -64,7 +69,10 @@ export class CheckoutFormsComponent implements OnInit {
 
   parcelShopSubmit() {
     if (this.parcelShopForm.valid) {
-      console.log(this.homeDeliveryForm.value);
+      // this.checkoutService.deliveryData = {
+      //   deliveryOption: 'Checkout.HomeDelivery',
+      //   deliveryAddress: this.homeDeliveryForm.value,
+      // };
       this.router.navigate(['/checkout/payment']);
     } else {
       this.notifier.error('Bitte füllen Sie das Formular ganz aus.');
