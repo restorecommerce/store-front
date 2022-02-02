@@ -32,21 +32,21 @@ export class CheckoutDeliveryComponent implements OnInit {
     }
   }
 
-  public getCartTotalGross(): string {
+  getCartTotalGross(): string {
     return this.cartService.round(this.cartService.getCartTotalGross());
   }
 
-  public getCartShipping(): Money {
+  getCartShipping(): Money {
     return this.cartService.getCartShipping();
   }
 
-  public getTaxes(): string {
+  getTaxes(): string {
     return this.cartService.round(
       Number(this.getCartTotalGross()) - Number(this.getCartTotalNet())
     );
   }
 
-  public getCartTotalNet(): string {
+  getCartTotalNet(): string {
     return this.cartService.round(this.cartService.getCartTotalNet());
   }
 }
