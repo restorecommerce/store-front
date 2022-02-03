@@ -1,0 +1,45 @@
+.root {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 60%;
+  padding: 1rem 1.5rem;
+  margin: auto;
+  position: relative;
+
+  .large-icon {
+    position: absolute;
+    font-size: 24px;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .title {
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #333;
+  }
+
+  .description {
+    font-size: 1.05rem;
+    color: #444;
+  }
+
+  .button-container {
+    .save {
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .save-options {
+      background-color: #eee;
+      border: 1px solid #bbb;
+      color: #111;
+    }
+  }
+}

@@ -27,6 +27,7 @@ import {
   VCLFormControlGroupModule,
   VCLTabNavModule,
   VCLRadioButtonModule,
+  VCLFlipSwitchModule,
 } from '@vcl/ng-vcl';
 import {
   TranslateModule,
@@ -63,6 +64,8 @@ import { FooterTopComponent } from './components/footer-top/footer-top.component
 import { HeaderComponent } from './components/header/header.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ShoesComponent } from './pages/shoes/shoes.component';
+import { CookiePreferenceComponent } from './components/cookie-preference/cookie-preference.component';
+
 import {
   LAZYLOAD_IMAGE_HOOKS,
   LazyLoadImageModule,
@@ -123,6 +126,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CartLayerContentsComponent,
     MenuLayerContentComponent,
     MenuLayerTitleComponent,
+    CookiePreferenceComponent,
   ],
   imports: [
     BrowserModule,
@@ -163,6 +167,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     VCLRadioButtonModule,
     VCLZoomBoxModule,
     VCLFormControlGroupModule,
+    VCLFlipSwitchModule,
   ],
   exports: [TranslateModule],
   providers: [

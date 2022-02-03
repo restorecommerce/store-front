@@ -1,0 +1,65 @@
+<div class="root">
+  <vcl-icon icon="fas:globe" class="large-icon"></vcl-icon>
+  <h2 class="title">STORE FRONT</h2>
+
+  <h3 class="subtitle">ABOUT COOKIES ON THIS SITE</h3>
+
+  <p class="description">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius commodi
+    placeat sequi. Harum excepturi ut impedit modi illo numquam soluta eum
+    similique aliquid neque, aut explicabo quos doloribus nesciunt consequatur?
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta rerum
+    praesentium illo neque et totam accusamus, impedit aspernatur, architecto
+    beatae culpa quia voluptatem ab? Eos consectetur dolores nam saepe illum.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima esse quasi
+    saepe beatae qui corrupti? Vel accusamus earum eligendi et at optio amet
+    itaque veritatis ad adipisci, possimus vitae aperiam!
+  </p>
+
+  <p class="more-links-to-settings">
+    <vcl-icogram class="mr-3">
+      <vcl-icon icon="fas:link"></vcl-icon>
+      Privacy Policy
+    </vcl-icogram>
+    <vcl-icogram class="mr-3">
+      <vcl-icon icon="fas:link"></vcl-icon>
+      Imprint
+    </vcl-icogram>
+    <vcl-icogram>
+      <vcl-icon icon="fas:cog"></vcl-icon>
+      More
+    </vcl-icogram>
+  </p>
+
+  <div class="row my-3 grid-gutterx-3">
+    <div class="row align-items-center justify-content-between">
+      <vcl-label class="mr-2">Necessary</vcl-label>
+      <vcl-flip-switch onLabel="Yes" offLabel="No"></vcl-flip-switch>
+    </div>
+    <div class="row align-items-center justify-content-between">
+      <vcl-label class="mr-2">Marketing</vcl-label>
+      <vcl-flip-switch onLabel="Yes" offLabel="No"></vcl-flip-switch>
+    </div>
+    <div class="row align-items-center justify-content-between">
+      <vcl-label class="mr-2">Functional</vcl-label>
+      <vcl-flip-switch onLabel="Yes" offLabel="No"></vcl-flip-switch>
+    </div>
+    <div class="row align-items-center justify-content-between">
+      <vcl-label class="mr-2">Analytics</vcl-label>
+      <vcl-flip-switch onLabel="Yes" offLabel="No"></vcl-flip-switch>
+    </div>
+  </div>
+
+  <div class="row button-container my-2">
+    <div class="flex-6 pr-1">
+      <button class="save save-options" vcl-button (click)="close()">
+        SAVE SERVICES
+      </button>
+    </div>
+    <div class="flex-6 pl-1">
+      <button class="save save-all" vcl-button (click)="close()">
+        ACCEPT ALL
+      </button>
+    </div>
+  </div>
+</div>
