@@ -11,7 +11,7 @@ import { CookiePreferenceComponent } from './components/cookie-preference/cookie
 export class AppComponent implements OnInit, AfterViewInit {
   cookiesSettingLayer: LayerRef;
 
-  cookiesExists = true;
+  cookiesExists = false;
 
   constructor(
     private translate: TranslateService,
@@ -33,9 +33,9 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   openComponentLayer() {
     this.cookiesSettingLayer.open().subscribe((result) => {
-      console.log('**Cookies component has result: ');
-      console.log(result);
-      console.log('===============');
+      // console.log('**Cookies component has result: ');
+      // console.log(result);
+      // console.log('===============');
     });
   }
 

@@ -1,5 +1,5 @@
 <div class="footer-top-container">
-  <ng-container *ngIf="this.screenWidth() >= this.desktopWidth()">
+  <ng-container *ngIf="screenWidth() >= desktopWidth()">
     <div class="row grid-gutter-5">
       <div class="flex-2 offset-1">
         <h2>{{ "Footer.StoreStories" | translate }}</h2>
@@ -216,7 +216,7 @@
     </div>
   </ng-container>
 
-  <ng-container *ngIf="this.screenWidth() < this.desktopWidth()">
+  <ng-container *ngIf="screenWidth() < desktopWidth()">
     <vcl-navigation>
       <vcl-navigation-item #store="vclNavigationItem">
         <vcl-navigation-label>

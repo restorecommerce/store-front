@@ -8,18 +8,15 @@ import { DisplayService } from 'src/app/services/display.service';
   styleUrls: ['./footer-top.component.scss'],
 })
 export class FooterTopComponent implements OnInit {
-  constructor(
-    private service: CartService,
-    private displayService: DisplayService
-  ) {}
+  constructor(private displayService: DisplayService) {}
 
   ngOnInit(): void {}
 
-  public screenWidth() {
+  screenWidth() {
     return this.displayService.getScreenSize();
   }
 
-  public desktopWidth() {
+  desktopWidth() {
     return this.displayService.desktopSize();
   }
 }

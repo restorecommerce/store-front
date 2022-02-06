@@ -1,7 +1,7 @@
 <div>
   <ng-container *ngIf="!this.loading">
     <div class="product-gallery-container">
-      <vcl-gallery row="true">
+      <vcl-gallery [row]="screenWidth() >= tabletWidth()">
         <ng-container *ngFor="let image of this.galleryImages">
           <vcl-gallery-image
             [image]="image.src"

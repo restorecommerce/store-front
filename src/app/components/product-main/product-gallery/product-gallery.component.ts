@@ -6,6 +6,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { Product, ProductImage } from 'src/app/models/product';
+import { DisplayService } from 'src/app/services/display.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -22,7 +23,10 @@ export class ProductGalleryComponent implements OnInit, OnChanges {
 
   @Input() product: Product;
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private displayService: DisplayService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -48,5 +52,13 @@ export class ProductGalleryComponent implements OnInit, OnChanges {
 
   zoom(): void {
     this.zoomImage = true;
+  }
+
+  screenWidth() {
+    return this.displayService.getScreenSize();
+  }
+
+  tabletWidth() {
+    return this.displayService.tabletSize();
   }
 }

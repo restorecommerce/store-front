@@ -15,7 +15,7 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class CartService {
-  public cart: Cart;
+  cart: Cart;
 
   cartItemCountUpdated = new Subject<number>();
 
