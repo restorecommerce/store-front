@@ -1,4 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 import { Product, ProductImage } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -7,7 +13,7 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './product-gallery.component.html',
   styleUrls: ['./product-gallery.component.scss'],
 })
-export class ProductGalleryComponent implements OnInit {
+export class ProductGalleryComponent implements OnInit, OnChanges {
   loading = false;
   zoomImage = false;
   productZoomContainerWidth: number;
@@ -18,7 +24,9 @@ export class ProductGalleryComponent implements OnInit {
 
   constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngOnChanges(changes: SimpleChanges): void {
     this.loadImages();
   }
 

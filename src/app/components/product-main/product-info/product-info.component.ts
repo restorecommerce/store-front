@@ -1,4 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  SimpleChanges,
+} from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
@@ -10,7 +16,7 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './product-info.component.html',
   styleUrls: ['./product-info.component.scss'],
 })
-export class ProductInfoComponent implements OnInit {
+export class ProductInfoComponent implements OnInit, OnChanges {
   @Input() product: Product;
   isItemInCart: boolean;
 
@@ -25,7 +31,9 @@ export class ProductInfoComponent implements OnInit {
     private productService: ProductService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngOnChanges(changes: SimpleChanges): void {
     this.isItemInCart = Boolean(
       this.cartService.isItemInCart(String(this.product.id))
     );
