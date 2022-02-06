@@ -1,32 +1,26 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
+import { DisplayService } from 'src/app/services/display.service';
 
 @Component({
   selector: 'app-returns',
   templateUrl: './returns.component.html',
-  styleUrls: ['./returns.component.scss']
+  styleUrls: ['./returns.component.scss'],
 })
-
 export class ReturnsComponent implements OnInit {
-
-  private dataService: CartService;
-
-  constructor(private service: CartService) {
-    this.dataService = this.service;
-  }
+  constructor(private displayService: DisplayService) {}
 
   ngOnInit(): void {}
 
-  public screenWidth() {
-    return this.dataService.getScreenSize();
+  screenWidth() {
+    return this.displayService.getScreenSize();
   }
 
-  public desktopWidth() {
-    return this.dataService.desktopSize();
+  desktopWidth() {
+    return this.displayService.desktopSize();
   }
 
-  public tabletWidth() {
-    return this.dataService.tabletSize();
+  tabletWidth() {
+    return this.displayService.tabletSize();
   }
 }
-

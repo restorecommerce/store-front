@@ -1,30 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
+import { DisplayService } from 'src/app/services/display.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
-  private dataService: CartService;
-
-  constructor(private service: CartService) {
-    this.dataService = this.service;
-  }
+  constructor(private displayService: DisplayService) {}
 
   ngOnInit(): void {}
 
   public screenWidth() {
-    return this.dataService.getScreenSize();
+    return this.displayService.getScreenSize();
   }
 
   public desktopWidth() {
-    return this.dataService.desktopSize();
+    return this.displayService.desktopSize();
   }
 
   public tabletWidth() {
-    return this.dataService.tabletSize();
+    return this.displayService.tabletSize();
   }
 }

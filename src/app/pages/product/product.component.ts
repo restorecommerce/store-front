@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
+import { DisplayService } from 'src/app/services/display.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -10,16 +11,14 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent implements OnInit {
-  private dataService: CartService;
   product: Product;
 
   constructor(
     private service: CartService,
     private productService: ProductService,
-    private route: ActivatedRoute
-  ) {
-    this.dataService = this.service;
-  }
+    private route: ActivatedRoute,
+    private displayService: DisplayService
+  ) {}
 
   ngOnInit(): void {
     this.getProduct();
@@ -33,14 +32,14 @@ export class ProductComponent implements OnInit {
   }
 
   public screenWidth() {
-    return this.dataService.getScreenSize();
+    return this.displayService.getScreenSize();
   }
 
   public desktopWidth() {
-    return this.dataService.desktopSize();
+    return this.displayService.desktopSize();
   }
 
   public tabletWidth() {
-    return this.dataService.tabletSize();
+    return this.displayService.tabletSize();
   }
 }

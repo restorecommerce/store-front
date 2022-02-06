@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
 import { Money } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
+import { DisplayService } from 'src/app/services/display.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -19,6 +20,7 @@ export class TopBarComponent implements OnInit {
   constructor(
     public cartService: CartService,
     private translateService: TranslateService,
+    private displayService: DisplayService,
     private router: Router
   ) {}
 
@@ -32,15 +34,13 @@ export class TopBarComponent implements OnInit {
     this.router.navigateByUrl(value);
   }
 
-  // should be refactored to a screenDisplayConfigurationService
   public screenWidth(): number {
-    return this.cartService.getScreenSize();
+    return this.displayService.getScreenSize();
   }
 
   public desktopWidth(): number {
-    return this.cartService.desktopSize();
+    return this.displayService.desktopSize();
   }
-  // ===========================================================
 
   public setLanguage(): void {
     this.translateService.use(this.language);

@@ -1,36 +1,30 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
+import { DisplayService } from 'src/app/services/display.service';
 
 @Component({
   selector: 'profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
 })
-
 export class ProfileComponent implements OnInit {
-
-  private dataService: CartService;
-
   public password: string = '';
   public email: string = '';
-  public remember: boolean  = false;
+  public remember: boolean = false;
 
-  constructor(private service: CartService) {
-    this.dataService = this.service;
-  }
+  constructor(private displayService: DisplayService) {}
 
   ngOnInit(): void {}
 
-  public screenWidth() {
-    return this.dataService.getScreenSize();
+  screenWidth() {
+    return this.displayService.getScreenSize();
   }
 
-  public desktopWidth() {
-    return this.dataService.desktopSize();
+  desktopWidth() {
+    return this.displayService.desktopSize();
   }
 
-  public tabletWidth() {
-    return this.dataService.tabletSize();
+  tabletWidth() {
+    return this.displayService.tabletSize();
   }
 }
-

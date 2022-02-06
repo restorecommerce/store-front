@@ -8,7 +8,6 @@ import {
   Money,
 } from '@restorecommerce/cart/lib/model/primitives';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
-import { element } from 'protractor';
 
 import { Subject } from 'rxjs';
 
@@ -88,22 +87,5 @@ export class CartService {
 
   round(value: Money): string {
     return this.cart.round(value);
-  }
-
-  // non related functions
-  public desktopSize(): number {
-    return 1400;
-  }
-
-  public tabletSize(): number {
-    return 768;
-  }
-
-  public getScreenSize(): number {
-    return document.body.clientWidth;
-  }
-
-  public getScreenWidth(): number {
-    return window.screen.width;
   }
 }
