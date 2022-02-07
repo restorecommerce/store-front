@@ -6,13 +6,6 @@
   margin: auto;
   position: relative;
 
-  .pos-language-dialog-absolute {
-    position: absolute !important;
-    border: 1px solid red;
-    right: 1.5rem !important;
-    top: 1.5rem !important;
-  }
-
   .globe-icogram {
     position: absolute;
     right: 1.5rem;
@@ -21,6 +14,12 @@
     .icon {
       font-size: 24px;
     }
+  }
+
+  .pos-language-dialog-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 
   .title {
