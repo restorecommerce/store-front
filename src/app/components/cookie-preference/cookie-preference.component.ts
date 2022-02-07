@@ -9,6 +9,8 @@ import { ComponentLayerRef } from '@vcl/ng-vcl';
 export class CookiePreferenceComponent implements OnInit {
   constructor(@Optional() private layer?: ComponentLayerRef) {}
 
+  language = 'de';
+
   allPreferences = {
     necessary: true,
     marketing: true,

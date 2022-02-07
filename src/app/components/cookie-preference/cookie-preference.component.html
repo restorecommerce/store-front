@@ -1,6 +1,11 @@
 <div class="root">
   <div class="icogram globe-icogram">
-    <div class="icon mdi mdi-earth" aria-hidden="true" role="img"></div>
+    <div
+      class="icon mdi mdi-earth"
+      (click)="languageLayer.open()"
+      aria-hidden="true"
+      role="img"
+    ></div>
   </div>
 
   <!-- <vcl-icon icon="fas:globe" class="large-icon"></vcl-icon> -->
@@ -73,4 +78,27 @@
       </button>
     </div>
   </div>
+
+  <!-- the language layer -->
+  <ng-template vclLayer #languageLayer="vclLayer">
+    <vcl-panel-dialog
+      [showCloseButton]="true"
+      (close)="languageLayer.close()"
+      class="pos-language-dialog-absolute"
+    >
+      <vcl-panel-title>{{ "Cookie.Language" | translate }}</vcl-panel-title>
+      <vcl-form-control-group>
+        <vcl-select>
+          <vcl-select-list [value]="language">
+            <vcl-select-list-item value="de">
+              {{ "TopBar.LanguageDe" | translate }}
+            </vcl-select-list-item>
+            <vcl-select-list-item value="en">
+              {{ "TopBar.LanguageEn" | translate }}
+            </vcl-select-list-item>
+          </vcl-select-list>
+        </vcl-select>
+      </vcl-form-control-group>
+    </vcl-panel-dialog>
+  </ng-template>
 </div>

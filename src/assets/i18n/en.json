@@ -238,5 +238,8 @@
     "color": "Color",
     "size": "Size",
     "invalidFormNotificationMessage": "Please fill out the form completely."
+  },
+  "Cookie": {
+    "Language": "Choose your language"
   }
 }
