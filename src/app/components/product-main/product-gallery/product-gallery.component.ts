@@ -42,9 +42,6 @@ export class ProductGalleryComponent implements OnInit, OnChanges {
 
       this.productService.productColorChanged.subscribe((color) => {
         this.galleryImages = this.product.productImageSources[color];
-        console.log('Loaded Gallery');
-        console.log(this.galleryImages);
-        console.log('============');
       });
       this.loading = false;
     }, 100);
