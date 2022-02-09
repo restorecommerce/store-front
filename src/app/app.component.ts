@@ -16,8 +16,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(
     private translate: TranslateService,
-    private layerService: LayerService,
-    private route: ActivatedRoute
+    private layerService: LayerService
   ) {}
 
   ngOnInit(): void {
