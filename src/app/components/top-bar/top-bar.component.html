@@ -2,19 +2,14 @@
   <!-- the main nav bar! -->
   <div class="row justify-content-between align-items-center top-bar-nav">
     <div class="vertical-center home-icon-container">
-      <button
-        type="button"
-        class="button transparent"
-        (click)="this.navigate('')"
-      >
-        <div class="icogram">
-          <div
-            class="icon mdi mdi-home-outline large-icon nav-icon"
-            aria-hidden="true"
-            role="img"
-          ></div>
-        </div>
-      </button>
+      <div>
+        <img
+          class="logo"
+          src="../../../assets/logos/restore_logo_wb.svg"
+          alt="restorelogo"
+          (click)="this.navigate('')"
+        />
+      </div>
     </div>
     <div class="vertical-center hamburger-icon-container">
       <button type="button" class="button transparent">
@@ -27,13 +22,6 @@
           ></div>
         </div>
       </button>
-    </div>
-    <div class="vertical-center">
-      <img
-        class="logo"
-        src="../../../assets/logos/restore_logo_wb.svg"
-        alt="restorelogo"
-      />
     </div>
     <div class="vertical-center men-women-container">
       <ng-container>
