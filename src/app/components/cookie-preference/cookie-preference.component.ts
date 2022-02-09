@@ -11,6 +11,8 @@ export class CookiePreferenceComponent implements OnInit {
 
   language = 'de';
 
+  languageLayerOpen = false;
+
   allPreferences = {
     necessary: true,
     marketing: true,
