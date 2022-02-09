@@ -172,14 +172,25 @@
 
   <!-- the cart layer -->
   <ng-template vclLayer #cartLayer="vclLayer">
-    <vcl-panel-dialog
-      [showCloseButton]="true"
-      (close)="cartLayer.close()"
-      class="pos-cart-absolute"
-    >
-      <vcl-panel-title>{{
-        "TopBar.OrderOverview" | translate
-      }}</vcl-panel-title>
+    <vcl-panel-dialog class="pos-cart-absolute" [showCloseButton]="false">
+      <vcl-panel-title
+        class="row justify-content-between align-items-center cart-panel-title"
+      >
+        <span>
+          {{ "TopBar.OrderOverview" | translate }}
+        </span>
+
+        <button
+          type="button"
+          class="button transparent"
+          (click)="cartLayer.close()"
+        >
+          <div class="icogram">
+            <span class="text">X</span>
+          </div>
+        </button>
+      </vcl-panel-title>
+
       <app-cart-layer-contents
         [cartLayer]="cartLayer"
       ></app-cart-layer-contents>
