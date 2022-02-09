@@ -82,6 +82,8 @@ import { CartLayerItemComponent } from './components/cart-layer-item/cart-layer-
 import { CartLayerContentsComponent } from './components/cart-layer-contents/cart-layer-contents.component';
 import { MenuLayerContentComponent } from './components/top-bar/menu-layer-content/menu-layer-content.component';
 import { MenuLayerTitleComponent } from './components/top-bar/menu-layer-title/menu-layer-title.component';
+import { PrivacyPolicyComponent } from './src/app/components/privacy-policy/privacy-policy.component';
+import { ImprintComponent } from './src/app/components/imprint/imprint.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -127,6 +129,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MenuLayerContentComponent,
     MenuLayerTitleComponent,
     CookiePreferenceComponent,
+    PrivacyPolicyComponent,
+    ImprintComponent,
   ],
   imports: [
     BrowserModule,

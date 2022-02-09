@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { LayerRef, LayerService } from '@vcl/ng-vcl';
 import { CookiePreferenceComponent } from './components/cookie-preference/cookie-preference.component';
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(
     private translate: TranslateService,
-    private layerService: LayerService
+    private layerService: LayerService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {

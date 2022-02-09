@@ -1,4 +1,5 @@
 import { Component, OnInit, Optional } from '@angular/core';
+import { Router } from '@angular/router';
 import { ComponentLayerRef } from '@vcl/ng-vcl';
 
 @Component({
@@ -7,7 +8,10 @@ import { ComponentLayerRef } from '@vcl/ng-vcl';
   styleUrls: ['./cookie-preference.component.scss'],
 })
 export class CookiePreferenceComponent implements OnInit {
-  constructor(@Optional() private layer?: ComponentLayerRef) {}
+  constructor(
+    private router: Router,
+    @Optional() private layer?: ComponentLayerRef
+  ) {}
 
   language = 'en';
 
