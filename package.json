@@ -1,13 +1,19 @@
 {
   "name": "store-front",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "rm -rf src/assets/products_responsive && ipp && ng serve",
-    "build": "rm -rf src/assets/products_responsive && ipp && ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "assets": "rm -rf src/assets/products_responsive && ipp",
+    "build": "run-s assets build:browser build:ssr",
+    "serve:browser": "ng serve",
+    "build:browser": "ng build",
+    "dev:ssr": "ng run store-front:serve-ssr",
+    "serve:ssr": "node dist/store-front/server/main.js",
+    "build:ssr": "ng build --prod && ng run store-front:server:production",
+    "prerender": "ng run store-front:prerender"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +37,7 @@
     "angular-responsive-carousel": "^2.1.2",
     "core-js": "^3.6.5",
     "document-register-element": "^1.14.10",
+    "express": "^4.15.2",
     "fuse.js": "^6.4.2",
     "hammerjs": "^2.0.8",
     "jsonschema": "^1.4.0",
@@ -59,6 +66,7 @@
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "npm-run-all": "^4.1.5",
     "protractor": "^7.0.0",
     "ts-node": "^10.5.0",
     "tslint": "^6.1.3",

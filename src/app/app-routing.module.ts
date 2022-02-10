@@ -14,7 +14,6 @@ import { CheckoutPageGuard } from './services/checkout-page-guard.service';
 import { PrivacyPolicyComponent } from './src/app/components/privacy-policy/privacy-policy.component';
 import { ImprintComponent } from './src/app/components/imprint/imprint.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -63,14 +62,14 @@ const routes: Routes = [
       },
     ],
   },
-    {
+  {
     path: 'about-us',
     component: ImprintComponent,
   },
   {
     path: 'privacy-statement',
-    component: PrivacyPolicyComponent
-  }
+    component: PrivacyPolicyComponent,
+  },
 ];
 
 @NgModule({
