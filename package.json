@@ -31,7 +31,7 @@
     "@mdi/font": "^6.5.95",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
-    "@restorecommerce/cart": "^0.3.2",
+    "@restorecommerce/cart": "^0.1.2",
     "@vcl/ng-vcl": "^2.1.8",
     "@vcl/vcl": "^2.1.14",
     "angular-responsive-carousel": "^2.1.2",

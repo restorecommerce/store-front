@@ -66,7 +66,6 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ShoesComponent } from './pages/shoes/shoes.component';
 import { CookiePreferenceComponent } from './components/cookie-preference/cookie-preference.component';
 
-<<<<<<< HEAD
 import {
   LAZYLOAD_IMAGE_HOOKS,
   LazyLoadImageModule,
@@ -87,9 +86,6 @@ import { PrivacyPolicyComponent } from './src/app/components/privacy-policy/priv
 import { ImprintComponent } from './src/app/components/imprint/imprint.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
-=======
-export  function  HttpLoaderFactory(http: HttpClient) {
->>>>>>> universal-docker
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
@@ -145,17 +141,10 @@ export  function  HttpLoaderFactory(http: HttpClient) {
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
-<<<<<<< HEAD
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient],
       },
-=======
-        provide:  TranslateLoader,
-        useFactory:  HttpLoaderFactory,
-        deps: [HttpClient],
-      }
->>>>>>> universal-docker
     }),
     FormsModule,
     ReactiveFormsModule,
