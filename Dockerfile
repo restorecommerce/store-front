@@ -1,7 +1,9 @@
 # syntax = docker/dockerfile:experimental
 
 ### Base
-FROM node:15-alpine as base
+FROM node:16.14.0-alpine as base
+
+RUN apk add g++ make python3 vips vips-dev
 
 USER node
 ARG APP_HOME=/home/node/app

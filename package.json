@@ -1,6 +1,13 @@
 {
   "name": "store-front",
   "version": "0.0.1",
+  "description": "Customer facing UI for Restorecommerce shops",
+  "author": "n-fuse GmbH",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/restorecommerce/store-front.git"
+  },
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "test": "ng test",
@@ -24,8 +31,9 @@
     "@angular/core": "^13.1.2",
     "@angular/forms": "^13.1.2",
     "@angular/material": "^13.2.2",
-    "@angular/platform-browser": "^13.1.2",
-    "@angular/platform-browser-dynamic": "^13.1.2",
+    "@angular/platform-browser": "^13.2.2",
+    "@angular/platform-browser-dynamic": "^13.2.2",
+    "@nguniversal/express-engine": "^13.0.2",
     "@angular/router": "^13.1.2",
     "@fortawesome/fontawesome-free": "^6.0.0",
     "@mdi/font": "^6.5.95",
