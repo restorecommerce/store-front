@@ -45,7 +45,6 @@ import { ProductZoomComponent } from './components/product-zoom/product-zoom.com
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 import { ClickAndCollectComponent } from './pages/click-and-collect/click-and-collect.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
-import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ReturnsComponent } from './pages/returns/returns.component';
@@ -77,7 +76,7 @@ import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout
 import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
 import { CheckoutDeliveryComponent } from './pages/checkout/checkout-delivery/checkout-delivery.component';
 import { ClickStopPropagation } from './shared/click-stop-propagation.directive';
-import { ProductCardComponent } from './pages/product-card/product-card.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CartLayerItemComponent } from './components/cart-layer-item/cart-layer-item.component';
 import { CartLayerContentsComponent } from './components/cart-layer-contents/cart-layer-contents.component';
 import { MenuLayerContentComponent } from './components/top-bar/menu-layer-content/menu-layer-content.component';
@@ -98,7 +97,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProductDescriptionComponent,
     ClickAndCollectComponent,
     DeliveryComponent,
-    HomeComponent,
     ProfileComponent,
     ProductComponent,
     ReturnsComponent,

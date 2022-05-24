@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { LayerRef, LayerService } from '@vcl/ng-vcl';
 import { CookiePreferenceComponent } from './components/cookie-preference/cookie-preference.component';
@@ -33,11 +32,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   openComponentLayer() {
-    this.cookiesSettingLayer.open().subscribe((result) => {
-      // console.log('**Cookies component has result: ');
-      // console.log(result);
-      // console.log('===============');
-    });
+    this.cookiesSettingLayer.open().subscribe((result) => {});
   }
 
   ngAfterViewInit(): void {

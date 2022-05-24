@@ -8,7 +8,6 @@ import {
   Money,
 } from '@restorecommerce/cart/lib/model/primitives';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
-import { DOCUMENT } from '@angular/common';
 
 import { Subject } from 'rxjs';
 
