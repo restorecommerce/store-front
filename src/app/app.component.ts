@@ -37,7 +37,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     if (!this.cookiesExists) {
-      this.openComponentLayer();
+      //this.openComponentLayer();
     }
   }
 }

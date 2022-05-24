@@ -61,7 +61,7 @@ import { TopPromotionComponent } from './components/top-promotion/top-promotion.
 import { NewsletterBarComponent } from './components/newsletter-bar/newsletter-bar.component';
 import { FooterTopComponent } from './components/footer-top/footer-top.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ProductsComponent } from './pages/products/products.component';
+import { ProductsComponent } from './components/products/products.component';
 import { ShoesComponent } from './pages/shoes/shoes.component';
 import { CookiePreferenceComponent } from './components/cookie-preference/cookie-preference.component';
 
