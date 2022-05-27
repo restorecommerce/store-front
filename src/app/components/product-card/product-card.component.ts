@@ -42,4 +42,8 @@ export class ProductCardComponent implements OnInit {
   ngOnInit(): void {
     this.selectedColor = this.product.selectedColor;
   }
+
+  onLikeProduct() {
+    this.product.like = !this.product.like;
+  }
 }

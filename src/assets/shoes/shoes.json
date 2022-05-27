@@ -4,7 +4,7 @@
     "title": "DOUBLE-STRAP SANDALS WITH STRUCTURED RUBBERIZED UPPERS",
     "price": 138.0,
     "like": true,
-    "additionalLabel": "",
+    "additionalLabel": "made in china",
     "colors": ["yellow"],
     "selectedColor": "yellow",
     "images": {
@@ -12,73 +12,6 @@
     },
     "urls": {
       "self": "products/shoe1"
-    }
-  },
-  {
-    "id": "shoe2",
-    "title": "ITALIAN-MADE SLIDES WITH LOGO STRAP AND CONTOURED SOLE",
-    "price": 118.0,
-    "like": true,
-    "additionalLabel": "",
-    "colors": ["black", "blue", "gray"],
-    "selectedColor": "blue",
-    "images": {
-      "blue": "https://images.hugoboss.com/is/image/boss/hbeu50425152_430_220",
-      "black": "https://images.hugoboss.com/is/image/boss/hbeu50425152_001_220",
-      "gray": "https://images.hugoboss.com/is/image/boss/hbeu50425152_059_220"
-    },
-    "urls": {
-      "self": "products/shoe2"
-    }
-  },
-  {
-    "id": "shoe3",
-    "title": "SLIPPERS IN REPREVE® WITH COLLAPSIBLE HEEL COUNTER",
-    "price": 228.0,
-    "like": false,
-    "additionalLabel": "",
-    "colors": ["black", "white"],
-    "selectedColor": "white",
-    "images": {
-      "white": "https://images.hugoboss.com/is/image/boss/hbeu50464913_131_220",
-      "black": "https://images.hugoboss.com/is/image/boss/hbeu50464913_001_220"
-    },
-    "urls": {
-      "self": "products/shoe3"
-    }
-  },
-  {
-    "id": "shoe4",
-    "title": "SOCK-CONSTRUCTION TRAINERS WITH MESH AND SUEDE",
-    "price": 298.0,
-    "like": true,
-    "additionalLabel": "",
-    "colors": ["black", "white", "purple", "yellow"],
-    "selectedColor": "yellow",
-    "images": {
-      "black": "https://images.hugoboss.com/is/image/boss/hbeu50465589_001_220",
-      "purple": "https://images.hugoboss.com/is/image/boss/hbeu50465589_512_220",
-      "white": "https://images.hugoboss.com/is/image/boss/hbeu50465589_120_220",
-      "yellow": "https://images.hugoboss.com/is/image/boss/hbeu50465589_750_220"
-    },
-    "urls": {
-      "self": "products/shoe4"
-    }
-  },
-  {
-    "id": "shoe5",
-    "title": "HALF-BOOTS IN SUEDE WITH LOGO DETAILS",
-    "price": 298.0,
-    "like": false,
-    "additionalLabel": "MADE IN EUROPE",
-    "colors": ["black", "white"],
-    "selectedColor": "black",
-    "images": {
-      "white": "https://images.hugoboss.com/is/image/boss/hbeu50464189_260_220",
-      "black": "https://images.hugoboss.com/is/image/boss/hbeu50464189_001_220"
-    },
-    "urls": {
-      "self": "products/shoe5"
     }
   }
 ]

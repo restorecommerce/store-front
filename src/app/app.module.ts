@@ -83,6 +83,7 @@ import { MenuLayerContentComponent } from './components/top-bar/menu-layer-conte
 import { MenuLayerTitleComponent } from './components/top-bar/menu-layer-title/menu-layer-title.component';
 import { PrivacyPolicyComponent } from './src/app/components/privacy-policy/privacy-policy.component';
 import { ImprintComponent } from './src/app/components/imprint/imprint.component';
+import { ProductColorPickerComponent } from './components/product-color-picker/product-color-picker.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -129,6 +130,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     CookiePreferenceComponent,
     PrivacyPolicyComponent,
     ImprintComponent,
+    ProductColorPickerComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
