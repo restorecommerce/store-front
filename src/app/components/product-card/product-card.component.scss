@@ -1,11 +1,21 @@
 .product-card {
   width: 100%;
+  cursor: pointer;
+  box-shadow: 0.3em 0.5em 0.5em rgba($color: #000000, $alpha: 0.13);
 
   &__title {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
+    text-align: center;
+    text-overflow: ellipsis;
+    letter-spacing: 1px;
+    padding-bottom: 0.5em;
+  }
+
+  &__price {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    padding-bottom: 0.5em;
   }
 
   &__image {

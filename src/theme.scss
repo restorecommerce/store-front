@@ -1,7 +1,6 @@
 @use "~@vcl/vcl/theme/terms.scss" as *;
 
 @use "~@vcl/vcl/theme/theme.scss" with (
-  $form-control-vertical-gap: 24px,
   $app-area-max-width: 100%,
   $app-area-min-width: 100%
 );

@@ -28,14 +28,7 @@ export class ProductCardComponent implements OnInit {
 
   constructor(private router: Router) {}
 
-  onChangeProductColor(color: string) {
-    if (this.product.selectedColor === color) return;
-    this.product.selectedColor = color;
-    this.selectedColor = color;
-  }
-
   onProductClicked() {
-    console.log(this.product.urls['self']);
     this.router.navigateByUrl(this.product.urls['self']);
   }
 

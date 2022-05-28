@@ -14,6 +14,10 @@ html,
   margin: 0;
 }
 
+.viewport {
+  font-size: 1em;
+}
+
 .content-area {
   background-color: white;
   position: static;
@@ -35,4 +39,13 @@ html,
 [override] app-product-zoom .gallery-image {
   max-height: 100%;
   cursor: zoom-in;
+}
+
+// Override Panel Styles
+.panel-header {
+  border: none;
+}
+
+.panel-body {
+  border: none;
 }

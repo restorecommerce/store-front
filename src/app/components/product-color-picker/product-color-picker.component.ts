@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProductColorPickerComponent implements OnInit {
   @Input() selectedColor: string;
-  @Input() colors: string[];
+  @Input() colors: string[] = [];
 
   constructor() {}
 
