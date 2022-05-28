@@ -32,7 +32,7 @@
       product.price | currency: currency
     }}</vcl-label>
     <app-product-color-picker
-      colors="product.colors"
+      [colors]="product.colors"
     ></app-product-color-picker>
   </vcl-panel-footer>
 </vcl-panel>
