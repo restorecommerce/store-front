@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
-import { DisplayService } from 'src/app/services/display.service';
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'app-returns',
@@ -8,7 +8,7 @@ import { DisplayService } from 'src/app/services/display.service';
   styleUrls: ['./returns.component.scss'],
 })
 export class ReturnsComponent implements OnInit {
-  constructor(private displayService: DisplayService) {}
+  constructor(private displayService: ScreenService) {}
 
   ngOnInit(): void {}
 

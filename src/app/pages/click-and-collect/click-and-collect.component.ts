@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
-import { DisplayService } from 'src/app/services/display.service';
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'app-click-and-collect',
@@ -8,7 +8,7 @@ import { DisplayService } from 'src/app/services/display.service';
   styleUrls: ['./click-and-collect.component.scss'],
 })
 export class ClickAndCollectComponent implements OnInit {
-  constructor(private displayService: DisplayService) {}
+  constructor(private displayService: ScreenService) {}
 
   ngOnInit(): void {}
 

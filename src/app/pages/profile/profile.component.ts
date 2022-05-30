@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
-import { DisplayService } from 'src/app/services/display.service';
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'profile',
@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
   public email: string = '';
   public remember: boolean = false;
 
-  constructor(private displayService: DisplayService) {}
+  constructor(private displayService: ScreenService) {}
 
   ngOnInit(): void {}
 

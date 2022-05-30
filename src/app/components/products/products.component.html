@@ -3,8 +3,13 @@
     <h2 class="title">Men's Shoes</h2>
   </header>
   <main>
-    <div class="row flex-wrap panel-products">
+    <div class="panel-products grid-row">
       <app-product-card
+        [ngClass]="{
+          'grid-span-25p': mediaBreakPoint === 'xl',
+          'grid-span-5': mediaBreakPoint === 'l',
+          'grid-span-50p': mediaBreakPoint === 'm'
+        }"
         *ngFor="let product of products"
         [product]="product"
       ></app-product-card>

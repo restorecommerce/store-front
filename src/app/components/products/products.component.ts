@@ -1,11 +1,20 @@
-import { Component, Input } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Input,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
+  mediaBreakPoint: string;
+
   groups: { title: string; productCount: number }[] = [
     { title: 'all', productCount: 244 },
     { title: 'brand 1', productCount: 170 },
@@ -38,7 +47,19 @@ export class ProductsComponent {
   @Input() products: Product[] = [];
   @Input() pageTitle: string;
 
-  constructor() {}
+  constructor(public screenService: ScreenService) {}
+
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    this.screenService.mediaBreakpoint$.subscribe((value) => {
+      this.mediaBreakPoint = value;
+    });
+  }
+
+  ngOnDestroy(): void {
+    //this.screenService.ngOnDestroy();
+  }
 
   sortOptionClicked(option: string, event) {
     this.sortBy = option;

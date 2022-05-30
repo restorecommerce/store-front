@@ -6,7 +6,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { Product, ProductImage } from 'src/app/models/product';
-import { DisplayService } from 'src/app/services/display.service';
+import { ScreenService } from 'src/app/services/screen.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -25,7 +25,7 @@ export class ProductGalleryComponent implements OnInit, OnChanges {
 
   constructor(
     private productService: ProductService,
-    private displayService: DisplayService
+    private displayService: ScreenService
   ) {}
 
   ngOnInit(): void {}

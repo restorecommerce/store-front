@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
-import { DisplayService } from 'src/app/services/display.service';
+import { ScreenService } from 'src/app/services/screen.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class ProductComponent implements OnInit {
     private service: CartService,
     private productService: ProductService,
     private route: ActivatedRoute,
-    private displayService: DisplayService
+    private displayService: ScreenService
   ) {}
 
   ngOnInit(): void {

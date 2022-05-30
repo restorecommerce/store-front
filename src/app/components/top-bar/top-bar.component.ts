@@ -4,7 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
 import { Money } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
-import { DisplayService } from 'src/app/services/display.service';
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -20,7 +20,7 @@ export class TopBarComponent implements OnInit {
   constructor(
     public cartService: CartService,
     private translateService: TranslateService,
-    private displayService: DisplayService,
+    private displayService: ScreenService,
     private router: Router
   ) {}
 
