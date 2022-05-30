@@ -84,6 +84,7 @@ import { MenuLayerTitleComponent } from './components/top-bar/menu-layer-title/m
 import { PrivacyPolicyComponent } from './src/app/components/privacy-policy/privacy-policy.component';
 import { ImprintComponent } from './src/app/components/imprint/imprint.component';
 import { ProductColorPickerComponent } from './components/product-color-picker/product-color-picker.component';
+import { HoverColorPickerDirective } from './directives/hover-color-picker-directive.service';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -131,6 +132,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PrivacyPolicyComponent,
     ImprintComponent,
     ProductColorPickerComponent,
+    HoverColorPickerDirective,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

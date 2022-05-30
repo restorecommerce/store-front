@@ -17,13 +17,13 @@
       [media]="
         '(max-width: ' + media.max + 'px) and (min-width: ' + media.min + 'px)'
       "
-      [srcset]="product.images[product.selectedColor]"
+      [srcset]="product.images[selectedColor]"
       [type]="'image/' + media.format"
     />
     <img
       class="product-card__image"
       alt="product image"
-      [src]="product.images[product.selectedColor]"
+      [src]="product.images[selectedColor]"
     />
   </picture>
   <vcl-panel-footer>

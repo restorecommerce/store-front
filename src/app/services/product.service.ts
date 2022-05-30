@@ -3,11 +3,14 @@ import { HttpClient } from '@angular/common/http';
 
 import { Product } from '../models/product';
 import { Product as ProductCard } from '../components/products/products.component';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProductService {
+  productImageColorHover = new Subject<string>();
+
   productColorChanged = new EventEmitter<string>();
 
   constructor(private http: HttpClient) {}

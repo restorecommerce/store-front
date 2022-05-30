@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/app/services/product.service';
 import { Product } from '../products/products.component';
 
 @Component({
@@ -26,7 +27,7 @@ export class ProductCardComponent implements OnInit {
     { width: 400, min: 1382, max: 99999, suffix: '-xl', format: 'jpeg' },
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private productService: ProductService) {}
 
   onProductClicked() {
     this.router.navigateByUrl(this.product.urls['self']);
@@ -34,6 +35,13 @@ export class ProductCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedColor = this.product.selectedColor;
+    this.productService.productImageColorHover.subscribe((colorHovered) => {
+      if (!this.product.colors.find((color) => color === colorHovered)) {
+        this.selectedColor = this.product.selectedColor;
+      } else {
+        this.selectedColor = colorHovered;
+      }
+    });
   }
 
   onLikeProduct() {

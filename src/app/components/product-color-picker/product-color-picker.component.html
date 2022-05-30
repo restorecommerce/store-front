@@ -1,4 +1,4 @@
-<div *ngIf="colors.length > 0" class="row justify-center colors">
+<div *ngIf="colors.length > 0" class="row justify-content-center colors">
   <div
     class="row color-wrapper"
     *ngFor="let color of colors"
@@ -6,6 +6,10 @@
     (click)="onChangeProductColor(color)"
     click-stop-propagation
   >
-    <div class="color" [style.background-color]="color"></div>
+    <div
+      class="color mx-1"
+      [style.background-color]="color"
+      [appHoverColorPicker]="color"
+    ></div>
   </div>
 </div>
