@@ -35,13 +35,26 @@ export class ProductCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectedColor = this.product.selectedColor;
-    this.productService.productImageColorHover.subscribe((colorHovered) => {
-      if (!this.product.colors.find((color) => color === colorHovered)) {
-        this.selectedColor = this.product.selectedColor;
-      } else {
-        this.selectedColor = colorHovered;
-      }
-    });
+  }
+
+  onMouseEnter($event: string) {
+    this.onHoverColorPicker($event);
+  }
+
+  onMouseLeave($event: string) {
+    this.onHoverColorPicker($event);
+  }
+
+  private onHoverColorPicker(colorHovered: string) {
+    if (this.product.selectedColor === colorHovered) {
+      return;
+    }
+
+    if (!this.product.colors.find((color) => color === colorHovered)) {
+      this.selectedColor = this.product.selectedColor;
+    } else {
+      this.selectedColor = colorHovered;
+    }
   }
 
   onLikeProduct() {

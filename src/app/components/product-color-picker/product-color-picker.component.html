@@ -4,12 +4,9 @@
     *ngFor="let color of colors"
     [class.color-selected]="color === selectedColor"
     (click)="onChangeProductColor(color)"
-    click-stop-propagation
+    (mouseenter)="onMouseEnter(color)"
+    (mouseleave)="onMouseLeave('')"
   >
-    <div
-      class="color mx-1"
-      [style.background-color]="color"
-      [appHoverColorPicker]="color"
-    ></div>
+    <div class="color mx-1" [style.background-color]="color"></div>
   </div>
 </div>

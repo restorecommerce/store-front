@@ -1,6 +1,6 @@
 [
   {
-    "id": "shoe",
+    "id": "shoe1",
     "title": "Knitted trainers with REPREVE® uppers",
     "price": 138.0,
     "like": false,
@@ -12,7 +12,71 @@
       "white": "https://images.hugoboss.com/is/image/boss/hbeu50470676_100_220?$large$=&fit=crop,1&align=1,1&wid=462&qlt=80"
     },
     "urls": {
-      "self": "products/shoe0"
+      "self": "products/shoe1"
+    }
+  },
+  {
+    "id": "shoe2",
+    "title": "Knitted trainers with REPREVE® uppers",
+    "price": 138.0,
+    "like": false,
+    "additionalLabel": "made in china",
+    "colors": ["white", "black"],
+    "selectedColor": "white",
+    "images": {
+      "black": "https://images.hugoboss.com/is/image/boss/hbeu50470596_014_200?$large$=&fit=crop,1&align=1,1&wid=462&qlt=80&fmt=webp",
+      "white": "https://images.hugoboss.com/is/image/boss/hbeu50470676_100_220?$large$=&fit=crop,1&align=1,1&wid=462&qlt=80"
+    },
+    "urls": {
+      "self": "products/shoe2"
+    }
+  },
+  {
+    "id": "shoe3",
+    "title": "Knitted trainers with REPREVE® uppers",
+    "price": 138.0,
+    "like": false,
+    "additionalLabel": "made in china",
+    "colors": ["white", "black"],
+    "selectedColor": "white",
+    "images": {
+      "black": "https://images.hugoboss.com/is/image/boss/hbeu50470596_014_200?$large$=&fit=crop,1&align=1,1&wid=462&qlt=80&fmt=webp",
+      "white": "https://images.hugoboss.com/is/image/boss/hbeu50470676_100_220?$large$=&fit=crop,1&align=1,1&wid=462&qlt=80"
+    },
+    "urls": {
+      "self": "products/shoe3"
+    }
+  },
+  {
+    "id": "shoe4",
+    "title": "Knitted trainers with REPREVE® uppers",
+    "price": 138.0,
+    "like": false,
+    "additionalLabel": "made in china",
+    "colors": ["white", "black"],
+    "selectedColor": "white",
+    "images": {
+      "black": "https://images.hugoboss.com/is/image/boss/hbeu50470596_014_200?$large$=&fit=crop,1&align=1,1&wid=462&qlt=80&fmt=webp",
+      "white": "https://images.hugoboss.com/is/image/boss/hbeu50470676_100_220?$large$=&fit=crop,1&align=1,1&wid=462&qlt=80"
+    },
+    "urls": {
+      "self": "products/shoe4"
+    }
+  },
+  {
+    "id": "shoe5",
+    "title": "Knitted trainers with REPREVE® uppers",
+    "price": 138.0,
+    "like": false,
+    "additionalLabel": "made in china",
+    "colors": ["white", "black"],
+    "selectedColor": "white",
+    "images": {
+      "black": "https://images.hugoboss.com/is/image/boss/hbeu50470596_014_200?$large$=&fit=crop,1&align=1,1&wid=462&qlt=80&fmt=webp",
+      "white": "https://images.hugoboss.com/is/image/boss/hbeu50470676_100_220?$large$=&fit=crop,1&align=1,1&wid=462&qlt=80"
+    },
+    "urls": {
+      "self": "products/shoe5"
     }
   }
 ]

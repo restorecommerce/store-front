@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-color-picker',
@@ -9,7 +9,18 @@ export class ProductColorPickerComponent implements OnInit {
   @Input() selectedColor: string;
   @Input() colors: string[] = [];
 
+  @Output() mouseOver = new EventEmitter();
+  @Output() mouseOut = new EventEmitter();
+
   constructor() {}
+
+  onMouseEnter(color: string) {
+    this.mouseOver.emit(color);
+  }
+
+  onMouseLeave(color: string) {
+    this.mouseOut.emit(color);
+  }
 
   ngOnInit(): void {}
 
