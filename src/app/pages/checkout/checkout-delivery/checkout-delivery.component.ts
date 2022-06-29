@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Money } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
 import { CheckoutService } from '../checkout.service';
@@ -19,11 +19,11 @@ export class CheckoutDeliveryComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  voucherForm = new FormGroup({
-    cardNumber: new FormControl('', [Validators.required]),
-    expiryDate: new FormControl('', [Validators.required]),
-    securityCode: new FormControl('', [Validators.required]),
-    cardHolder: new FormControl('', [Validators.required]),
+  voucherForm = new UntypedFormGroup({
+    cardNumber: new UntypedFormControl('', [Validators.required]),
+    expiryDate: new UntypedFormControl('', [Validators.required]),
+    securityCode: new UntypedFormControl('', [Validators.required]),
+    cardHolder: new UntypedFormControl('', [Validators.required]),
   });
 
   voucherSubmit() {

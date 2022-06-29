@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
@@ -21,16 +21,16 @@ export class CheckoutFormsComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  homeDeliveryForm = new FormGroup({
-    gender: new FormControl(null, Validators.required),
-    firstName: new FormControl('', [Validators.required]),
-    lastName: new FormControl('', [Validators.required]),
-    streetName: new FormControl('', [Validators.required]),
-    houseNumber: new FormControl('', [Validators.required]),
-    postcode: new FormControl('', [Validators.required]),
-    city: new FormControl('', [Validators.required]),
-    country: new FormControl('', [Validators.required]),
-    mail: new FormControl('', [Validators.required]),
+  homeDeliveryForm = new UntypedFormGroup({
+    gender: new UntypedFormControl(null, Validators.required),
+    firstName: new UntypedFormControl('', [Validators.required]),
+    lastName: new UntypedFormControl('', [Validators.required]),
+    streetName: new UntypedFormControl('', [Validators.required]),
+    houseNumber: new UntypedFormControl('', [Validators.required]),
+    postcode: new UntypedFormControl('', [Validators.required]),
+    city: new UntypedFormControl('', [Validators.required]),
+    country: new UntypedFormControl('', [Validators.required]),
+    mail: new UntypedFormControl('', [Validators.required]),
   });
 
   homeDeliverySubmit() {
@@ -47,20 +47,20 @@ export class CheckoutFormsComponent implements OnInit {
     }
   }
 
-  parcelShopForm = new FormGroup({
-    gender: new FormControl(null, Validators.required),
-    firstName: new FormControl('', [Validators.required]),
-    lastName: new FormControl('', [Validators.required]),
-    streetName: new FormControl('', [Validators.required]),
-    houseNumber: new FormControl('', [Validators.required]),
-    postcode: new FormControl('', [Validators.required]),
-    city: new FormControl('', [Validators.required]),
-    country: new FormControl('', [Validators.required]),
-    mail: new FormControl('', [Validators.required]),
-    psGender: new FormControl(null, Validators.required),
-    psFirstName: new FormControl('', [Validators.required]),
-    psLastName: new FormControl('', [Validators.required]),
-    psPostNumber: new FormControl('', [Validators.required]),
+  parcelShopForm = new UntypedFormGroup({
+    gender: new UntypedFormControl(null, Validators.required),
+    firstName: new UntypedFormControl('', [Validators.required]),
+    lastName: new UntypedFormControl('', [Validators.required]),
+    streetName: new UntypedFormControl('', [Validators.required]),
+    houseNumber: new UntypedFormControl('', [Validators.required]),
+    postcode: new UntypedFormControl('', [Validators.required]),
+    city: new UntypedFormControl('', [Validators.required]),
+    country: new UntypedFormControl('', [Validators.required]),
+    mail: new UntypedFormControl('', [Validators.required]),
+    psGender: new UntypedFormControl(null, Validators.required),
+    psFirstName: new UntypedFormControl('', [Validators.required]),
+    psLastName: new UntypedFormControl('', [Validators.required]),
+    psPostNumber: new UntypedFormControl('', [Validators.required]),
   });
 
   parcelShopSubmit() {
@@ -71,16 +71,16 @@ export class CheckoutFormsComponent implements OnInit {
     }
   }
 
-  clickAndCollectForm = new FormGroup({
-    gender: new FormControl(null, Validators.required),
-    firstName: new FormControl('', [Validators.required]),
-    lastName: new FormControl('', [Validators.required]),
-    streetName: new FormControl('', [Validators.required]),
-    houseNumber: new FormControl('', [Validators.required]),
-    postcode: new FormControl('', [Validators.required]),
-    city: new FormControl('', [Validators.required]),
-    country: new FormControl('', [Validators.required]),
-    mail: new FormControl('', [Validators.required]),
+  clickAndCollectForm = new UntypedFormGroup({
+    gender: new UntypedFormControl(null, Validators.required),
+    firstName: new UntypedFormControl('', [Validators.required]),
+    lastName: new UntypedFormControl('', [Validators.required]),
+    streetName: new UntypedFormControl('', [Validators.required]),
+    houseNumber: new UntypedFormControl('', [Validators.required]),
+    postcode: new UntypedFormControl('', [Validators.required]),
+    city: new UntypedFormControl('', [Validators.required]),
+    country: new UntypedFormControl('', [Validators.required]),
+    mail: new UntypedFormControl('', [Validators.required]),
   });
 
   clickAndCollectSubmit() {

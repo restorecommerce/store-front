@@ -158,7 +158,6 @@
       }
     }
   },
-  "defaultProject": "store-front",
   "cli": {
     "analytics": "9bbf1a76-6a0f-4ec3-a69e-e26ec35c1f1f"
   }

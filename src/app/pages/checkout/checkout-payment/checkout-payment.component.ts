@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
@@ -22,11 +22,11 @@ export class CheckoutPaymentComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  paymentOptionForm = new FormGroup({
-    cardNumber: new FormControl('', [Validators.required]),
-    expiryDate: new FormControl('', [Validators.required]),
-    securityCode: new FormControl('', [Validators.required]),
-    cardHolder: new FormControl('', [Validators.required]),
+  paymentOptionForm = new UntypedFormGroup({
+    cardNumber: new UntypedFormControl('', [Validators.required]),
+    expiryDate: new UntypedFormControl('', [Validators.required]),
+    securityCode: new UntypedFormControl('', [Validators.required]),
+    cardHolder: new UntypedFormControl('', [Validators.required]),
   });
 
   paymentOptionSubmit() {
