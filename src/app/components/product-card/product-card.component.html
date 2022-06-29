@@ -5,12 +5,14 @@
     <vcl-label class="badge">
       {{ product.additionalLabel }}
     </vcl-label>
-    <vcl-icon
-      icon="fas fa-heart"
+    <button
+      vcl-square-button
       [class.liked]="product.like"
+      class="circular favorite"
       (click)="onLikeProduct()"
-      alt="like"
-    ></vcl-icon>
+    >
+      <vcl-icon icon="fas:heart"></vcl-icon>
+    </button>
   </vcl-panel-title>
   <div class="position-relative">
     <picture class="image-wrapper">
@@ -33,9 +35,9 @@
         [src]="product.images[selectedColor]"
       />
     </picture>
-    <div class="product-card__quick-shop p-3">quick shop</div>
+    <!-- <div class="product-card__quick-shop p-3">quick shop</div> -->
   </div>
-  <vcl-panel-footer class="p-4">
+  <vcl-panel-footer class="p-2 product-card__footer">
     <vcl-label class="product-card__title">{{ product.title }}</vcl-label>
     <vcl-label class="product-card__price">{{
       product.price | currency: currency

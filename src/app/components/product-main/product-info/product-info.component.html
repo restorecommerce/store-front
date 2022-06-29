@@ -6,7 +6,7 @@
     <p>
       {{ product.description }}
     </p>
-    <div class="row justify-content-between bestseller-like-container">
+    <div class="row justify-content-between my-2">
       <div>
         <span *ngIf="product.isBestSeller">
           <vcl-badge vclRounded type="primary" class="badge">{{
@@ -24,12 +24,12 @@
 <hr />
 <div class="row">
   <div class="flex align-left">
-    <p class="price-container-text">
+    <p class="mb-0">
       {{ "Price" | translate }}
     </p>
   </div>
   <div class="flex align-right">
-    <p class="price-container-text">
+    <p class="mb-0">
       <b>{{ product.price | currency: "EUR":true }}</b>
     </p>
   </div>
@@ -74,7 +74,7 @@
 <app-product-description></app-product-description>
 <hr style="margin-top: 0" />
 <div class="add-to-cart-section">
-  <div class="add-to-cart-button-container">
+  <div class="mb-2">
     <button
       *ngIf="!isItemInCart; else removeItemInCartButton"
       vcl-button

@@ -102,7 +102,7 @@
     <vcl-panel-dialog
       [showCloseButton]="true"
       (close)="languageLayer.close()"
-      class="pos-cart-absolute"
+      class="pos-cart-absolute p-4"
     >
       <vcl-panel-title>{{ "TopBar.PanelTitle" | translate }}</vcl-panel-title>
       <h3>{{ "TopBar.SecondaryHeading" | translate }}</h3>
@@ -160,7 +160,7 @@
 
   <!-- the cart layer -->
   <ng-template vclLayer #cartLayer="vclLayer">
-    <vcl-panel-dialog class="pos-cart-absolute" [showCloseButton]="false">
+    <vcl-panel-dialog class="pos-cart-absolute p-4" [showCloseButton]="false">
       <vcl-panel-title
         class="row justify-content-between align-items-center cart-panel-title"
       >
@@ -190,7 +190,7 @@
     <vcl-panel-dialog
       [showCloseButton]="true"
       (close)="menuLayer.close()"
-      class="pos-menu-absolute"
+      class="pos-menu-absolute p-4"
     >
       <vcl-panel-title>
         <app-menu-layer-title

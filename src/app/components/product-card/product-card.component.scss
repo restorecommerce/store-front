@@ -34,5 +34,12 @@
     left: 0;
     right: 0;
     bottom: 0;
+    transform: translateY(110%);
+    width: 100%;
+    transition: transform 0.2s;
+  }
+
+  &:hover &__quick-shop {
+    transform: translateY(0);
   }
 }
