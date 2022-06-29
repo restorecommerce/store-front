@@ -1,4 +1,4 @@
-@use "~@vcl/vcl/theme/terms.scss" as *;
+@use "./_storefront-variables.scss" as *;
 
 @use "~@vcl/vcl/theme/theme.scss" with (
   $app-area-max-width: 100%,

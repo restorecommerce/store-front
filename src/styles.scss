@@ -1,9 +1,6 @@
 @use "~normalize.css" as normalize;
 
-@use "~@vcl/vcl/bw-theme" with (
-  $app-area-max-width: 100%,
-  $app-area-min-width: 100%
-);
+@use "./styles/theme/storefront-theme.scss";
 
 @use "~@vcl/vcl";
 
@@ -22,4 +19,4 @@
 @import "~@angular/cdk/overlay-prebuilt.css";
 @import "~@angular/cdk/a11y-prebuilt.css";
 
-@import "global.scss";
+@import "./styles/app.scss";

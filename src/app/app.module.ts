@@ -81,8 +81,8 @@ import { CartLayerItemComponent } from './components/cart-layer-item/cart-layer-
 import { CartLayerContentsComponent } from './components/cart-layer-contents/cart-layer-contents.component';
 import { MenuLayerContentComponent } from './components/top-bar/menu-layer-content/menu-layer-content.component';
 import { MenuLayerTitleComponent } from './components/top-bar/menu-layer-title/menu-layer-title.component';
-import { PrivacyPolicyComponent } from './src/app/components/privacy-policy/privacy-policy.component';
-import { ImprintComponent } from './src/app/components/imprint/imprint.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { ImprintComponent } from './pages/imprint/imprint.component';
 import { ProductColorPickerComponent } from './components/product-color-picker/product-color-picker.component';
 import { HoverColorPickerDirective } from './directives/hover-color-picker-directive.service';
 

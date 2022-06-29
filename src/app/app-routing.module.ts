@@ -11,8 +11,8 @@ import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout
 import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
 import { CheckoutDeliveryComponent } from './pages/checkout/checkout-delivery/checkout-delivery.component';
 import { CheckoutPageGuard } from './services/checkout-page-guard.service';
-import { PrivacyPolicyComponent } from './src/app/components/privacy-policy/privacy-policy.component';
-import { ImprintComponent } from './src/app/components/imprint/imprint.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { ImprintComponent } from './pages/imprint/imprint.component';
 
 const routes: Routes = [
   {
