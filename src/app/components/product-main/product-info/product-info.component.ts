@@ -19,12 +19,8 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductInfoComponent implements OnInit, OnChanges {
   @Input() product: Product;
   isItemInCart: boolean;
-
   selectedSize: number;
-  /* 
-    Question: how do we deal with the selected product size,
-    in the cart, since IItem has no such type.
-  */
+
   constructor(
     public cartService: CartService,
     private notificationService: NotificationService,
@@ -45,13 +41,13 @@ export class ProductInfoComponent implements OnInit, OnChanges {
     }
   }
 
-  removeItemFromCart(skuId: string) {
+  removeProductFromCart(skuId: string) {
     this.cartService.removeCartItem(skuId);
     this.isItemInCart = false;
     this.notificationService.error('Item removed from cart');
   }
 
-  addItemToCart() {
+  addProductToCart() {
     if (!this.selectedSize) {
       this.notificationService.error('Please select a size for the product!');
       return;
@@ -64,6 +60,7 @@ export class ProductInfoComponent implements OnInit, OnChanges {
       productImageSources,
       selectedColor,
     } = this.product;
+
     const thumbImage = productImageSources[selectedColor][0].srcThumb;
 
     this.cartService.addItemToCart([
@@ -77,7 +74,7 @@ export class ProductInfoComponent implements OnInit, OnChanges {
         height: 4.2,
         width: 27.5,
         depth: 6.22,
-        quantity: 1,
+        quantity: 1, // replace hardcoded entity value!
       },
     ]);
 
@@ -92,5 +89,11 @@ export class ProductInfoComponent implements OnInit, OnChanges {
 
   onSizeSelected(payload: number) {
     this.selectedSize = payload;
+  }
+
+  onChangeQuantityPicker(quantity: number) {
+    //TODO: Set a new quantity for the product you want to buy!
+    // quantity have a value of 1 - n; where n is the total number of quantity
+    // that can be purchased for a given product.
   }
 }

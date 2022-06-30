@@ -16,6 +16,8 @@ import { Subject } from 'rxjs';
 })
 export class CartService {
   cart: Cart;
+  /// Let the product instants be available in the Product instance page.
+  // Or even better I could extend the type of a `IItem and make it a StoreIItem
 
   cartItemCountUpdated = new Subject<number>();
 
@@ -83,6 +85,7 @@ export class CartService {
 
   removeCartItem(sku: string): void {
     this.cart.remItem(sku);
+    this.cartItemCountUpdated.next(this.getCartItemCount());
   }
 
   round(value: Money): string {

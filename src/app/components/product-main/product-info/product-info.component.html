@@ -38,7 +38,7 @@
 <div class="row justify-content-between align-items-center">
   <div>
     <p class="chosen-color-name">
-      <b>{{ "ProductInformation.Color" | translate }}</b>
+      <b>{{ "ProductInformation.Color" | translate }}:</b>
       {{ product.selectedColor }}
     </p>
   </div>
@@ -70,16 +70,17 @@
   (sizeSelected)="onSizeSelected($event)"
 ></app-product-size-picker>
 
-<hr style="margin-bottom: 0" />
+<hr class="mb-0" />
 <app-product-description></app-product-description>
-<hr style="margin-top: 0" />
+<hr class="mt-0" />
+
 <div class="add-to-cart-section">
   <div class="mb-2">
     <button
       *ngIf="!isItemInCart; else removeItemInCartButton"
       vcl-button
       class="add-to-cart-button"
-      (click)="addItemToCart()"
+      (click)="addProductToCart()"
     >
       <vcl-icogram>
         <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
@@ -91,7 +92,7 @@
         *ngIf="isItemInCart; else removeItemInCartButton"
         vcl-button
         class="add-to-cart-button"
-        (click)="removeItemFromCart(product.id)"
+        (click)="removeProductFromCart(product.id)"
       >
         <vcl-icogram>
           <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
@@ -104,14 +105,13 @@
     "ProductInformation.ProductDelivery" | translate
   }}</span>
 </div>
-<div class="add-to-cart-section">
-  <div class="tooltip" role="tooltip">
-    <div class="tooltip-content tooltip-text">
-      <p>
-        <b>{{ "ProductInformation.ShopOnline" | translate }}</b>
-      </p>
-      <p>{{ "ProductInformation.IfStyleDoesntSuit" | translate }}</p>
-    </div>
-    <div class="arrow-pointer tooltip-pointer"></div>
+
+<div class="tooltip" role="tooltip">
+  <div class="tooltip-content tooltip-text">
+    <p>
+      <b>{{ "ProductInformation.ShopOnline" | translate }}</b>
+    </p>
+    <p>{{ "ProductInformation.IfStyleDoesntSuit" | translate }}</p>
   </div>
+  <div class="arrow-pointer tooltip-pointer"></div>
 </div>
