@@ -29,10 +29,12 @@
         <h4>{{ "Women" | translate }}</h4>
       </ng-container>
     </div>
+
     <div class="align-right top-bar-search-container">
       <vcl-icon icon="mdi:magnify" class="search-icon"></vcl-icon>
       <input class="top-bar-search" placeholder="Search" />
     </div>
+
     <div class="vertical-center">
       <button type="button" class="button nav-icon-container transparent">
         <div class="icogram">
@@ -160,7 +162,10 @@
 
   <!-- the cart layer -->
   <ng-template vclLayer #cartLayer="vclLayer">
-    <vcl-panel-dialog class="pos-cart-absolute p-4" [showCloseButton]="false">
+    <vcl-panel-dialog
+      class="pos-cart-absolute p-4 scrollable y"
+      [showCloseButton]="false"
+    >
       <vcl-panel-title
         class="row justify-content-between align-items-center cart-panel-title"
       >
