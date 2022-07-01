@@ -1,8 +1,8 @@
 <section class="content-area" role="main">
   <h1>{{ "Profile.Title" | translate }}</h1>
-  <hr>
-  <div class="row">
-    <div class="flex-5">
+  <hr />
+  <div class="row mb-2">
+    <div class="flex-5 col justify-content-between">
       <h2>{{ "Profile.Register" | translate }}</h2>
       <p>{{ "Profile.PleaseEnterYour" | translate }}</p>
       <vcl-form-control-group>
@@ -17,10 +17,12 @@
       <vcl-form-control-group>
         <vcl-label>*{{ "Profile.Password" | translate }}</vcl-label>
         <vcl-password-input>
-          <input vclInput [(value)]="password" placeholder="*Passwort">
+          <input vclInput [(value)]="password" placeholder="*Passwort" />
         </vcl-password-input>
       </vcl-form-control-group>
-      <vcl-checkbox [(checked)]="remember">{{ "Profile.SaveEmailAdress" | translate }}</vcl-checkbox>
+      <vcl-checkbox [(checked)]="remember">{{
+        "Profile.SaveEmailAdress" | translate
+      }}</vcl-checkbox>
       <div class="align-right">
         <button vcl-button>
           <vcl-icogram>
@@ -29,16 +31,17 @@
         </button>
       </div>
     </div>
-    <div class="flex-2">
-    </div>
-    <div class="flex-5">
+    <div class="flex-2"></div>
+    <div class="flex-5 col justify-content-between">
       <h2>{{ "Profile.CreateAnAccount" | translate }}</h2>
       <p>{{ "Profile.CreateAccounntAndEnjoy" | translate }}:</p>
       <ul class="list">
         <li class="list-item">{{ "Profile.FasterPayment" | translate }}</li>
         <li class="list-item">{{ "Profile.ViewOrderStatus" | translate }}</li>
         <li class="list-item">{{ "Profile.GetOrderHistory" | translate }}</li>
-        <li class="list-item">{{ "Profile.SaveSeveralDelivery" | translate }}</li>
+        <li class="list-item">
+          {{ "Profile.SaveSeveralDelivery" | translate }}
+        </li>
         <li class="list-item">{{ "Profile.AllTheAdvantages" | translate }}</li>
       </ul>
       <div class="align-right">
