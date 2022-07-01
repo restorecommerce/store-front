@@ -1,3 +1,5 @@
+import { IItem } from '@restorecommerce/cart/lib/model/IItem';
+
 export interface ProductImage {
   src: string;
   srcThumb: string;
@@ -21,14 +23,28 @@ export interface Product {
   materialInfo: string;
   additionalLabel: string;
   availableSizes: number[];
-  // meta: {
-  //   // SKU Item : Will form part of the IItem
-  //   sku: string;
-  //   taxType: string;
-  //   weight: number;
-  //   height: number;
-  //   width: number;
-  //   depth: number;
-  //   currency: string;
-  // };
+}
+
+export class ProductItem implements Product, IItem {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  isBestSeller: boolean;
+  liked: boolean;
+  productImageSources: MultiColorsProductImage;
+  selectedColor: string;
+  colors: string[];
+  materialInfo: string;
+  additionalLabel: string;
+  availableSizes: number[];
+
+  sku: string;
+  taxType: 'vat_standard' | 'vat_reduced' | 'vat_free' | 'vat_placeholder';
+  weight: number;
+  height: number;
+  width: number;
+  depth: number;
+  currency: string;
+  quantity: number;
 }

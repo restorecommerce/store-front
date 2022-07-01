@@ -78,6 +78,8 @@ export class ProductInfoComponent implements OnInit, OnChanges {
       },
     ]);
 
+    // Let addItemToCart be able to take an object that implements the IItem
+
     this.isItemInCart = true;
     this.notificationService.success('Item added to cart!');
   }

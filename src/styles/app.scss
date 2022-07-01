@@ -58,3 +58,15 @@ html,
 .position-relative {
   position: relative;
 }
+
+.favorite {
+  color: salmon;
+  background-color: white;
+  border: lightgray solid 1px;
+  width: 30px;
+  height: 30px;
+}
+
+.favorite:hover {
+  color: red;
+}

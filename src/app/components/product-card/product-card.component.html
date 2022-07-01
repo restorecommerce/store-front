@@ -5,12 +5,7 @@
     <vcl-label class="badge">
       {{ product.additionalLabel }}
     </vcl-label>
-    <button
-      vcl-square-button
-      [class.liked]="product.like"
-      class="circular favorite"
-      (click)="onLikeProduct()"
-    >
+    <button vcl-square-button class="circular favorite">
       <vcl-icon icon="fas:heart"></vcl-icon>
     </button>
   </vcl-panel-title>
