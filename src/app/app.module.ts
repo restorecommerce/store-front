@@ -28,6 +28,7 @@ import {
   VCLTabNavModule,
   VCLRadioButtonModule,
   VCLFlipSwitchModule,
+  IconResolverService,
 } from '@vcl/ng-vcl';
 import {
   TranslateModule,
@@ -37,9 +38,7 @@ import {
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
-import { ApolloModule, APOLLO_OPTIONS } from 'apollo-angular';
-import { HttpLink } from 'apollo-angular/http';
-import { InMemoryCache } from '@apollo/client/core';
+import { MaterialDesignVCLIconAliasResolverService } from './shared/icon-resolver.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -184,6 +183,11 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     TranslateService,
     { provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks },
+    {
+      provide: IconResolverService,
+      useClass: MaterialDesignVCLIconAliasResolverService,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })
