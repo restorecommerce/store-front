@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  graphql_url: 'http://localhost:5000/graphql',
+  graphql_path: undefined,
+  authEnabled: true,
 };
 
 /*
