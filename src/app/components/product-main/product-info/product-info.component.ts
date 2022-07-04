@@ -10,6 +10,7 @@ import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
 import { NotificationService } from 'src/app/services/notification.service';
 import { ProductService } from 'src/app/services/product.service';
+import { IItem } from '@restorecommerce/cart/lib/model/IItem';
 
 @Component({
   selector: 'app-product-info',
@@ -19,7 +20,6 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductInfoComponent implements OnInit, OnChanges {
   @Input() product: Product;
   isItemInCart: boolean;
-  selectedSize: number;
 
   constructor(
     public cartService: CartService,
@@ -48,7 +48,7 @@ export class ProductInfoComponent implements OnInit, OnChanges {
   }
 
   addProductToCart() {
-    if (!this.selectedSize) {
+    if (!this.product.selectedSize) {
       this.notificationService.error('Please select a size for the product!');
       return;
     }
@@ -75,13 +75,9 @@ export class ProductInfoComponent implements OnInit, OnChanges {
         width: 27.5,
         depth: 6.22,
         quantity: 1, // replace hardcoded entity value!
-      },
+        product: this.product,
+      } as IItem,
     ]);
-
-    // Let addItemToCart be able to take an object that implements the IItem
-
-    this.isItemInCart = true;
-    this.notificationService.success('Item added to cart!');
   }
 
   onChangeProductColor(color: string): void {
@@ -89,8 +85,8 @@ export class ProductInfoComponent implements OnInit, OnChanges {
     this.productService.productColorChanged.emit(color);
   }
 
-  onSizeSelected(payload: number) {
-    this.selectedSize = payload;
+  onSizeSelected(size: number) {
+    this.product.selectedSize = size;
   }
 
   onChangeQuantityPicker(quantity: number) {

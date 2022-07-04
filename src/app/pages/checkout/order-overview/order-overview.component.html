@@ -18,8 +18,14 @@
     <div class="item-description-container flex-5">
       <p class="item-description">{{ item.desc }}</p>
       <br />
-      <p class="item-color">{{ "Checkout.color" | translate }}</p>
-      <p class="item-size">{{ "Checkout.size" | translate }}</p>
+      <p class="item-color">
+        {{ "Checkout.color" | translate }}:
+
+        {{ item.product.selectedColor }}
+      </p>
+      <p class="item-size">
+        {{ "Checkout.size" | translate }}: {{ item.product.selectedSize }}
+      </p>
       <p class="availability">{{ "Checkout.InStock" | translate }}</p>
       <br />
       <p class="single-price-header">

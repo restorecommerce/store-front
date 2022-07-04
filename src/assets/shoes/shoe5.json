@@ -67,5 +67,6 @@
   "colors": ["black", "white"],
   "materialInfo": "Upper material: 100% Cow leather, 100% Cow leather, Sole: 100% Ethylene vinyl acetate, Innersole: 90% Polyamid, 10% Polyurethane",
   "additionalLabel": "Made in Europe",
-  "availableSizes": [41, 43, 44, 47, 49]
+  "selectedSize": null,
+  "sizes": [41, 43, 44, 47, 49]
 }
