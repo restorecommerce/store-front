@@ -41,7 +41,7 @@
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "@restorecommerce/cart": "^0.3.5",
-    "@vcl/ng-vcl": "^2.3.3",
+    "@vcl/ng-vcl": "^2.3.4",
     "@vcl/vcl": "^2.3.3",
     "angular-responsive-carousel": "^2.1.2",
     "apollo-angular": "^3.0.1",
