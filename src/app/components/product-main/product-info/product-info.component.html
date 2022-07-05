@@ -1,117 +1,119 @@
-<div class="row">
-  <div class="flex-12">
-    <h2>
-      {{ product.title }}
-    </h2>
-    <p>
-      {{ product.description }}
-    </p>
-    <div class="row justify-content-between my-2">
-      <div>
-        <span *ngIf="product.isBestSeller">
-          <vcl-badge vclRounded type="primary" class="badge">{{
-            "ProductInformation.Bestseller" | translate
-          }}</vcl-badge>
-        </span>
+<div *ngIf="product">
+  <div class="row">
+    <div class="flex-12">
+      <h2>
+        {{ product.title }}
+      </h2>
+      <p>
+        {{ product.description }}
+      </p>
+      <div class="row justify-content-between my-2">
+        <div>
+          <span *ngIf="product.isBestSeller">
+            <vcl-badge vclRounded type="primary" class="badge">{{
+              "ProductInformation.Bestseller" | translate
+            }}</vcl-badge>
+          </span>
+        </div>
+        <button vcl-square-button class="circular favorite">
+          <vcl-icon icon="fas:heart"></vcl-icon>
+        </button>
       </div>
-      <button vcl-square-button class="circular favorite">
-        <vcl-icon icon="fas:heart"></vcl-icon>
-      </button>
     </div>
   </div>
-</div>
-<app-product-interest></app-product-interest>
-<hr />
-<div class="row">
-  <div class="flex align-left">
-    <p class="mb-0">
-      {{ "Price" | translate }}
-    </p>
-  </div>
-  <div class="flex align-right">
-    <p class="mb-0">
-      <b>{{ product.price | currency: "EUR":true }}</b>
-    </p>
-  </div>
-</div>
-<hr />
-<div class="row justify-content-between align-items-center">
-  <div>
-    <p class="chosen-color-name">
-      <b>{{ "ProductInformation.Color" | translate }}:</b>
-      {{ product.selectedColor }}
-    </p>
-  </div>
-  <div>
-    <div class="colored-buttons-container row align-items-center">
-      <button
-        vcl-square-button
-        class="circular color-button"
-        *ngFor="let color of product.colors"
-        (click)="onChangeProductColor(color)"
-        [ngClass]="{
-          'button-selected': product.selectedColor === color,
-          'button-border': product.selectedColor !== color
-        }"
-        [ngStyle]="{ backgroundColor: color }"
-      ></button>
+  <app-product-interest></app-product-interest>
+  <hr />
+  <div class="row">
+    <div class="flex align-left">
+      <p class="mb-0">
+        {{ "Price" | translate }}
+      </p>
+    </div>
+    <div class="flex align-right">
+      <p class="mb-0">
+        <b>{{ product.price | currency: "EUR":true }}</b>
+      </p>
     </div>
   </div>
-</div>
-<hr />
-<p>
-  <b>{{ "ProductInformation.Material" | translate }}:</b>
-  {{ product.materialInfo }}
-</p>
-<hr />
+  <hr />
+  <div class="row justify-content-between align-items-center">
+    <div>
+      <p class="chosen-color-name">
+        <b>{{ "ProductInformation.Color" | translate }}:</b>
+        {{ product.selectedColor }}
+      </p>
+    </div>
+    <div>
+      <div class="colored-buttons-container row align-items-center">
+        <button
+          vcl-square-button
+          class="circular color-button"
+          *ngFor="let color of product.colors"
+          (click)="onChangeProductColor(color)"
+          [ngClass]="{
+            'button-selected': product.selectedColor === color,
+            'button-border': product.selectedColor !== color
+          }"
+          [ngStyle]="{ backgroundColor: color }"
+        ></button>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <p>
+    <b>{{ "ProductInformation.Material" | translate }}:</b>
+    {{ product.materialInfo }}
+  </p>
+  <hr />
 
-<app-product-size-picker
-  [sizeArray]="product.sizes"
-  (sizeSelected)="onSizeSelected($event)"
-></app-product-size-picker>
+  <app-product-size-picker
+    [sizeArray]="product.sizes"
+    (sizeSelected)="onSizeSelected($event)"
+  ></app-product-size-picker>
 
-<hr class="mb-0" />
-<app-product-description></app-product-description>
-<hr class="mt-0" />
+  <hr class="mb-0" />
+  <app-product-description></app-product-description>
+  <hr class="mt-0" />
 
-<div class="add-to-cart-section">
-  <div class="mb-2">
-    <button
-      *ngIf="!isItemInCart; else removeItemInCartButton"
-      vcl-button
-      class="add-to-cart-button"
-      (click)="addProductToCart()"
-    >
-      <vcl-icogram>
-        <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
-        {{ "ProductInformation.Cart" | translate }}
-      </vcl-icogram>
-    </button>
-    <ng-template #removeItemInCartButton>
+  <div class="add-to-cart-section">
+    <div class="mb-2">
       <button
-        *ngIf="isItemInCart; else removeItemInCartButton"
+        *ngIf="!isItemInCart; else removeItemInCartButton"
         vcl-button
         class="add-to-cart-button"
-        (click)="removeProductFromCart(product.id)"
+        (click)="addProductToCart()"
       >
         <vcl-icogram>
           <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
-          {{ "ProductInformation.RemoveFromCart" | translate }}
+          {{ "ProductInformation.Cart" | translate }}
         </vcl-icogram>
       </button>
-    </ng-template>
+      <ng-template #removeItemInCartButton>
+        <button
+          *ngIf="isItemInCart; else removeItemInCartButton"
+          vcl-button
+          class="add-to-cart-button"
+          (click)="removeProductFromCart(product.id)"
+        >
+          <vcl-icogram>
+            <vcl-icon vclAppend icon="fas:cart-plus"></vcl-icon>
+            {{ "ProductInformation.RemoveFromCart" | translate }}
+          </vcl-icogram>
+        </button>
+      </ng-template>
+    </div>
+    <span class="delivery-time">{{
+      "ProductInformation.ProductDelivery" | translate
+    }}</span>
   </div>
-  <span class="delivery-time">{{
-    "ProductInformation.ProductDelivery" | translate
-  }}</span>
-</div>
 
-<div class="tooltip" role="tooltip">
-  <div class="tooltip-content tooltip-text">
-    <p>
-      <b>{{ "ProductInformation.ShopOnline" | translate }}</b>
-    </p>
-    <p>{{ "ProductInformation.IfStyleDoesntSuit" | translate }}</p>
+  <div class="tooltip" role="tooltip">
+    <div class="tooltip-content tooltip-text">
+      <p>
+        <b>{{ "ProductInformation.ShopOnline" | translate }}</b>
+      </p>
+      <p>{{ "ProductInformation.IfStyleDoesntSuit" | translate }}</p>
+    </div>
+    <div class="arrow-pointer tooltip-pointer"></div>
   </div>
-  <div class="arrow-pointer tooltip-pointer"></div>
 </div>

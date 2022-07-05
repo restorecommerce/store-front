@@ -30,9 +30,11 @@ export class ProductInfoComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    this.isItemInCart = Boolean(
-      this.cartService.isItemInCart(String(this.product.id))
-    );
+    if (this.product) {
+      this.isItemInCart = Boolean(
+        this.cartService.isItemInCart(String(this.product.id))
+      );
+    }
   }
 
   public getStyle(color: string, selected: boolean): string {
@@ -78,6 +80,8 @@ export class ProductInfoComponent implements OnInit, OnChanges {
         product: this.product,
       } as IItem,
     ]);
+    this.isItemInCart = true;
+    this.notificationService.success('Item added to cart!');
   }
 
   onChangeProductColor(color: string): void {
