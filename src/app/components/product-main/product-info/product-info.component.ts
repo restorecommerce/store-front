@@ -27,7 +27,11 @@ export class ProductInfoComponent implements OnInit, OnChanges {
     private productService: ProductService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.cartService.itemRemovedFromCart$.subscribe((sku) => {
+      this.isItemInCart = !(sku === this.product.id);
+    });
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (this.product) {

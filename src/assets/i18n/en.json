@@ -52,8 +52,8 @@
     "Material": "Material",
     "MaterialInfo": "Upper material: 100% cow leather, sole: 100% rubber",
     "ProductDelivery": "Delivery in 2-3 working days",
-    "Cart": "Add product to cart",
-    "RemoveFromCart": "Remove product from cart",
+    "AddToCart": "Add item to cart",
+    "RemoveFromCart": "Remove item from cart",
     "ShopOnline": "Shop online, decide at home",
     "IfStyleDoesntSuit": "If a style does not suit you, you can easily send it back free of charge",
     "Bestseller": "BESTSELLER"

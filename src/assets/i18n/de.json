@@ -60,7 +60,8 @@
     "Material": "Materialangabe",
     "MaterialInfo": "Obermaterial: 100% Rindsleder, 100% Ziegenleder, 100% Kalbsleder, 100% Rindsleder, Sohle: 100% Gummi",
     "ProductDelivery": "Lieferung in 2-3 Werktagen",
-    "Cart": "Dem Warenkorb hinzufügen",
+    "AddToCart": "Dem Warenkorb hinzufügen",
+    "RemoveFromCart": "Artikel aus dem Warenkorb entfernen",
     "ShopOnline": "Online shoppen, zu Hause entscheiden",
     "IfStyleDoesntSuit": "Wenn Ihnen ein Style nicht passt, können Sie ihn ganz einfach und kostenlos wieder zurückschicken",
     "Bestseller": "BESTSELLER"

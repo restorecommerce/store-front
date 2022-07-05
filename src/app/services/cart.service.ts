@@ -20,6 +20,7 @@ export class CartService {
   // Or even better I could extend the type of a `IItem and make it a StoreIItem
 
   cartItemCountUpdated = new Subject<number>();
+  itemRemovedFromCart$ = new Subject<string>();
 
   constructor() {
     this.initializeCart();
@@ -86,6 +87,7 @@ export class CartService {
   removeCartItem(sku: string): void {
     this.cart.remItem(sku);
     this.cartItemCountUpdated.next(this.getCartItemCount());
+    this.itemRemovedFromCart$.next(sku);
   }
 
   round(value: Money): string {
