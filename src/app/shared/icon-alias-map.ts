@@ -1,4 +1,4 @@
-// tslint:disable:object-literal-key-quotes
+/* eslint-disable quote-props */
 import { VCLIconAliasMap } from '@vcl/ng-vcl/icon';
 
 export const ALIAS_MAP: VCLIconAliasMap = {
