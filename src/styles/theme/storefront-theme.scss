@@ -1,6 +1,6 @@
 @use "./_storefront-variables.scss" as *;
 
-@use "~@vcl/vcl/bw-theme" with (
+@use "@vcl/vcl/bw-theme" with (
   $app-area-max-width: 100%,
   $app-area-min-width: 100%
 );
