@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { ScreenService } from 'src/app/services/screen.service';
 
@@ -7,10 +7,8 @@ import { ScreenService } from 'src/app/services/screen.service';
   templateUrl: './returns.component.html',
   styleUrls: ['./returns.component.scss'],
 })
-export class ReturnsComponent implements OnInit {
+export class ReturnsComponent {
   constructor(private displayService: ScreenService) {}
-
-  ngOnInit(): void {}
 
   screenWidth() {
     return this.displayService.getScreenSize();
