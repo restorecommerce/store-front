@@ -10,8 +10,7 @@ const LOCAL_STORAGE_KEY = 'TODO';
 
 export function createApollo(httpLink: HttpLink) {
   const authLink = setContext(() => {
-    const token =
-      typeof window === 'object' && localStorage.getItem(LOCAL_STORAGE_KEY);
+    const token = environment.graphql.key;
 
     if (!token) {
       return {};
@@ -24,7 +23,7 @@ export function createApollo(httpLink: HttpLink) {
     }
   });
 
-  let uri = environment.graphql_url;
+  let uri = environment.graphql.url;
   if (!uri) {
     uri = window.location.origin + environment.graphql_path;
   }
@@ -38,6 +37,7 @@ export function createApollo(httpLink: HttpLink) {
 
   const merge = (existing, incoming, { mergeObjects }) =>
     mergeObjects(existing, incoming);
+
   return {
     link,
     cache: new InMemoryCache({

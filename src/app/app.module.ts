@@ -88,6 +88,7 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { ImprintComponent } from './pages/imprint/imprint.component';
 import { ProductColorPickerComponent } from './components/product-color-picker/product-color-picker.component';
 import { HoverColorPickerDirective } from './directives/hover-color-picker-directive.service';
+import { GraphQLModule } from './graphql.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -153,6 +154,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     FormsModule,
     ReactiveFormsModule,
+    GraphQLModule,
     OverlayModule,
     ScrollingModule,
     VCLBadgeModule,

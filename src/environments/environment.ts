@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  graphql_url: 'http://localhost:5000/graphql',
+  graphql: {
+    url: 'http://localhost:5000/graphql',
+    key: 'd81b8a44972247adb81149d0c1d958f0',
+  },
+
   graphql_path: undefined,
   authEnabled: true,
 };
