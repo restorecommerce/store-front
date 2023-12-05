@@ -1,0 +1,14 @@
+overwrite: true
+schema:
+  - "http://localhost:5000/graphql"
+documents:
+  - "./src/app/**/*.gql"
+config: {}
+generates:
+  ./src/app/generated/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-apollo-angular
+      - fragment-matcher
+require: []
