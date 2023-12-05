@@ -1,0 +1,65 @@
+query ProductsQuery(
+  $input: IIoRestorecommerceResourcebaseReadRequest!
+) {
+  catalog {
+    product {
+      Read(input: $input) {
+        details {
+          items {
+            payload {
+              id
+              product {
+                name
+                description
+                physical {
+                  variants {
+                    id
+                    name
+                    description
+                    price {
+                      regularPrice
+                      sale
+                      salePrice
+                    }
+                    stockKeepingUnit
+                    stockLevel
+                    parentVariantId
+                    package {
+                      rotatable
+                      sizeInCm {
+                        height
+                        length
+                        width
+                      }
+                      weightInKg
+                    }
+                    images {
+                      id
+                      filename
+                      url
+                      caption
+                    }
+                    properties {
+                      id
+                      value
+                    }
+                  }
+                }
+              }
+              meta {
+                owners {
+                  id
+                  value
+                  attributes {
+                    id
+                    value
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

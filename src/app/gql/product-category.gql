@@ -1,0 +1,20 @@
+query ProductCategoryQuery($input: IIoRestorecommerceResourcebaseReadRequest!) {
+  catalog {
+    product_category {
+      Read(input: $input) {
+        details {
+          items {
+            payload {
+              id
+              name
+              description
+              parent {
+                parentId
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
