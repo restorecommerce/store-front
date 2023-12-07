@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from '../products/products.component';
 
@@ -9,7 +10,7 @@ import { Product } from '../products/products.component';
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product: Product;
+  @Input() product!: IoRestorecommerceProductPhysicalVariant;
 
   currency: string;
   selectedColor: string;
@@ -30,11 +31,11 @@ export class ProductCardComponent implements OnInit {
   constructor(private router: Router, private productService: ProductService) {}
 
   onProductClicked() {
-    this.router.navigateByUrl(this.product.urls['self']);
+    // this.router.navigateByUrl(this.product.urls['self']);
   }
 
   ngOnInit(): void {
-    this.selectedColor = this.product.selectedColor;
+    // this.selectedColor = this.product.selectedColor;
   }
 
   onMouseEnter($event: string) {
@@ -46,18 +47,18 @@ export class ProductCardComponent implements OnInit {
   }
 
   private onHoverColorPicker(colorHovered: string) {
-    if (this.product.selectedColor === colorHovered) {
-      return;
-    }
+    // if (this.product.selectedColor === colorHovered) {
+    //   return;
+    // }
 
-    if (!this.product.colors.find((color) => color === colorHovered)) {
-      this.selectedColor = this.product.selectedColor;
-    } else {
-      this.selectedColor = colorHovered;
-    }
+    // if (!this.product.colors.find((color) => color === colorHovered)) {
+    //   this.selectedColor = this.product.selectedColor;
+    // } else {
+    //   this.selectedColor = colorHovered;
+    // }
   }
 
   onLikeProduct() {
-    this.product.like = !this.product.like;
+    // this.product.like = !this.product.like;
   }
 }

@@ -11,7 +11,21 @@ query ProductCategoryQuery($input: IIoRestorecommerceResourcebaseReadRequest!) {
               parent {
                 parentId
               }
+              image {
+                filename
+                caption
+                url
+              }
             }
+            status {
+              code
+              message
+            }
+          }
+          totalCount
+          operationStatus {
+            code
+            message
           }
         }
       }

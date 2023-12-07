@@ -1,6 +1,4 @@
-query ProductsQuery(
-  $input: IIoRestorecommerceResourcebaseReadRequest!
-) {
+query ProductsQuery($input: IIoRestorecommerceResourcebaseReadRequest!) {
   catalog {
     product {
       Read(input: $input) {
@@ -34,7 +32,6 @@ query ProductsQuery(
                       weightInKg
                     }
                     images {
-                      id
                       filename
                       url
                       caption
@@ -57,6 +54,15 @@ query ProductsQuery(
                 }
               }
             }
+            status {
+              code
+              message
+            }
+          }
+          totalCount
+          operationStatus {
+            code
+            message
           }
         }
       }

@@ -1,1 +1,5 @@
-<products pageTitle="Men's shoes" currency="€" [products]="products"></products>
+<products
+  [pageTitle]="pageTitle"
+  [currency]="currency"
+  [products]="products$ | async"
+></products>

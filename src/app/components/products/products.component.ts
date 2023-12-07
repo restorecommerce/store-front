@@ -12,7 +12,7 @@ import { ScreenService } from 'src/app/services/screen.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
 })
-export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
+export class ProductsComponent implements AfterViewInit, OnDestroy {
   mediaBreakPoint: string;
 
   groups: { title: string; productCount: number }[] = [
@@ -49,8 +49,6 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor(public screenService: ScreenService) {}
 
-  ngOnInit(): void {}
-
   ngAfterViewInit(): void {
     this.screenService.mediaBreakpoint$.subscribe((value) => {
       this.mediaBreakPoint = value;
@@ -58,7 +56,7 @@ export class ProductsComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    //this.screenService.ngOnDestroy();
+    this.screenService.ngOnDestroy();
   }
 
   sortOptionClicked(option: string, event) {
