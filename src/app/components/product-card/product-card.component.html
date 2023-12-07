@@ -11,7 +11,7 @@
     </button>
   </vcl-panel-title>
   <div class="position-relative">
-    <!-- <picture class="image-wrapper">
+    <picture class="image-wrapper">
       <source
         class="image"
         *ngFor="let media of responsiveImagesConfiguration"
@@ -22,15 +22,15 @@
           media.min +
           'px)'
         "
-        [srcset]="product.images[selectedColor]"
+        [srcset]="product.images[selectedColor].url"
         [type]="'image/' + media.format"
       />
       <img
         class="product-card__image"
         alt="product image"
-        [src]="product.images[selectedColor]"
+        [src]="product.images[selectedColor].url"
       />
-    </picture> -->
+    </picture>
     <!-- <div class="product-card__quick-shop p-3">quick shop</div> -->
   </div>
   <vcl-panel-footer class="p-2 product-card__footer">

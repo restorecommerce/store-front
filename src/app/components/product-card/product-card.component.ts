@@ -13,7 +13,7 @@ export class ProductCardComponent implements OnInit {
   @Input() product!: IoRestorecommerceProductPhysicalVariant;
 
   currency: string;
-  selectedColor: string;
+  selectedColor: number;
 
   responsiveImagesConfiguration = [
     { width: 400, min: 0, max: 1100.99, suffix: '-xl', format: 'webp' },
@@ -35,7 +35,7 @@ export class ProductCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.selectedColor = this.product.selectedColor;
+  this.selectedColor = 0;
   }
 
   onMouseEnter($event: string) {
