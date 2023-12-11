@@ -53,66 +53,8 @@
         {{ filterOption }}
       </div>
     </div>
-    <!-- Product. -->
     <div class="row flex-wrap panel-products">
-      <div
-        class="column align-centered product"
-        *ngFor="let product of products; let i = index"
-        (click)="onProductClicked(product.id)"
-      >
-        <div class="row justify-between product-header">
-          <div class="row additional-label" *ngIf="product.additionalLabel">
-            <div class="text">{{ product.additionalLabel }}</div>
-            <div class="rounded-right"></div>
-          </div>
-          <i
-            class="fas fa-heart like"
-            [class.liked]="product.like"
-            (click)="product.like = !product.like"
-          ></i>
-        </div>
-        <picture class="image-wrapper">
-          <source
-            class="image"
-            *ngFor="let media of responsiveImagesConfiguration"
-            [media]="
-              '(max-width: ' +
-              media.max +
-              'px) and (min-width: ' +
-              media.min +
-              'px)'
-            "
-            [srcset]="
-              './assets/products_responsive/product' +
-              (i + 1) +
-              media.suffix +
-              '.' +
-              media.format
-            "
-            [type]="'image/' + media.format"
-          />
-          <img
-            class="image"
-            alt="product image"
-            [src]="'./assets/products/product' + (i + 1) + '.jpeg'"
-          />
-        </picture>
-        <!-- <div class="row center justify-center spinner-wrapper" *ngIf="!product.imgUrl"><i class="fas fa-spinner spinner"></i></div> -->
-        <div class="row justify-center colors">
-          <div
-            class="row color-wrapper"
-            *ngFor="let color of product.colors"
-            [class.color-selected]="color === product.selectedColor"
-            (click)="product.selectedColor = color"
-          >
-            <div class="color" [style.background-color]="color"></div>
-          </div>
-        </div>
-        <div class="title">{{ product.product.name }}</div>
-        <div class="row justify-center price">
-          {{ product.price | currency : currency }}
-        </div>
-      </div>
+      <ng-content></ng-content>
     </div>
   </div>
 </section>

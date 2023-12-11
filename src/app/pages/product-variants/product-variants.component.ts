@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 
 import { ProductService } from 'src/app/services/product.service';
@@ -7,26 +7,10 @@ import { ProductService } from 'src/app/services/product.service';
 @Component({
   selector: 'app-product-variants',
   templateUrl: './product-variants.component.html',
+  styleUrls: ['./product-variants.component.scss'],
 })
 export class ProductVariantsComponent {
   currency = '€';
-
-  products$ = this.productService.products$;
-
-  // TODO Handle error
-  productVaraints$ = this.route.params.pipe(
-    map((params) => params.productId),
-    switchMap((productId) => {
-      return this.products$.pipe(
-        map(
-          (products) =>
-            products.find((product) => product.id === productId).product
-              .physical.variants
-        )
-      );
-    })
-  );
-
   responsiveImagesConfiguration = [
     { width: 400, min: 0, max: 1100.99, suffix: '-xl', format: 'webp' },
     { width: 400, min: 0, max: 1100.99, suffix: '-xl', format: 'jpg' },
@@ -40,10 +24,34 @@ export class ProductVariantsComponent {
     { width: 400, min: 1382, max: 99999, suffix: '-xl', format: 'jpg' },
   ];
 
+  productId$ = this.route.params.pipe(
+    map((params) => params.productId as string)
+  );
+
+  products$ = this.productService.products$;
+
+  product$ = this.productId$.pipe(
+    switchMap((productId) => {
+      return this.products$.pipe(
+        map((products) => products.find((product) => product.id === productId))
+      );
+    })
+  );
+
+  pageTitle$ = this.product$.pipe(map((product) => product.product.name));
+
+  productVariants$ = this.product$.pipe(
+    map((product) => product.product.physical.variants)
+  );
+
   constructor(
     private productService: ProductService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
-  onProductClicked(varaintId: string) {}
+  onProductClicked(productId: string, varaintId: string) {
+    // TODO Refactor code for route.
+    this.router.navigateByUrl(`shoes/${productId}/variants/${varaintId}`);
+  }
 }

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import {
   VCLBadgeModule,
@@ -91,6 +91,7 @@ import { HoverColorPickerDirective } from './directives/hover-color-picker-direc
 import { GraphQLModule } from './graphql.module';
 import { ShoesProductsComponent } from './pages/shoes-products/shoes-products.component';
 import { ProductVariantsComponent } from './pages/product-variants/product-variants.component';
+import { ProductsTemplateComponent } from './templates/products-template/products-template.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -166,7 +167,8 @@ const vclModules = [
     ProductColorPickerComponent,
     HoverColorPickerDirective,
     ShoesProductsComponent,
-    ProductVariantsComponent
+    ProductVariantsComponent,
+    ProductsTemplateComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

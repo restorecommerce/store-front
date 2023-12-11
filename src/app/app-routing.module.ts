@@ -22,10 +22,6 @@ const routes: Routes = [
     component: ShoesComponent,
   },
   {
-    path: 'products/:productId',
-    component: ProductComponent,
-  },
-  {
     path: 'returns',
     component: ReturnsComponent,
   },
@@ -50,9 +46,14 @@ const routes: Routes = [
         component: ShoesProductsComponent,
       },
       {
+        path: ':productId/variants/:variantId',
+        component: ProductComponent,
+      },
+      {
         path: ':productId',
         component: ProductVariantsComponent,
       },
+
     ],
   },
   {

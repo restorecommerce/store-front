@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { IoRestorecommerceProductProduct } from 'src/app/generated/graphql';
 
 @Component({
-  selector: 'products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  selector: 'app-products-template',
+  templateUrl: './products-template.component.html',
+  styleUrls: ['./products-template.component.scss']
 })
-export class ProductsComponent {
+export class ProductsTemplateComponent {
 
   responsiveImagesConfiguration = [
     {width: 400, min: 0, max: 1100.99, suffix: '-xl', format: 'webp'},
