@@ -4,9 +4,9 @@
       <vcl-gallery [row]="screenWidth() >= tabletWidth()">
         <ng-container *ngFor="let image of this.galleryImages">
           <vcl-gallery-image
-            [image]="image.src"
-            [thumbnail]="image.srcThumb"
-            [alt]="image.alt"
+            [image]="image.url"
+            [thumbnail]="image.url"
+            [alt]="image.caption"
           ></vcl-gallery-image>
         </ng-container>
         <vcl-gallery-thumbnails></vcl-gallery-thumbnails>

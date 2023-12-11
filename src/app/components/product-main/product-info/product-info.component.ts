@@ -8,7 +8,6 @@ import {
 import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
 import { NotificationService } from 'src/app/services/notification.service';
-import { ProductService } from 'src/app/services/product.service';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
 import { IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
 
@@ -24,7 +23,6 @@ export class ProductInfoComponent implements OnInit, OnChanges {
   constructor(
     public cartService: CartService,
     private notificationService: NotificationService,
-    private productService: ProductService
   ) {}
 
   ngOnInit(): void {
@@ -54,38 +52,33 @@ export class ProductInfoComponent implements OnInit, OnChanges {
   }
 
   addProductToCart() {
-    // if (!this.product.selectedSize) {
-    //   this.notificationService.error('Please select a size for the product!');
-    //   return;
-    // }
+    const selectedIndex = 0; // The selected Index could be chosen by the user.
 
-    // const {
-    //   price,
-    //   id: sku,
-    //   title,
-    //   productImageSources,
-    //   selectedColor,
-    // } = this.product;
+    const { price, id: sku, name, images, properties } = this.product;
 
-    // const thumbImage = productImageSources[selectedColor][0].srcThumb;
+    const thumbImage = images[selectedIndex].url;
+    const width = properties.find((prop) => prop.id === 'Width');
+    const height = properties.find((prop) => prop.id === 'Height');
+    const weight = properties.find((prop) => prop.id === 'Weight');
+    const depth = properties.find((prop) => prop.id === 'Depth');
 
-    // this.cartService.addItemToCart([
-    //   {
-    //     sku,
-    //     desc: title,
-    //     imgSrc: thumbImage,
-    //     price: new Decimal(price),
-    //     taxType: 'vat_standard',
-    //     weight: 610,
-    //     height: 4.2,
-    //     width: 27.5,
-    //     depth: 6.22,
-    //     quantity: 1, // replace hardcoded entity value!
-    //     product: this.product,
-    //   } as IItem,
-    // ]);
-    // this.isItemInCart = true;
-    this.notificationService.success('TODO: Item added to cart!');
+    const cartItem = {
+      sku,
+      desc: name,
+      imgSrc: thumbImage,
+      price: new Decimal(price.salePrice),
+      taxType: 'vat_standard',
+      weight: weight ? weight.value : 0,
+      height: height ? height.value : 0,
+      width: width ? width.value : 0,
+      depth: depth ? depth.value : 0,
+      quantity: 1, // replace hardcoded entity value!
+      product: this.product,
+    } as IItem;
+
+    this.cartService.addItemToCart([cartItem]);
+
+    this.notificationService.success('Item added to cart');
   }
 
   onChangeProductColor(color: string): void {

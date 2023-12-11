@@ -5,44 +5,39 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { Product, ProductImage } from 'src/app/models/product';
 import { ScreenService } from 'src/app/services/screen.service';
-import { ProductService } from 'src/app/services/product.service';
+import { IoRestorecommerceImageImage, IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
 
 @Component({
   selector: 'app-product-gallery',
   templateUrl: './product-gallery.component.html',
   styleUrls: ['./product-gallery.component.scss'],
 })
-export class ProductGalleryComponent implements OnInit, OnChanges {
+export class ProductGalleryComponent implements OnChanges {
   loading = false;
   zoomImage = false;
   productZoomContainerWidth: number;
-  public galleryImages: ProductImage[];
+  public galleryImages: IoRestorecommerceImageImage[];
   imageIndex = 0;
 
-  @Input() product: Product;
+
+
+  @Input() product: IoRestorecommerceProductPhysicalVariant;
 
   constructor(
-    private productService: ProductService,
     private displayService: ScreenService
   ) {}
 
-  ngOnInit(): void {}
-
   ngOnChanges(changes: SimpleChanges): void {
     this.loadImages();
+    // this.galleryImages[0].url
   }
 
   loadImages() {
     this.loading = true;
     setTimeout(() => {
-      const { productImageSources, selectedColor } = this.product;
-      this.galleryImages = productImageSources[selectedColor];
-
-      this.productService.productColorChanged.subscribe((color) => {
-        this.galleryImages = this.product.productImageSources[color];
-      });
+      const { images } = this.product;
+      this.galleryImages = images;
       this.loading = false;
     }, 100);
   }
