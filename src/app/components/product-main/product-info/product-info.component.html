@@ -2,14 +2,14 @@
   <div class="row">
     <div class="flex-12">
       <h2>
-        {{ product.title }}
+        {{ product.name }}
       </h2>
       <p>
         {{ product.description }}
       </p>
       <div class="row justify-content-between my-2">
         <div>
-          <span *ngIf="product.isBestSeller">
+          <span>
             <vcl-badge vclRounded type="primary" class="badge">{{
               "ProductInformation.Bestseller" | translate
             }}</vcl-badge>
@@ -31,7 +31,7 @@
     </div>
     <div class="flex align-right">
       <p class="mb-0">
-        <b>{{ product.price | currency: "EUR":true }}</b>
+        <b>{{ product.price.salePrice | currency: "EUR":true }}</b>
       </p>
     </div>
   </div>
@@ -40,7 +40,7 @@
     <div>
       <p class="chosen-color-name">
         <b>{{ "ProductInformation.Color" | translate }}:</b>
-        {{ product.selectedColor }}
+        <!-- {{ product.selectedColor }} -->
       </p>
     </div>
     <div>
@@ -48,13 +48,12 @@
         <button
           vcl-square-button
           class="circular color-button"
-          *ngFor="let color of product.colors"
-          (click)="onChangeProductColor(color)"
-          [ngClass]="{
+          ngFor="let color of product.colors"
+          click="onChangeProductColor(color)"
+          ngClass="{
             'button-selected': product.selectedColor === color,
             'button-border': product.selectedColor !== color
           }"
-          [ngStyle]="{ backgroundColor: color }"
         ></button>
       </div>
     </div>
@@ -62,14 +61,14 @@
   <hr />
   <p>
     <b>{{ "ProductInformation.Material" | translate }}:</b>
-    {{ product.materialInfo }}
+    <!-- {{ product.materialInfo }} -->
   </p>
   <hr />
 
-  <app-product-size-picker
+  <!-- <app-product-size-picker
     [sizeArray]="product.sizes"
     (sizeSelected)="onSizeSelected($event)"
-  ></app-product-size-picker>
+  ></app-product-size-picker> -->
 
   <hr class="mb-0" />
   <app-product-description></app-product-description>

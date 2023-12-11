@@ -5,12 +5,12 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { Product } from 'src/app/models/product';
 import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
 import { NotificationService } from 'src/app/services/notification.service';
 import { ProductService } from 'src/app/services/product.service';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
+import { IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
 
 @Component({
   selector: 'app-product-info',
@@ -18,7 +18,7 @@ import { IItem } from '@restorecommerce/cart/lib/model/IItem';
   styleUrls: ['./product-info.component.scss'],
 })
 export class ProductInfoComponent implements OnInit, OnChanges {
-  @Input() product: Product;
+  @Input() product: IoRestorecommerceProductPhysicalVariant;
   isItemInCart: boolean;
 
   constructor(
@@ -54,47 +54,47 @@ export class ProductInfoComponent implements OnInit, OnChanges {
   }
 
   addProductToCart() {
-    if (!this.product.selectedSize) {
-      this.notificationService.error('Please select a size for the product!');
-      return;
-    }
+    // if (!this.product.selectedSize) {
+    //   this.notificationService.error('Please select a size for the product!');
+    //   return;
+    // }
 
-    const {
-      price,
-      id: sku,
-      title,
-      productImageSources,
-      selectedColor,
-    } = this.product;
+    // const {
+    //   price,
+    //   id: sku,
+    //   title,
+    //   productImageSources,
+    //   selectedColor,
+    // } = this.product;
 
-    const thumbImage = productImageSources[selectedColor][0].srcThumb;
+    // const thumbImage = productImageSources[selectedColor][0].srcThumb;
 
-    this.cartService.addItemToCart([
-      {
-        sku,
-        desc: title,
-        imgSrc: thumbImage,
-        price: new Decimal(price),
-        taxType: 'vat_standard',
-        weight: 610,
-        height: 4.2,
-        width: 27.5,
-        depth: 6.22,
-        quantity: 1, // replace hardcoded entity value!
-        product: this.product,
-      } as IItem,
-    ]);
-    this.isItemInCart = true;
-    this.notificationService.success('Item added to cart!');
+    // this.cartService.addItemToCart([
+    //   {
+    //     sku,
+    //     desc: title,
+    //     imgSrc: thumbImage,
+    //     price: new Decimal(price),
+    //     taxType: 'vat_standard',
+    //     weight: 610,
+    //     height: 4.2,
+    //     width: 27.5,
+    //     depth: 6.22,
+    //     quantity: 1, // replace hardcoded entity value!
+    //     product: this.product,
+    //   } as IItem,
+    // ]);
+    // this.isItemInCart = true;
+    this.notificationService.success('TODO: Item added to cart!');
   }
 
   onChangeProductColor(color: string): void {
-    this.product.selectedColor = color;
-    this.productService.productColorChanged.emit(color);
+    // this.product.selectedColor = color;
+    // this.productService.productColorChanged.emit(color);
   }
 
   onSizeSelected(size: number) {
-    this.product.selectedSize = size;
+    // this.product.selectedSize = size;
   }
 
   onChangeQuantityPicker(quantity: number) {
