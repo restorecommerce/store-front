@@ -1,0 +1,13 @@
+.page-products {
+  background-color: #f2f2f2;
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  &__panel {
+    box-sizing: border-box;
+  }
+}

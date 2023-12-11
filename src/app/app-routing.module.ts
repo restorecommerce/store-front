@@ -13,6 +13,8 @@ import { CheckoutDeliveryComponent } from './pages/checkout/checkout-delivery/ch
 import { CheckoutPageGuard } from './services/checkout-page-guard.service';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { ImprintComponent } from './pages/imprint/imprint.component';
+import { ProductVariantsComponent } from './pages/product-variants/product-variants.component';
+import { ShoesProductsComponent } from './pages/shoes-products/shoes-products.component';
 
 const routes: Routes = [
   {
@@ -42,6 +44,16 @@ const routes: Routes = [
   {
     path: 'shoes',
     component: ShoesComponent,
+    children: [
+      {
+        path: '',
+        component: ShoesProductsComponent,
+      },
+      {
+        path: ':productId',
+        component: ProductVariantsComponent,
+      },
+    ],
   },
   {
     path: 'checkout',

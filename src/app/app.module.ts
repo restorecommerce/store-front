@@ -89,6 +89,8 @@ import { ImprintComponent } from './pages/imprint/imprint.component';
 import { ProductColorPickerComponent } from './components/product-color-picker/product-color-picker.component';
 import { HoverColorPickerDirective } from './directives/hover-color-picker-directive.service';
 import { GraphQLModule } from './graphql.module';
+import { ShoesProductsComponent } from './pages/shoes-products/shoes-products.component';
+import { ProductVariantsComponent } from './pages/product-variants/product-variants.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -163,6 +165,8 @@ const vclModules = [
     ImprintComponent,
     ProductColorPickerComponent,
     HoverColorPickerDirective,
+    ShoesProductsComponent,
+    ProductVariantsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
