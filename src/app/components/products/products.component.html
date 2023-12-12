@@ -61,8 +61,8 @@
         (click)="onProductClicked(product.id)"
       >
         <div class="row justify-between product-header">
-          <div class="row additional-label" *ngIf="product.additionalLabel">
-            <div class="text">{{ product.additionalLabel }}</div>
+          <div class="row additional-label">
+            <div class="text">{{ product.product.physical.variants.length }} Varaints</div>
             <div class="rounded-right"></div>
           </div>
           <i
