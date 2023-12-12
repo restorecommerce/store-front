@@ -72,7 +72,7 @@
           ></i>
         </div>
         <picture class="image-wrapper">
-          <source
+          <!-- <source
             class="image"
             *ngFor="let media of responsiveImagesConfiguration"
             [media]="
@@ -82,22 +82,16 @@
               media.min +
               'px)'
             "
-            [srcset]="
-              './assets/products_responsive/product' +
-              (i + 1) +
-              media.suffix +
-              '.' +
-              media.format
-            "
+            [srcset]="product.product.physical.variants[0].images[0].url"
             [type]="'image/' + media.format"
-          />
+          /> -->
           <img
             class="image"
             alt="product image"
-            [src]="'./assets/products/product' + (i + 1) + '.jpeg'"
+            [src]="product.product.physical.variants[0].images[0].url"
           />
         </picture>
-        <!-- <div class="row center justify-center spinner-wrapper" *ngIf="!product.imgUrl"><i class="fas fa-spinner spinner"></i></div> -->
+        <div class="row center justify-center spinner-wrapper" *ngIf="!product.product.physical.variants[0].images[0].url"><i class="fas fa-spinner spinner"></i></div>
         <div class="row justify-center colors">
           <div
             class="row color-wrapper"

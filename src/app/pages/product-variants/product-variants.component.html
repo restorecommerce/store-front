@@ -18,7 +18,7 @@
         ></i>
       </div>
       <picture class="image-wrapper">
-        <source
+        <!-- <source
           class="image"
           *ngFor="let media of responsiveImagesConfiguration"
           [media]="
@@ -36,14 +36,14 @@
             media.format
           "
           [type]="'image/' + media.format"
-        />
+        /> -->
         <img
           class="image"
           alt="product image"
-          [src]="'./assets/products/product' + (i + 1) + '.jpeg'"
+          [src]="variant.images[0].url"
         />
       </picture>
-      <!-- <div class="row center justify-center spinner-wrapper" *ngIf="!product.imgUrl"><i class="fas fa-spinner spinner"></i></div> -->
+      <div class="row center justify-center spinner-wrapper" *ngIf="!variant.images[0].url"><i class="fas fa-spinner spinner"></i></div>
       <div class="row justify-center colors">
         <div
           class="row color-wrapper"
