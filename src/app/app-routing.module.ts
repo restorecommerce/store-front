@@ -3,9 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ClickAndCollectComponent } from './pages/click-and-collect/click-and-collect.component';
 import { DeliveryComponent } from './pages/delivery/delivery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { ProductComponent } from './pages/product/product.component';
 import { ReturnsComponent } from './pages/returns/returns.component';
-import { ShoesComponent } from './pages/shoes/shoes.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout-forms.component';
 import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
@@ -15,14 +13,6 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { ImprintComponent } from './pages/imprint/imprint.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ShoesComponent,
-  },
-  {
-    path: 'products/:productId',
-    component: ProductComponent,
-  },
   {
     path: 'returns',
     component: ReturnsComponent,
@@ -38,10 +28,6 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
-  },
-  {
-    path: 'shoes',
-    component: ShoesComponent,
   },
   {
     path: 'checkout',

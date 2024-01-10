@@ -1,0 +1,47 @@
+<vcl-panel panel-card class="product-card" (click)="onProductClicked()">
+  <vcl-panel-title
+    class="row justify-content-between align-items-center m-0 p-2"
+  >
+    <vcl-label class="badge">
+      <!-- {{ product.additionalLabel }} -->
+      Product.additionalLabel
+    </vcl-label>
+    <button vcl-square-button class="circular favorite">
+      <vcl-icon icon="fas:heart"></vcl-icon>
+    </button>
+  </vcl-panel-title>
+  <div class="position-relative">
+    <picture class="image-wrapper">
+      <source
+        class="image"
+        *ngFor="let media of responsiveImagesConfiguration"
+        [media]="
+          '(max-width: ' +
+          media.max +
+          'px) and (min-width: ' +
+          media.min +
+          'px)'
+        "
+        [srcset]="product.images[selectedColor].url"
+        [type]="'image/' + media.format"
+      />
+      <img
+        class="product-card__image"
+        alt="product image"
+        [src]="product.images[selectedColor].url"
+      />
+    </picture>
+    <!-- <div class="product-card__quick-shop p-3">quick shop</div> -->
+  </div>
+  <vcl-panel-footer class="p-2 product-card__footer">
+    <vcl-label class="product-card__title">{{ product.name }}</vcl-label>
+    <vcl-label class="product-card__price">{{
+      product.price.salePrice | currency: currency
+    }}</vcl-label>
+    <!-- <app-product-color-picker
+      [colors]="product.colors"
+      (mouseOver)="onMouseEnter($event)"
+      (mouseOut)="onMouseLeave($event)"
+    ></app-product-color-picker> -->
+  </vcl-panel-footer>
+</vcl-panel>

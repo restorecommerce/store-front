@@ -1,0 +1,7 @@
+<section class="content-area product-content-area" role="main">
+  <app-product-navigation
+    *ngIf="this.screenWidth() >= this.desktopWidth()"
+  ></app-product-navigation>
+  <app-product-main [product]="varaint$ | async"></app-product-main>
+  <app-product-recommend></app-product-recommend>
+</section>

@@ -17,7 +17,7 @@
   [cartItem]="item"
 ></app-cart-layer-item>
 
-<ng-container *ngIf="this.cartService.getCartItemCount() == 0">
+<ng-container *ngIf="this.cartService.getCartItemCount() === 0">
   <hr />
   <p>{{ "TopBar.YourShoppingCartCurrently" | translate }}</p>
   <hr />
