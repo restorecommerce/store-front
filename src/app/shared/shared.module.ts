@@ -13,6 +13,7 @@ import {
   VCLPanelModule,
 } from '@vcl/ng-vcl';
 import { TranslateModule } from '@ngx-translate/core';
+import { FormsModule } from '@angular/forms';
 
 const vclModules = [
   VCLBadgeModule,
@@ -30,6 +31,6 @@ const vclModules = [
 @NgModule({
   declarations: [],
   imports: [CommonModule],
-  exports: [...vclModules, TranslateModule],
+  exports: [...vclModules, TranslateModule, FormsModule],
 })
 export class SharedModule {}

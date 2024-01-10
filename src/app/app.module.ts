@@ -7,13 +7,11 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import {
   VCLDrawerModule,
   VCLFontAwesomeModule,
-  VCLGalleryModule,
   VCLInputModule,
   VCLMaterialDesignModule,
   VCLPasswordInputModule,
   VCLSelectModule,
   VCLSelectListModule,
-  VCLZoomBoxModule,
   VCLFormControlGroupModule,
   VCLTabNavModule,
   VCLRadioButtonModule,
@@ -51,11 +49,6 @@ import {
   LazyLoadImageModule,
   ScrollHooks,
 } from 'ng-lazyload-image';
-import { CheckoutComponent } from './pages/checkout/checkout.component';
-import { OrderOverviewComponent } from './pages/checkout/order-overview/order-overview.component';
-import { CheckoutFormsComponent } from './pages/checkout/checkout-forms/checkout-forms.component';
-import { CheckoutPaymentComponent } from './pages/checkout/checkout-payment/checkout-payment.component';
-import { CheckoutDeliveryComponent } from './pages/checkout/checkout-delivery/checkout-delivery.component';
 import { ClickStopPropagation } from './shared/click-stop-propagation.directive';
 import { CartLayerItemComponent } from './components/cart-layer-item/cart-layer-item.component';
 import { CartLayerContentsComponent } from './components/cart-layer-contents/cart-layer-contents.component';
@@ -67,6 +60,7 @@ import { HoverColorPickerDirective } from './directives/hover-color-picker-direc
 import { GraphQLModule } from './graphql.module';
 import { ProductsModule } from './products/products.module';
 import { SharedModule } from './shared/shared.module';
+import { CheckoutModule } from './checkout/checkout.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -101,11 +95,6 @@ const vclModules = [
     NewsletterBarComponent,
     FooterTopComponent,
     HeaderComponent,
-    CheckoutComponent,
-    OrderOverviewComponent,
-    CheckoutFormsComponent,
-    CheckoutPaymentComponent,
-    CheckoutDeliveryComponent,
     ClickStopPropagation,
     CartLayerItemComponent,
     CartLayerContentsComponent,
@@ -120,6 +109,7 @@ const vclModules = [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     ProductsModule,
+    CheckoutModule,
     AppRoutingModule,
     HttpClientModule,
     LazyLoadImageModule,
@@ -131,8 +121,6 @@ const vclModules = [
         deps: [HttpClient],
       },
     }),
-    FormsModule,
-    ReactiveFormsModule,
     GraphQLModule,
     OverlayModule,
     ScrollingModule,

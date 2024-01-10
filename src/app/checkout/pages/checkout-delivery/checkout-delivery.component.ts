@@ -1,23 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import {
+  UntypedFormControl,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
 import { Money } from '@restorecommerce/cart/lib/model/primitives';
 import { CartService } from 'src/app/services/cart.service';
-import { CheckoutService } from '../checkout.service';
+import { CheckoutService } from '../../services/checkout.service';
 
 @Component({
   selector: 'app-checkout-delivery',
   templateUrl: './checkout-delivery.component.html',
   styleUrls: ['./checkout-delivery.component.scss'],
 })
-export class CheckoutDeliveryComponent implements OnInit {
+export class CheckoutDeliveryComponent {
   constructor(
     private cartService: CartService,
     public checkoutService: CheckoutService
   ) {}
 
   deliveryMethod = 'standard';
-
-  ngOnInit(): void {}
 
   voucherForm = new UntypedFormGroup({
     cardNumber: new UntypedFormControl('', [Validators.required]),

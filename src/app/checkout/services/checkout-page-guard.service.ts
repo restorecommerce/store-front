@@ -7,7 +7,7 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { CartService } from './cart.service';
+import { CartService } from '../../services/cart.service';
 
 @Injectable({
   providedIn: 'root',
@@ -30,7 +30,5 @@ export class CheckoutPageGuard implements CanActivate {
     } else {
       return true;
     }
-    console.log('Your cart items are,', this.cartService.getCartItemCount());
-    return;
   }
 }

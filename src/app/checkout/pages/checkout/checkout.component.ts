@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CheckoutService } from './checkout.service';
+import { Component } from '@angular/core';
+import { CheckoutService } from '../../services/checkout.service';
 
 @Component({
   selector: 'app-checkout',
@@ -7,8 +7,6 @@ import { CheckoutService } from './checkout.service';
   styleUrls: ['./checkout.component.scss'],
   providers: [CheckoutService],
 })
-export class CheckoutComponent implements OnInit {
+export class CheckoutComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

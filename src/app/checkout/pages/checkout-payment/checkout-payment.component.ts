@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import {
+  UntypedFormControl,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
-import { CheckoutService } from '../checkout.service';
+import { CheckoutService } from '../../services/checkout.service';
 
 @Component({
   selector: 'app-checkout-payment',
   templateUrl: './checkout-payment.component.html',
   styleUrls: ['./checkout-payment.component.scss'],
 })
-export class CheckoutPaymentComponent implements OnInit {
+export class CheckoutPaymentComponent {
   payMethod = 'paypal';
 
   constructor(
@@ -19,8 +23,6 @@ export class CheckoutPaymentComponent implements OnInit {
     private translate: TranslateService,
     public checkoutService: CheckoutService
   ) {}
-
-  ngOnInit(): void {}
 
   paymentOptionForm = new UntypedFormGroup({
     cardNumber: new UntypedFormControl('', [Validators.required]),

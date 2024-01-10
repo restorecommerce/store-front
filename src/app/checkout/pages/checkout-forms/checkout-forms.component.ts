@@ -1,25 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import {
+  UntypedFormControl,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { NotifierService } from '@vcl/ng-vcl';
-
-import { CheckoutService } from '../checkout.service';
+import { CheckoutService } from '../../services/checkout.service';
 
 @Component({
   selector: 'app-checkout-forms',
   templateUrl: './checkout-forms.component.html',
   styleUrls: ['./checkout-forms.component.scss'],
 })
-export class CheckoutFormsComponent implements OnInit {
+export class CheckoutFormsComponent {
   constructor(
     private notifier: NotifierService,
     private translate: TranslateService,
     private router: Router,
     private checkoutService: CheckoutService
   ) {}
-
-  ngOnInit(): void {}
 
   homeDeliveryForm = new UntypedFormGroup({
     gender: new UntypedFormControl(null, Validators.required),
