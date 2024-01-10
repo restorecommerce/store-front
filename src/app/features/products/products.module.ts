@@ -5,7 +5,7 @@ import { ShoesComponent } from './components/shoes/shoes.component';
 import { ShoesProductsComponent } from './components/shoes-products/shoes-products.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductVariantsComponent } from './components/product-variants/product-variants.component';
-import { ProductsTemplateComponent } from '../templates/products-template/products-template.component';
+import { ProductsTemplateComponent } from '../../templates/products-template/products-template.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductColorPickerComponent } from './components/product-color-picker/product-color-picker.component';
 import { ProductInterestComponent } from './components/product-interest/product-interest.component';
@@ -16,7 +16,7 @@ import { ProductNavigationComponent } from './components/product-navigation/prod
 import { ProductMainComponent } from './components/product-main/product-main.component';
 import { ProductRecommendComponent } from './components/product-recommend/product-recommend.component';
 import { ProductSizePickerComponent } from './components/product-size-picker/product-size-picker.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 import { ProductsComponent } from './components/products/products.component';
 import {
   VCLGalleryModule,

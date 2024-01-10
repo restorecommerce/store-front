@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 
-import { ProductService } from 'src/app/products/services/product.service';
+import { ProductService } from 'src/app/features/products/services/product.service';
 
 @Component({
   selector: 'app-product-variants',

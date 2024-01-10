@@ -51,9 +51,9 @@ import { MenuLayerContentComponent } from './components/top-bar/menu-layer-conte
 import { MenuLayerTitleComponent } from './components/top-bar/menu-layer-title/menu-layer-title.component';
 import { HoverColorPickerDirective } from './directives/hover-color-picker-directive.service';
 import { GraphQLModule } from './graphql.module';
-import { ProductsModule } from './products/products.module';
+import { ProductsModule } from './features/products/products.module';
 import { SharedModule } from './shared/shared.module';
-import { CheckoutModule } from './checkout/checkout.module';
+import { CheckoutModule } from './features/checkout/checkout.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

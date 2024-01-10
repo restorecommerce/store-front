@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProfileComponent } from './user-profile/pages/profile/profile.component';
-import { PrivacyPolicyComponent } from './privacy-policy/pages/privacy-policy/privacy-policy.component';
-import { ImprintComponent } from './imprint/pages/imprint/imprint.component';
 
 const routes: Routes = [
   // {

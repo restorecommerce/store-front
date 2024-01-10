@@ -7,7 +7,6 @@ import { CheckoutFormsComponent } from './pages/checkout-forms/checkout-forms.co
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { CheckoutPageGuard } from './services/checkout-page-guard.service';
 import { OrderOverviewComponent } from './components/order-overview/order-overview.component';
-import { SharedModule } from '../shared/shared.module';
 import {
   VCLFlipSwitchModule,
   VCLFormControlGroupModule,
@@ -16,6 +15,7 @@ import {
   VCLTabNavModule,
 } from '@vcl/ng-vcl';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes = [
   {

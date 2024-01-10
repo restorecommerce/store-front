@@ -8,7 +8,7 @@ import {
   VCLPasswordInputModule,
   VCLRadioButtonModule,
 } from '@vcl/ng-vcl';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 const routes: Routes = [
   {
