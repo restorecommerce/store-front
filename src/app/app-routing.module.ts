@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileComponent } from './user-profile/pages/profile/profile.component';
 import { PrivacyPolicyComponent } from './privacy-policy/pages/privacy-policy/privacy-policy.component';
 import { ImprintComponent } from './imprint/pages/imprint/imprint.component';
 
@@ -17,10 +17,10 @@ const routes: Routes = [
   //   path: 'delivery',
   //   component: DeliveryComponent,
   // },
-  {
-    path: 'profile',
-    component: ProfileComponent, // TODO Place into module.
-  },
+  // {
+  //   path: 'profile',
+  //   component: ProfileComponent,
+  // },
   // {
   //   path: 'about-us',
   //   component: ImprintComponent,

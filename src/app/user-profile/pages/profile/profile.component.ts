@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
+import { Component } from '@angular/core';
 import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
-  selector: 'profile',
+  selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss'],
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
   public password: string = '';
   public email: string = '';
   public remember: boolean = false;
 
   constructor(private displayService: ScreenService) {}
-
-  ngOnInit(): void {}
 
   screenWidth() {
     return this.displayService.getScreenSize();
