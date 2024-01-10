@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
-import { ProductService } from '../services/product.service';
+import { ProductService } from '../products/services/product.service';
 
 @Directive({
   selector: '[appHoverColorPicker]',

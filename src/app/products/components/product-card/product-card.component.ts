@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
-import { ProductService } from 'src/app/services/product.service';
-import { Product } from '../products/products.component';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-card',
@@ -35,7 +34,7 @@ export class ProductCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  this.selectedColor = 0;
+    this.selectedColor = 0;
   }
 
   onMouseEnter($event: string) {
@@ -50,7 +49,6 @@ export class ProductCardComponent implements OnInit {
     // if (this.product.selectedColor === colorHovered) {
     //   return;
     // }
-
     // if (!this.product.colors.find((color) => color === colorHovered)) {
     //   this.selectedColor = this.product.selectedColor;
     // } else {
