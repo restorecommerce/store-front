@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './product-color-picker.component.html',
   styleUrls: ['./product-color-picker.component.scss'],
 })
-export class ProductColorPickerComponent implements OnInit {
+export class ProductColorPickerComponent {
   @Input() selectedColor: string;
   @Input() colors: string[] = [];
 
@@ -21,8 +21,6 @@ export class ProductColorPickerComponent implements OnInit {
   onMouseLeave(color: string) {
     this.mouseOut.emit(color);
   }
-
-  ngOnInit(): void {}
 
   onChangeProductColor(color: string) {}
 }

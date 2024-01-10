@@ -8,8 +8,6 @@ import { ProductRecommendationService } from './product-recommend.service';
   styleUrls: ['./product-recommend.component.scss'],
   providers: [ProductRecommendationService],
 })
-export class ProductRecommendComponent implements OnInit {
+export class ProductRecommendComponent {
   constructor(public service: ProductRecommendationService) {}
-
-  ngOnInit() {}
 }

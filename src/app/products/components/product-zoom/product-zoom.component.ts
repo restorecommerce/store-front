@@ -7,9 +7,7 @@ import {
   ViewChild,
   ElementRef,
   HostListener,
-  AfterViewInit,
   AfterViewChecked,
-  OnChanges,
 } from '@angular/core';
 import { ProductImage } from 'src/app/models/product';
 

@@ -3,13 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-product-navigation',
   templateUrl: './product-navigation.component.html',
-  styleUrls: ['./product-navigation.component.scss']
+  styleUrls: ['./product-navigation.component.scss'],
 })
-export class ProductNavigationComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ProductNavigationComponent {
+  constructor() {}
 }

@@ -7,7 +7,7 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './product-description.component.html',
   styleUrls: ['./product-description.component.scss'],
 })
-export class ProductDescriptionComponent implements OnInit {
+export class ProductDescriptionComponent {
   @Input() imageArray: ProductImage[];
 
   public zoomImage = false;
@@ -18,6 +18,4 @@ export class ProductDescriptionComponent implements OnInit {
   constructor(private service: CartService) {
     this.dataService = this.service;
   }
-
-  ngOnInit(): void {}
 }

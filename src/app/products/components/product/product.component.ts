@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ScreenService } from 'src/app/services/screen.service';
 import { ProductService } from 'src/app/services/product.service';
-import { combineLatest, forkJoin, map, switchMap } from 'rxjs';
+import { combineLatest, map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-product',

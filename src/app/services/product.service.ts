@@ -2,7 +2,7 @@ import { Injectable, EventEmitter, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Product } from '../models/product';
-import { Product as ProductCard } from '../components/products/products.component';
+import { Product as ProductCard } from '../products/components/products/products.component';
 import { Subject, Subscription, map, catchError, of, tap } from 'rxjs';
 import {
   IoRestorecommerceProductProduct,
