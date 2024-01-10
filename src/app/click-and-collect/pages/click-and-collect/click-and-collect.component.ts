@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
 import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
@@ -7,10 +6,8 @@ import { ScreenService } from 'src/app/services/screen.service';
   templateUrl: './click-and-collect.component.html',
   styleUrls: ['./click-and-collect.component.scss'],
 })
-export class ClickAndCollectComponent implements OnInit {
+export class ClickAndCollectComponent {
   constructor(private displayService: ScreenService) {}
-
-  ngOnInit(): void {}
 
   screenWidth() {
     return this.displayService.getScreenSize();

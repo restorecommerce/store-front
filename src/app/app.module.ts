@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -30,10 +29,6 @@ import { MaterialDesignVCLIconAliasResolverService } from './shared/icon-resolve
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClickAndCollectComponent } from './pages/click-and-collect/click-and-collect.component';
-import { DeliveryComponent } from './pages/delivery/delivery.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { ReturnsComponent } from './pages/returns/returns.component';
 import { ServiceTeaserComponent } from './components/service-teaser/service-teaser.component';
 import { PromotionBarComponent } from './components/promotion-bar/promotion-bar.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -54,8 +49,6 @@ import { CartLayerItemComponent } from './components/cart-layer-item/cart-layer-
 import { CartLayerContentsComponent } from './components/cart-layer-contents/cart-layer-contents.component';
 import { MenuLayerContentComponent } from './components/top-bar/menu-layer-content/menu-layer-content.component';
 import { MenuLayerTitleComponent } from './components/top-bar/menu-layer-title/menu-layer-title.component';
-import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
-import { ImprintComponent } from './pages/imprint/imprint.component';
 import { HoverColorPickerDirective } from './directives/hover-color-picker-directive.service';
 import { GraphQLModule } from './graphql.module';
 import { ProductsModule } from './products/products.module';
@@ -83,10 +76,6 @@ const vclModules = [
 @NgModule({
   declarations: [
     AppComponent,
-    ClickAndCollectComponent,
-    DeliveryComponent,
-    ProfileComponent,
-    ReturnsComponent,
     ServiceTeaserComponent,
     PromotionBarComponent,
     NavigationComponent,
@@ -101,8 +90,6 @@ const vclModules = [
     MenuLayerContentComponent,
     MenuLayerTitleComponent,
     CookiePreferenceComponent,
-    PrivacyPolicyComponent,
-    ImprintComponent,
     HoverColorPickerDirective,
   ],
   imports: [
@@ -125,7 +112,7 @@ const vclModules = [
     OverlayModule,
     ScrollingModule,
     ...vclModules,
-    SharedModule
+    SharedModule,
   ],
   exports: [TranslateModule],
   providers: [

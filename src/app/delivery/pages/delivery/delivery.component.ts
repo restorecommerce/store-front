@@ -7,10 +7,8 @@ import { ScreenService } from 'src/app/services/screen.service';
   templateUrl: './delivery.component.html',
   styleUrls: ['./delivery.component.scss'],
 })
-export class DeliveryComponent implements OnInit {
+export class DeliveryComponent {
   constructor(private displayService: ScreenService) {}
-
-  ngOnInit(): void {}
 
   public screenWidth() {
     return this.displayService.getScreenSize();
