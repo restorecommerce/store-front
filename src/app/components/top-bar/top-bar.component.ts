@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { IItem } from '@restorecommerce/cart/lib/model/IItem';
-import { Money } from '@restorecommerce/cart/lib/model/primitives';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/features/cart/services/cart.service';
 import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({

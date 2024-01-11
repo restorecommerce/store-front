@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   UntypedFormControl,
   UntypedFormGroup,
   Validators,
 } from '@angular/forms';
 import { Money } from '@restorecommerce/cart/lib/model/primitives';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/features/cart/services/cart.service';
 import { CheckoutService } from '../../services/checkout.service';
 
 @Component({

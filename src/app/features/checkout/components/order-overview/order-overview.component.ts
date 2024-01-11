@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
-import { CartService } from 'src/app/services/cart.service';
-import { TranslateService } from '@ngx-translate/core';
+import { CartService } from 'src/app/features/cart/services/cart.service';
 import { Money } from '@restorecommerce/cart/lib/model/primitives';
 
 @Component({

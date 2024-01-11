@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
+import { Component, Input } from '@angular/core';
+import { CartService } from 'src/app/features/cart/services/cart.service';
 
 @Component({
   selector: 'app-cart-layer-item',

@@ -7,7 +7,7 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/features/cart/services/cart.service';
 
 @Injectable({
   providedIn: 'root',

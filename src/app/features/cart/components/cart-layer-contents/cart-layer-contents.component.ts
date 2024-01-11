@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { TemplateLayerRef } from '@vcl/ng-vcl';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/features/cart/services/cart.service';
 
 @Component({
   selector: 'app-cart-layer-contents',

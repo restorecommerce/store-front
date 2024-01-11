@@ -6,7 +6,7 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from 'src/app/features/cart/services/cart.service';
 import { NotificationService } from 'src/app/services/notification.service';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
 import { IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
