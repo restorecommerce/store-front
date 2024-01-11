@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LayerRef, LayerService } from '@vcl/ng-vcl';
-import { CookiePreferenceComponent } from './components/cookie-preference/cookie-preference.component';
+import { CookiePreferenceComponent } from './core/components/cookie-preference/cookie-preference.component';
 
 @Component({
   selector: 'app-root',

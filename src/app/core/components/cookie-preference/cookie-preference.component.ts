@@ -1,4 +1,4 @@
-import { Component, OnInit, Optional } from '@angular/core';
+import { Component, Optional } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComponentLayerRef } from '@vcl/ng-vcl';
 
@@ -7,7 +7,7 @@ import { ComponentLayerRef } from '@vcl/ng-vcl';
   templateUrl: './cookie-preference.component.html',
   styleUrls: ['./cookie-preference.component.scss'],
 })
-export class CookiePreferenceComponent implements OnInit {
+export class CookiePreferenceComponent {
   constructor(
     private router: Router,
     @Optional() private layer?: ComponentLayerRef
@@ -23,8 +23,6 @@ export class CookiePreferenceComponent implements OnInit {
     functional: true,
     analytics: true,
   };
-
-  ngOnInit(): void {}
 
   close(newPrefernces: {} = {}) {
     const references = { ...this.allPreferences, ...newPrefernces };

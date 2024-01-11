@@ -4,17 +4,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-service-teaser',
   templateUrl: './service-teaser.component.html',
-  styleUrls: ['./service-teaser.component.scss']
+  styleUrls: ['./service-teaser.component.scss'],
 })
-export class ServiceTeaserComponent implements OnInit {
-
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
+export class ServiceTeaserComponent {
+  constructor(private router: Router) {}
 
   public navigate(value: string): void {
     this.router.navigateByUrl(value);
   }
-
 }
