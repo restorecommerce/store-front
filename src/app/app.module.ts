@@ -52,7 +52,7 @@ import { GraphQLModule } from './graphql.module';
 import { ProductsModule } from './features/products/products.module';
 import { SharedModule } from './shared/shared.module';
 import { CheckoutModule } from './features/checkout/checkout.module';
-import { CartModule } from './cart/cart.module';
+import { CartModule } from './features/cart/cart.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
