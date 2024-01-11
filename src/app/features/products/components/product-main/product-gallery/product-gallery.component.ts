@@ -5,7 +5,7 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { ScreenService } from 'src/app/services/screen.service';
+import { ScreenService } from 'src/app/core/services/screen.service';
 import { IoRestorecommerceImageImage, IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
 
 @Component({

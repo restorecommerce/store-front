@@ -3,7 +3,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { VCLDrawerModule, IconResolverService } from '@vcl/ng-vcl';
+import { IconResolverService } from '@vcl/ng-vcl';
 import {
   TranslateModule,
   TranslateLoader,
@@ -22,8 +22,6 @@ import {
   LazyLoadImageModule,
   ScrollHooks,
 } from 'ng-lazyload-image';
-import { ClickStopPropagation } from './shared/click-stop-propagation.directive';
-import { HoverColorPickerDirective } from './directives/hover-color-picker-directive.service';
 import { GraphQLModule } from './graphql.module';
 import { ProductsModule } from './features/products/products.module';
 import { SharedModule } from './shared/shared.module';
@@ -35,10 +33,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
-const vclModules = [];
-
 @NgModule({
-  declarations: [AppComponent, ClickStopPropagation, HoverColorPickerDirective],
+  declarations: [AppComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
@@ -60,7 +56,6 @@ const vclModules = [];
     GraphQLModule,
     OverlayModule,
     ScrollingModule,
-    ...vclModules,
     SharedModule,
   ],
   exports: [TranslateModule],

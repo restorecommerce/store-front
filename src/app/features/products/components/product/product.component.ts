@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ScreenService } from 'src/app/services/screen.service';
 import { ProductService } from 'src/app/features/products/services/product.service';
 import { combineLatest, map, switchMap } from 'rxjs';
+import { ScreenService } from 'src/app/core/services/screen.service';
 
 @Component({
   selector: 'app-product',

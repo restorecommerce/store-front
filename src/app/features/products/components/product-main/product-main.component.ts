@@ -1,7 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
-import { Product } from 'src/app/models/product';
-
 @Component({
   selector: 'app-product-main',
   templateUrl: './product-main.component.html',

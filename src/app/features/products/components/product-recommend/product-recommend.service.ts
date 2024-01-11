@@ -1,9 +1,9 @@
-import { ProductImage } from 'src/app/models/product';
+import { ProductImage } from '../../models/product';
 
-import * as blackSneakers from 'src/app/data/blackSneakers.json';
-import * as brownSneakers from 'src/app/data/brownSneakers.json';
-import * as whiteSneakers from 'src/app/data/whiteSneakers.json';
-import * as whiteShirt from 'src/app/data/whiteShirt.json';
+import * as blackSneakers from '../../data/blackSneakers.json';
+import * as brownSneakers from '../../data/brownSneakers.json';
+import * as whiteSneakers from '../../data/whiteSneakers.json';
+import * as whiteShirt from '../../data/whiteShirt.json';
 
 export class ProductRecommendationService {
   private color: string = 'brown';

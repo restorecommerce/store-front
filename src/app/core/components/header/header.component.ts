@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ScreenService } from 'src/app/services/screen.service';
+import { ScreenService } from '../../services/screen.service';
 
 @Component({
   selector: 'app-header',

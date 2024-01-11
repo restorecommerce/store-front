@@ -9,7 +9,7 @@ import {
   HostListener,
   AfterViewChecked,
 } from '@angular/core';
-import { ProductImage } from 'src/app/models/product';
+import { ProductImage } from '../../models/product';
 
 @Component({
   selector: 'app-product-zoom',

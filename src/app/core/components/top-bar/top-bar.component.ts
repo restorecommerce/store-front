@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { CartService } from 'src/app/features/cart/services/cart.service';
-import { ScreenService } from 'src/app/services/screen.service';
+import { ScreenService } from '../../services/screen.service';
 
 @Component({
   selector: 'app-top-bar',

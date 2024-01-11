@@ -1,9 +1,6 @@
-import { Injectable, EventEmitter, OnDestroy } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable, EventEmitter } from '@angular/core';
 
-import { Product } from '../../../models/product';
-import { Product as ProductCard } from '../components/products/products.component';
-import { Subject, Subscription, map, catchError, of, tap } from 'rxjs';
+import { map, catchError, of, tap } from 'rxjs';
 import {
   IoRestorecommerceProductProduct,
   IoRestorecommerceResourcebaseFilterOperation,
@@ -13,19 +10,10 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class ProductService implements OnDestroy {
-  productImageColorHover = new Subject<string>();
-
-  sub: Subscription;
-
+export class ProductService {
   productColorChanged = new EventEmitter<string>();
 
-  constructor(private http: HttpClient, private productGQL: ProductsQueryGQL) {}
-
-  getShoe(shoeId: number | string) {
-    const url = `/assets/shoes/${shoeId}.json`;
-    return this.http.get<Product>(url);
-  }
+  constructor(private productGQL: ProductsQueryGQL) {}
 
   products$ = this.productGQL
     .fetch({
@@ -58,36 +46,4 @@ export class ProductService implements OnDestroy {
         return of([] as IoRestorecommerceProductProduct[]);
       })
     );
-
-  getShoes() {
-    this.sub = this.productGQL
-      .fetch({
-        input: {
-          offset: 0,
-          limit: 10,
-          filters: [
-            {
-              // TODO This refactor this code as In-house boilerplate code.
-              filters: [
-                {
-                  field: 'meta.owners[*].attributes[0].value',
-                  operation: IoRestorecommerceResourcebaseFilterOperation.In,
-                  value: 'r-ug',
-                },
-              ],
-            },
-          ],
-        },
-      })
-      .subscribe((response) => console.log('Products', response));
-    return this.http.get<ProductCard[]>('/assets/shoes/shoes.json');
-  }
-
-  ngOnDestroy(): void {
-    if (this.sub) {
-      this.sub.unsubscribe();
-    }
-  }
-
-  onProductColorChanged(color: string) {}
 }

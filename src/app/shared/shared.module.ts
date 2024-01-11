@@ -14,6 +14,7 @@ import {
 } from '@vcl/ng-vcl';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
+import { StopClickPropagationDirective } from './click-stop-propagation.directive';
 
 const vclModules = [
   VCLBadgeModule,
@@ -28,9 +29,11 @@ const vclModules = [
   VCLPanelModule,
 ];
 
+const directives = [StopClickPropagationDirective];
+
 @NgModule({
-  declarations: [],
+  declarations: [...directives],
   imports: [CommonModule],
-  exports: [...vclModules, TranslateModule, FormsModule],
+  exports: [TranslateModule, FormsModule, ...vclModules, ...directives],
 })
 export class SharedModule {}
