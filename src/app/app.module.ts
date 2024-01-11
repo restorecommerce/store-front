@@ -45,8 +45,6 @@ import {
   ScrollHooks,
 } from 'ng-lazyload-image';
 import { ClickStopPropagation } from './shared/click-stop-propagation.directive';
-import { CartLayerItemComponent } from './components/cart-layer-item/cart-layer-item.component';
-import { CartLayerContentsComponent } from './components/cart-layer-contents/cart-layer-contents.component';
 import { MenuLayerContentComponent } from './components/top-bar/menu-layer-content/menu-layer-content.component';
 import { MenuLayerTitleComponent } from './components/top-bar/menu-layer-title/menu-layer-title.component';
 import { HoverColorPickerDirective } from './directives/hover-color-picker-directive.service';
@@ -54,6 +52,7 @@ import { GraphQLModule } from './graphql.module';
 import { ProductsModule } from './features/products/products.module';
 import { SharedModule } from './shared/shared.module';
 import { CheckoutModule } from './features/checkout/checkout.module';
+import { CartModule } from './cart/cart.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -85,8 +84,6 @@ const vclModules = [
     FooterTopComponent,
     HeaderComponent,
     ClickStopPropagation,
-    CartLayerItemComponent,
-    CartLayerContentsComponent,
     MenuLayerContentComponent,
     MenuLayerTitleComponent,
     CookiePreferenceComponent,
@@ -97,6 +94,7 @@ const vclModules = [
     BrowserAnimationsModule,
     ProductsModule,
     CheckoutModule,
+    CartModule,
     AppRoutingModule,
     HttpClientModule,
     LazyLoadImageModule,

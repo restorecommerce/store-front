@@ -6,10 +6,8 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './cart-layer-item.component.html',
   styleUrls: ['./cart-layer-item.component.scss'],
 })
-export class CartLayerItemComponent implements OnInit {
+export class CartLayerItemComponent {
   constructor(public cartService: CartService) {}
 
   @Input() cartItem: any;
-
-  ngOnInit(): void {}
 }
