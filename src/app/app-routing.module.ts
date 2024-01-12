@@ -40,6 +40,8 @@ const routes: Routes = [
         (m) => m.PrivacyPolicyModule
       ),
   },
+  { path: '', redirectTo: '/products', pathMatch: 'full' }, // TODO CHANGE TO PRODUCTS
+  { path: '**', redirectTo: '/products' },
 ];
 
 @NgModule({

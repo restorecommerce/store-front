@@ -35,11 +35,7 @@ const vclModules = [
 
 const routes: Routes = [
   {
-    path: '',
-    component: ShoesComponent,
-  },
-  {
-    path: 'shoes',
+    path: 'products',
     component: ShoesComponent,
     children: [
       {
@@ -78,7 +74,7 @@ const routes: Routes = [
     ProductNavigationComponent,
     ProductRecommendComponent,
     ProductSizePickerComponent,
-    ProductZoomComponent
+    ProductZoomComponent,
   ],
   imports: [
     CommonModule,
