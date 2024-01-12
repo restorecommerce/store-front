@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ScreenService } from 'src/app/services/screen.service';
+import { Component } from '@angular/core';
+import { ScreenService } from 'src/app/core/services/screen.service';
 
 @Component({
   selector: 'app-click-and-collect',
