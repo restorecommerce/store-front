@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { catchError, of, tap } from 'rxjs';
+import { catchError, map, of, tap } from 'rxjs';
 import {
+  IoRestorecommerceProductCategoryProductCategory,
   IoRestorecommerceResourcebaseFilterOperation,
   IoRestorecommerceResourcebaseFilterOpOperator,
   ProductCategoryQueryGQL,
@@ -24,11 +25,12 @@ export class ProductCategoryService {
                 operation: IoRestorecommerceResourcebaseFilterOperation.In,
                 value: 'r-ug',
               },
-              {
-                field: 'parent.parent_id',
-                value: '',
-                operation: IoRestorecommerceResourcebaseFilterOperation.Eq,
-              },
+              // Parent items are items with parent as null: The filter for this doesn't work.
+              // {
+              //   field: 'parent.parent_id',
+              //   value: '',
+              //   operation: IoRestorecommerceResourcebaseFilterOperation.Eq,
+              // },
             ],
             operator: IoRestorecommerceResourcebaseFilterOpOperator.And,
           },
@@ -36,6 +38,12 @@ export class ProductCategoryService {
       },
     })
     .pipe(
+      map((response) =>
+        response.data.catalog.product_category.Read.details.items.map(
+          (item) =>
+            item.payload as IoRestorecommerceProductCategoryProductCategory
+        )
+      ),
       tap((data) => console.log('category data', data)),
       catchError((err) => {
         console.log('Error:', err);

@@ -1,11 +1,16 @@
 <div class="navigation-container">
   <vcl-navigation
-    *ngIf="categories$ | async"
     layout="horizontal"
     class="row justify-content-center"
     style="text-align: center"
   >
-    <vcl-navigation-item>
+    <vcl-navigation-item *ngFor="let category of categories$ | async">
+      <vcl-navigation-label class="navigation-item">
+        {{ category.name }}
+      </vcl-navigation-label>
+    </vcl-navigation-item>
+
+    <!--<vcl-navigation-item >
       <vcl-navigation-label class="navigation-item">
         {{ "Navigation.NewIn" | translate }}
       </vcl-navigation-label>
@@ -19,7 +24,8 @@
       <vcl-navigation-label class="navigation-item">
         {{ "Navigation.Shoes" | translate }}
       </vcl-navigation-label>
-    </vcl-navigation-item>
+    </vcl-navigation-item> -->
+
     <!--<vcl-navigation-item>
       <vcl-navigation-label>
         {{ 'Navigation.Accessories' | translate }}
