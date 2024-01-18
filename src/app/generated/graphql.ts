@@ -5226,14 +5226,14 @@ export type ProductCategoryQueryQueryVariables = Exact<{
 }>;
 
 
-export type ProductCategoryQueryQuery = { __typename?: 'Query', catalog: { __typename?: 'CatalogQuery', product_category: { __typename?: 'CatalogProductCategoryQuery', Read?: { __typename?: 'ProtoIoRestorecommerceProductCategoryProductCategoryListResponse', details?: { __typename?: 'IoRestorecommerceProductCategoryProductCategoryListResponse', items?: Array<{ __typename?: 'IoRestorecommerceProductCategoryProductCategoryResponse', payload?: { __typename?: 'IoRestorecommerceProductCategoryProductCategory', id?: string | null, name?: string | null, description?: string | null, parent?: { __typename?: 'IoRestorecommerceProductCategoryParent', parentId?: string | null } | null } | null }> | null } | null } | null } } };
+export type ProductCategoryQueryQuery = { __typename?: 'Query', catalog: { __typename?: 'CatalogQuery', product_category: { __typename?: 'CatalogProductCategoryQuery', Read?: { __typename?: 'ProtoIoRestorecommerceProductCategoryProductCategoryListResponse', details?: { __typename?: 'IoRestorecommerceProductCategoryProductCategoryListResponse', totalCount?: number | null, items?: Array<{ __typename?: 'IoRestorecommerceProductCategoryProductCategoryResponse', payload?: { __typename?: 'IoRestorecommerceProductCategoryProductCategory', id?: string | null, name?: string | null, description?: string | null, parent?: { __typename?: 'IoRestorecommerceProductCategoryParent', parentId?: string | null } | null, image?: { __typename?: 'IoRestorecommerceImageImage', filename?: string | null, caption?: string | null, url?: string | null } | null } | null, status?: { __typename?: 'IoRestorecommerceStatusStatus', code?: number | null, message?: string | null } | null }> | null, operationStatus?: { __typename?: 'IoRestorecommerceStatusOperationStatus', code?: number | null, message?: string | null } | null } | null } | null } } };
 
 export type ProductsQueryQueryVariables = Exact<{
   input: IIoRestorecommerceResourcebaseReadRequest;
 }>;
 
 
-export type ProductsQueryQuery = { __typename?: 'Query', catalog: { __typename?: 'CatalogQuery', product: { __typename?: 'CatalogProductQuery', Read?: { __typename?: 'ProtoIoRestorecommerceProductProductListResponse', details?: { __typename?: 'IoRestorecommerceProductProductListResponse', items?: Array<{ __typename?: 'IoRestorecommerceProductProductResponse', payload?: { __typename?: 'IoRestorecommerceProductProduct', id?: string | null, product?: { __typename?: 'IoRestorecommerceProductIndividualProduct', name?: string | null, description?: string | null, physical?: { __typename?: 'IoRestorecommerceProductPhysicalProduct', variants?: Array<{ __typename?: 'IoRestorecommerceProductPhysicalVariant', id?: string | null, name?: string | null, description?: string | null, stockKeepingUnit?: string | null, stockLevel?: number | null, parentVariantId?: string | null, price?: { __typename?: 'IoRestorecommercePricePrice', regularPrice?: number | null, sale?: boolean | null, salePrice?: number | null } | null, package?: { __typename?: 'IoRestorecommerceProductPackage', rotatable?: boolean | null, weightInKg?: number | null, sizeInCm?: { __typename?: 'IoRestorecommerceGeometryBoundingBox3D', height?: number | null, length?: number | null, width?: number | null } | null } | null, images?: Array<{ __typename?: 'IoRestorecommerceImageImage', id?: string | null, filename?: string | null, url?: string | null, caption?: string | null }> | null, properties?: Array<{ __typename?: 'IoRestorecommercePropertyProperty', id?: string | null, value?: string | null }> | null }> | null } | null } | null, meta?: { __typename?: 'IoRestorecommerceMetaMeta', owners?: Array<{ __typename?: 'IoRestorecommerceAttributeAttribute', id?: string | null, value?: string | null, attributes?: Array<{ __typename?: 'IoRestorecommerceAttributeAttribute', id?: string | null, value?: string | null }> | null }> | null } | null } | null }> | null } | null } | null } } };
+export type ProductsQueryQuery = { __typename?: 'Query', catalog: { __typename?: 'CatalogQuery', product: { __typename?: 'CatalogProductQuery', Read?: { __typename?: 'ProtoIoRestorecommerceProductProductListResponse', details?: { __typename?: 'IoRestorecommerceProductProductListResponse', totalCount?: number | null, items?: Array<{ __typename?: 'IoRestorecommerceProductProductResponse', payload?: { __typename?: 'IoRestorecommerceProductProduct', id?: string | null, product?: { __typename?: 'IoRestorecommerceProductIndividualProduct', name?: string | null, description?: string | null, categoryId?: string | null, category?: { __typename?: 'IoRestorecommerceProductCategoryProductCategory', id?: string | null, name?: string | null, parent?: { __typename?: 'IoRestorecommerceProductCategoryParent', parentId?: string | null } | null } | null, physical?: { __typename?: 'IoRestorecommerceProductPhysicalProduct', variants?: Array<{ __typename?: 'IoRestorecommerceProductPhysicalVariant', id?: string | null, name?: string | null, description?: string | null, stockKeepingUnit?: string | null, stockLevel?: number | null, parentVariantId?: string | null, price?: { __typename?: 'IoRestorecommercePricePrice', regularPrice?: number | null, sale?: boolean | null, salePrice?: number | null } | null, package?: { __typename?: 'IoRestorecommerceProductPackage', rotatable?: boolean | null, weightInKg?: number | null, sizeInCm?: { __typename?: 'IoRestorecommerceGeometryBoundingBox3D', height?: number | null, length?: number | null, width?: number | null } | null } | null, images?: Array<{ __typename?: 'IoRestorecommerceImageImage', filename?: string | null, url?: string | null, caption?: string | null }> | null, properties?: Array<{ __typename?: 'IoRestorecommercePropertyProperty', id?: string | null, value?: string | null }> | null }> | null } | null } | null, meta?: { __typename?: 'IoRestorecommerceMetaMeta', owners?: Array<{ __typename?: 'IoRestorecommerceAttributeAttribute', id?: string | null, value?: string | null, attributes?: Array<{ __typename?: 'IoRestorecommerceAttributeAttribute', id?: string | null, value?: string | null }> | null }> | null } | null } | null, status?: { __typename?: 'IoRestorecommerceStatusStatus', code?: number | null, message?: string | null } | null }> | null, operationStatus?: { __typename?: 'IoRestorecommerceStatusOperationStatus', code?: number | null, message?: string | null } | null } | null } | null } } };
 
 export const ProductCategoryQueryDocument = gql`
     query ProductCategoryQuery($input: IIoRestorecommerceResourcebaseReadRequest!) {
@@ -5249,7 +5249,21 @@ export const ProductCategoryQueryDocument = gql`
               parent {
                 parentId
               }
+              image {
+                filename
+                caption
+                url
+              }
             }
+            status {
+              code
+              message
+            }
+          }
+          totalCount
+          operationStatus {
+            code
+            message
           }
         }
       }
@@ -5280,6 +5294,14 @@ export const ProductsQueryDocument = gql`
               product {
                 name
                 description
+                categoryId
+                category {
+                  id
+                  name
+                  parent {
+                    parentId
+                  }
+                }
                 physical {
                   variants {
                     id
@@ -5303,7 +5325,6 @@ export const ProductsQueryDocument = gql`
                       weightInKg
                     }
                     images {
-                      id
                       filename
                       url
                       caption
@@ -5326,6 +5347,15 @@ export const ProductsQueryDocument = gql`
                 }
               }
             }
+            status {
+              code
+              message
+            }
+          }
+          totalCount
+          operationStatus {
+            code
+            message
           }
         }
       }

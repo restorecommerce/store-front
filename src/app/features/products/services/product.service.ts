@@ -7,6 +7,8 @@ import {
   ProductsQueryGQL,
 } from '../../../generated/graphql';
 
+export const PRODUCT_LIST_LIMIT = 20;
+export const PRODUCT_LIST_OFFSET = 4;
 
 @Injectable({
   providedIn: 'root',
@@ -17,8 +19,8 @@ export class ProductService {
   products$ = this.productGQL
     .fetch({
       input: {
-        offset: 0,
-        limit: 10,
+        offset: PRODUCT_LIST_OFFSET * PRODUCT_LIST_LIMIT, // TODO Implementing pagination.
+        limit: PRODUCT_LIST_LIMIT,
         filters: [
           {
             // TODO Refactor this code as In-house boilerplate code.

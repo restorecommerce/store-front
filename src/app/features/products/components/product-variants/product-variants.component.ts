@@ -51,7 +51,6 @@ export class ProductVariantsComponent {
   ) {}
 
   onProductClicked(productId: string, varaintId: string) {
-    // TODO Refactor code for route.
-    this.router.navigateByUrl(`shoes/${productId}/variants/${varaintId}`);
+    this.router.navigateByUrl(`products/${productId}/variants/${varaintId}`);
   }
 }

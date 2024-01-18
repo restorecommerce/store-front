@@ -51,7 +51,7 @@ export class ProductsComponent {
   }
 
   onProductClicked(productId: string) {
-    this.router.navigateByUrl(`shoes/${productId}`)
+    this.router.navigateByUrl(`products/${productId}`)
   }
 
 }

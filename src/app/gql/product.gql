@@ -9,6 +9,14 @@ query ProductsQuery($input: IIoRestorecommerceResourcebaseReadRequest!) {
               product {
                 name
                 description
+                categoryId
+                category {
+                  id
+                  name
+                  parent {
+                    parentId
+                  }
+                }
                 physical {
                   variants {
                     id
