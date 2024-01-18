@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductCategoryService } from 'src/app/features/products/services/product-category.service';
 
 @Component({
   selector: 'app-navigation',
@@ -7,9 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
-  constructor(private router: Router) {}
+  categories$ = this.productCategoryService.category$;
 
-  public navigate(value: string): void {
+  constructor(
+    private router: Router,
+    private productCategoryService: ProductCategoryService
+  ) {}
+
+  navigate(value: string): void {
     this.router.navigateByUrl(value);
   }
 }

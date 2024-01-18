@@ -10,8 +10,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductColorPickerComponent } from './components/product-color-picker/product-color-picker.component';
 import { ProductInterestComponent } from './components/product-interest/product-interest.component';
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
-import { ProductInfoComponent } from './components/product-main/product-info/product-info.component';
-import { ProductGalleryComponent } from './components/product-main/product-gallery/product-gallery.component';
+import { ProductInfoComponent } from './components/product-info/product-info.component';
+import { ProductGalleryComponent } from './components/product-gallery/product-gallery.component';
 import { ProductNavigationComponent } from './components/product-navigation/product-navigation.component';
 import { ProductMainComponent } from './components/product-main/product-main.component';
 import { ProductRecommendComponent } from './components/product-recommend/product-recommend.component';

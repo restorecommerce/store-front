@@ -1,24 +1,20 @@
 import { Injectable } from '@angular/core';
-
-import { map, catchError, of, tap } from 'rxjs';
+import { catchError, of, tap } from 'rxjs';
 import {
-  IoRestorecommerceProductProduct,
   IoRestorecommerceResourcebaseFilterOperation,
-  ProductsQueryGQL,
-} from '../../../generated/graphql';
-
+  IoRestorecommerceResourcebaseFilterOpOperator,
+  ProductCategoryQueryGQL,
+} from 'src/app/generated/graphql';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ProductService {
-  constructor(private productGQL: ProductsQueryGQL) {}
+export class ProductCategoryService {
+  constructor(private categoryGQL: ProductCategoryQueryGQL) {}
 
-  products$ = this.productGQL
+  category$ = this.categoryGQL
     .fetch({
       input: {
-        offset: 0,
-        limit: 10,
         filters: [
           {
             // TODO Refactor this code as In-house boilerplate code.
@@ -28,21 +24,22 @@ export class ProductService {
                 operation: IoRestorecommerceResourcebaseFilterOperation.In,
                 value: 'r-ug',
               },
+              {
+                field: 'parent.parent_id',
+                value: '',
+                operation: IoRestorecommerceResourcebaseFilterOperation.Eq,
+              },
             ],
+            operator: IoRestorecommerceResourcebaseFilterOpOperator.And,
           },
         ],
       },
     })
     .pipe(
-      map((response) =>
-        response.data.catalog.product.Read.details.items.map(
-          (item) => item.payload as IoRestorecommerceProductProduct
-        )
-      ),
-      tap((data) => console.log('data', data)),
+      tap((data) => console.log('category data', data)),
       catchError((err) => {
         console.log('Error:', err);
-        return of([] as IoRestorecommerceProductProduct[]);
+        return of(null);
       })
     );
 }

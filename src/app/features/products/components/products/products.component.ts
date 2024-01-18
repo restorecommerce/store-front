@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { IoRestorecommerceProductProduct } from 'src/app/generated/graphql';
 
 @Component({
-  selector: 'products',
+  selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })

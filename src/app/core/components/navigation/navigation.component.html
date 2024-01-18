@@ -1,18 +1,23 @@
 <div class="navigation-container">
-  <vcl-navigation layout="horizontal" class="row justify-content-center" style="text-align: center;">
+  <vcl-navigation
+    *ngIf="categories$ | async"
+    layout="horizontal"
+    class="row justify-content-center"
+    style="text-align: center"
+  >
     <vcl-navigation-item>
       <vcl-navigation-label class="navigation-item">
-        {{ 'Navigation.NewIn' | translate }}
+        {{ "Navigation.NewIn" | translate }}
       </vcl-navigation-label>
     </vcl-navigation-item>
     <vcl-navigation-item>
       <vcl-navigation-label class="navigation-item">
-        {{ 'Navigation.Clothing' | translate }}
+        {{ "Navigation.Clothing" | translate }}
       </vcl-navigation-label>
     </vcl-navigation-item>
     <vcl-navigation-item (click)="this.navigate('/shoes')">
       <vcl-navigation-label class="navigation-item">
-        {{ 'Navigation.Shoes' | translate }}
+        {{ "Navigation.Shoes" | translate }}
       </vcl-navigation-label>
     </vcl-navigation-item>
     <!--<vcl-navigation-item>
