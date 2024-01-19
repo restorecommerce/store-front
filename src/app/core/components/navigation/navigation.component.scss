@@ -7,10 +7,16 @@
 
 .navigation {
   margin-bottom: 0;
-}
 
-.navigation-item {
-  color: white;
+  .navigation-item {
+    color: white;
+
+    &.selected {
+      & > .navigation-item-label {
+        color: red;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1024px) {

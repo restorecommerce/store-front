@@ -4,8 +4,10 @@
     class="row justify-content-center"
     style="text-align: center"
   >
-    <vcl-navigation-item *ngFor="let category of categories$ | async">
-      <vcl-navigation-label class="navigation-item">
+    <vcl-navigation-item
+      *ngFor="let category of categories$ | async"
+    >
+      <vcl-navigation-label>
         {{ category.name }}
       </vcl-navigation-label>
     </vcl-navigation-item>
