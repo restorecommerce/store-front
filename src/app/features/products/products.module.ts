@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './components/product/product.component';
+import { ProductComponent } from './pages/product/product.component';
 import { ProductVariantsComponent } from './pages/product-variants/product-variants.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductColorPickerComponent } from './components/product-color-picker/product-color-picker.component';
