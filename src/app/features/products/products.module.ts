@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ShoesComponent } from './components/shoes/shoes.component';
-import { ShoesProductsComponent } from './components/shoes-products/shoes-products.component';
 import { ProductComponent } from './components/product/product.component';
-import { ProductVariantsComponent } from './components/product-variants/product-variants.component';
-import { ProductsTemplateComponent } from './templates/products-template/products-template.component';
+import { ProductVariantsComponent } from './pages/product-variants/product-variants.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductColorPickerComponent } from './components/product-color-picker/product-color-picker.component';
 import { ProductInterestComponent } from './components/product-interest/product-interest.component';
@@ -17,7 +14,7 @@ import { ProductMainComponent } from './components/product-main/product-main.com
 import { ProductRecommendComponent } from './components/product-recommend/product-recommend.component';
 import { ProductSizePickerComponent } from './components/product-size-picker/product-size-picker.component';
 import { SharedModule } from '../../shared/shared.module';
-import { ProductsComponent } from './components/products/products.component';
+import { ProductsLayoutComponent } from './pages/products-layout/products-layout.component';
 import {
   VCLGalleryModule,
   VCLSelectListModule,
@@ -25,6 +22,9 @@ import {
   VCLZoomBoxModule,
 } from '@vcl/ng-vcl';
 import { ProductZoomComponent } from './components/product-zoom/product-zoom.component';
+import { ProductVariantCardComponent } from './components/product-variant-card/product-variant-card.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
+import { ProductsComponent } from './pages/products/products.component';
 
 const vclModules = [
   VCLSelectModule,
@@ -36,19 +36,25 @@ const vclModules = [
 const routes: Routes = [
   {
     path: 'products',
-    component: ShoesComponent,
+    component: ProductsComponent,
     children: [
       {
         path: '',
-        component: ShoesProductsComponent,
+        component: ProductsLayoutComponent,
+        children: [
+          {
+            path: '',
+            component: ProductListComponent,
+          },
+          {
+            path: ':productId',
+            component: ProductVariantsComponent,
+          },
+        ],
       },
       {
         path: ':productId/variants/:variantId',
         component: ProductComponent,
-      },
-      {
-        path: ':productId',
-        component: ProductVariantsComponent,
       },
     ],
   },
@@ -56,14 +62,10 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    ShoesComponent,
-    ShoesProductsComponent,
-    ProductComponent,
-    ShoesProductsComponent,
-    ProductVariantsComponent,
-    ProductsTemplateComponent,
-    ProductComponent,
     ProductsComponent,
+    ProductComponent,
+    ProductVariantsComponent,
+    ProductComponent,
     ProductCardComponent,
     ProductColorPickerComponent,
     ProductDescriptionComponent,
@@ -75,6 +77,9 @@ const routes: Routes = [
     ProductRecommendComponent,
     ProductSizePickerComponent,
     ProductZoomComponent,
+    ProductVariantCardComponent,
+    ProductListComponent,
+    ProductsLayoutComponent
   ],
   imports: [
     CommonModule,

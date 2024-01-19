@@ -1,8 +1,6 @@
 <div class="row justify-between product-header">
   <div class="row additional-label">
-    <div class="text">
-      {{ product.product.physical.variants.length }} Varaints
-    </div>
+    <div class="text">{{ product.name }}</div>
     <div class="rounded-right"></div>
   </div>
   <i class="fas fa-heart like"></i>
@@ -18,18 +16,20 @@
       media.min +
       'px)'
     "
-    [srcset]="product.product.physical.variants[0].images[0].url"
+    [srcset]="
+      './assets/products_responsive/product' +
+      (i + 1) +
+      media.suffix +
+      '.' +
+      media.format
+    "
     [type]="'image/' + media.format"
   /> -->
-  <img
-    class="image"
-    alt="product image"
-    [src]="product.product.physical.variants[0].images[0].url"
-  />
+  <img class="image" alt="product image" [src]="product.images[0].url" />
 </picture>
 <div
   class="row center justify-center spinner-wrapper"
-  *ngIf="!product.product.physical.variants[0].images[0].url"
+  *ngIf="!product.images[0].url"
 >
   <i class="fas fa-spinner spinner"></i>
 </div>
@@ -43,7 +43,7 @@
       <div class="color" [style.background-color]="color"></div>
     </div>
   </div> -->
-<div class="title">{{ product.product.name }}</div>
-<!-- <div class="row justify-center price">
-    {{ product.price | currency : currency }}
-  </div> -->
+<div class="title">{{ product.name }}</div>
+<div class="row justify-center price">
+  {{ product.price.salePrice | currency : currency }}
+</div>

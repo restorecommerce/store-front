@@ -1,0 +1,7 @@
+<ng-container *ngIf="productId$ | async as productId">
+  <app-product-variant-card
+    *ngFor="let variant of productVariants$ | async"
+    [product]="variant"
+    (click)="onProductClicked(productId, variant.id)"
+  ></app-product-variant-card>
+</ng-container>

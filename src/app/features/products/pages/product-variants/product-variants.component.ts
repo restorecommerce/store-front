@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, switchMap } from 'rxjs';
 
@@ -7,23 +7,12 @@ import { ProductService } from 'src/app/features/products/services/product.servi
 @Component({
   selector: 'app-product-variants',
   templateUrl: './product-variants.component.html',
-  styleUrls: ['./product-variants.component.scss'],
 })
 export class ProductVariantsComponent {
-  currency = '€';
-  responsiveImagesConfiguration = [
-    { width: 400, min: 0, max: 1100.99, suffix: '-xl', format: 'webp' },
-    { width: 400, min: 0, max: 1100.99, suffix: '-xl', format: 'jpg' },
-    { width: 190, min: 1101, max: 1156.99, suffix: '-sm', format: 'webp' },
-    { width: 190, min: 1101, max: 1156.99, suffix: '-sm', format: 'jpg' },
-    { width: 260, min: 1157, max: 1268.99, suffix: '-md', format: 'webp' },
-    { width: 260, min: 1157, max: 1268.99, suffix: '-md', format: 'jpg' },
-    { width: 330, min: 1269, max: 1381.99, suffix: '-lg', format: 'webp' },
-    { width: 330, min: 1269, max: 1381.99, suffix: '-lg', format: 'jpg' },
-    { width: 400, min: 1382, max: 99999, suffix: '-xl', format: 'webp' },
-    { width: 400, min: 1382, max: 99999, suffix: '-xl', format: 'jpg' },
-  ];
-
+  @HostBinding('class') classes = 'w-100p row flex-wrap';
+  // TODO Flex wrap may have been deprecated in the
+  // TODO Pass 'title' to the top of the products component.
+  // TODO Use the route params.
   productId$ = this.route.params.pipe(
     map((params) => params.productId as string)
   );

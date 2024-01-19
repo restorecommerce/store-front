@@ -1,0 +1,5 @@
+<app-product-card
+  *ngFor="let product of products$ | async"
+  [product]="product"
+  (click)="onProductClicked(product.id)"
+></app-product-card>

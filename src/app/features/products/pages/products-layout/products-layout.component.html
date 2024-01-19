@@ -53,8 +53,9 @@
         {{ filterOption }}
       </div>
     </div>
-    <div class="row flex-wrap panel-products">
-      <ng-content></ng-content>
+    <!-- TODO: Should layout misbehave.  -->
+    <div class="flex">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </section>

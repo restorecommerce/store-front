@@ -1,4 +1,4 @@
-.product {
+:host(.product) {
   background-color: white;
   width: calc(33.333333% - 30px);
   @media (max-width: 1100px) {

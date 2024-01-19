@@ -1,4 +1,4 @@
-import { Product } from '../pages/products/products.component';
+import { Product } from '../pages/products-layout/products-layout.component';
 
 const products: Product[] = [];
 
