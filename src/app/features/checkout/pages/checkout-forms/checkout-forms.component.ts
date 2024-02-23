@@ -23,15 +23,15 @@ export class CheckoutFormsComponent {
   ) {}
 
   homeDeliveryForm = new UntypedFormGroup({
-    gender: new UntypedFormControl(null, Validators.required),
-    firstName: new UntypedFormControl('', [Validators.required]),
-    lastName: new UntypedFormControl('', [Validators.required]),
-    streetName: new UntypedFormControl('', [Validators.required]),
-    houseNumber: new UntypedFormControl('', [Validators.required]),
-    postcode: new UntypedFormControl('', [Validators.required]),
-    city: new UntypedFormControl('', [Validators.required]),
-    country: new UntypedFormControl('', [Validators.required]),
-    mail: new UntypedFormControl('', [Validators.required]),
+    gender: new UntypedFormControl('m', Validators.required),
+    firstName: new UntypedFormControl('Bello', [Validators.required]),
+    lastName: new UntypedFormControl('Babakolo', [Validators.required]),
+    streetName: new UntypedFormControl('NMRI mando raod', [Validators.required]),
+    houseNumber: new UntypedFormControl('18', [Validators.required]),
+    postcode: new UntypedFormControl('800283', [Validators.required]),
+    city: new UntypedFormControl('Kaduna', [Validators.required]),
+    country: new UntypedFormControl('Nigeria', [Validators.required]),
+    mail: new UntypedFormControl('fleetbeekay@gmail.com', [Validators.required]),
   });
 
   homeDeliverySubmit() {

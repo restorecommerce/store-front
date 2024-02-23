@@ -1,0 +1,45 @@
+mutation CreateOrder($input: IIoRestorecommerceOrderOrderList!) {
+  ordering {
+    order {
+      Submit(input: $input) {
+        details {
+          orders {
+            payload {
+              id
+              userId
+              customerId
+              orderState
+              paymentState
+              fulfillmentState
+              items {
+                id
+                productId
+                product {
+                  id
+                  product {
+                    name
+                    category {
+                      id
+                      name
+                    }
+                    physical {
+                      variants {
+                        id
+                        name
+                        stockKeepingUnit
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          operationStatus {
+            message
+            code
+          }
+        }
+      }
+    }
+  }
+}

@@ -41,7 +41,7 @@
       "Checkout.CreditCard" | translate
     }}</vcl-radio-button>
     <div class="creditCardOption" *ngIf="payMethod === 'creditcard'">
-      <form [formGroup]="paymentOptionForm" (ngSubmit)="paymentOptionSubmit()">
+      <form [formGroup]="cardInfoForm" (ngSubmit)="cardInfoFormSubmit()">
         <vcl-form-control-group>
           <vcl-label>{{ "Checkout.CardNumber" | translate }}</vcl-label>
           <vcl-input-field>

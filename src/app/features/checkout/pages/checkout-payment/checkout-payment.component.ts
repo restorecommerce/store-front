@@ -15,7 +15,7 @@ import { CheckoutService } from '../../services/checkout.service';
   styleUrls: ['./checkout-payment.component.scss'],
 })
 export class CheckoutPaymentComponent {
-  payMethod = 'paypal';
+  payMethod = this.checkoutService.paymentData || 'paypal';
 
   constructor(
     private notifier: NotifierService,
@@ -24,16 +24,16 @@ export class CheckoutPaymentComponent {
     public checkoutService: CheckoutService
   ) {}
 
-  paymentOptionForm = new UntypedFormGroup({
+  cardInfoForm = new UntypedFormGroup({
     cardNumber: new UntypedFormControl('', [Validators.required]),
     expiryDate: new UntypedFormControl('', [Validators.required]),
     securityCode: new UntypedFormControl('', [Validators.required]),
     cardHolder: new UntypedFormControl('', [Validators.required]),
   });
 
-  paymentOptionSubmit() {
-    if (this.paymentOptionForm.valid) {
-      console.log(this.paymentOptionForm.value);
+  cardInfoFormSubmit() {
+    if (this.cardInfoForm.valid) {
+      console.log(this.cardInfoForm.value);
       this.router.navigate(['/checkout/delivery']);
     } else {
       this.notifier.error(
@@ -43,7 +43,7 @@ export class CheckoutPaymentComponent {
   }
 
   goToDelivery() {
-    console.log(this.payMethod);
+    this.checkoutService.paymentData = this.payMethod;
     this.router.navigate(['/checkout/delivery']);
   }
 }

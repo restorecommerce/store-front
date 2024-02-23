@@ -27,7 +27,7 @@
 </h2>
 <div class="content-container">
   <h3>{{ "Checkout.PaymentOptionHeader" | translate }}</h3>
-  <p>Chosen Payment Option</p>
+  <p>{{ checkoutService.paymentData | translate }}</p>
 </div>
 <h2 class="checkout-forms-header">
   <span class="header-num">03</span>{{ "Checkout.Delivery" | translate }}
@@ -77,7 +77,9 @@
       <p class="total">{{ this.getCartTotalGross() }} €</p>
     </div>
   </div>
-  <button class="go-to-payment">
+  <button vcl-button (click)="onPlaceOrderAndPay()" class="go-to-payment">
+    <!-- TODO Place order and pay: For this, since the payment option is paypal. We need to pay first
+    before placing the order. So the order will be marked as pay. -->
     {{ "Checkout.PlaceOrderAndPay" | translate }}
   </button>
 </div>

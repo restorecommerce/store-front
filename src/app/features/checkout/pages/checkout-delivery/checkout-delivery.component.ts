@@ -25,6 +25,7 @@ export class CheckoutDeliveryComponent {
     cardNumber: new UntypedFormControl('', [Validators.required]),
     expiryDate: new UntypedFormControl('', [Validators.required]),
     securityCode: new UntypedFormControl('', [Validators.required]),
+    voucher:  new UntypedFormControl('', [Validators.required]),
     cardHolder: new UntypedFormControl('', [Validators.required]),
   });
 
@@ -50,5 +51,12 @@ export class CheckoutDeliveryComponent {
 
   getCartTotalNet(): string {
     return this.cartService.round(this.cartService.getCartTotalNet());
+  }
+
+  onPlaceOrderAndPay() {
+    console.log("-----Creating Order------");
+    this.checkoutService.createOrder();
+    console.log('****************');
+
   }
 }
