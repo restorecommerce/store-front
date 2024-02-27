@@ -19,8 +19,6 @@ export class ProductGalleryComponent implements OnChanges {
   public galleryImages: IoRestorecommerceImageImage[];
   imageIndex = 0;
 
-
-
   @Input() product: IoRestorecommerceProductPhysicalVariant;
 
   constructor(

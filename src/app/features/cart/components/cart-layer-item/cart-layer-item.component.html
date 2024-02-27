@@ -7,8 +7,8 @@
       <vcl-form-control-group class="flex-5">
         <vcl-label>{{ "ProductSizePicker.Size" | translate }}</vcl-label>
         <vcl-select>
-          <vcl-select-list [value]="cartItem.product.selectedSize">
-            <ng-container *ngFor="let el of cartItem.product.sizes">
+          <vcl-select-list [value]="cartItem.variant.selectedSize">
+            <ng-container *ngFor="let el of cartItem.variant.sizes">
               <vcl-select-list-item [value]="el">
                 {{ this.el }}
               </vcl-select-list-item>
@@ -34,8 +34,10 @@
         </vcl-select>
       </vcl-form-control-group>
     </div>
-    <!-- item * quantity -->
-    <p>{{ "TopBar.TotalPrice" | translate }}: 2000 €</p>
+    <p>
+      {{ "TopBar.TotalPrice" | translate }}:
+      {{ cartItem.price * cartItem.quantity }} €
+    </p>
   </div>
   <div class="flex-5">
     <img class="responsive-image" [src]="cartItem.imgSrc" />

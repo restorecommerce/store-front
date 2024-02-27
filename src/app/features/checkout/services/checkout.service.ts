@@ -36,23 +36,23 @@ export class CheckoutService {
     const orderItems: IIoRestorecommerceOrderItem[] = this.cartService
       .getCartItems()
       .map((item) => ({
-        id: '498c255935fadc7cd6e22442',
-        productId: 'ea7ee1e3620b8f56bb14fb45224a5f2fe15a484d',
-        variantId: 'c2d766ca982eca8304150849735ffef9',
-        quantity: 1,
-        unitPrice: {
-          regularPrice: 25,
-          sale: true,
-          salePrice: 25,
-          currencyId: 'EUR',
+        // embedd product in this cartItem.
+        productId: item.variant.parentVariantId,
+        variantId: item.variant.id, // productVariant
+        quantity: item.quantity,
+        unitPrice: { // The price of one unit of item
+          regularPrice: item.variant.price.regularPrice,
+          sale: item.variant.price.sale,
+          salePrice: item.variant.price.salePrice,
+          currencyId: item.variant.price.currencyId,
         },
         amount: {
-          currencyId: 'EUR',
-          gross: 26,
-          net: 25,
+          currencyId: item.variant.price.currencyId,
+          gross: 26, // ((vat in included per item.) + (shipping per item)) + (tarrifs) * the quantity
+          net: 25, // item * quantity
           vats: [
             {
-              taxId: 'bcd96fcc818a4f44922a57b67dad65bb',
+              taxId: item.taxType,
               vat: 4.0,
             },
           ],
@@ -73,6 +73,9 @@ export class CheckoutService {
     // notificationEmail?? This should be the email that would be used to notify the buyer.
     // customerOrderNr -- The number of the order.
     // customerRmk about the good. Maybe after a product has been fulfilled.
+
+
+    // TODO Implement auth with the User Id and Address
 
     const orderInput: IIoRestorecommerceOrderOrderList = {
       items: [

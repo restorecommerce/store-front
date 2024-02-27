@@ -53,10 +53,5 @@ export class CheckoutDeliveryComponent {
     return this.cartService.round(this.cartService.getCartTotalNet());
   }
 
-  onPlaceOrderAndPay() {
-    console.log("-----Creating Order------");
-    this.checkoutService.createOrder();
-    console.log('****************');
-
-  }
+  onPlaceOrderAndPay() {}
 }

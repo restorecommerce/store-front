@@ -5221,6 +5221,13 @@ export type SubscriptionOutput = {
   id?: Maybe<Scalars['String']>;
 };
 
+export type CreateOrderMutationVariables = Exact<{
+  input: IIoRestorecommerceOrderOrderList;
+}>;
+
+
+export type CreateOrderMutation = { __typename?: 'Mutation', ordering: { __typename?: 'OrderingMutation', order: { __typename?: 'OrderingOrderMutation', Submit?: { __typename?: 'ProtoIoRestorecommerceOrderOrderSubmitListResponse', details?: { __typename?: 'IoRestorecommerceOrderOrderSubmitListResponse', orders?: Array<{ __typename?: 'IoRestorecommerceOrderOrderResponse', payload?: { __typename?: 'IoRestorecommerceOrderOrder', id?: string | null, userId?: string | null, customerId?: string | null, orderState?: IoRestorecommerceOrderOrderState | null, paymentState?: IoRestorecommerceInvoicePaymentState | null, fulfillmentState?: IoRestorecommerceFulfillmentState | null, items?: Array<{ __typename?: 'IoRestorecommerceOrderItem', id?: string | null, productId?: string | null, product?: { __typename?: 'IoRestorecommerceProductProduct', id?: string | null, product?: { __typename?: 'IoRestorecommerceProductIndividualProduct', name?: string | null, category?: { __typename?: 'IoRestorecommerceProductCategoryProductCategory', id?: string | null, name?: string | null } | null, physical?: { __typename?: 'IoRestorecommerceProductPhysicalProduct', variants?: Array<{ __typename?: 'IoRestorecommerceProductPhysicalVariant', id?: string | null, name?: string | null, stockKeepingUnit?: string | null }> | null } | null } | null } | null }> | null } | null }> | null, operationStatus?: { __typename?: 'IoRestorecommerceStatusOperationStatus', message?: string | null, code?: number | null } | null } | null } | null } } };
+
 export type ProductCategoryQueryQueryVariables = Exact<{
   input: IIoRestorecommerceResourcebaseReadRequest;
 }>;
@@ -5235,6 +5242,64 @@ export type ProductsQueryQueryVariables = Exact<{
 
 export type ProductsQueryQuery = { __typename?: 'Query', catalog: { __typename?: 'CatalogQuery', product: { __typename?: 'CatalogProductQuery', Read?: { __typename?: 'ProtoIoRestorecommerceProductProductListResponse', details?: { __typename?: 'IoRestorecommerceProductProductListResponse', totalCount?: number | null, items?: Array<{ __typename?: 'IoRestorecommerceProductProductResponse', payload?: { __typename?: 'IoRestorecommerceProductProduct', id?: string | null, product?: { __typename?: 'IoRestorecommerceProductIndividualProduct', name?: string | null, description?: string | null, categoryId?: string | null, category?: { __typename?: 'IoRestorecommerceProductCategoryProductCategory', id?: string | null, name?: string | null, parent?: { __typename?: 'IoRestorecommerceProductCategoryParent', parentId?: string | null } | null } | null, physical?: { __typename?: 'IoRestorecommerceProductPhysicalProduct', variants?: Array<{ __typename?: 'IoRestorecommerceProductPhysicalVariant', id?: string | null, name?: string | null, description?: string | null, stockKeepingUnit?: string | null, stockLevel?: number | null, parentVariantId?: string | null, price?: { __typename?: 'IoRestorecommercePricePrice', regularPrice?: number | null, sale?: boolean | null, salePrice?: number | null } | null, package?: { __typename?: 'IoRestorecommerceProductPackage', rotatable?: boolean | null, weightInKg?: number | null, sizeInCm?: { __typename?: 'IoRestorecommerceGeometryBoundingBox3D', height?: number | null, length?: number | null, width?: number | null } | null } | null, images?: Array<{ __typename?: 'IoRestorecommerceImageImage', filename?: string | null, url?: string | null, caption?: string | null }> | null, properties?: Array<{ __typename?: 'IoRestorecommercePropertyProperty', id?: string | null, value?: string | null }> | null }> | null } | null } | null, meta?: { __typename?: 'IoRestorecommerceMetaMeta', owners?: Array<{ __typename?: 'IoRestorecommerceAttributeAttribute', id?: string | null, value?: string | null, attributes?: Array<{ __typename?: 'IoRestorecommerceAttributeAttribute', id?: string | null, value?: string | null }> | null }> | null } | null } | null, status?: { __typename?: 'IoRestorecommerceStatusStatus', code?: number | null, message?: string | null } | null }> | null, operationStatus?: { __typename?: 'IoRestorecommerceStatusOperationStatus', code?: number | null, message?: string | null } | null } | null } | null } } };
 
+export const CreateOrderDocument = gql`
+    mutation CreateOrder($input: IIoRestorecommerceOrderOrderList!) {
+  ordering {
+    order {
+      Submit(input: $input) {
+        details {
+          orders {
+            payload {
+              id
+              userId
+              customerId
+              orderState
+              paymentState
+              fulfillmentState
+              items {
+                id
+                productId
+                product {
+                  id
+                  product {
+                    name
+                    category {
+                      id
+                      name
+                    }
+                    physical {
+                      variants {
+                        id
+                        name
+                        stockKeepingUnit
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          operationStatus {
+            message
+            code
+          }
+        }
+      }
+    }
+  }
+}
+    `;
+
+  @Injectable({
+    providedIn: 'root'
+  })
+  export class CreateOrderGQL extends Apollo.Mutation<CreateOrderMutation, CreateOrderMutationVariables> {
+    document = CreateOrderDocument;
+    
+    constructor(apollo: Apollo.Apollo) {
+      super(apollo);
+    }
+  }
 export const ProductCategoryQueryDocument = gql`
     query ProductCategoryQuery($input: IIoRestorecommerceResourcebaseReadRequest!) {
   catalog {

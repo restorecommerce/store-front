@@ -6,9 +6,11 @@ import {
   SimpleChanges,
 } from '@angular/core';
 import { Decimal } from '@restorecommerce/cart/lib/model/primitives';
-import { CartService } from 'src/app/features/cart/services/cart.service';
+import {
+  CartItem,
+  CartService,
+} from 'src/app/features/cart/services/cart.service';
 import { NotificationService } from 'src/app/core/services/notification.service';
-import { IItem } from '@restorecommerce/cart/lib/model/IItem';
 import { IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
 
 @Component({
@@ -22,7 +24,7 @@ export class ProductInfoComponent implements OnInit, OnChanges {
 
   constructor(
     public cartService: CartService,
-    private notificationService: NotificationService,
+    private notificationService: NotificationService
   ) {}
 
   ngOnInit(): void {
@@ -73,8 +75,8 @@ export class ProductInfoComponent implements OnInit, OnChanges {
       width: width ? width.value : 0,
       depth: depth ? depth.value : 0,
       quantity: 1, // replace hardcoded entity value!
-      product: this.product,
-    } as IItem;
+      variant: this.product,
+    } as CartItem;
 
     this.cartService.addItemToCart([cartItem]);
 

@@ -9,7 +9,13 @@ import {
 } from '@restorecommerce/cart/lib/model/primitives';
 import { IItem } from '@restorecommerce/cart/lib/model/IItem';
 
+export interface CartItem extends IItem {
+  variant: IoRestorecommerceProductPhysicalVariant;
+  productId: string;
+}
+
 import { Subject } from 'rxjs';
+import { IoRestorecommerceProductPhysicalVariant } from 'src/app/generated/graphql';
 
 @Injectable({
   providedIn: 'root',
@@ -52,13 +58,13 @@ export class CartService {
     return this.cart.getItems().find((item) => item.sku === skuId);
   }
 
-  addItemToCart(items: IItem[]): void {
+  addItemToCart(items: CartItem[]): void {
     this.cart.addItems(items);
     this.cartItemCountUpdated.next(this.getCartItemCount());
   }
 
-  getCartItems(): IItem[] {
-    return this.cart.getItems();
+  getCartItems(): CartItem[] {
+    return this.cart.getItems() as CartItem[];
   }
 
   getCartItemCount(): number {
