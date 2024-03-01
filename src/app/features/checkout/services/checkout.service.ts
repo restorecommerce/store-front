@@ -40,7 +40,8 @@ export class CheckoutService {
         productId: item.variant.parentVariantId,
         variantId: item.variant.id, // productVariant
         quantity: item.quantity,
-        unitPrice: { // The price of one unit of item
+        unitPrice: {
+          // The price of one unit of item
           regularPrice: item.variant.price.regularPrice,
           sale: item.variant.price.sale,
           salePrice: item.variant.price.salePrice,
@@ -48,11 +49,11 @@ export class CheckoutService {
         },
         amount: {
           currencyId: item.variant.price.currencyId,
-          gross: 26, // ((vat in included per item.) + (shipping per item)) + (tarrifs) * the quantity
-          net: 25, // item * quantity
+          gross: item.variant.price.salePrice * item.quantity,
+          net: item.variant.price.salePrice * item.quantity,
           vats: [
             {
-              taxId: item.taxType,
+              taxId: item.taxType, // Tax Id is usually on the product.
               vat: 4.0,
             },
           ],
@@ -60,10 +61,6 @@ export class CheckoutService {
       }));
 
     // TODO
-    // 1. Get cart items.
-    // 2. Map these cart items to create "order.items[0].items". Where "order" is IIoRestorecommerceOrderOrderList
-    // 3. Map or Extract from the cart or it items to get the "order.items[0].totalAmounts".
-
     // 4. UserId: This is the id of the buyer. It could be anonymous. Or the id of the login user. Extracted using the user service.
     // 5. customerId: Let it be the same as the userId.
     // 6. shopId: Id of the current shop. Possibly the merchant's shopId (A merchant could have many shop).
@@ -73,7 +70,6 @@ export class CheckoutService {
     // notificationEmail?? This should be the email that would be used to notify the buyer.
     // customerOrderNr -- The number of the order.
     // customerRmk about the good. Maybe after a product has been fulfilled.
-
 
     // TODO Implement auth with the User Id and Address
 
