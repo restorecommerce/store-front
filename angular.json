@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "store-front:build"
+            "buildTarget": "store-front:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "store-front:build:production"
+              "buildTarget": "store-front:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "store-front:build"
+            "buildTarget": "store-front:build"
           }
         },
         "test": {
@@ -130,12 +130,13 @@
                 }
               ],
               "sourceMap": false,
-              "optimization": true
+              "optimization": true,
+              "buildOptimizer": true
             }
           }
         },
         "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "options": {
             "browserTarget": "store-front:build",
             "serverTarget": "store-front:server"
@@ -148,7 +149,7 @@
           }
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "browserTarget": "store-front:build:production",
             "serverTarget": "store-front:server:production",
